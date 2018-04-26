@@ -11,4 +11,4 @@ import { CreateComponent } from './create/create.component';
     CreateComponent
   ]
 })
-export class GerenteModule { }
+export class CategoriasModule { }

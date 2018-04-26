@@ -1,9 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
 
-import { AppComponent } from './app.component';
-import {GerenteModule} from "./gerente/gerente.module";
+import {AppComponent} from './app.component';
+import {CategoriasModule} from "./categorias/categorias.module";
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import {GerenteModule} from "./gerente/gerente.module";
   ],
   imports: [
     BrowserModule,
-    GerenteModule
+    CategoriasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
