@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  background: url("background.jpg");
+  background-size: 100%;
+  color: white;
+}
+
+form {
+  margin: 0 auto;
+  width: 345px;
+}
+
+div{
+  margin-top: 2%;
+  position: relative;
+  display: block;
+}
+
+button{
+  float: left;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0px;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  opacity: 0.9;
+  display: block;
+}
+
+input{
+  width: 95%;
+}
+
+input[id="cargo"]{
+  width: 65%;
+}
+
+input[id="gerente"]{
+  width: auto;
+}
+
+.cancelar{
+  background-color: red;
+  margin-left: 18%;
+}
+
+.confirmar{
+  background-color: green;
+}
