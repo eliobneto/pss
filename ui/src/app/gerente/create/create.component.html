@@ -1,3 +1,71 @@
-<p>
-  create works!
-</p>
+<!DOCTYPE html>
+
+<html>
+
+  <head xmlns="">
+    <script src="SpryValidationTextField.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="create.component.css">
+  </head>
+
+  <body>
+    <div>
+      <form>
+        <div>
+          <img src="../../logo.png" alt="Boxit" width="70%">
+          <h2 style="margin-left: 18%; margin-top: 0px; margin-bottom: 10%">Cadastro</h2>
+        </div>
+        <div class="ui input">
+          <label for="nome" >Nome Completo</label><br>
+          <input type="text" name="nome" id="nome" placeholder="Elio Bolognese Neto">
+        </div>
+
+        <div class="ui input">
+          <label for="cpf" >CPF</label><br>
+          <input type="text" name="cpf" id="cpf" placeholder="123.456.789-11">
+        </div>
+
+        <div class="ui input">
+          <label for="celular" >Celular</label><br>
+          <input type="text" name="celular" id="celular" placeholder="(44) 99848-6668">
+        </div>
+
+        <div class="ui input">
+          <label for= "email">E-mail</label><br>
+          <input type="text" name="email" id="email" placeholder="eliobgz@gmail.com">
+        </div>
+
+        <div class="ui input">
+          <label for="cargo">Cargo</label><br>
+          <input type="text" name="cargo" id="cargo" placeholder="Estagiario">
+          <input type="checkbox" name="gerente" id="gerente" style="alignment: right">
+          <label for="gerente">Gerente</label>
+        </div>
+
+        <div class="ui input">
+          <label for= "senha">Senha</label><br>
+          <input type="password" name="senha" id="senha">
+        </div>
+
+        <div class="ui input">
+          <label for= "csenha">Confimar Senha</label><br>
+          <input type="password" name="csenha" id="csenha">
+        </div>
+        <button class="cancelar" type="submit"> Cancelar </button>
+        <button class="confirmar" type="submit"> Confirmar </button>
+      </form>
+    </div>
+    <div style="text-align: center">
+        <p>Apos preencher, clique no botao abaixo para receber* o seu codigo de usuario no e-mail cadastrado</p>
+        <p>*Prazo de 24h a confirmacao de cadastro e envio de e-mail</p>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    <!--
+    var cpf = new Spry.Widget.ValidationTextField("cpf", "custom", {pattern:"000.000.000-00", useCharacterMasking:true});
+    var celular = new Spry.Widget.ValidationTextField("celular", "custom", {pattern:"(00) 00000-0000", useCharacterMasking:true});
+    var email = new Spry.Widget.ValidationTextField("email", "email");
+    //-->
+  </script>
+
+</html>
