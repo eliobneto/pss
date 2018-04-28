@@ -6,20 +6,19 @@
 
   <div class="ui input">
     <label for="nome">Nome Completo</label><br>
-    <input type="text" required name="nome" id="nome" placeholder="Elio Bolognese Neto">
+    <input type="text" required name="nome" appKzMask="999.999.999-99" id="nome" placeholder="Elio Bolognese Neto">
   </div>
 
   <div class="ui input">
     <label for="cpf">CPF</label><br>
-    <input type="text" name="cpf" mask='0000-00-00' [(ngModel)]="cpf" [cpf]="cpf" #cpfInput="ngModel" required id="cpf"
-           placeholder="000.000.000-00" maxlength="15">
+    <input type="text" name="cpf" [spMask]='cpfMask' [spKeepMask]="true" [(ngModel)]="cpf" [cpf]="cpf" #cpfInput="ngModel" required id="cpf">
     <div *ngIf="cpfInput?.errors?.cpf"> CPF Inválido</div>
   </div>
 
 
   <div class="ui input">
     <label for="celular">Celular</label><br>
-    <input type="text" name="celular" required id="celular" placeholder="(00) 00000-0000" maxlength="15">
+    <input type="text" name="celular" [spMask]='phoneMask' [spKeepMask]="true" required ngModel id="celular">
   </div>
 
   <div class="ui input">
