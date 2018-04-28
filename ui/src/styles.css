@@ -1,5 +1,5 @@
 body{
-  background: url("background.jpg");
+  background: url("assets/img/background.jpg");
   background-size: 100%;
   color: white;
 }
@@ -19,7 +19,7 @@ button{
   float: left;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0px;
+  margin: 8px 0;
   border: none;
   cursor: pointer;
   width: auto;
