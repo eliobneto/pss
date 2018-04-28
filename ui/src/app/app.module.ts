@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {GerenteModule} from "./gerente/gerente.module";
+import {CpfCnpjModule} from "ng2-cpf-cnpj";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import {GerenteModule} from "./gerente/gerente.module";
   ],
   imports: [
     BrowserModule,
-    GerenteModule
+    GerenteModule,
+    CpfCnpjModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,62 +9,70 @@
   </head>
 
   <body>
-    <div>
       <form>
         <div>
-          <img src="../../logo.png" alt="Boxit" width="70%">
-          <h2 style="margin-left: 18%; margin-top: 0px; margin-bottom: 10%">Cadastro</h2>
+          <img src="../../logo.png" alt="Boxit" width=100%>
+          <h2 style="margin-top: 0px; margin-bottom: 5%; text-align: center ">Admin - Cadastro</h2>
         </div>
+
         <div class="ui input">
           <label for="nome" >Nome Completo</label><br>
-          <input type="text" name="nome" id="nome" placeholder="Elio Bolognese Neto">
+          <input type="text" required name="nome" id="nome" placeholder="Elio Bolognese Neto">
         </div>
 
         <div class="ui input">
           <label for="cpf" >CPF</label><br>
-          <input type="text" name="cpf" id="cpf" placeholder="123.456.789-11">
+          <input type="text" name="cpf" [(ngModel)]="cpf" [cpf]="cpf" #cpfInput="ngModel" required id="cpf" placeholder="123.456.789-11">
+        <div *nglf="cpfInput?.errors?.cpf"> CPF Inválido
         </div>
+        </div>
+
+
 
         <div class="ui input">
           <label for="celular" >Celular</label><br>
-          <input type="text" name="celular" id="celular" placeholder="(44) 99848-6668">
+          <input type="text" name="celular" required id="celular" placeholder="(44) 99848-6668">
         </div>
 
         <div class="ui input">
           <label for= "email">E-mail</label><br>
-          <input type="text" name="email" id="email" placeholder="eliobgz@gmail.com">
+          <input type="text" name="email" required id="email" placeholder="eliobgz@gmail.com">
         </div>
 
         <div class="ui input">
           <label for="cargo">Cargo</label><br>
-          <input type="text" name="cargo" id="cargo" placeholder="Estagiário">
+          <input type="text" name="cargo" required id="cargo" placeholder="Estagiário">
           <input type="checkbox" name="gerente" id="gerente" style="alignment: right">
           <label for="gerente">Gerente</label>
         </div>
 
         <div class="ui input">
           <label for= "senha">Senha</label><br>
-          <input type="password" name="senha" id="senha">
+          <input type="password" name="senha" required id="senha">
         </div>
 
         <div class="ui input">
           <label for= "csenha">Confimar Senha</label><br>
-          <input type="password" name="csenha" id="csenha">
+          <input type="password" name="csenha" required id="csenha">
         </div>
-        <button class="cancelar" type="submit"> Cancelar </button>
-        <button class="confirmar" type="submit"> Confirmar </button>
+
+        <div>
+          <button class="cancelar" type="submit"> Cancelar </button>
+          <button class="confirmar" type="submit"> Confirmar </button>
+        </div>
+
       </form>
-    </div>
-    <div style="text-align: center">
-        <h4>Após preencher, clique no botão abaixo para receber* o seu código de usuário no e-mail cadastrado</h4>
-        <h5 style="margin-top: -1%">*Prazo de 24h a confirmação de cadastro e envio de e-mail</h5>
-    </div>
+
+      <br><br><br>
+      <h4 style="text-align: center">Após preencher, clique no botão abaixo para receber* o seu código de usuário no e-mail cadastrado</h4>
+      <h5 style="margin-top: -1%; text-align: center">*Prazo de 24h a confirmação de cadastro e envio de e-mail</h5>
+
   </body>
 
   <script type="text/javascript">
     <!--
     var cpf = new Spry.Widget.ValidationTextField("cpf", "custom", {pattern:"000.000.000-00", useCharacterMasking:true});
-    var celular = new Spry.Widget.ValidationTextField("celular", "custom", {pattern:"(00) 00000-0000", useCharacterMasking:true});
+    var celular = new Spry.Widget.ValidationTextField("celular", "phone_number",{useCharacterMasking:true});
     var email = new Spry.Widget.ValidationTextField("email", "email");
     //-->
   </script>

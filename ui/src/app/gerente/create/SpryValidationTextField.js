@@ -425,8 +425,8 @@ Spry.Widget.ValidationTextField.ValidationDescriptors = {
   'phone_number': {
     formats: {
       //US phone number; 10 digits
-      'phone_us': {
-        pattern:'(000) 000-0000'
+      'phone_br': {
+        pattern:'(00) 00000-0000'
       },
       'phone_custom': {}
     }
@@ -656,9 +656,9 @@ Spry.Widget.ValidationTextField.prototype.init = function(element, options)
 
   this.validClass = "textfieldValidState";
   this.focusClass = "textfieldFocusState";
-  this.requiredClass = "textfieldRequiredState";
+  this.requiredClass = "obrigratorio";
   this.hintClass = "textfieldHintState";
-  this.invalidFormatClass = "textfieldInvalidFormatState";
+  this.invalidFormatClass = "invalido";
   this.invalidRangeMinClass = "textfieldMinValueState";
   this.invalidRangeMaxClass = "textfieldMaxValueState";
   this.invalidCharsMinClass = "textfieldMinCharsState";
@@ -669,7 +669,7 @@ Spry.Widget.ValidationTextField.prototype.init = function(element, options)
   }
 
   switch (this.type) {
-    case 'phone_number':options.format = Spry.Widget.Utils.firstValid(options.format, 'phone_us');break;
+    case 'phone_number':options.format = Spry.Widget.Utils.firstValid(options.format, 'phone_br');break;
     case 'currency':options.format = Spry.Widget.Utils.firstValid(options.format, 'comma_dot');break;
     case 'zip_code':options.format = Spry.Widget.Utils.firstValid(options.format, 'zip_us5');break;
     case 'date':
