@@ -1,55 +1,71 @@
-<form>
-  <div>
-    <img src="assets/img/logo.png" alt="Boxit">
-    <h2 style="margin-top: 0px; margin-bottom: 5%; text-align: center ">Admin - Cadastro</h2>
+<div class="container text-center">
+  <form class="ui fluid form">
+    <div>
+      <img src="assets/img/logo.png" alt="Boxit">
+      <h2 style="margin-top: 0px; margin-bottom: 5%; text-align: center ">Admin - Cadastro</h2>
+    </div>
+    <div class="ui labeled input">
+      <div class="ui label">
+        <label for="nome">Nome Completo</label>
+      </div>
+      <input type="text" required name="nome" id="nome" placeholder="nome">
+    </div>
+
+    <div class="ui labeled input">
+      <div class="ui label">
+        <label for="cpf">CPF</label>
+      </div>
+      <input type="text" name="cpf" [spMask]="cpfMask" [spKeepMask]="true" [(ngModel)]="cpf" [cpf]="cpf"
+             #cpfInput="ngModel" required id="cpf">
+    </div>
+    <div class="ui pointing red basic label" *ngIf="cpfInput?.errors?.cpf && cpfInput.touched"> CPF Inválido</div>
+
+    <div class="ui labeled input">
+      <div class="ui label">
+        <label for="celular">Celular</label>
+      </div>
+      <input type="text" name="celular" [spMask]="phoneMask" [spKeepMask]="true" required ngModel id="celular">
+    </div>
+
+    <div class="ui labeled input">
+      <div class="ui label">
+        <label for="email">E-mail</label>
+      </div>
+      <input type="text" name="email" required id="email" placeholder="example@example.com">
+    </div>
+
+    <div class="ui labeled input">
+      <div class="ui label">
+        <label for="cargo">Cargo</label><br>
+      </div>
+      <div class="inline field">
+
+      </div>
+      <input type="text" name="cargo" required id="cargo" placeholder="Estagiário">
+      <input type="checkbox" name="gerente" id="gerente" style="alignment: right">
+      <label for="gerente">Gerente</label>
+    </div>
+
+    <div class="ui input">
+      <label for="senha">Senha</label><br>
+      <input type="password" name="senha" required id="senha">
+    </div>
+
+    <div class="ui input">
+      <label for="csenha">Confimar Senha</label><br>
+      <input type="password" name="csenha" required id="csenha">
+    </div>
+
+    <div>
+      <button class="cancelar" type="submit"> Cancelar</button>
+      <button class="confirmar" type="submit"> Confirmar</button>
+    </div>
+
+  </form>
+  <div class="sixteen wide column">
+    <h4 style="text-align: center">Após preencher, clique no botão abaixo para receber* o seu código de usuário no
+      e-mail
+      cadastrado</h4>
+    <h5 style="margin-top: -1%; text-align: center">*Prazo de 24h a confirmação de cadastro e envio de e-mail</h5>
   </div>
-
-  <div class="ui input">
-    <label for="nome">Nome Completo</label><br>
-    <input type="text" required name="nome" appKzMask="999.999.999-99" id="nome" placeholder="Elio Bolognese Neto">
-  </div>
-
-  <div class="ui input">
-    <label for="cpf">CPF</label><br>
-    <input type="text" name="cpf" [spMask]="cpfMask" [spKeepMask]="true" [(ngModel)]="cpf" [cpf]="cpf" #cpfInput="ngModel" required id="cpf">
-    <div *ngIf="cpfInput?.errors?.cpf"> CPF Inválido</div>
-  </div>
-
-
-  <div class="ui input">
-    <label for="celular">Celular</label><br>
-    <input type="text" name="celular" [spMask]="phoneMask" [spKeepMask]="true" required ngModel id="celular">
-  </div>
-
-  <div class="ui input">
-    <label for="email">E-mail</label><br>
-    <input type="text" name="email" required id="email" placeholder="eliobgz@gmail.com">
-  </div>
-
-  <div class="ui input">
-    <label for="cargo">Cargo</label><br>
-    <input type="text" name="cargo" required id="cargo" placeholder="Estagiário">
-    <input type="checkbox" name="gerente" id="gerente" style="alignment: right">
-    <label for="gerente">Gerente</label>
-  </div>
-
-  <div class="ui input">
-    <label for="senha">Senha</label><br>
-    <input type="password" name="senha" required id="senha">
-  </div>
-
-  <div class="ui input">
-    <label for="csenha">Confimar Senha</label><br>
-    <input type="password" name="csenha" required id="csenha">
-  </div>
-
-  <div>
-    <button class="cancelar" type="submit"> Cancelar</button>
-    <button class="confirmar" type="submit"> Confirmar</button>
-  </div>
-
-</form>
-
-<h4 style="text-align: center">Após preencher, clique no botão abaixo para receber* o seu código de usuário no e-mail
-  cadastrado</h4>
-<h5 style="margin-top: -1%; text-align: center">*Prazo de 24h a confirmação de cadastro e envio de e-mail</h5>
+</div>
