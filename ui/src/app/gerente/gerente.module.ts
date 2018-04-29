@@ -4,6 +4,7 @@ import {CreateComponent} from './create/create.component';
 import {CpfCnpjModule} from 'ng2-cpf-cnpj';
 import {FormsModule} from '@angular/forms';
 import {MaskModule} from '../mask/mask.module';
+import {ConfirmEqualValidatorDirective} from "./create/confirm-equal-validator.directive";
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import {MaskModule} from '../mask/mask.module';
     MaskModule
   ],
   declarations: [
-    CreateComponent
+    CreateComponent,
+    ConfirmEqualValidatorDirective
   ],
   exports: [
     CreateComponent
