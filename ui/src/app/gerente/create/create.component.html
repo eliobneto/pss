@@ -1,71 +1,60 @@
 <div class="container text-center">
-  <form class="ui fluid form">
-    <div>
-      <img src="assets/img/logo.png" alt="Boxit">
-      <h2 style="margin-top: 0px; margin-bottom: 5%; text-align: center ">Admin - Cadastro</h2>
-    </div>
-    <div class="ui labeled input">
-      <div class="ui label">
-        <label for="nome">Nome Completo</label>
-      </div>
-      <input type="text" required name="nome" id="nome" placeholder="nome">
+  <div class="col-xs-12">
+    <img src="assets/img/logo.png" alt="Boxit">
+    <h2 style="margin-top: 0px; margin-bottom: 10px;">Admin - Cadastro</h2>
+  </div>
+  <form class="col-xs-12">
+    <div class="form-group row">
+      <label for="nome">Nome Completo</label>
+      <input type="text" class="form-control" required name="nome" id="nome" placeholder="nome">
     </div>
 
-    <div class="ui labeled input">
-      <div class="ui label">
-        <label for="cpf">CPF</label>
-      </div>
+    <div class="form-group row">
+      <label for="cpf">CPF</label>
       <input type="text" name="cpf" [spMask]="cpfMask" [spKeepMask]="true" [(ngModel)]="cpf" [cpf]="cpf"
-             #cpfInput="ngModel" required id="cpf">
-    </div>
-    <div class="ui pointing red basic label" *ngIf="cpfInput?.errors?.cpf && cpfInput.touched"> CPF Inválido</div>
-
-    <div class="ui labeled input">
-      <div class="ui label">
-        <label for="celular">Celular</label>
-      </div>
-      <input type="text" name="celular" [spMask]="phoneMask" [spKeepMask]="true" required ngModel id="celular">
+             #cpfInput="ngModel" class="form-control" required id="cpf" [ngClass]="(cpfInput?.errors?.cpf) ? 'is-invalid' : ''">
+      <div class="invalid-feedback" *ngIf="cpfInput?.errors?.cpf && cpfInput.touched"> CPF Inválido</div>
     </div>
 
-    <div class="ui labeled input">
-      <div class="ui label">
-        <label for="email">E-mail</label>
-      </div>
-      <input type="text" name="email" required id="email" placeholder="example@example.com">
+    <div class="form-group row">
+      <label for="celular">Celular</label>
+      <input type="text" class="form-control" name="celular" [spMask]="phoneMask" [spKeepMask]="true" required ngModel id="celular">
     </div>
 
-    <div class="ui labeled input">
-      <div class="ui label">
-        <label for="cargo">Cargo</label><br>
-      </div>
-      <div class="inline field">
-
-      </div>
-      <input type="text" name="cargo" required id="cargo" placeholder="Estagiário">
-      <input type="checkbox" name="gerente" id="gerente" style="alignment: right">
-      <label for="gerente">Gerente</label>
+    <div class="form-group row">
+      <label for="email">E-mail</label>
+      <input type="text" class="form-control" name="email" required id="email" placeholder="example@example.com">
     </div>
 
-    <div class="ui input">
+    <div class="form-group row">
+      <label for="cargo">Cargo</label>
+      <select class="custom-select" id="cargo">
+        <option selected>Select one option</option>
+        <option value="1">funcionario</option>
+        <option value="2">gerente</option>
+      </select>
+    </div>
+
+    <div class="form-group row">
       <label for="senha">Senha</label><br>
-      <input type="password" name="senha" required id="senha">
+      <input type="password" class="form-control" name="senha" required id="senha">
     </div>
 
-    <div class="ui input">
+    <div class="form-group row">
       <label for="csenha">Confimar Senha</label><br>
-      <input type="password" name="csenha" required id="csenha">
+      <input type="password" class="form-control" name="csenha" required id="csenha">
     </div>
 
-    <div>
-      <button class="cancelar" type="submit"> Cancelar</button>
-      <button class="confirmar" type="submit"> Confirmar</button>
+    <div class="form-group row justify-content-center">
+        <button class="btn btn-danger" type="submit"> Cancelar</button>
+        <button class="btn btn-success" type="submit"> Confirmar</button>
     </div>
 
   </form>
-  <div class="sixteen wide column">
-    <h4 style="text-align: center">Após preencher, clique no botão abaixo para receber* o seu código de usuário no
+  <div class="col-xs-12">
+    <h4 style="text-align: center">Após preencher, clique no botão abaixo para receber<span class="text-danger">*</span> o seu código de usuário no
       e-mail
       cadastrado</h4>
-    <h5 style="margin-top: -1%; text-align: center">*Prazo de 24h a confirmação de cadastro e envio de e-mail</h5>
+    <h5 style="margin-top: -1%; text-align: center"><span class="text-danger">*</span>Prazo de 24h a confirmação de cadastro e envio de e-mail</h5>
   </div>
 </div>
