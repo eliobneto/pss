@@ -11,14 +11,14 @@
 
   <div class="ui input">
     <label for="cpf">CPF</label><br>
-    <input type="text" name="cpf" [spMask]='cpfMask' [spKeepMask]="true" [(ngModel)]="cpf" [cpf]="cpf" #cpfInput="ngModel" required id="cpf">
+    <input type="text" name="cpf" [spMask]="cpfMask" [spKeepMask]="true" [(ngModel)]="cpf" [cpf]="cpf" #cpfInput="ngModel" required id="cpf">
     <div *ngIf="cpfInput?.errors?.cpf"> CPF Inválido</div>
   </div>
 
 
   <div class="ui input">
     <label for="celular">Celular</label><br>
-    <input type="text" name="celular" [spMask]='phoneMask' [spKeepMask]="true" required ngModel id="celular">
+    <input type="text" name="celular" [spMask]="phoneMask" [spKeepMask]="true" required ngModel id="celular">
   </div>
 
   <div class="ui input">
