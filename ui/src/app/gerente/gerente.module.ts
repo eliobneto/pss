@@ -4,7 +4,8 @@ import {CreateComponent} from './create/create.component';
 import {CpfCnpjModule} from 'ng2-cpf-cnpj';
 import {FormsModule} from '@angular/forms';
 import {MaskModule} from '../mask/mask.module';
-import {ConfirmEqualValidatorDirective} from "./create/confirm-equal-validator.directive";
+import {ConfirmEqualValidatorDirective} from "./confirm-equal-validator.directive";
+import { ReadDeleteComponent } from './read-delete/read-delete.component';
 
 @NgModule({
   imports: [
@@ -15,10 +16,12 @@ import {ConfirmEqualValidatorDirective} from "./create/confirm-equal-validator.d
   ],
   declarations: [
     CreateComponent,
-    ConfirmEqualValidatorDirective
+    ConfirmEqualValidatorDirective,
+    ReadDeleteComponent,
   ],
   exports: [
-    CreateComponent
+    CreateComponent,
+    ReadDeleteComponent
   ]
 })
 export class GerenteModule { }

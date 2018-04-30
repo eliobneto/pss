@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+  <head>
+
+  </head>
+
+  <body>
+  <div style="margin: 0 auto; margin-top: 2%; width: 345px; color: white;">
+    <img src="../../../assets/img/logo.png" alt="Boxit" width=100%>
+    <h2 style="margin-top: 0px; margin-bottom: 5%; text-align: center ">Admin - Cadastro</h2>
+  </div>
+
+    <div class="card" style="margin: 0 auto; width: 80%" *ngFor="let funcionario of fun">
+      <div class="card-header" style="color:#fff;background-color:#337ab7;border-color:#337ab7">
+        <label> {{funcionario.nome}}</label>
+      </div>
+
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card-text">Nome: {{funcionario.nome}}</div>
+          </div>
+          <div class="col-sm">
+            <div class="card-text">CPF: {{funcionario.cpf}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm">
+            <div class="card-text">Celular: {{funcionario.celular}}</div>
+          </div>
+          <div class="col-sm">
+            <div class="card-text">Email: {{funcionario.email}}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm">
+            <div class="card-text">Cargo: {{funcionario.cargo}}</div>
+          </div>
+          <div class="col-sm">
+            <div class="card-text">Cargo: Gerente</div>
+          </div>
+          <div class="col-sm">
+            <button class="btn-danger">Excluir</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+
+</html>
