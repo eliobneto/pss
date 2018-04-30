@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {AppComponent} from './app.component';
 import {GerenteModule} from './gerente/gerente.module';
 
@@ -11,7 +10,7 @@ import {GerenteModule} from './gerente/gerente.module';
   ],
   imports: [
     BrowserModule,
-    GerenteModule
+    GerenteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

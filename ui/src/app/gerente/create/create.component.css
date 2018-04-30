@@ -15,35 +15,14 @@ div{
   display: block;
 }
 
-button{
-  float: left;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: auto;
-  opacity: 0.9;
-  display: block;
-}
-
 input{
-  width: 95%;
+  width: 100%;
 }
 
 input[id="cargo"]{
-  width: 70%;
+  width: 76%;
 }
 
 input[id="gerente"]{
   width: auto;
-}
-
-.cancelar{
-  background-color: red;
-  margin-left: 18%;
-}
-
-.confirmar{
-  background-color: green;
 }

@@ -2,85 +2,71 @@
 
 <html lang="pt-BR">
 
-<head xmlns="">
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
 <body>
-<form>
+<form #funform="ngForm" ng (ngSubmit) = "Salvafun(funform)">
   <div>
     <img src="../../../assets/img/logo.png" alt="Boxit" width=100%>
     <h2 style="margin-top: 0px; margin-bottom: 5%; text-align: center ">Admin - Cadastro</h2>
   </div>
 
-  <div >
+  <div [class.has-error]="nomef.invalid && nomef.touched">
     <label for="nome" >Nome Completo</label><br>
-    <input type="text" required name="nome" id="nome" placeholder="Elio Bolognese Neto">
-  </div>
-
-  <div >
-    <label for="cpf" >CPF</label><br>
-    <input type="text" name="cpf" [spMask]="cpfMask" placeholder="123.456.789-11" [spKeepMask]="true" [(ngModel)]="cpf" [cpf]="cpf"
-           #cpfInput="ngModel" class="form-control" required id="cpf" [ngClass]="(cpfInput?.errors?.cpf) ? 'is-invalid' : ''">
-    <div class="invalid-feedback" *ngIf="cpfInput?.errors?.cpf && cpfInput.touched"> CPF Inválido</div>
-  </div>
-
-
-
-  <div >
-    <label for="celular" >Celular</label><br>
-    <input type="text" class="form-control" name="celular" [spMask]="phoneMask" placeholder="(33) 99848-6668" [spKeepMask]="true" required ngModel id="celular">
-  </div>
-
-  <div >
-    <label for= "email">E-mail</label><br>
-    <input type="text" name="email" required id="email" placeholder="eliobgz@gmail.com">
-  </div>
-
-  <div >
-    <label for="cargo">Cargo</label><br>
-    <input type="text" name="cargo" required id="cargo" placeholder="Estagiário">
-    <input type="checkbox" name="gerente" id="gerente" style="alignment: right">
-    <label for="gerente">Gerente</label>
-  </div>
-
-  <div class="form-group"
-       [class.has-error]="password.touched && password.invalid">
-    <label for="password" class="control-label">Password</label>
-    <input id="password" required type="text" class="form-control"
-           name="password" [(ngModel)]="employee.password"
-           #password="ngModel">
-    <span class="help-block"
-          *ngIf="password.touched && password.errors?.required">
-    Password is required
-  </span>
-  </div>
-
-  <div class="form-group"
-       [class.has-error]="confirmPassword.touched && confirmPassword.invalid">
-    <label for="confirmPassword" class="control-label">Confirm Password</label>
-    <input name="confirmPassword" appConfirmEqualValidator="password" required
-           id="confirmPassword" type="text" class="form-control"
-           [(ngModel)]="employee.confirmPassword" #confirmPassword="ngModel">
-    <span class="help-block"
-          *ngIf="confirmPassword.touched && confirmPassword.errors?.required">
-    Confirm Password is required
-  </span>
-    <span class="help-block"
-          *ngIf="confirmPassword.touched && confirmPassword.errors?.notEqual &&
-          !confirmPassword.errors?.required">
-    Password and Confirm Password does not match
-  </span>
+    <input type="text" required name="nome" id="nome" placeholder="Elio Bolognese Neto" [(ngModel)]="nome" #nomef="ngModel">
+    <div class="invalid-feedback" *ngIf="nomef.invalid && nomef.touched">Campo Obrigatório </div>
   </div>
 
   <div>
-    <button class="cancelar" type="submit"> Cancelar </button>
-    <button class="confirmar" type="submit"> Confirmar </button>
+    <label for="cpf" >CPF</label><br>
+    <input type="text" name="cpf" [spMask]="cpfMask" id="cpf" placeholder="123.456.789-11" [spKeepMask]="true" [(ngModel)]="cpf" [cpf]="cpf"
+           #cpff="ngModel" class="form-control" required [ngClass]="(cpff?.errors?.cpf) ? 'is-invalid' : ''">
+    <div class="invalid-feedback" *ngIf="cpff?.errors?.cpf && cpff.touched || (cpff.touched && cpff.invalid)"> CPF Inválido</div>
+  </div>
+
+
+
+  <div [class.has-error]="celularf">
+    <label for="celular" >Celular</label><br>
+    <input type="text" class="form-control" #celularf="ngModel" name="celular" maxlength="15" minlength="15" [(ngModel)]="celular" [spMask]="phoneMask" placeholder="(33) 99848-6668" [spKeepMask]="true" required ngModel id="celular">
+    <div class="invalid-feedback" *ngIf="celularf.invalid && celularf.touched">Número Inválido</div>
+  </div>
+
+  <div [class.has-error]="emailf.invalid && emailf.touched">
+    <label for= "email">E-mail</label><br>
+    <input type="text" name="email" required email id="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" [(ngModel)]="email" #emailf = "ngModel" placeholder="eliobgz@gmail.com">
+    <div class="invalid-feedback" *ngIf="emailf.invalid && emailf.touched">E-mail Inválido</div>
+  </div>
+
+  <div [class.has-error]="cargof.invalid && cargof.touched">
+    <label for="cargo">Cargo</label><br>
+    <input type="text" name="cargo" required id="cargo" [(ngModel)]="cargo" #cargof="ngModel" placeholder="Estagiário">
+    <input type="checkbox" name="gerente" id="gerente" [(ngModel)]="gerente" style="alignment: right">
+    <label for="gerente" style="width: 15%">Gerente</label>
+    <div class="invalid-feedback" *ngIf="cargof.invalid && cargof.touched">Campo Obrigatório </div>
+  </div>
+
+  <div [class.has-error]="senhaf.touched && senhaf.invalid">
+    <label for="senha" class="control-label">Senha</label><br>
+    <input id="senha" required type="text" name="senha" [(ngModel)]="senha" #senhaf="ngModel">
+    <div class="invalid-feedback" *ngIf="senhaf.touched && senhaf.invalid"> Campo Obrigatório  </div>
+  </div>
+
+  <div [class.has-error]="csenhaf.touched && csenhaf.invalid">
+    <label for="csenha" >Confirmar Senha</label>
+    <input name="csenha" appConfirmEqualValidator="password" required id="csenha" type="text" [(ngModel)]="csenha" #csenhaf="ngModel">
+    <div class="invalid-feedback" *ngIf="csenhaf.touched && csenhaf.invalid">Campo Obrigatório</div>
+    <div class="invalid-feedback" *ngIf="csenhaf.touched && csenhaf.errors?.notEqual && !ccsenhaf.errors?.required">Password and Confirm Password does not match</div>
+  </div>
+
+  <div>
+    <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="funform.invalid" style="text-align: center" > Enviar </button>
   </div>
 
 </form>
-
-<br><br><br>
+<br>
 <h4 style="text-align: center">Após preencher, clique no botão abaixo para receber<span class="text-danger">*</span> o seu código de usuário no e-mail cadastrado</h4>
 <h5 style="margin-top: -1%; text-align: center"><span class="text-danger">*</span>Prazo de 24h a confirmação de cadastro e envio de e-mail</h5>
 

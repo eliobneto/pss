@@ -11,7 +11,7 @@ import {ConfirmEqualValidatorDirective} from "./create/confirm-equal-validator.d
     CommonModule,
     CpfCnpjModule,
     FormsModule,
-    MaskModule
+    MaskModule,
   ],
   declarations: [
     CreateComponent,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MyMaskUtil} from '../../mask/my-mask.util';
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-gerente-create',
@@ -14,6 +15,10 @@ export class CreateComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  Salvafun(funform: NgForm): void{
+    console.log(funform);
   }
 
 }
