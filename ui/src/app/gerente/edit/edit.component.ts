@@ -1,18 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {MyMaskUtil} from '../../mask/my-mask.util';
-import {NgForm,AbstractControl} from "@angular/forms";
+import {AbstractControl, NgForm} from "@angular/forms";
 
 @Component({
-  selector: 'app-gerente-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  selector: 'app-gerente-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.css']
 })
-export class CreateComponent implements OnInit {
-  public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
-  public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
+export class EditComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit() {
   }
@@ -38,11 +34,12 @@ export class CreateComponent implements OnInit {
     var res;
     res = true;
     if(res==true){
-      alert("Cadastro concluido com sucesso");
+      alert("Edição concluida com sucesso");
       history.go(-1);
     }
     else{
       alert("Erro na validação com o servidor")
     }
   }
+
 }

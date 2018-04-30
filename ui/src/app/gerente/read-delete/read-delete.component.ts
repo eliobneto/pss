@@ -22,4 +22,13 @@ export class ReadDeleteComponent implements OnInit {
   ngOnInit() {
   }
 
+  confirmaex() {
+    if(confirm("Vocẽ tem certerza que deseja excluir!\nEssa ação não poderá ser desfeita") == true){
+      history.go(0);
+    }
+  }
+
+  edita(){
+    window.location.href = "https://www.google.com/";
+  }
 }

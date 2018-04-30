@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+  <head>
+
+  </head>
+
+  <body>
+    <form #funform="ngForm" ng (ngSubmit) = "Salvafun(funform)">
+      <div>
+        <img src="../../../assets/img/logo.png" alt="Boxit" width=100%>
+        <h2 style="margin-top: 0px; margin-bottom: 5%; text-align: center ">Admin - Editar Cadastro</h2>
+      </div>
+
+      <div [class.has-error]="nomef.invalid && nomef.touched">
+        <label for="nome" >Nome Completo</label><br>
+        <input type="text" required name="nome" id="nome" placeholder="Elio Bolognese Neto" [(ngModel)]="nome" #nomef="ngModel">
+        <div class="invalid-feedback" *ngIf="nomef.invalid && nomef.touched">Campo Obrigatório </div>
+      </div>
+
+      <div>
+        <label for="cpf" >CPF</label><br>
+        <input type="text" name="cpf" [spMask]="cpfMask" id="cpf" placeholder="123.456.789-11" [spKeepMask]="true" [(ngModel)]="cpf" [cpf]="cpf"
+               #cpff="ngModel" class="form-control" required [ngClass]="(cpff?.errors?.cpf) ? 'is-invalid' : ''">
+        <div class="invalid-feedback" *ngIf="cpff?.errors?.cpf && cpff.touched || (cpff.touched && cpff.invalid)"> CPF Inválido</div>
+      </div>
+
+
+
+      <div [class.has-error]="celularf">
+        <label for="celular" >Celular</label><br>
+        <input type="text" class="form-control" #celularf="ngModel" name="celular" maxlength="15" minlength="15" [(ngModel)]="celular" [spMask]="phoneMask" placeholder="(33) 99848-6668" [spKeepMask]="true" required ngModel id="celular">
+        <div class="invalid-feedback" *ngIf="celularf.invalid && celularf.touched">Número Inválido</div>
+      </div>
+
+      <div [class.has-error]="emailf.invalid && emailf.touched">
+        <label for= "email">E-mail</label><br>
+        <input type="text" name="email" required email id="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" [(ngModel)]="email" #emailf = "ngModel" placeholder="eliobgz@gmail.com">
+        <div class="invalid-feedback" *ngIf="emailf.invalid && emailf.touched">E-mail Inválido</div>
+      </div>
+
+      <div [class.has-error]="cargof.invalid && cargof.touched">
+        <label for="cargo">Cargo</label><br>
+        <input type="text" [disabled]="valida(funform)" name="cargo" required id="cargo" [(ngModel)]="cargo" #cargof="ngModel" placeholder="Estagiário">
+        <input type="checkbox" [(ngModel)]="gerente" #gerentef="ngModel" name="gerente" id="gerente" [(ngModel)]="gerente" style="alignment: right">
+        <label for="gerente" style="width: 15%">Gerente</label>
+        <div class="invalid-feedback" *ngIf="cargof.invalid && cargof.touched">Campo Obrigatório </div>
+      </div>
+
+      <div [class.has-error]="senhaf.touched && senhaf.invalid">
+        <label for="senha" class="control-label">Senha</label><br>
+        <input id="senha" required type="password" name="senha" [(ngModel)]="senha" #senhaf="ngModel">
+        <div class="invalid-feedback" *ngIf="senhaf.touched && senhaf.invalid"> Camgipo Obrigatório  </div>
+      </div>
+
+      <div [class.has-error]="csenhaf.touched && csenhaf.invalid">
+        <label for="csenha" >Confirmar Senha</label>
+        <input name="csenha" required id="csenha" type="password" [(ngModel)]="csenha" #csenhaf="ngModel">
+        <div class="invalid-feedback" *ngIf="csenhaf.touched && csenhaf.invalid">Campo Obrigatório</div>
+        <div class="invalid-feedback" *ngIf="csenhaf.touched && confirmasenha(funform,csenhaf)">As senhas não conferem</div>
+      </div>
+
+      <div>
+        <button class="btn btn-primary btn-lg btn-block" (click)="confirma()" type="submit" [disabled]="funform.invalid" style="text-align: center" > Enviar </button>
+      </div>
+
+    </form>
+
+  </body>
+</html>

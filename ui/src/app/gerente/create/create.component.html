@@ -10,7 +10,7 @@
 <form #funform="ngForm" ng (ngSubmit) = "Salvafun(funform)">
   <div>
     <img src="../../../assets/img/logo.png" alt="Boxit" width=100%>
-    <h2 style="margin-top: 0px; margin-bottom: 5%; text-align: center ">Admin - Cadastro</h2>
+    <h2 style="margin-top: 0px; margin-bottom: 5%; text-align: center ">Admin - Cadastro de Funcionário</h2>
   </div>
 
   <div [class.has-error]="nomef.invalid && nomef.touched">
@@ -42,34 +42,33 @@
 
   <div [class.has-error]="cargof.invalid && cargof.touched">
     <label for="cargo">Cargo</label><br>
-    <input type="text" name="cargo" required id="cargo" [(ngModel)]="cargo" #cargof="ngModel" placeholder="Estagiário">
-    <input type="checkbox" name="gerente" id="gerente" [(ngModel)]="gerente" style="alignment: right">
+    <input type="text" [disabled]="valida(funform)" name="cargo" required id="cargo" [(ngModel)]="cargo" #cargof="ngModel" placeholder="Estagiário">
+    <input type="checkbox" [(ngModel)]="gerente" #gerentef="ngModel" name="gerente" id="gerente" [(ngModel)]="gerente" style="alignment: right">
     <label for="gerente" style="width: 15%">Gerente</label>
     <div class="invalid-feedback" *ngIf="cargof.invalid && cargof.touched">Campo Obrigatório </div>
   </div>
 
   <div [class.has-error]="senhaf.touched && senhaf.invalid">
     <label for="senha" class="control-label">Senha</label><br>
-    <input id="senha" required type="text" name="senha" [(ngModel)]="senha" #senhaf="ngModel">
+    <input id="senha" required type="password" name="senha" [(ngModel)]="senha" #senhaf="ngModel">
     <div class="invalid-feedback" *ngIf="senhaf.touched && senhaf.invalid"> Camgipo Obrigatório  </div>
   </div>
 
   <div [class.has-error]="csenhaf.touched && csenhaf.invalid">
     <label for="csenha" >Confirmar Senha</label>
-    <input name="csenha" appConfirmEqualValidator="password" required id="csenha" type="text" [(ngModel)]="csenha" #csenhaf="ngModel">
+    <input name="csenha" required id="csenha" type="password" [(ngModel)]="csenha" #csenhaf="ngModel">
     <div class="invalid-feedback" *ngIf="csenhaf.touched && csenhaf.invalid">Campo Obrigatório</div>
-    <div class="invalid-feedback" *ngIf="csenhaf.touched && csenhaf.errors?.notEqual && !ccsenhaf.errors?.required">Password and Confirm Password does not match</div>
+    <div class="invalid-feedback" *ngIf="csenhaf.touched && confirmasenha(funform,csenhaf)">As senhas não conferem</div>
   </div>
 
   <div>
-    <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="funform.invalid" style="text-align: center" > Enviar </button>
+    <button class="btn btn-primary btn-lg btn-block" (click)="confirma()" type="submit" [disabled]="funform.invalid" style="text-align: center" > Enviar </button>
   </div>
 
 </form>
 <br>
 <h4 style="text-align: center">Após preencher, clique no botão abaixo para receber<span class="text-danger">*</span> o seu código de usuário no e-mail cadastrado</h4>
 <h5 style="margin-top: -1%; text-align: center"><span class="text-danger">*</span>Prazo de 24h a confirmação de cadastro e envio de e-mail</h5>
-
 </body>
 
 </html>
