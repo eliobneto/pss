@@ -5,6 +5,7 @@ import com.lelo452.boxitapiv2.dto.CategoriaDTO;
 import com.lelo452.boxitapiv2.dto.CategoriaNewDTO;
 import com.lelo452.boxitapiv2.services.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -13,7 +14,10 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/categorias")
+@RequestMapping(
+        value = "/categorias",
+        produces = MediaType.APPLICATION_JSON_UTF8_VALUE
+)
 public class CategoriaRS {
 
     @Autowired

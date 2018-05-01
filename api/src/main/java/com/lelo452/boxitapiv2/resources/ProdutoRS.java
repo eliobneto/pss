@@ -5,6 +5,7 @@ import com.lelo452.boxitapiv2.dto.ProdutoDTO;
 import com.lelo452.boxitapiv2.dto.ProdutoNewDTO;
 import com.lelo452.boxitapiv2.services.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -13,7 +14,10 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping(
+        value = "/produtos",
+        produces = MediaType.APPLICATION_JSON_UTF8_VALUE
+)
 public class ProdutoRS {
 
     @Autowired
