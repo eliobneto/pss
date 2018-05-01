@@ -32,6 +32,7 @@ public abstract class Usuario implements Serializable {
     @JsonIgnore
     private String password;
     private Boolean active;
+    private Integer perfil;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Endereco> enderecos = new ArrayList<>();
@@ -40,23 +41,29 @@ public abstract class Usuario implements Serializable {
     @CollectionTable(name = "telefone")
     private Set<String> telefones = new HashSet<>();
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "perfis")
-    private Set<Integer> perfis = new HashSet<>();
-
-    public Usuario(String nome, String email, String password, Boolean active) {
+    public Usuario(Integer id, String nome, String email, String password, Boolean active, Perfil perfil) {
+        this.id = id;
         this.nome = nome;
         this.email = email;
         this.password = password;
         this.active = active;
+        this.perfil = perfil.getCod();
     }
 
-    public Set<Perfil> getPerfis() {
-        return perfis.stream().map(Perfil::toEnum).collect(Collectors.toSet());
+    public Usuario(String nome, String email, String password, Boolean active, Perfil perfil) {
+        this.nome = nome;
+        this.email = email;
+        this.password = password;
+        this.active = active;
+        this.perfil = perfil.getCod();
     }
 
-    public void addPerfil(Perfil perfil) {
-        perfis.add(perfil.getCod());
+    public Perfil getPerfil() {
+        return Perfil.toEnum(perfil);
+    }
+
+    public void setPerfil(Integer perfil) {
+        this.perfil = perfil;
     }
 
     @Override
