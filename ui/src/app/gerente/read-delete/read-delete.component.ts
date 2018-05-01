@@ -27,8 +27,4 @@ export class ReadDeleteComponent implements OnInit {
       history.go(0);
     }
   }
-
-  edita(){
-    window.location.href = "https://www.google.com/";
-  }
 }

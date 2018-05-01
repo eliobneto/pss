@@ -1,1 +1,14 @@
-<app-read-delete></app-read-delete>
+<nav class="navbar navbar-expand-lg" style="background-color: black; color: white">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" style="color: white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Funcionários
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" routerLink="create">Cadastrar</a>
+        <a class="dropdown-item" routerLink="read">Lista</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

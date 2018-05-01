@@ -3,7 +3,6 @@ import {MyMaskUtil} from '../../mask/my-mask.util';
 import {NgForm,AbstractControl} from "@angular/forms";
 
 @Component({
-  selector: 'app-gerente-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })

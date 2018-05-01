@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <div style="margin: 0 auto; margin-top: 2%; margin-bottom: 5%; width: 345px; color: white;">
+    <div style="margin: 0 auto; margin-top:1%; position: relative; display: block; margin-bottom: 3%; width: 345px; color: white;">
       <img src="../../../assets/img/logo.png" alt="Boxit" width=100%>
       <h2 style="margin-top: 0px; text-align: center ">Admin - Funcionários</h2>
     </div>
@@ -18,7 +18,7 @@
         <h3> {{funcionario.nome}}</h3>
        </div>
        <div class="col-sm-1">
-         <button class="btn btn-success" (click)="edita()">Editar</button>
+         <button class="btn btn-success" routerLink="edit">Editar</button>
        </div>
        <div class="col-sm-1">
          <button class="btn btn-danger" (click)="confirmaex()">Excluir</button>
