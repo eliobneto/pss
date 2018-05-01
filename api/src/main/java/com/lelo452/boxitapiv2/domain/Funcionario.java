@@ -25,4 +25,9 @@ public class Funcionario extends Usuario {
         super(id, nome, email, password, active, perfil, gerente);
         this.cpf = cpf;
     }
+
+    public Funcionario(Integer id, String nome, String email, Boolean active, String perfil, Boolean gerente, @CPF String cpf) {
+        super(id, nome, email, active, perfil, gerente);
+        this.cpf = cpf;
+    }
 }

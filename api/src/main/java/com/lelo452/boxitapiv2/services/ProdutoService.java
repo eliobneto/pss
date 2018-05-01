@@ -39,14 +39,14 @@ public class ProdutoService {
         return repo.findAll().parallelStream().map(toDTO).collect(Collectors.toList());
     }
 
-    public Produto insert(ProdutoNewDTO dto) {
+    public ProdutoDTO insert(ProdutoNewDTO dto) {
         Produto obj = fromDTO(dto);
-        return repo.save(obj);
+        return toDTO.apply(repo.save(obj));
     }
 
-    public Produto update(ProdutoDTO dto) {
+    public ProdutoDTO update(ProdutoDTO dto) {
         Produto obj = fromDTO(dto);
-        return repo.save(obj);
+        return toDTO.apply(repo.save(obj));
     }
 
     public void delete(Integer id) {

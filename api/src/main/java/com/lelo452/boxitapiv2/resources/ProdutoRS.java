@@ -37,10 +37,16 @@ public class ProdutoRS {
 
     @PostMapping
     public ResponseEntity<Void> insert(@RequestBody ProdutoNewDTO dto) {
-        Produto obj = service.insert(dto);
+        ProdutoDTO obj = service.insert(dto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(obj.getId()).toUri();
         return ResponseEntity.created(uri).build();
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ProdutoDTO> update(@PathVariable Integer id, @RequestBody ProdutoDTO dto) {
+        ProdutoDTO obj = service.update(dto);
+        return ResponseEntity.ok(obj);
     }
 
     @DeleteMapping("/{id}")

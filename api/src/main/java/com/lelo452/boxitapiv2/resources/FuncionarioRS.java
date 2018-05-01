@@ -1,7 +1,6 @@
 package com.lelo452.boxitapiv2.resources;
 
-import com.lelo452.boxitapiv2.domain.Funcionario;
-import com.lelo452.boxitapiv2.dto.FuncionarioListDTO;
+import com.lelo452.boxitapiv2.dto.FuncionarioDTO;
 import com.lelo452.boxitapiv2.dto.FuncionarioNewDTO;
 import com.lelo452.boxitapiv2.services.FuncionarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,23 +23,29 @@ public class FuncionarioRS {
     private FuncionarioService service;
 
     @GetMapping
-    public ResponseEntity<List<FuncionarioListDTO>> findAll() {
-        List<FuncionarioListDTO> dto = service.findAll();
+    public ResponseEntity<List<FuncionarioDTO>> findAll() {
+        List<FuncionarioDTO> dto = service.findAll();
         return ResponseEntity.ok(dto);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<FuncionarioListDTO> finOne(@PathVariable Integer id) {
-        FuncionarioListDTO dto = service.find(id);
+    public ResponseEntity<FuncionarioDTO> finOne(@PathVariable Integer id) {
+        FuncionarioDTO dto = service.find(id);
         return ResponseEntity.ok(dto);
     }
 
     @PostMapping
     public ResponseEntity<Void> insert(@RequestBody FuncionarioNewDTO dto) {
-        Funcionario obj = service.insert(dto);
+        FuncionarioDTO obj = service.insert(dto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(obj.getId()).toUri();
         return ResponseEntity.created(uri).build();
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<FuncionarioDTO> update(@PathVariable Integer id, @RequestBody FuncionarioDTO dto) {
+        FuncionarioDTO obj = service.update(dto);
+        return ResponseEntity.ok(obj);
     }
 
     @DeleteMapping("/{id}")

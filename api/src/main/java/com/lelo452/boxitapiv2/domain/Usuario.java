@@ -50,6 +50,15 @@ public abstract class Usuario implements Serializable {
         this.gerente = gerente;
     }
 
+    public Usuario(Integer id, String nome, String email, Boolean active, String cargo, Boolean gerente) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.active = active;
+        this.cargo = cargo;
+        this.gerente = gerente;
+    }
+
     public Usuario(String nome, String email, String password, Boolean active, String cargo, Boolean gerente) {
         this.nome = nome;
         this.email = email;
