@@ -6,13 +6,21 @@ import {FormsModule} from '@angular/forms';
 import {MaskModule} from '../mask/mask.module';
 import {ReadDeleteComponent} from './read-delete/read-delete.component';
 import {EditComponent} from './edit/edit.component';
+import {RouterModule, Routes} from "@angular/router";
+import {BrowserModule} from "@angular/platform-browser";
+
+const appRoutes: Routes = [
+  { path: '../edit', component: EditComponent}
+];
 
 @NgModule({
   imports: [
     CommonModule,
     CpfCnpjModule,
     FormsModule,
-    MaskModule
+    MaskModule,
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   declarations: [
     CreateComponent,
