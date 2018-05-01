@@ -1,6 +1,5 @@
 package com.lelo452.boxitapiv2.dto;
 
-import com.lelo452.boxitapiv2.domain.enums.Perfil;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,7 +17,7 @@ public class FuncionarioDTO implements Serializable {
     private String cpf;
     private String telefone;
     private String email;
-    private Perfil cargo;
+    private String cargo;
     private String password;
-    private String cpassword;
+    private Boolean gerente;
 }

@@ -9,15 +9,14 @@ import java.io.Serializable;
 @Getter
 @Setter
 @NoArgsConstructor
-public class FuncionarioNewDTO implements Serializable {
+public class FuncionarioListDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    private Integer id;
     private String nome;
     private String cpf;
     private String telefone;
     private String email;
     private String cargo;
-    private String password;
-    private String cpassword;
     private Boolean gerente;
 }

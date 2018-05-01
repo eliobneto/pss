@@ -2,6 +2,7 @@ package com.lelo452.boxitapiv2.resources;
 
 import com.lelo452.boxitapiv2.domain.Funcionario;
 import com.lelo452.boxitapiv2.dto.FuncionarioDTO;
+import com.lelo452.boxitapiv2.dto.FuncionarioListDTO;
 import com.lelo452.boxitapiv2.dto.FuncionarioNewDTO;
 import com.lelo452.boxitapiv2.services.FuncionarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +21,14 @@ public class FuncionarioRS {
     private FuncionarioService service;
 
     @GetMapping
-    public ResponseEntity<List<FuncionarioDTO>> findAll() {
-        List<FuncionarioDTO> dto = service.findAll();
+    public ResponseEntity<List<FuncionarioListDTO>> findAll() {
+        List<FuncionarioListDTO> dto = service.findAll();
         return ResponseEntity.ok(dto);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<FuncionarioDTO> finOne(@PathVariable Integer id) {
-        FuncionarioDTO dto = service.find(id);
+    public ResponseEntity<FuncionarioListDTO> finOne(@PathVariable Integer id) {
+        FuncionarioListDTO dto = service.find(id);
         return ResponseEntity.ok(dto);
     }
 

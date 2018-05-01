@@ -2,17 +2,15 @@ package com.lelo452.boxitapiv2.services;
 
 import com.lelo452.boxitapiv2.domain.Funcionario;
 import com.lelo452.boxitapiv2.domain.Produto;
-import com.lelo452.boxitapiv2.domain.enums.Perfil;
 import com.lelo452.boxitapiv2.dto.FuncionarioDTO;
+import com.lelo452.boxitapiv2.dto.FuncionarioListDTO;
 import com.lelo452.boxitapiv2.dto.FuncionarioNewDTO;
 import com.lelo452.boxitapiv2.repository.FuncionarioRepository;
 import com.lelo452.boxitapiv2.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -22,21 +20,17 @@ public class FuncionarioService {
     @Autowired
     private FuncionarioRepository repo;
 
-    public FuncionarioDTO find(Integer id) {
-        Optional<FuncionarioDTO> obj = repo.findById(id).map(toDTO);
+    public FuncionarioListDTO find(Integer id) {
+        Optional<FuncionarioListDTO> obj = repo.findById(id).map(toDTO);
         return obj.orElseThrow(() -> new ObjectNotFoundException(
                 "Objeto não encontrado! Id: " + id + ", Tipo: " + Produto.class.getName()));
     }
 
-    public List<FuncionarioDTO> findAll() {
+    public List<FuncionarioListDTO> findAll() {
         return repo.findAll().parallelStream().map(toDTO).collect(Collectors.toList());
     }
 
     public Funcionario insert(FuncionarioNewDTO dto) {
-        List<Funcionario> funcs = repo.findAllByActiveAndPerfil(true, Perfil.GERENTE);
-        if((dto.getCargo().equals(Perfil.GERENTE)) && (funcs.size() > 1)) {
-            return null;
-        }
         Funcionario obj = fromDTO(dto);
         return repo.save(obj);
     }
@@ -52,21 +46,31 @@ public class FuncionarioService {
     }
 
     private Funcionario fromDTO(FuncionarioDTO dto) {
-        return new Funcionario(dto.getId(), dto.getNome(), dto.getEmail(), dto.getPassword(), false, dto.getCpf(), null, dto.getCargo());
+        Funcionario f = new Funcionario(dto.getId(), dto.getNome(), dto.getEmail(), dto.getPassword(), false, dto.getCargo(), dto.getGerente(), dto.getCpf());
+        Set<String> fones = new HashSet<>();
+        fones.add(dto.getTelefone());
+        f.setTelefones(fones);
+        return f;
     }
 
     private Funcionario fromDTO(FuncionarioNewDTO dto) {
-        return new Funcionario(null, dto.getNome(), dto.getEmail(), dto.getPassword(), false, dto.getCpf(), null, dto.getCargo());
+        Funcionario f = new Funcionario(null, dto.getNome(), dto.getEmail(), dto.getPassword(), false, dto.getCargo(), dto.getGerente(), dto.getCpf());
+        Set<String> fones = new HashSet<>();
+        fones.add(dto.getTelefone());
+        f.setTelefones(fones);
+        return f;
     }
 
-    private Function<Funcionario, FuncionarioDTO> toDTO = (f) -> {
-        FuncionarioDTO dto = new FuncionarioDTO();
+    private Function<Funcionario, FuncionarioListDTO> toDTO = (f) -> {
+        FuncionarioListDTO dto = new FuncionarioListDTO();
         dto.setId(f.getId());
         dto.setNome(f.getNome());
         dto.setEmail(f.getEmail());
-        dto.setPassword(f.getPassword());
         dto.setCpf(f.getCpf());
-        dto.setCargo(f.getPerfil());
+        dto.setCargo(f.getCargo());
+        dto.setGerente(f.getGerente());
+        List<String> t = new ArrayList<>(f.getTelefones());
+        dto.setTelefone(t.get(0));
         return dto;
     };
 

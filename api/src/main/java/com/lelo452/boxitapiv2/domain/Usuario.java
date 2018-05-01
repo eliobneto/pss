@@ -1,7 +1,6 @@
 package com.lelo452.boxitapiv2.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.lelo452.boxitapiv2.domain.enums.Perfil;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,7 +10,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Entity
 @Data
@@ -32,38 +30,41 @@ public abstract class Usuario implements Serializable {
     @JsonIgnore
     private String password;
     private Boolean active;
-    private Integer perfil;
+    private String cargo;
+    private Boolean gerente;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Endereco> enderecos = new ArrayList<>();
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "telefone")
     private Set<String> telefones = new HashSet<>();
 
-    public Usuario(Integer id, String nome, String email, String password, Boolean active, Perfil perfil) {
+    public Usuario(Integer id, String nome, String email, String password, Boolean active, String cargo, Boolean gerente) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.password = password;
         this.active = active;
-        this.perfil = perfil.getCod();
+        this.cargo = cargo;
+        this.gerente = gerente;
     }
 
-    public Usuario(String nome, String email, String password, Boolean active, Perfil perfil) {
+    public Usuario(String nome, String email, String password, Boolean active, String cargo, Boolean gerente) {
         this.nome = nome;
         this.email = email;
         this.password = password;
         this.active = active;
-        this.perfil = perfil.getCod();
+        this.cargo = cargo;
+        this.gerente = gerente;
     }
 
-    public Perfil getPerfil() {
-        return Perfil.toEnum(perfil);
+    public String getCargo() {
+        return cargo;
     }
 
-    public void setPerfil(Integer perfil) {
-        this.perfil = perfil;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
     @Override

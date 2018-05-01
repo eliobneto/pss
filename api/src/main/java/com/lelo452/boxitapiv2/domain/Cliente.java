@@ -2,7 +2,6 @@ package com.lelo452.boxitapiv2.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonTypeName;
-import com.lelo452.boxitapiv2.domain.enums.Perfil;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.br.CNPJ;
@@ -33,8 +32,8 @@ public class Cliente extends Usuario {
 
     }
 
-    public Cliente(String nome, String email, String password, Boolean active, String nomeFantasia, @CNPJ String cnpj, Perfil perfil) {
-        super(nome, email, password, active, perfil);
+    public Cliente(String nome, String email, String password, Boolean active, String nomeFantasia, @CNPJ String cnpj, String perfil) {
+        super(nome, email, password, active, perfil, false);
         this.nomeFantasia = nomeFantasia;
         this.cnpj = cnpj;
     }
