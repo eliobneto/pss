@@ -10,7 +10,7 @@ import {EditComponent} from "./gerente/edit/edit.component";
 const appRoutes: Routes = [
   { path: 'create', component: CreateComponent},
   { path: 'read', component: ReadDeleteComponent},
-  { path: 'gerente/edit', component: EditComponent}
+  { path: '../edit', component: EditComponent}
   ];
 
 @NgModule({

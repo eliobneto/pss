@@ -10,7 +10,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {BrowserModule} from "@angular/platform-browser";
 
 const appRoutes: Routes = [
-  { path: '../edit', component: EditComponent}
+  { path: 'edit', component: EditComponent}
 ];
 
 @NgModule({

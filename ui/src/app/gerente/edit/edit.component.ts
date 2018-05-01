@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import {AbstractControl, NgForm} from "@angular/forms";
+import {MyMaskUtil} from '../../mask/my-mask.util';
+import {NgForm,AbstractControl} from "@angular/forms";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
-  selector: 'app-gerente-edit',
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+  public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
+  public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
@@ -41,5 +45,4 @@ export class EditComponent implements OnInit {
       alert("Erro na validação com o servidor")
     }
   }
-
 }
