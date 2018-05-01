@@ -1,11 +1,11 @@
 package com.lelo452.boxitapiv2.services;
 
 import com.lelo452.boxitapiv2.domain.Categoria;
+import com.lelo452.boxitapiv2.dto.CategoriaDTO;
+import com.lelo452.boxitapiv2.dto.CategoriaNewDTO;
 import com.lelo452.boxitapiv2.repository.CategoriaRepository;
-import com.lelo452.boxitapiv2.services.exceptions.DataIntegrityException;
 import com.lelo452.boxitapiv2.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Service
 public class CategoriaService {
@@ -20,35 +22,29 @@ public class CategoriaService {
     @Autowired
     private CategoriaRepository repo;
 
-    public Categoria find(Integer id) {
-        Optional<Categoria> obj = repo.findById(id);
+    public CategoriaDTO find(Integer id) {
+        Optional<CategoriaDTO> obj = repo.findById(id).map(toDTO);
         return obj.orElseThrow(() -> new ObjectNotFoundException(
                 "Objeto não encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
     }
 
-    public Categoria insert(Categoria obj) {
-        obj.setId(null);
+    public Categoria insert(CategoriaNewDTO dto) {
+        Categoria obj = fromDTO(dto);
         return repo.save(obj);
     }
 
-    public Categoria update(Categoria obj) {
-        Categoria newObj = find(obj.getId());
-        updateData(newObj, obj);
-        return repo.save(newObj);
+    public Categoria update(CategoriaDTO dto) {
+        Categoria obj = fromDTO(dto);
+        return repo.save(obj);
     }
 
     public void delete(Integer id) {
         find(id);
-        try {
-            repo.deleteById(id);
-        }
-        catch (DataIntegrityViolationException e) {
-            throw new DataIntegrityException("Não é possível excluir uma categoria que possui produtos");
-        }
+        repo.deleteById(id);
     }
 
-    public List<Categoria> findAll() {
-        return repo.findAll();
+    public List<CategoriaDTO> findAll() {
+        return repo.findAll().parallelStream().map(toDTO).collect(Collectors.toList());
     }
 
     public Page<Categoria> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
@@ -56,8 +52,19 @@ public class CategoriaService {
         return repo.findAll(pageRequest);
     }
 
-    private void updateData(Categoria newObj, Categoria obj) {
-        newObj.setNome(obj.getNome());
+    private Categoria fromDTO(CategoriaDTO dto) {
+        return new Categoria(dto.getId(), dto.getNome());
     }
+
+    private Categoria fromDTO(CategoriaNewDTO dto) {
+        return new Categoria(null, dto.getNome());
+    }
+
+    private Function<Categoria, CategoriaDTO> toDTO = (c) -> {
+        CategoriaDTO dto = new CategoriaDTO();
+        dto.setId(c.getId());
+        dto.setNome(c.getNome());
+        return dto;
+    };
 
 }
