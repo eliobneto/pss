@@ -65,13 +65,13 @@
       <div class="col-12 col-md-6">
         <label for="cargo">Cargo</label>
         <div class="row">
-          <div class="col-8">
+          <div class="col-8 col-md-10">
             <input type="text" [disabled]="valida(funform)" name="cargo" required id="cargo" [(ngModel)]="cargo"
                    #cargof="ngModel" placeholder="Estagiário"
                    [ngClass]="(cargof.invalid && cargof.touched) ? 'is-invalid' : ''" class="form-control">
             <div class="invalid-feedback" *ngIf="cargof.invalid && cargof.touched">Campo Obrigatório</div>
           </div>
-          <div class="col-4" style="padding-left: 0;">
+          <div class="col-4 col-md-2" style="padding-left: 0;">
             <input type="checkbox" [(ngModel)]="gerente" #gerentef="ngModel" name="gerente" id="gerente"
                    [(ngModel)]="gerente"
                    style="alignment: right">
