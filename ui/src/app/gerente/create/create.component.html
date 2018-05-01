@@ -54,6 +54,7 @@
         <label for="email">E-mail</label>
         <input type="email" name="email" required email id="email"
                [(ngModel)]="email" #emailf="ngModel" email
+               pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
                placeholder="eliobgz@gmail.com" [ngClass]="(emailf.invalid && emailf.touched) ? 'is-invalid' : ''"
                class="form-control">
         <div class="invalid-feedback" *ngIf="emailf.invalid && emailf.touched">E-mail Inválido</div>
@@ -99,7 +100,7 @@
       <div class="col-12 col-md-6">
         <label for="csenha">Confirmar Senha</label>
         <input name="csenha" required id="csenha" type="password" [(ngModel)]="csenha" #csenhaf="ngModel"
-               [ngClass]="(csenhaf.invalid && csenhaf.touched) ? 'is-invalid' : ''"
+               [ngClass]="(csenhaf.invalid && csenhaf.touched) || (confirmasenha(funform,csenhaf)) ? 'is-invalid' : ''"
                class="form-control">
         <div class="invalid-feedback" *ngIf="csenhaf.touched && csenhaf.invalid">Campo Obrigatório</div>
         <div class="invalid-feedback" *ngIf="csenhaf.touched && confirmasenha(funform,csenhaf)">As senhas não conferem

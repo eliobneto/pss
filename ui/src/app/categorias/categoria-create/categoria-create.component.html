@@ -1,3 +1,35 @@
-<p>
-  categoria-create works!
-</p>
+<div class="container-fluid bg-admin">
+  <div class="row">
+    <div class="col-6">
+      <img src="assets/img/icon.png" alt="Boxit" height="80px" width="auto" style="float: right;">
+    </div>
+    <div class="col-6 justify-content-start align-middle">
+      <h1 class="logo-text-space">BoxIt</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="text-center">Nova categoria</h1>
+    </div>
+  </div>
+  <div *ngIf="error" class="alert alert-danger" role="alert">{{msg}}</div>
+  <form #f="ngForm">
+    <div class="row">
+      <div class="col-12 col-md-4"></div>
+      <div class="col-12 col-md-4">
+        <label>Nome<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" placeholder="example"
+               name="name" ngModel required [minlength]="2" #nameInput="ngModel"/>
+      </div>
+      <div class="col-12 col-md-4"></div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-12 col-md-4"></div>
+      <div class="col-12 col-md-4">
+        <button [disabled]="f.invalid" type="button" class="btn btn-primary btn-block" (click)="cadastrar(nameInput.value)">Cadastrar</button>
+      </div>
+      <div class="col-12 col-md-4"></div>
+    </div>
+  </form>
+</div>

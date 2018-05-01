@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CategoriasService} from '../categorias.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-categoria-create',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categoria-create.component.css']
 })
 export class CategoriaCreateComponent implements OnInit {
+  msg: string;
+  error = false;
 
-  constructor() { }
+  constructor(
+    private service: CategoriasService,
+    private route: Router
+  ) { }
 
   ngOnInit() {
   }
 
+  cadastrar(nome: string) {
+    this.service.create(nome).subscribe(
+      (s: Response) => {
+        this.error = false;
+        this.route.navigate(['/categorias']);
+      }, (e) => {
+        this.error = true;
+        this.msg = e['message'];
+      }
+    );
+  }
 }
