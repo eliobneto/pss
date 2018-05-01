@@ -28,14 +28,14 @@ public class CategoriaService {
                 "Objeto não encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
     }
 
-    public Categoria insert(CategoriaNewDTO dto) {
+    public CategoriaDTO insert(CategoriaNewDTO dto) {
         Categoria obj = fromDTO(dto);
-        return repo.save(obj);
+        return toDTO.apply(repo.save(obj));
     }
 
-    public Categoria update(CategoriaDTO dto) {
+    public CategoriaDTO update(CategoriaDTO dto) {
         Categoria obj = fromDTO(dto);
-        return repo.save(obj);
+        return toDTO.apply(repo.save(obj));
     }
 
     public void delete(Integer id) {
