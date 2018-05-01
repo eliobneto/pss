@@ -1,14 +1,20 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CreateComponent } from './create/create.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {CategoriaCreateComponent} from './categoria-create/categoria-create.component';
+import {CategoriaListComponent} from './categoria-list/categoria-list.component';
+import {RouterModule} from '@angular/router';
+import {CategoriaRouting} from './categoria.routing';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    CategoriaRouting
   ],
-  declarations: [CreateComponent],
-  exports: [
-    CreateComponent
-  ]
+  declarations: [
+    CategoriaCreateComponent,
+    CategoriaListComponent
+  ],
+  exports: []
 })
-export class CategoriasModule { }
+export class CategoriasModule {}

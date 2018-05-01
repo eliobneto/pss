@@ -2,7 +2,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {CategoriasModule} from './categorias/categorias.module';
+import {CoreModule} from './core/core.module';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import {CategoriasModule} from './categorias/categorias.module';
   ],
   imports: [
     BrowserModule,
-    CategoriasModule
+    CoreModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
