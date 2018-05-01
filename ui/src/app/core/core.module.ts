@@ -7,14 +7,18 @@ import localePt from '@angular/common/locales/pt';
 import {HttpClient} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {NavbarComponent} from './navbar/navbar.component';
+import {GerenteModule} from '../gerente/gerente.module';
+import {AppRouting} from '../app.routing';
 
 registerLocaleData(localePt, 'pt-BR');
 
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
+    AppRouting,
     CategoriasModule,
-    RouterModule
+    GerenteModule
   ],
   declarations: [
     NavbarComponent
