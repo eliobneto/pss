@@ -1,9 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
-
 import {AppComponent} from './app.component';
-import {CategoriasModule} from "./categorias/categorias.module";
+import {CategoriasModule} from './categorias/categorias.module';
 
 
 @NgModule({
