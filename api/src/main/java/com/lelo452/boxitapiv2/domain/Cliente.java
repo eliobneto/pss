@@ -30,13 +30,12 @@ public class Cliente extends Usuario {
     private List<Pedido> pedidos = new ArrayList<>();
 
     public Cliente() {
-        addPerfil(Perfil.CLIENTE);
+
     }
 
-    public Cliente(String nome, String email, String password, Boolean active, String nomeFantasia, @CNPJ String cnpj) {
-        super(nome, email, password, active);
+    public Cliente(String nome, String email, String password, Boolean active, String nomeFantasia, @CNPJ String cnpj, Perfil perfil) {
+        super(nome, email, password, active, perfil);
         this.nomeFantasia = nomeFantasia;
         this.cnpj = cnpj;
-        addPerfil(Perfil.CLIENTE);
     }
 }

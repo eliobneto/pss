@@ -5,6 +5,7 @@ import com.lelo452.boxitapiv2.domain.enums.Perfil;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
+import sun.misc.Perf;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,13 +25,11 @@ public class Funcionario extends Usuario {
     private String username;
 
     public Funcionario() {
-        addPerfil(Perfil.ADMIN);
     }
 
-    public Funcionario(String nome, String email, String password, Boolean active, @CPF String cpf, String username) {
-        super(nome, email, password, active);
+    public Funcionario(Integer id, String nome, String email, String password, Boolean active, @CPF String cpf, String username, Perfil perfil) {
+        super(id, nome, email, password, active, perfil);
         this.cpf = cpf;
         this.username = username;
-        addPerfil(Perfil.ADMIN);
     }
 }
