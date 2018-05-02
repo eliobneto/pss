@@ -14,4 +14,4 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ]
 })
-export class CategoriaRouting { }
+export class CategoriasRouting { }

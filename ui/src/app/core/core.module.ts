@@ -8,6 +8,7 @@ import {HttpClient} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {NavbarComponent} from './navbar/navbar.component';
 import {GerenteModule} from '../gerente/gerente.module';
+import {EstoqueModule} from "../estoque/estoque.module";
 import {AppRouting} from '../app.routing';
 
 registerLocaleData(localePt, 'pt-BR');
@@ -18,6 +19,7 @@ registerLocaleData(localePt, 'pt-BR');
     RouterModule,
     AppRouting,
     CategoriasModule,
+    EstoqueModule,
     GerenteModule
   ],
   declarations: [
