@@ -1,6 +1,5 @@
 package com.lelo452.boxitapiv2.resources;
 
-import com.lelo452.boxitapiv2.domain.Produto;
 import com.lelo452.boxitapiv2.dto.ProdutoDTO;
 import com.lelo452.boxitapiv2.dto.ProdutoNewDTO;
 import com.lelo452.boxitapiv2.services.ProdutoService;
@@ -8,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -47,6 +47,12 @@ public class ProdutoRS {
     public ResponseEntity<ProdutoDTO> update(@PathVariable Integer id, @RequestBody ProdutoDTO dto) {
         ProdutoDTO obj = service.update(dto);
         return ResponseEntity.ok(obj);
+    }
+
+    @RequestMapping(value="/picture", method=RequestMethod.POST)
+    public ResponseEntity<Void> uploadProfilePicture(@RequestParam(name="file") MultipartFile file) {
+        URI uri = service.uploadProfilePicture(file);
+        return ResponseEntity.created(uri).build();
     }
 
     @DeleteMapping("/{id}")

@@ -28,6 +28,7 @@ public class Produto implements Serializable {
     private String descricao;
     private Integer qtdLote;
     private Integer quantidade;
+    private String sku;
 
     @JsonIgnore
     @ManyToMany
@@ -50,21 +51,23 @@ public class Produto implements Serializable {
     @JoinColumn(name = "historico_id")
     private List<Historico> historicoPreco = new ArrayList<>();
 
-    public Produto(Integer id, String nome, Double preco, String descricao, Integer qtdLote, Integer quantidade) {
+    public Produto(Integer id, String nome, Double preco, String descricao, Integer qtdLote, Integer quantidade, String sku) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
         this.descricao = descricao;
         this.qtdLote = qtdLote;
         this.quantidade = quantidade;
+        this.sku = sku;
     }
 
-    public Produto(String nome, Double preco, String descricao, Integer qtdLote, Integer quantidade) {
+    public Produto(String nome, Double preco, String descricao, Integer qtdLote, Integer quantidade, String sku) {
         this.nome = nome;
         this.preco = preco;
         this.descricao = descricao;
         this.qtdLote = qtdLote;
         this.quantidade = quantidade;
+        this.sku = sku;
     }
 
     @JsonIgnore

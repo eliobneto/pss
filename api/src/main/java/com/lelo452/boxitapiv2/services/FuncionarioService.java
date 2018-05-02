@@ -8,7 +8,9 @@ import com.lelo452.boxitapiv2.repository.FuncionarioRepository;
 import com.lelo452.boxitapiv2.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.net.URI;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -75,7 +77,10 @@ public class FuncionarioService {
         dto.setCargo(f.getCargo());
         dto.setGerente(f.getGerente());
         List<String> t = new ArrayList<>(f.getTelefones());
-        dto.setTelefone(t.get(0));
+        if(t.size() > 1)
+            dto.setTelefone(t.get(t.size() - 1));
+        else
+            dto.setTelefone(null);
         return dto;
     };
 

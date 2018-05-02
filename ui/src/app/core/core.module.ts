@@ -11,6 +11,7 @@ import {GerenteModule} from '../gerente/gerente.module';
 import {EstoqueModule} from '../estoque/estoque.module';
 import {AppRouting} from '../app.routing';
 import {EstoqueService} from '../estoque/estoque.service';
+import {FuncionarioService} from '../gerente/funcionario.service';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -32,6 +33,7 @@ registerLocaleData(localePt, 'pt-BR');
   providers: [
     CategoriasService,
     EstoqueService,
+    FuncionarioService,
     { provide: LOCALE_ID, useValue: 'pt-BR' },
     HttpClient
   ]

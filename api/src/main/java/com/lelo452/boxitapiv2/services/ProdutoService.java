@@ -6,15 +6,16 @@ import com.lelo452.boxitapiv2.dto.ProdutoDTO;
 import com.lelo452.boxitapiv2.dto.ProdutoNewDTO;
 import com.lelo452.boxitapiv2.repository.CategoriaRepository;
 import com.lelo452.boxitapiv2.repository.ProdutoRepository;
-import com.lelo452.boxitapiv2.services.exceptions.DataIntegrityException;
 import com.lelo452.boxitapiv2.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
@@ -28,6 +29,9 @@ public class ProdutoService {
 
     @Autowired
     private CategoriaRepository categoriaRepository;
+
+    @Autowired
+    private S3Service s3Service;
 
     public ProdutoDTO find(Integer id) {
         Optional<ProdutoDTO> obj = repo.findById(id).map(toDTO);
@@ -60,12 +64,16 @@ public class ProdutoService {
         return repo.findDistinctByNomeContainingAndCategoriasIn(nome, categorias, pageRequest);
     }
 
+    public URI uploadProfilePicture(MultipartFile multipartFile) {
+        return s3Service.uploadFile(multipartFile);
+    }
+
     private Produto fromDTO(ProdutoDTO dto) {
-        return new Produto(dto.getId(), dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), null, null, null, null);
+        return new Produto(dto.getId(), dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), dto.getSku(),null, null, null, null);
     }
 
     private Produto fromDTO(ProdutoNewDTO dto) {
-        return new Produto(null, dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), null, null, null, null);
+        return new Produto(null, dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), dto.getSku(), null, null, null, null);
     }
 
     private Function<Produto, ProdutoDTO>  toDTO = (p) -> {
@@ -76,6 +84,7 @@ public class ProdutoService {
         dto.setDescricao(p.getDescricao());
         dto.setQtd(p.getQtdLote());
         dto.setLote(p.getQtdLote());
+        dto.setSku(p.getSku());
         return dto;
     };
 }
