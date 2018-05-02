@@ -8,8 +8,9 @@ import {HttpClient} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {NavbarComponent} from './navbar/navbar.component';
 import {GerenteModule} from '../gerente/gerente.module';
-import {EstoqueModule} from "../estoque/estoque.module";
+import {EstoqueModule} from '../estoque/estoque.module';
 import {AppRouting} from '../app.routing';
+import {EstoqueService} from '../estoque/estoque.service';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -30,6 +31,7 @@ registerLocaleData(localePt, 'pt-BR');
   ],
   providers: [
     CategoriasService,
+    EstoqueService,
     { provide: LOCALE_ID, useValue: 'pt-BR' },
     HttpClient
   ]
