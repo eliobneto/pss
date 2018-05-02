@@ -4,6 +4,7 @@ import {MyMaskUtil} from '../../shared/mask/my-mask.util';
 import {FuncionarioService} from '../funcionario.service';
 import {funcionario} from '../funcionario';
 import {ActivatedRoute, Router} from '@angular/router';
+import {e} from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-edit',
@@ -30,9 +31,12 @@ export class EditComponent implements OnInit {
         this.ser.getFun(this.funId).subscribe(
           (s) => {
             this.fun = s;
-            console.log(this.fun);
+            alert('charles vagal');
           }
         );
+      } else {
+        alert('Erro no servidor');
+        history.go(-1);
       }
     });
   }
@@ -52,13 +56,13 @@ export class EditComponent implements OnInit {
   }
 
   confirma() {
-    let res;
-    res = true;
-    if (res === true) {
-      alert('Edição concluida com sucesso');
-      history.go(-1);
-    } else {
-      alert('Erro na validação com o servidor');
-    }
+    this.ser.updat(this.funId, this.f).subscribe(
+      () => {
+        alert('Edição concluido com sucesso');
+        history.go(-1);
+      }, () => {
+        alert('Erro na validação com o servidor');
+      }
+    );
   }
 }

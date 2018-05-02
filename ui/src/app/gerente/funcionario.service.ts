@@ -6,7 +6,7 @@ import {funcionario} from './funcionario';
 
 @Injectable()
 export class FuncionarioService {
-  private service = `${environment.apiUrl}funcionario`;
+  private service = `${environment.apiUrl}funcionarios/`;
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -19,15 +19,22 @@ export class FuncionarioService {
   }
 
   getFun(id: string){
-    return this.http.get(this.service + id)
+    return this.http.get<funcionario>(this.service + id)
   }
 
   criarFun(func: funcionario) {
-    return this.http.post(this.service, {func});
+    const cargo = func.cargo;
+    const telefone = func.telefone;
+    const cpf = func.cpf;
+    const email = func.email;
+    const gerente = func.gerente;
+    const password = func.password;
+    const nome = func.nome;
+    return this.http.post(this.service, {cargo, telefone, cpf, email, nome, password, gerente});
   }
 
-  updat(id: string, cargo: string, cpf: string, email: string, gerente: boolean, nome: string, senha: string, celular: string){
-    return this.http.put(this.service + id, {cargo, cpf, email, gerente, senha, nome, celular})
+  updat(id: string, func: funcionario) {
+    return this.http.put(this.service + id, {func});
   }
 
 }

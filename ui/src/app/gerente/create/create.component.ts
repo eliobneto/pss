@@ -3,6 +3,7 @@ import {AbstractControl, NgForm} from '@angular/forms';
 import {MyMaskUtil} from '../../shared/mask/my-mask.util';
 import {FuncionarioService} from '../funcionario.service';
 import {funcionario} from '../funcionario';
+import {e} from '@angular/core/src/render3';
 
 
 @Component({
@@ -37,8 +38,11 @@ export class CreateComponent implements OnInit {
   }
   confirma() {
     this.ser.criarFun(this.f).subscribe(
-      (s: Response) => {
-        alert('eba');
+      () => {
+        alert('Cadastro concluida com sucesso');
+        history.go(-1);
+      }, () => {
+        alert('Erro na validação com o servidor');
       }
     );
   }
