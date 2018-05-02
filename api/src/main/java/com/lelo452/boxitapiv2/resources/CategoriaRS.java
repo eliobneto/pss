@@ -46,7 +46,6 @@ public class CategoriaRS {
     @PutMapping("/{id}")
     public ResponseEntity<CategoriaDTO> update(@PathVariable Integer id, @RequestBody CategoriaDTO dto) {
         CategoriaDTO obj = service.update(dto);
-        obj.setId(id);
         return ResponseEntity.ok(obj);
     }
 
