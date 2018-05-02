@@ -7,16 +7,25 @@
   </head>
   <body>
   <router-outlet></router-outlet>
-    <div style="margin: 0 auto; margin-top:1%; position: relative; display: block; margin-bottom: 3%; width: 345px; color: white;">
-      <img src="../../../assets/img/logo.png" alt="Boxit" width=100%>
-      <h2 style="margin-top: 0px; text-align: center ">Admin - Funcionários</h2>
+  <div class="row" style="margin-top: 2%">
+    <div class="col-6">
+      <img src="assets/img/icon.png" alt="Boxit" height="80px" width="auto" style="float: right;">
     </div>
+    <div class="col-6 justify-content-start align-middle">
+      <h1 style="color: white">BoxIt</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2 style="color: white">Admin - Lista de Funcionários</h2>
+    </div>
+  </div>
     <div class="container">
       <div class="input-group">
         <span class="input-group-btn">
           <button class="btn btn-primary" type="button">Pesquisar</button>
         </span>
-        <input type="text" class="form-group" placeholder="Pesquisar CPF">
+        <input type="text" [spKeepMask]="true" [spMask]="cpfMask" class="form-group" placeholder="Pesquisar CPF">
       </div>
     </div>
     <div class="card" style="margin: 0 auto; width: 80%; margin-bottom: 5px" *ngFor="let funcionario of fun">
@@ -28,7 +37,7 @@
          <button class="btn btn-success" routerLink="../edit">Editar</button>
        </div>
        <div class="col-sm-1">
-         <button class="btn btn-danger" (click)="confirmaex()">Excluir</button>
+         <button class="btn btn-danger" (click)="confirmaex('321')">{{funcionario.id}}</button>
        </div>
      </div>
 

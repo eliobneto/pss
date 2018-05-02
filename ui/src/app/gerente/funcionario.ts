@@ -1,5 +1,5 @@
 export class funcionario {
-  id: number;
+  id: string;
   nome: string;
   cpf: string;
   celular: string;

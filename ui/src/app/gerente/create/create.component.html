@@ -29,7 +29,7 @@
         <label for="cpf">CPF</label><br>
         <input type="text" name="cpf" [spMask]="cpfMask" id="cpf" placeholder="123.456.789-11" [spKeepMask]="true"
                [(ngModel)]="cpf" [cpf]="cpf"
-               #cpff="ngModel" class="form-control" required [ngClass]="(cpff?.errors?.cpf) ? 'is-invalid' : ''">
+               #cpff="ngModel" class="form-control" required [ngClass]="(cpff?.errors?.cpf || (cpff.touched && cpff.invalid)) ? 'is-invalid' : ''">
         <div class="invalid-feedback" *ngIf="cpff?.errors?.cpf && cpff.touched || (cpff.touched && cpff.invalid)"> CPF
           Inválido
         </div>
@@ -42,8 +42,7 @@
         <label for="celular">Celular</label>
         <input type="text" class="form-control" #celularf="ngModel" name="celular" maxlength="15" minlength="15"
                [(ngModel)]="celular" [spMask]="phoneMask" placeholder="(33) 99848-6668" [spKeepMask]="true" required
-               ngModel id="celular" [ngClass]="(celularf.invalid && celularf.touched) ? 'is-invalid' : ''"
-               class="form-control">
+               ngModel id="celular" [ngClass]="(celularf.invalid && celularf.touched) ? 'is-invalid' : ''">
         <div class="invalid-feedback" *ngIf="celularf.invalid && celularf.touched">Número Inválido</div>
       </div>
       <div class="col-12 col-md-3"></div>
@@ -53,7 +52,8 @@
       <div class="col-12 col-md-6">
         <label for="email">E-mail</label>
         <input type="email" name="email" required email id="email"
-               [(ngModel)]="email" #emailf="ngModel" email
+               [(ngModel)]="email" #emailf="ngModel"
+               pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
                placeholder="eliobgz@gmail.com" [ngClass]="(emailf.invalid && emailf.touched) ? 'is-invalid' : ''"
                class="form-control">
         <div class="invalid-feedback" *ngIf="emailf.invalid && emailf.touched">E-mail Inválido</div>
@@ -73,7 +73,6 @@
           </div>
           <div class="col-4 col-md-2" style="padding-left: 0;">
             <input type="checkbox" [(ngModel)]="gerente" #gerentef="ngModel" name="gerente" id="gerente"
-                   [(ngModel)]="gerente"
                    style="alignment: right">
             <label for="gerente" style="width: 15%">Gerente</label>
           </div>
@@ -99,10 +98,11 @@
       <div class="col-12 col-md-6">
         <label for="csenha">Confirmar Senha</label>
         <input name="csenha" required id="csenha" type="password" [(ngModel)]="csenha" #csenhaf="ngModel"
-               [ngClass]="(csenhaf.invalid && csenhaf.touched) ? 'is-invalid' : ''"
+               [ngClass]="(csenhaf.invalid && csenhaf.touched) || (confirmasenha(funform,csenhaf)) ? 'is-invalid' : ''"
                class="form-control">
-        <div class="invalid-feedback" *ngIf="csenhaf.touched && csenhaf.invalid">Campo Obrigatório</div>
-        <div class="invalid-feedback" *ngIf="csenhaf.touched && confirmasenha(funform,csenhaf)">As senhas não conferem
+        <div class="invalid-feedback" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem
+        </div>
+        <div class="invalid-feedback" *ngIf="((csenhaf.touched && senhaf.invalid) && (csenhaf.touched && csenhaf.invalid))">Campo Obrigatório
         </div>
       </div>
       <div class="col-12 col-md-3"></div>
@@ -112,7 +112,7 @@
       <div class="col-12 col-md-3"></div>
       <div class="col-12 col-md-6">
         <button class="btn btn-primary btn-lg btn-block" (click)="confirma()" type="submit"
-                [disabled]="funform.invalid"> Enviar
+                [disabled]="funform.invalid || confirmasenha(funform,csenhaf)"> Enviar
         </button>
       </div>
       <div class="col-12 col-md-3"></div>

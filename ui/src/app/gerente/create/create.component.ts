@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-
 import {AbstractControl, NgForm} from '@angular/forms';
 import {MyMaskUtil} from '../../shared/mask/my-mask.util';
+import {FuncionarioService} from "../funcionario.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-create',
@@ -12,7 +13,7 @@ export class CreateComponent implements OnInit {
   public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
   public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
 
-  constructor() {
+  constructor(private ser: FuncionarioService, private route: Router) {
   }
 
   ngOnInit() {
