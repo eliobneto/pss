@@ -15,6 +15,10 @@ export class CategoriaListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.populate();
+  }
+
+  populate() {
     this.service.getAll().subscribe(
       (s) => {
         this.categorias = s;
@@ -36,13 +40,18 @@ export class CategoriaListComponent implements OnInit {
       reverseButtons: true
     }).then((result) => {
       if (result.value) {
-        swal({
-          title: 'Concluido!',
-          text: 'Categoria ' + nome + ' deletada!',
-          type: 'success',
-          confirmButtonClass: 'btn btn-success',
-          buttonsStyling: false
-        });
+        this.service.delete(id).subscribe(
+          (s) => {
+            swal({
+              title: 'Concluido!',
+              text: 'Categoria ' + nome + ' deletada!',
+              type: 'success',
+              confirmButtonClass: 'btn btn-success',
+              buttonsStyling: false
+            });
+            this.populate();
+          }
+        );
       }
     });
   }

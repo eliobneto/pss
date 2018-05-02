@@ -27,6 +27,6 @@ export class CategoriasService {
   }
 
   delete(id: string) {
-    this.http.delete(this.categoriaUrl);
+    return this.http.delete(this.categoriaUrl + id);
   }
 }
