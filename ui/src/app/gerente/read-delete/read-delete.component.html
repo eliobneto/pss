@@ -1,67 +1,56 @@
-<router-outlet></router-outlet>
-<div class="bg-image container-fluid">
-  <div class="row" style="margin-top: 2%">
-    <div class="col-6">
-      <img src="assets/img/icon.png" alt="Boxit" height="80px" width="auto" style="float: right;">
-    </div>
-    <div class="col-6 justify-content-start align-middle">
-      <h1 style="color: white">BoxIt</h1>
-    </div>
+<div class="row">
+  <div class="col-12 text-center">
+    <h2 style="color: white">Admin - Lista de Funcionários</h2>
   </div>
-  <div class="row">
-    <div class="col-12 text-center">
-      <h2 style="color: white">Admin - Lista de Funcionários</h2>
-    </div>
-  </div>
-    <div class="container">
-      <div class="input-group">
+</div>
+<div class="container">
+  <div class="input-group">
         <span class="input-group-btn">
-          <button class="btn btn-primary"  type="button">Pesquisar</button>
+          <button class="btn btn-primary" type="button">Pesquisar</button>
         </span>
-        <input type="text" class="form-group" placeholder="Pesquisar CPF">
-      </div>
+    <input type="text" class="form-group" placeholder="Pesquisar CPF">
+  </div>
+</div>
+<div class="card" style="margin: 0 auto; width: 80%; margin-bottom: 5px; color: black;" *ngFor="let funcionario of fun">
+  <div class="card-header row" style="color:#fff;background-color:#337ab7;border-color:#337ab7">
+    <div class="col-sm-6">
+      <h3> {{funcionario.nome}}</h3>
     </div>
-    <div class="card" style="margin: 0 auto; width: 80%; margin-bottom: 5px" *ngFor="let funcionario of fun">
-     <div class="card-header row" style="color:#fff;background-color:#337ab7;border-color:#337ab7">
-       <div class="col-sm-6">
-        <h3> {{funcionario.nome}}</h3>
-       </div>
-       <div class="col-sm-1">
-         <button class="btn btn-success" routerLink="{{funcionario.id}}/edit">Editar</button>
-       </div>
-       <div class="col-sm-1">
-         <button class="btn btn-danger" (click)="confirmaex(funcionario.id)">Deletar</button>
-       </div>
-     </div>
-
-      <div class="card-body">
-       <div class="row">
-         <div class="col-sm">
-           <div class="card-text">Nome: {{funcionario.nome}}</div>
-         </div>
-         <div class="col-sm">
-           <div class="card-text">CPF: {{funcionario.cpf}}</div>
-         </div>
-       </div>
-
-       <div class="row">
-         <div class="col-sm">
-           <div class="card-text">Celular: {{funcionario.telefone}}</div>
-         </div>
-         <div class="col-sm">
-           <div class="card-text">Email: {{funcionario.email}}</div>
-         </div>
-       </div>
-
-       <div class="row">
-         <div class="col-sm" *ngIf="funcionario.gerente == false">
-           <div class="card-text">Cargo: {{funcionario.cargo}}</div>
-         </div>
-         <div class="col-sm">
-           <div class="card-text" *ngIf="funcionario.gerente == true">Cargo: Gerente</div>
-         </div>
-       </div>
-
-      </div>
+    <div class="col-sm-1">
+      <button class="btn btn-success" routerLink="{{funcionario.id}}/edit">Editar</button>
+    </div>
+    <div class="col-sm-1">
+      <button class="btn btn-danger" (click)="confirmaex(funcionario.id)">Deletar</button>
     </div>
   </div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card-text">Nome: {{funcionario.nome}}</div>
+      </div>
+      <div class="col-sm">
+        <div class="card-text">CPF: {{funcionario.cpf}}</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm">
+        <div class="card-text">Celular: {{funcionario.telefone}}</div>
+      </div>
+      <div class="col-sm">
+        <div class="card-text">Email: {{funcionario.email}}</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm" *ngIf="funcionario.gerente == false">
+        <div class="card-text">Cargo: {{funcionario.cargo}}</div>
+      </div>
+      <div class="col-sm">
+        <div class="card-text" *ngIf="funcionario.gerente == true">Cargo: Gerente</div>
+      </div>
+    </div>
+
+  </div>
+</div>

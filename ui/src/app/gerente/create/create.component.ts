@@ -3,7 +3,6 @@ import {AbstractControl, NgForm} from '@angular/forms';
 import {MyMaskUtil} from '../../shared/mask/my-mask.util';
 import {FuncionarioService} from '../funcionario.service';
 import {funcionario} from '../funcionario';
-import {e} from '@angular/core/src/render3';
 
 
 @Component({
