@@ -4,12 +4,16 @@ import {CategoriaCreateComponent} from './categoria-create/categoria-create.comp
 import {CategoriaListComponent} from './categoria-list/categoria-list.component';
 import {RouterModule} from '@angular/router';
 import {CategoriaRouting} from './categoria.routing';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    CategoriaRouting
+    CategoriaRouting,
+    FormsModule,
+    HttpClientModule
   ],
   declarations: [
     CategoriaCreateComponent,

@@ -14,3 +14,19 @@ html, body {
 .cursor {
   cursor: default;
 }
+
+.bg-admin {
+  color: white;
+  background-image: url("/assets/img/background.jpg");
+  background-size: cover;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.logo-text-space {
+  margin-top: 12px;
+}
+
+.space-left-alert {
+  margin-left: 10px;
+}

@@ -6,7 +6,7 @@ import {CategoriaListComponent} from './categoria-list/categoria-list.component'
 const routes: Routes = [
   {path: 'categorias/new', component: CategoriaCreateComponent},
   {path: 'categorias', component: CategoriaListComponent},
-  {path: 'categorias/:id', component: CategoriaCreateComponent}
+  {path: 'categorias/:id/edit', component: CategoriaCreateComponent}
 ];
 
 @NgModule({
