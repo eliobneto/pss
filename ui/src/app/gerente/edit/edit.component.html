@@ -16,7 +16,7 @@
       <div class="col-12 offset-md-3 col-md-6">
         <label for="cpf">CPF</label><br>
         <input type="text" name="cpf" [spMask]="cpfMask" id="cpf" placeholder="123.456.789-11" [spKeepMask]="true"
-               [(ngModel)]="fun.cpf" [cpf]="cpf"
+               [(ngModel)]="fun.cpf" [cpf]="fun.cpf"
                #cpff="ngModel" class="form-control" required [ngClass]="(cpff?.errors?.cpf || (cpff.touched && cpff.invalid)) ? 'is-invalid' : ''">
         <div class="invalid-feedback" *ngIf="cpff?.errors?.cpf && cpff.touched || (cpff.touched && cpff.invalid)"> CPF
           Inválido

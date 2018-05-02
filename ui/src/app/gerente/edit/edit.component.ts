@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgForm, AbstractControl} from '@angular/forms';
 import {MyMaskUtil} from '../../shared/mask/my-mask.util';
 import {FuncionarioService} from '../funcionario.service';
-import {funcionario} from '../funcionario';
 import {ActivatedRoute, Router} from '@angular/router';
-import {e} from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-edit',
@@ -63,8 +61,8 @@ export class EditComponent implements OnInit {
       () => {
         alert('Edição concluido com sucesso');
         history.go(-1);
-      }, () => {
-        alert('Erro na validação com o servidor');
+      }, (e) => {
+        alert(e['message']);
       }
     );
   }

@@ -16,7 +16,7 @@
     <div class="col-12 offset-md-3 col-md-6">
       <label for="cpf">CPF</label><br>
       <input type="text" name="cpf" [spMask]="cpfMask" id="cpf" placeholder="123.456.789-11" [spKeepMask]="true"
-             [(ngModel)]="f.cpf" [cpf]="cpf"
+             [(ngModel)]="f.cpf" [cpf]="f.cpf"
              #cpff="ngModel" class="form-control" required
              [ngClass]="(cpff?.errors?.cpf || (cpff.touched && cpff.invalid)) ? 'is-invalid' : ''">
       <div class="invalid-feedback" *ngIf="cpff?.errors?.cpf && cpff.touched || (cpff.touched && cpff.invalid)"> CPF
@@ -37,7 +37,7 @@
     <div class="col-12 offset-md-3 col-md-6">
       <label for="email">E-mail</label>
       <input type="email" name="email" required email id="email"
-             [(ngModel)]="email" #emailf="ngModel" email
+             [(ngModel)]="f.email" #emailf="ngModel"
              pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
              placeholder="eliobgz@gmail.com" [ngClass]="(emailf.invalid && emailf.touched) ? 'is-invalid' : ''"
              class="form-control">
