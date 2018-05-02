@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -52,6 +53,12 @@ public class FuncionarioRS {
     public ResponseEntity<Void> updatePassword(@PathVariable Integer id, @RequestBody String password) {
         FuncionarioDTO obj = service.updatePassword(password, id);
         return ResponseEntity.noContent().build();
+    }
+
+    @RequestMapping(value="/picture", method=RequestMethod.POST)
+    public ResponseEntity<Void> uploadProfilePicture(@RequestParam(name="file") MultipartFile file) {
+        URI uri = service.uploadProfilePicture(file);
+        return ResponseEntity.created(uri).build();
     }
 
     @DeleteMapping("/{id}")

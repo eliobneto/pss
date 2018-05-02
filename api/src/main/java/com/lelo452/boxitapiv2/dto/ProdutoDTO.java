@@ -19,4 +19,6 @@ public class ProdutoDTO implements Serializable {
     private Integer lote;
     private String sku;
     private String descricao;
+    private String categoria;
+    private String foto;
 }

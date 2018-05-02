@@ -15,8 +15,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -41,12 +40,21 @@ public class ProdutoService {
 
     public ProdutoDTO insert(ProdutoNewDTO dto) {
         Produto obj = fromDTO(dto);
+        addCategoria(obj, dto.getCategoria());
         return toDTO.apply(repo.save(obj));
     }
 
     public ProdutoDTO update(ProdutoDTO dto) {
         Produto obj = fromDTO(dto);
+        addCategoria(obj, dto.getCategoria());
         return toDTO.apply(repo.save(obj));
+    }
+
+    private Produto addCategoria(Produto dto, String categoria) {
+        List<Categoria> cat = new ArrayList<>();
+        cat.add(new Categoria(null, categoria));
+        dto.setCategorias(cat);
+        return dto;
     }
 
     public void delete(Integer id) {
@@ -61,11 +69,25 @@ public class ProdutoService {
     }
 
     private Produto fromDTO(ProdutoDTO dto) {
-        return new Produto(dto.getId(), dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), null, null, null, null);
+        Produto p = new Produto(dto.getId(), dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), null, null, null, null);
+        List<Categoria> cat = new ArrayList<>();
+        cat.add(new Categoria(null, dto.getCategoria()));
+        p.setCategorias(cat);
+        Set<String> fotos = new HashSet<>();
+        fotos.add(dto.getFoto());
+        p.setFotos(fotos);
+        return p;
     }
 
     private Produto fromDTO(ProdutoNewDTO dto) {
-        return new Produto(null, dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), null, null, null, null);
+        Produto p = new Produto(null, dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), null, null, null, null);
+        List<Categoria> cat = new ArrayList<>();
+        cat.add(new Categoria(null, dto.getCategoria()));
+        p.setCategorias(cat);
+        Set<String> fotos = new HashSet<>();
+        fotos.add(dto.getFoto());
+        p.setFotos(fotos);
+        return p;
     }
 
     private Function<Produto, ProdutoDTO>  toDTO = (p) -> {
@@ -76,6 +98,9 @@ public class ProdutoService {
         dto.setDescricao(p.getDescricao());
         dto.setQtd(p.getQtdLote());
         dto.setLote(p.getQtdLote());
+        dto.setCategoria(p.getCategorias().get(0).toString());
+        List<String> t = new ArrayList<>(p.getFotos());
+        dto.setFoto(t.get(0));
         return dto;
     };
 }
