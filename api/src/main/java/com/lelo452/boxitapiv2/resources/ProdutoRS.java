@@ -46,6 +46,7 @@ public class ProdutoRS {
     @PutMapping("/{id}")
     public ResponseEntity<ProdutoDTO> update(@PathVariable Integer id, @RequestBody ProdutoDTO dto) {
         ProdutoDTO obj = service.update(dto);
+        obj.setId(id);
         return ResponseEntity.ok(obj);
     }
 

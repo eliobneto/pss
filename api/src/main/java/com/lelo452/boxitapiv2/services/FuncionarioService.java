@@ -39,6 +39,12 @@ public class FuncionarioService {
         return toDTO.apply(repo.save(obj));
     }
 
+    public FuncionarioDTO updatePassword(String password, Integer id) {
+        Funcionario func = repo.getOne(id);
+        func.setPassword(password);
+        return toDTO.apply(repo.save(func));
+    }
+
     public void delete(Integer id) {
         find(id);
         repo.deleteById(id);
