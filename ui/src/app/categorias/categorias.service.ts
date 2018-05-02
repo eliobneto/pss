@@ -23,7 +23,7 @@ export class CategoriasService {
   }
 
   update(nome: string, id: string) {
-    return this.http.put(this.categoriaUrl + id, {nome});
+    return this.http.put(this.categoriaUrl + id, {id, nome});
   }
 
   delete(id: string) {
