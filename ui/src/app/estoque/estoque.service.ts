@@ -6,27 +6,41 @@ import {Estoque} from './estoque.model';
 
 @Injectable()
 export class EstoqueService {
-  private estoqueUrl = `${environment.apiUrl}estoque/`;
+  private service = `${environment.apiUrl}produtos/`;
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  create(nome: string) {
-    return this.http.post(this.estoqueUrl, {nome});
-  }
-
   getAll() {
-    return this.http.get<Estoque>(this.estoqueUrl);
+    return this.http.get(this.service);
   }
 
   getOne(id: string) {
-    return this.http.get<Estoque>(this.estoqueUrl + id);
+    return this.http.get<Estoque>(this.service + id);
   }
 
-  update(nome: string, id: string) {
-    return this.http.put(this.estoqueUrl + id, {id, nome});
+  criarProduto(produto: Estoque) {
+    const nome = produto.nome;
+    const preco = produto.preco;
+    const qtd = +produto.qtd;
+    const lote = +produto.lote;
+    const descricao = produto.descricao;
+    const foto = produto.foto;
+    const sku = produto.sku;
+    return this.http.post(this.service, {nome, preco, qtd, lote, descricao, foto, sku});
   }
 
-  delete(id: string) {
-    return this.http.delete(this.estoqueUrl + id);
+  atualizarProduto(id: string, produto: Estoque) {
+    const nome = produto.nome;
+    const preco = produto.preco;
+    const qtd = +produto.qtd;
+    const lote = +produto.lote;
+    const descricao = produto.descricao;
+    const foto = produto.foto;
+    const sku = produto.sku;
+    return this.http.put(this.service + id, {id, nome, preco, qtd, lote, descricao, foto, sku});
+  }
+
+  excluirProduto(id: string) {
+    return this.http.delete(this.service + id);
   }
 }

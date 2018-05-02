@@ -15,35 +15,35 @@
       <div class="col-12" style="padding-right: 0;">
         <label>Nome<span class="text-danger">*</span></label>
         <input type="text" class="form-control" placeholder="produto"
-               name="name" [ngModel]="produtoNome" required [minlength]="2" #nameInput="ngModel"/>
+               name="name" [(ngModel)]="estoque.nome" required [minlength]="2"/>
       </div>
       <div class="row">
         <div class="col-12 col-md-6">
           <div class="col-12">
             <label>Preço<span class="text-danger">*</span></label>
             <input type="text" class="form-control" placeholder="R$00,00"
-                   currencyMask [(ngModel)]="produtoPreco" [options]="{prefix: 'R$ ', thousands: '.', decimal: ','}"
-                   name="preco" required [minlength]="2" #nameInput="ngModel"/>
+                   currencyMask [(ngModel)]="estoque.preco" [options]="{prefix: 'R$ ', thousands: '.', decimal: ','}"
+                   name="preco" required [minlength]="2"/>
           </div>
           <div class="col-12">
             <label>Quantidade<span class="text-danger">*</span></label>
             <input type="text" class="form-control" placeholder="0"
-                   name="qtd" [ngModel]="produtoQtd" required [minlength]="1" #nameInput="ngModel"/>
+                   name="qtd" [(ngModel)]="estoque.qtd" required [minlength]="1"/>
           </div>
           <div class="col-12">
             <label>Un/Lote<span class="text-danger">*</span></label>
             <input type="text" class="form-control" placeholder="0"
-                   name="lote" [ngModel]="produtoLote" required [minlength]="1" #nameInput="ngModel"/>
+                   name="lote" [(ngModel)]="estoque.lote" required [minlength]="1"/>
           </div>
           <div class="col-12">
             <label>Código<span class="text-danger">*</span></label>
             <input type="text" class="form-control" placeholder="0"
-                   name="sku" [ngModel]="produtoSku" required [minlength]="1" #nameInput="ngModel"/>
+                   name="sku" [(ngModel)]="estoque.sku" required [minlength]="1"/>
           </div>
           <div class="col-12">
 
             <label>Categoria<span class="text-danger">*</span></label>
-            <select [ngModel]="produtoCateg" required [minlength]="1" #nameInput="ngModel" class="custom-select">
+            <select [(ngModel)]="estoque.categoria" required [minlength]="1" class="custom-select" [ngModelOptions]="{standalone: true}">
               <option *ngFor="let cat of categorias" value="{{cat.id}}">{{cat.nome}}</option>
             </select>
 
@@ -52,7 +52,7 @@
         <div class="col-12 col-md-6">
           <label>Descrição<span class="text-danger">*</span></label>
           <textarea class="form-control" placeholder="produto" rows="10"
-                    name="descricao" [ngModel]="produtoDesc" required [minlength]="1" #nameInput="ngModel"></textarea>
+                    name="descricao" [(ngModel)]="estoque.descricao" required [minlength]="1" #nameInput="ngModel"></textarea>
           <br/>
         </div>
       </div>
@@ -87,7 +87,7 @@
         <div class="col-2"></div>
         <div class="col-5">
           <button [disabled]="f.invalid" type="button" class="btn btn-primary btn-block"
-                  (click)="!update && cadastrar(nameInput.value) || updateCategoria(nameInput.value)">{{!update &&
+                  (click)="!update && cadastrarProduto() || atualizarProduto()">{{!update &&
             "Cadastrar" || "Atualizar"}}
           </button>
         </div>

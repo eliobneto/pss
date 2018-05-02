@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {EstoqueService} from '../estoque.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CategoriasService} from '../../categorias/categorias.service';
+import {Estoque} from '../estoque.model';
 
 @Component({
   selector: 'app-create',
@@ -13,14 +14,10 @@ export class CreateComponent implements OnInit {
   error = false;
   produtoId: string;
   produtoNome: string;
-  produtoPreco: number;
-  produtoQtd: number;
-  produtoLote: number;
-  produtoDesc: string;
-  produtoCateg: string;
-  produtoSku: string;
   update = false;
   categorias: any;
+  estoque = new Estoque();
+
 
   constructor(
     private service: EstoqueService,
@@ -48,11 +45,11 @@ export class CreateComponent implements OnInit {
     );
   }
 
-  cadastrar(nome: string) {
-    this.service.create(nome).subscribe(
+  cadastrarProduto() {
+    this.service.criarProduto(this.estoque).subscribe(
       (s: Response) => {
         this.error = false;
-        this.route.navigate(['/categorias']);
+        this.route.navigate(['/produtos']);
       }, (e) => {
         this.error = true;
         this.msg = e['message'];
@@ -60,20 +57,15 @@ export class CreateComponent implements OnInit {
     );
   }
 
-  updateCategoria(nome: string) {
-    if (nome === this.produtoNome) {
-      this.error = true;
-      this.msg = 'O nome da categoria deve ser diferente do atual';
-    } else {
-      this.service.update(nome, this.produtoId).subscribe(
+  atualizarProduto(nome: string) {
+      this.service.atualizarProduto(this.estoque.id, this.estoque).subscribe(
         (s) => {
           this.error = false;
-          this.route.navigate(['/categorias']);
+          this.route.navigate(['/produtos']);
         }, (e) => {
           this.error = true;
           this.msg = e['message'];
         }
       );
     }
-  }
 }

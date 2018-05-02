@@ -1,4 +1,4 @@
-export interface Estoque {
+export class Estoque {
   id: string;
   nome: string;
   preco: number;
