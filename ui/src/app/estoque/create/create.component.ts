@@ -57,7 +57,7 @@ export class CreateComponent implements OnInit {
     );
   }
 
-  atualizarProduto(nome: string) {
+  atualizarProduto() {
       this.service.atualizarProduto(this.estoque.id, this.estoque).subscribe(
         (s) => {
           this.error = false;

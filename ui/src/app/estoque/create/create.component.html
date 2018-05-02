@@ -43,7 +43,8 @@
           <div class="col-12">
 
             <label>Categoria<span class="text-danger">*</span></label>
-            <select [(ngModel)]="estoque.categoria" required [minlength]="1" class="custom-select" [ngModelOptions]="{standalone: true}">
+            <select [(ngModel)]="estoque.categoria" required [minlength]="1" class="custom-select"
+                    [ngModelOptions]="{standalone: true}">
               <option *ngFor="let cat of categorias" value="{{cat.id}}">{{cat.nome}}</option>
             </select>
 
@@ -52,7 +53,8 @@
         <div class="col-12 col-md-6">
           <label>Descrição<span class="text-danger">*</span></label>
           <textarea class="form-control" placeholder="produto" rows="10"
-                    name="descricao" [(ngModel)]="estoque.descricao" required [minlength]="1" #nameInput="ngModel"></textarea>
+                    name="descricao" [(ngModel)]="estoque.descricao" required [minlength]="1"
+                    #nameInput="ngModel"></textarea>
           <br/>
         </div>
       </div>
@@ -65,10 +67,10 @@
         <div class="col"><i class="fal fa-file-image fa-5x"></i></div>
         <div class="col-12 text-center">
           <br>
-          <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
-          <button class="btn btn-primary" (click)="fileInput.click()">Selecionar arquivo</button>
+          <input style="display: none" type="file" #fileInput>
+          <button class="btn btn-primary">Selecionar arquivo</button>
           &nbsp;
-          <button class="btn btn-primary" (click)="onUpload()">Fazer upload de fotos</button>
+          <button class="btn btn-primary">Fazer upload de fotos</button>
         </div>
       </div>
     </div>
@@ -86,9 +88,8 @@
         </div>
         <div class="col-2"></div>
         <div class="col-5">
-          <button [disabled]="f.invalid" type="button" class="btn btn-primary btn-block"
-                  (click)="!update && cadastrarProduto() || atualizarProduto()">{{!update &&
-            "Cadastrar" || "Atualizar"}}
+          <button [disabled]="f.invalid" type="button" class="btn btn-primary btn-block">{{!update && "Cadastrar" ||
+            "Atualizar"}}
           </button>
         </div>
       </div>
