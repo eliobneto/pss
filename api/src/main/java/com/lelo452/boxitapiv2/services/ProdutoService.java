@@ -69,11 +69,11 @@ public class ProdutoService {
     }
 
     private Produto fromDTO(ProdutoDTO dto) {
-        return new Produto(dto.getId(), dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), null, null, null, null);
+        return new Produto(dto.getId(), dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), dto.getSku(),null, null, null, null);
     }
 
     private Produto fromDTO(ProdutoNewDTO dto) {
-        return new Produto(null, dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), null, null, null, null);
+        return new Produto(null, dto.getNome(), dto.getPreco(), dto.getDescricao(), dto.getLote(), dto.getQtd(), dto.getSku(), null, null, null, null);
     }
 
     private Function<Produto, ProdutoDTO>  toDTO = (p) -> {
@@ -84,6 +84,7 @@ public class ProdutoService {
         dto.setDescricao(p.getDescricao());
         dto.setQtd(p.getQtdLote());
         dto.setLote(p.getQtdLote());
+        dto.setSku(p.getSku());
         return dto;
     };
 }
