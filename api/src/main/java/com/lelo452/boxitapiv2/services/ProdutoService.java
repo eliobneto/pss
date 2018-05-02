@@ -109,7 +109,10 @@ public class ProdutoService {
         dto.setLote(p.getQtdLote());
         dto.setCategoria(p.getCategorias().get(0).toString());
         List<String> t = new ArrayList<>(p.getFotos());
-        dto.setFoto(t.get(0));
+        if(t.size() > 1)
+            dto.setFoto(t.get(t.size() - 1));
+        else
+            dto.setFoto(null);
         return dto;
     };
 }

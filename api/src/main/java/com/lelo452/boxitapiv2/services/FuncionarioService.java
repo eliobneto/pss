@@ -77,7 +77,10 @@ public class FuncionarioService {
         dto.setCargo(f.getCargo());
         dto.setGerente(f.getGerente());
         List<String> t = new ArrayList<>(f.getTelefones());
-        dto.setTelefone(t.get(0));
+        if(t.size() > 1)
+            dto.setTelefone(t.get(t.size() - 1));
+        else
+            dto.setTelefone(null);
         return dto;
     };
 
