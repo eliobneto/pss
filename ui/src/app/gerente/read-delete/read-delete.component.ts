@@ -13,13 +13,19 @@ export class ReadDeleteComponent implements OnInit {
   constructor(private ser: FuncionarioService, private route: Router) {
   }
 
+  fun: any;
   ngOnInit() {
+    this.ser.getFuns().subscribe((s) => { this.fun = s; });
   }
 
   confirmaex(id: string) {
-    if (confirm('Vocẽ tem certerza que deseja excluir!\nEssa ação não poderá ser desfeita') == true) {
-      this.ser.excluir(id);
-      history.go(0);
+    if (confirm('Vocẽ tem certerza que deseja excluir!\nEssa ação não poderá ser desfeita') === true) {
+      this.ser.excluir(id).subscribe(
+        () => {
+          alert('Cadastro excluido com sucesso');
+          history.go(0);
+        },
+        (e) => {alert('Erro na validação com o servidor'); } );
     }
   }
 }

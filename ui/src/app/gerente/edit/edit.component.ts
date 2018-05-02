@@ -18,7 +18,6 @@ export class EditComponent implements OnInit {
   funId: string;
   fun: any;
   update = false;
-  f = new funcionario();
 
 
   constructor(private ser: FuncionarioService, private route: Router, private activatedRoute: ActivatedRoute) {
@@ -31,11 +30,10 @@ export class EditComponent implements OnInit {
         this.ser.getFun(this.funId).subscribe(
           (s) => {
             this.fun = s;
-            alert('charles vagal');
-          }
-        );
+            }, () => { alert('Erro no servidor'); }
+            );
       } else {
-        alert('Erro no servidor');
+        alert('Pagina não Encontrada');
         history.go(-1);
       }
     });
@@ -56,7 +54,12 @@ export class EditComponent implements OnInit {
   }
 
   confirma() {
-    this.ser.updat(this.funId, this.f).subscribe(
+    if (!this.fun.gerente) {
+      this.fun.gerente = false;
+    } else {
+      this.fun.cargo = null;
+    }
+    this.ser.updat(this.funId, this.fun).subscribe(
       () => {
         alert('Edição concluido com sucesso');
         history.go(-1);

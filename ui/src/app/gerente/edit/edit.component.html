@@ -17,7 +17,7 @@
       <div class="col-12 col-md-3"></div>
       <div class="col-12 col-md-6">
         <label for="nome">Nome Completo</label>
-        <input type="text" required name="nome" id="nome" placeholder="Elio Bolognese Neto" [(ngModel)]="f.nome"
+        <input type="text" required name="nome" id="nome" placeholder="Elio Bolognese Neto" [(ngModel)]="fun.nome"
                #nomef="ngModel" [ngClass]="(nomef.invalid && nomef.touched) ? 'is-invalid' : ''" class="form-control">
         <div class="invalid-feedback" *ngIf="nomef.invalid && nomef.touched">Campo Obrigatório</div>
       </div>
@@ -41,7 +41,7 @@
       <div class="col-12 col-md-6">
         <label for="celular">Celular</label>
         <input type="text" class="form-control" #celularf="ngModel" name="celular" maxlength="15" minlength="15"
-               [(ngModel)]="f.telefone" [spMask]="phoneMask" placeholder="(33) 99848-6668" [spKeepMask]="true" required
+               [(ngModel)]="fun.telefone" [spMask]="phoneMask" placeholder="(33) 99848-6668" [spKeepMask]="true" required
                ngModel id="celular" [ngClass]="(celularf.invalid && celularf.touched) ? 'is-invalid' : ''">
         <div class="invalid-feedback" *ngIf="celularf.invalid && celularf.touched">Número Inválido</div>
       </div>
@@ -52,7 +52,7 @@
       <div class="col-12 col-md-6">
         <label for="email">E-mail</label>
         <input type="email" name="email" required email id="email"
-               [(ngModel)]="f.email" #emailf="ngModel"
+               [(ngModel)]="fun.email" #emailf="ngModel"
                pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
                placeholder="eliobgz@gmail.com" [ngClass]="(emailf.invalid && emailf.touched) ? 'is-invalid' : ''"
                class="form-control">
@@ -66,13 +66,13 @@
         <label for="cargo">Cargo</label>
         <div class="row">
           <div class="col-8 col-md-10">
-            <input type="text" [disabled]="valida(funform)" name="cargo" required id="cargo" [(ngModel)]="f.cargo"
+            <input type="text" [disabled]="valida(funform)" name="cargo" required id="cargo" [(ngModel)]="fun.cargo"
                    #cargof="ngModel" placeholder="Estagiário"
                    [ngClass]="(cargof.invalid && cargof.touched) ? 'is-invalid' : ''" class="form-control">
             <div class="invalid-feedback" *ngIf="cargof.invalid && cargof.touched">Campo Obrigatório</div>
           </div>
           <div class="col-4 col-md-2" style="padding-left: 0;">
-            <input type="checkbox" [(ngModel)]="f.gerente" #gerentef="ngModel" name="gerente" id="gerente"
+            <input type="checkbox" [(ngModel)]="fun.gerente" #gerentef="ngModel" name="gerente" id="gerente"
                    style="alignment: right">
             <label for="gerente" style="width: 15%">Gerente</label>
           </div>

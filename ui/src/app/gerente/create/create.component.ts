@@ -37,12 +37,17 @@ export class CreateComponent implements OnInit {
     return true;
   }
   confirma() {
+    if (!this.f.gerente) {
+      this.f.gerente = false;
+    } else {
+      this.f.cargo = null;
+    }
     this.ser.criarFun(this.f).subscribe(
       () => {
         alert('Cadastro concluida com sucesso');
         history.go(-1);
-      }, () => {
-        alert('Erro na validação com o servidor');
+      }, (e) => {
+        alert('Erro na validação com o servidor' + e['message']);
       }
     );
   }

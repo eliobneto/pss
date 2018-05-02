@@ -14,12 +14,12 @@ export class FuncionarioService {
     return this.http.get(this.service);
   }
 
-  excluir(id: string){
-    return this.http.delete(this.service)
+  excluir(id: string) {
+    return this.http.delete(this.service + id);
   }
 
-  getFun(id: string){
-    return this.http.get<funcionario>(this.service + id)
+  getFun(id: string) {
+    return this.http.get<funcionario>(this.service + id);
   }
 
   criarFun(func: funcionario) {
@@ -34,7 +34,14 @@ export class FuncionarioService {
   }
 
   updat(id: string, func: funcionario) {
-    return this.http.put(this.service + id, {func});
+    const cargo = func.cargo;
+    const telefone = func.telefone;
+    const cpf = func.cpf;
+    const email = func.email;
+    const gerente = func.gerente;
+    const password = func.password;
+    const nome = func.nome;
+    return this.http.put(this.service + id, {cargo, id, telefone, cpf, email, nome, password, gerente});
   }
 
 }
