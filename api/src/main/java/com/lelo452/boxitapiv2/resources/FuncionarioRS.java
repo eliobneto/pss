@@ -55,12 +55,6 @@ public class FuncionarioRS {
         return ResponseEntity.noContent().build();
     }
 
-    @RequestMapping(value="/picture", method=RequestMethod.POST)
-    public ResponseEntity<Void> uploadProfilePicture(@RequestParam(name="file") MultipartFile file) {
-        URI uri = service.uploadProfilePicture(file);
-        return ResponseEntity.created(uri).build();
-    }
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Integer id) {
         service.delete(id);

@@ -21,9 +21,6 @@ public class FuncionarioService {
     @Autowired
     private FuncionarioRepository repo;
 
-    @Autowired
-	private S3Service s3Service;
-
     public FuncionarioDTO find(Integer id) {
         Optional<FuncionarioDTO> obj = repo.findById(id).map(toDTO);
         return obj.orElseThrow(() -> new ObjectNotFoundException(
@@ -53,10 +50,6 @@ public class FuncionarioService {
     public void delete(Integer id) {
         find(id);
         repo.deleteById(id);
-    }
-
-    public URI uploadProfilePicture(MultipartFile multipartFile) {
-        return s3Service.uploadFile(multipartFile);
     }
 
     private Funcionario fromDTO(FuncionarioDTO dto) {
