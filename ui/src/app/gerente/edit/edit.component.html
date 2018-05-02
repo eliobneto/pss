@@ -16,7 +16,7 @@
       <div class="col-12 offset-md-3 col-md-6">
         <label for="cpf">CPF</label><br>
         <input type="text" name="cpf" [spMask]="cpfMask" id="cpf" placeholder="123.456.789-11" [spKeepMask]="true"
-               [(ngModel)]="fun.cpf" [cpf]="cpf"
+               [(ngModel)]="fun.cpf" [cpf]="fun.cpf"
                #cpff="ngModel" class="form-control" required [ngClass]="(cpff?.errors?.cpf || (cpff.touched && cpff.invalid)) ? 'is-invalid' : ''">
         <div class="invalid-feedback" *ngIf="cpff?.errors?.cpf && cpff.touched || (cpff.touched && cpff.invalid)"> CPF
           Inválido
@@ -65,7 +65,7 @@
     <div class="row">
       <div class="col-12 offset-md-3 col-md-6">
         <label for="senha" class="control-label">Senha</label><br>
-        <input id="senha" required type="password" name="senha" [(ngModel)]="f.password" #senhaf="ngModel"
+        <input id="senha" required type="password" name="senha" [(ngModel)]="fun.password" #senhaf="ngModel"
                [ngClass]="(senhaf.invalid && senhaf.touched) ? 'is-invalid' : ''"
                class="form-control">
         <div class="invalid-feedback" *ngIf="senhaf.touched && senhaf.invalid"> Camgipo Obrigatório</div>
@@ -75,7 +75,7 @@
     <div class="row">
       <div class="col-12 offset-md-3 col-md-6">
         <label for="csenha">Confirmar Senha</label>
-        <input name="csenha" required id="csenha" type="password" [(ngModel)]="csenha" #csenhaf="ngModel"
+        <input name="csenha" required id="csenha" type="password" ngModel #csenhaf="ngModel"
                [ngClass]="(csenhaf.invalid && csenhaf.touched) || (confirmasenha(funform,csenhaf)) ? 'is-invalid' : ''"
                class="form-control">
         <div class="invalid-feedback" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem
