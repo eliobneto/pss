@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm, AbstractControl} from '@angular/forms';
 import {MyMaskUtil} from '../../shared/mask/my-mask.util';
-import {FuncionarioService} from "../funcionario.service";
-import {Router} from "@angular/router";
+import {FuncionarioService} from '../funcionario.service';
+import {funcionario} from '../funcionario';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-edit',
@@ -13,14 +14,27 @@ export class EditComponent implements OnInit {
   public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
   public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
 
-  constructor(private ser: FuncionarioService, private route: Router) {
+  funId: string;
+  fun: any;
+  update = false;
+  f = new funcionario();
+
+
+  constructor(private ser: FuncionarioService, private route: Router, private activatedRoute: ActivatedRoute) {
   }
-
-  Salvafun(s: NgForm){
-
-  }
-
   ngOnInit() {
+    this.activatedRoute.paramMap.subscribe(params => {
+      this.funId = params.get('id');
+      if (this.funId) {
+        this.update = true;
+        this.ser.getFun(this.funId).subscribe(
+          (s) => {
+            this.fun = s;
+            console.log(this.fun);
+          }
+        );
+      }
+    });
   }
 
   valida(funform: NgForm): boolean {
