@@ -45,21 +45,12 @@ public class ProdutoService {
 
     public ProdutoDTO insert(ProdutoNewDTO dto) {
         Produto obj = fromDTO(dto);
-        addCategoria(obj, dto.getCategoria());
         return toDTO.apply(repo.save(obj));
     }
 
     public ProdutoDTO update(ProdutoDTO dto) {
         Produto obj = fromDTO(dto);
-        addCategoria(obj, dto.getCategoria());
         return toDTO.apply(repo.save(obj));
-    }
-
-    private Produto addCategoria(Produto dto, String categoria) {
-        List<Categoria> cat = new ArrayList<>();
-        cat.add(new Categoria(null, categoria));
-        dto.setCategorias(cat);
-        return dto;
     }
 
     public void delete(Integer id) {
