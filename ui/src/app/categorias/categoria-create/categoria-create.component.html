@@ -9,7 +9,7 @@
   </div>
   <div class="row">
     <div class="col-12 text-center">
-      <h1 class="text-center">Nova categoria</h1>
+      <h1 class="text-center">{{ !update && "Nova categoria" || "Editar categoria" }}</h1>
     </div>
   </div>
   <div *ngIf="error" class="alert alert-danger" role="alert">{{msg}}</div>
@@ -19,7 +19,7 @@
       <div class="col-12 col-md-4">
         <label>Nome<span class="text-danger">*</span></label>
         <input type="text" class="form-control" placeholder="example"
-               name="name" ngModel required [minlength]="2" #nameInput="ngModel"/>
+               name="name" ngModel required [minlength]="2" [value]="categoriaName" #nameInput="ngModel"/>
       </div>
       <div class="col-12 col-md-4"></div>
     </div>
@@ -27,8 +27,23 @@
     <div class="row">
       <div class="col-12 col-md-4"></div>
       <div class="col-12 col-md-4">
-        <button [disabled]="f.invalid" type="button" class="btn btn-primary btn-block" (click)="cadastrar(nameInput.value)">Cadastrar</button>
+        <button *ngIf="!update" [disabled]="f.invalid" type="button" class="btn btn-primary btn-block"
+                (click)="cadastrar(nameInput.value)">Cadastrar
+        </button>
+        <div *ngIf="update">
+          <div class="col-5">
+            <button type="button" class="btn btn-primary btn-block" onclick="history.go(-1)">Cancelar
+            </button>
+          </div>
+          <div class="col-2"></div>
+          <div class="col-5">
+            <button [disabled]="f.invalid" type="button" class="btn btn-primary btn-block"
+                    (click)="updateCategoria(nameInput.value)">Atualizar
+            </button>
+          </div>
+        </div>
       </div>
+
       <div class="col-12 col-md-4"></div>
     </div>
   </form>

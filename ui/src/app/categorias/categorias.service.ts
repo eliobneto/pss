@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
+import {Categoria} from './categoria.model';
 
 @Injectable()
 export class CategoriasService {
-  private categoriaUrl = `${environment.apiUrl}categorias`;
+  private categoriaUrl = `${environment.apiUrl}categorias/`;
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -14,11 +15,11 @@ export class CategoriasService {
   }
 
   getAll() {
-    return this.http.get(this.categoriaUrl);
+    return this.http.get<Categoria>(this.categoriaUrl);
   }
 
   getOne(id: string) {
-    return this.http.get(this.categoriaUrl + id);
+    return this.http.get<Categoria>(this.categoriaUrl + id);
   }
 
   update(nome: string, id: string) {
