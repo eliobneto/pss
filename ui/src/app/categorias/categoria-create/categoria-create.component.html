@@ -30,14 +30,13 @@
         <button *ngIf="!update" [disabled]="f.invalid" type="button" class="btn btn-primary btn-block"
                 (click)="cadastrar(nameInput.value)">Cadastrar
         </button>
-        <div *ngIf="update">
+        <div *ngIf="update" class="row">
           <div class="col-5">
-            <button type="button" class="btn btn-primary btn-block" onclick="history.go(-1)">Cancelar
-            </button>
+            <a routerLink="/categorias"><button type="button" class="btn btn-primary btn-block">Cancelar</button></a>
           </div>
           <div class="col-2"></div>
           <div class="col-5">
-            <button [disabled]="f.invalid" type="button" class="btn btn-primary btn-block"
+            <button type="button" class="btn btn-primary btn-block"
                     (click)="updateCategoria(nameInput.value)">Atualizar
             </button>
           </div>
