@@ -53,6 +53,7 @@ export class CategoriaCreateComponent implements OnInit {
     } else {
       this.service.update(nome, this.categoriaId).subscribe(
         (s) => {
+          console.log(s);
           this.error = false;
           this.route.navigate(['/categorias']);
         }, (e) => {
