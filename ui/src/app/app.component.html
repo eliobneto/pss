@@ -1,6 +1,16 @@
 <div class="d-flex flex-column" style="height: 100%">
   <app-navbar></app-navbar>
-  <div class="grow">
-    <router-outlet></router-outlet>
+  <div class="grow bg-admin">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <img src="assets/img/icon.png" alt="Boxit" height="80px" width="auto" style="float: right;">
+        </div>
+        <div class="col-6 justify-content-start align-middle">
+          <h1 class="logo-text-space">BoxIt</h1>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
