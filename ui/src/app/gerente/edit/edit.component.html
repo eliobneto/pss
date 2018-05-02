@@ -1,71 +1,122 @@
-<!DOCTYPE html>
-
-<html lang="pt-BR">
-
-  <head>
-
-  </head>
-
-  <body>
-    <form #funform="ngForm" ng (ngSubmit) = "Salvafun(funform)">
-      <div>
-        <img src="../../../assets/img/logo.png" alt="Boxit" width=100%>
-        <h2 style="margin-top: 0px; margin-bottom: 5%; text-align: center ">Admin - Editar Cadastro</h2>
+<div class="bg-image container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <img src="assets/img/icon.png" alt="Boxit" height="80px" width="auto" style="float: right;">
+    </div>
+    <div class="col-6 justify-content-start align-middle">
+      <h1>BoxIt</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2>Admin - Editar Cadastro</h2>
+    </div>
+  </div>
+  <form #funform="ngForm" >
+    <div class="row">
+      <div class="col-12 col-md-3"></div>
+      <div class="col-12 col-md-6">
+        <label for="nome">Nome Completo</label>
+        <input type="text" required name="nome" id="nome" placeholder="Elio Bolognese Neto" [(ngModel)]="fun.nome"
+               #nomef="ngModel" [ngClass]="(nomef.invalid && nomef.touched) ? 'is-invalid' : ''" class="form-control">
+        <div class="invalid-feedback" *ngIf="nomef.invalid && nomef.touched">Campo Obrigatório</div>
       </div>
-
-      <div [class.has-error]="nomef.invalid && nomef.touched">
-        <label for="nome" >Nome Completo</label><br>
-        <input type="text" required name="nome" id="nome" placeholder="Elio Bolognese Neto" [(ngModel)]="nome" #nomef="ngModel">
-        <div class="invalid-feedback" *ngIf="nomef.invalid && nomef.touched">Campo Obrigatório </div>
+      <div class="col-12 col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-3"></div>
+      <div class="col-12 col-md-6">
+        <label for="cpf">CPF</label><br>
+        <input type="text" name="cpf" [spMask]="cpfMask" id="cpf" placeholder="123.456.789-11" [spKeepMask]="true"
+               [(ngModel)]="fun.cpf" [cpf]="cpf"
+               #cpff="ngModel" class="form-control" required [ngClass]="(cpff?.errors?.cpf || (cpff.touched && cpff.invalid)) ? 'is-invalid' : ''">
+        <div class="invalid-feedback" *ngIf="cpff?.errors?.cpf && cpff.touched || (cpff.touched && cpff.invalid)"> CPF
+          Inválido
+        </div>
       </div>
-
-      <div>
-        <label for="cpf" >CPF</label><br>
-        <input type="text" name="cpf" [spMask]="cpfMask" id="cpf" placeholder="123.456.789-11" [spKeepMask]="true" [(ngModel)]="cpf" [cpf]="cpf"
-               #cpff="ngModel" class="form-control" required [ngClass]="(cpff?.errors?.cpf) ? 'is-invalid' : ''">
-        <div class="invalid-feedback" *ngIf="cpff?.errors?.cpf && cpff.touched || (cpff.touched && cpff.invalid)"> CPF Inválido</div>
-      </div>
-
-
-
-      <div [class.has-error]="celularf">
-        <label for="celular" >Celular</label><br>
-        <input type="text" class="form-control" #celularf="ngModel" name="celular" maxlength="15" minlength="15" [(ngModel)]="celular" [spMask]="phoneMask" placeholder="(33) 99848-6668" [spKeepMask]="true" required ngModel id="celular">
+      <div class="col-12 col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-3"></div>
+      <div class="col-12 col-md-6">
+        <label for="celular">Celular</label>
+        <input type="text" class="form-control" #celularf="ngModel" name="celular" maxlength="15" minlength="15"
+               [(ngModel)]="fun.telefone" [spMask]="phoneMask" placeholder="(33) 99848-6668" [spKeepMask]="true" required
+               ngModel id="celular" [ngClass]="(celularf.invalid && celularf.touched) ? 'is-invalid' : ''">
         <div class="invalid-feedback" *ngIf="celularf.invalid && celularf.touched">Número Inválido</div>
       </div>
-
-      <div [class.has-error]="emailf.invalid && emailf.touched">
-        <label for= "email">E-mail</label><br>
-        <input type="text" name="email" required email id="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" [(ngModel)]="email" #emailf = "ngModel" placeholder="eliobgz@gmail.com">
+      <div class="col-12 col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-3"></div>
+      <div class="col-12 col-md-6">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" required email id="email"
+               [(ngModel)]="fun.email" #emailf="ngModel"
+               pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+               placeholder="eliobgz@gmail.com" [ngClass]="(emailf.invalid && emailf.touched) ? 'is-invalid' : ''"
+               class="form-control">
         <div class="invalid-feedback" *ngIf="emailf.invalid && emailf.touched">E-mail Inválido</div>
       </div>
-
-      <div [class.has-error]="cargof.invalid && cargof.touched">
-        <label for="cargo">Cargo</label><br>
-        <input type="text" [disabled]="valida(funform)" name="cargo" required id="cargo" [(ngModel)]="cargo" #cargof="ngModel" placeholder="Estagiário">
-        <input type="checkbox" [(ngModel)]="gerente" #gerentef="ngModel" name="gerente" id="gerente" [(ngModel)]="gerente" style="alignment: right">
-        <label for="gerente" style="width: 15%">Gerente</label>
-        <div class="invalid-feedback" *ngIf="cargof.invalid && cargof.touched">Campo Obrigatório </div>
+      <div class="col-12 col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-3"></div>
+      <div class="col-12 col-md-6">
+        <label for="cargo">Cargo</label>
+        <div class="row">
+          <div class="col-8 col-md-10">
+            <input type="text" [disabled]="valida(funform)" name="cargo" required id="cargo" [(ngModel)]="fun.cargo"
+                   #cargof="ngModel" placeholder="Estagiário"
+                   [ngClass]="(cargof.invalid && cargof.touched) ? 'is-invalid' : ''" class="form-control">
+            <div class="invalid-feedback" *ngIf="cargof.invalid && cargof.touched">Campo Obrigatório</div>
+          </div>
+          <div class="col-4 col-md-2" style="padding-left: 0;">
+            <input type="checkbox" [(ngModel)]="fun.gerente" #gerentef="ngModel" name="gerente" id="gerente"
+                   style="alignment: right">
+            <label for="gerente" style="width: 15%">Gerente</label>
+          </div>
+        </div>
       </div>
+      <div class="col-12 col-md-3"></div>
+    </div>
 
-      <div [class.has-error]="senhaf.touched && senhaf.invalid">
+    <div class="row">
+      <div class="col-12 col-md-3"></div>
+      <div class="col-12 col-md-6">
         <label for="senha" class="control-label">Senha</label><br>
-        <input id="senha" required type="password" name="senha" [(ngModel)]="senha" #senhaf="ngModel">
-        <div class="invalid-feedback" *ngIf="senhaf.touched && senhaf.invalid"> Camgipo Obrigatório  </div>
+        <input id="senha" required type="password" name="senha" [(ngModel)]="f.password" #senhaf="ngModel"
+               [ngClass]="(senhaf.invalid && senhaf.touched) ? 'is-invalid' : ''"
+               class="form-control">
+        <div class="invalid-feedback" *ngIf="senhaf.touched && senhaf.invalid"> Camgipo Obrigatório</div>
       </div>
+      <div class="col-12 col-md-3"></div>
+    </div>
 
-      <div [class.has-error]="csenhaf.touched && csenhaf.invalid">
-        <label for="csenha" >Confirmar Senha</label>
-        <input name="csenha" required id="csenha" type="password" [(ngModel)]="csenha" #csenhaf="ngModel">
-        <div class="invalid-feedback" *ngIf="csenhaf.touched && csenhaf.invalid">Campo Obrigatório</div>
-        <div class="invalid-feedback" *ngIf="csenhaf.touched && confirmasenha(funform,csenhaf)">As senhas não conferem</div>
+    <div class="row">
+      <div class="col-12 col-md-3"></div>
+      <div class="col-12 col-md-6">
+        <label for="csenha">Confirmar Senha</label>
+        <input name="csenha" required id="csenha" type="password" [(ngModel)]="csenha" #csenhaf="ngModel"
+               [ngClass]="(csenhaf.invalid && csenhaf.touched) || (confirmasenha(funform,csenhaf)) ? 'is-invalid' : ''"
+               class="form-control">
+        <div class="invalid-feedback" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem
+        </div>
+        <div class="invalid-feedback" *ngIf="((csenhaf.touched && senhaf.invalid) && (csenhaf.touched && csenhaf.invalid))">Campo Obrigatório
+        </div>
       </div>
-
-      <div>
-        <button class="btn btn-primary btn-lg btn-block" (click)="confirma()" type="submit" [disabled]="funform.invalid" style="text-align: center" > Salvar </button>
+      <div class="col-12 col-md-3"></div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-12 col-md-3"></div>
+      <div class="col-12 col-md-6">
+        <button class="btn btn-primary btn-lg btn-block" (click)="confirma()" type="submit"
+                [disabled]="funform.invalid || confirmasenha(funform,csenhaf)"> Enviar
+        </button>
       </div>
+      <div class="col-12 col-md-3"></div>
+    </div>
+  </form>
 
-    </form>
-
-  </body>
-</html>
+</div>

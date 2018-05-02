@@ -9,6 +9,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {GerenteRouting} from './gerente.routing';
 import {SharedModule} from '../shared/shared.module';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   imports: [
@@ -18,13 +20,15 @@ import {SharedModule} from '../shared/shared.module';
     SharedModule,
     BrowserModule,
     RouterModule,
-    GerenteRouting
+    GerenteRouting,
+    HttpClientModule
   ],
   declarations: [
     CreateComponent,
     ReadDeleteComponent,
     EditComponent
   ],
-  exports: []
+  exports: [],
+  providers: []
 })
 export class GerenteModule { }

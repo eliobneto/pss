@@ -9,6 +9,7 @@ import {RouterModule} from '@angular/router';
 import {NavbarComponent} from './navbar/navbar.component';
 import {GerenteModule} from '../gerente/gerente.module';
 import {AppRouting} from '../app.routing';
+import {FuncionarioService} from '../gerente/funcionario.service';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -28,6 +29,7 @@ registerLocaleData(localePt, 'pt-BR');
   ],
   providers: [
     CategoriasService,
+    FuncionarioService,
     { provide: LOCALE_ID, useValue: 'pt-BR' },
     HttpClient
   ]
