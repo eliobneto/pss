@@ -29,6 +29,10 @@ export class CreateComponent implements OnInit {
     return false;
   }
 
+  canSubmit(form: boolean, senha: boolean) {
+    return form && senha;
+  }
+
   confirmasenha(funform: NgForm, csa: AbstractControl): boolean {
     if (funform.value.senha === csa.value) {
       return false;

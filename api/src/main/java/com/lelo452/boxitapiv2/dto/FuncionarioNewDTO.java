@@ -18,6 +18,5 @@ public class FuncionarioNewDTO implements Serializable {
     private String email;
     private String cargo;
     private String password;
-    private String cpassword;
     private Boolean gerente;
 }

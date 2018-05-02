@@ -48,6 +48,12 @@ public class FuncionarioRS {
         return ResponseEntity.ok(obj);
     }
 
+    @PutMapping("/{id}/password")
+    public ResponseEntity<Void> updatePassword(@PathVariable Integer id, @RequestBody String password) {
+        FuncionarioDTO obj = service.updatePassword(password, id);
+        return ResponseEntity.noContent().build();
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Integer id) {
         service.delete(id);
