@@ -29,6 +29,10 @@ export class CreateComponent implements OnInit {
     return false;
   }
 
+  canSubmit(form: boolean, senha: boolean) {
+    return form && senha;
+  }
+
   confirmasenha(funform: NgForm, csa: AbstractControl): boolean {
     if (funform.value.senha === csa.value) {
       return false;
@@ -46,7 +50,7 @@ export class CreateComponent implements OnInit {
         alert('Cadastro concluida com sucesso');
         history.go(-1);
       }, (e) => {
-        alert('Erro na validação com o servidor: Email já cadastrado');
+        alert('CPF ou e-mail já cadastrado');
       }
     );
   }

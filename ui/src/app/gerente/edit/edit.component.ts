@@ -45,7 +45,7 @@ export class EditComponent implements OnInit {
   }
 
   confirmasenha(funform: NgForm, csa: AbstractControl): boolean {
-    if (funform.value.senha === csa.value) {
+    if ((!csa.value && !funform.value.senha) || (funform.value.senha === csa.value)) {
       return false;
     }
     return true;
@@ -61,8 +61,8 @@ export class EditComponent implements OnInit {
       () => {
         alert('Edição concluido com sucesso');
         history.go(-1);
-      }, (e) => {
-        alert(e['message']);
+      }, () => {
+        alert('Erro na validação com o servidor');
       }
     );
   }
