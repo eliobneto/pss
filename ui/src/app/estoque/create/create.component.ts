@@ -9,7 +9,9 @@ import {Estoque} from '../estoque.model';
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
+
 export class CreateComponent implements OnInit {
+
   msg: string;
   error = false;
   produtoId: string;
