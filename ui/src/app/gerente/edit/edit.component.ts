@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NgForm, AbstractControl} from '@angular/forms';
 import {MyMaskUtil} from '../../shared/mask/my-mask.util';
 import {FuncionarioService} from '../funcionario.service';
@@ -15,11 +15,18 @@ export class EditComponent implements OnInit {
 
   funId: string;
   fun: any;
+  funcionarios: any;
   update = false;
+  gerente = false;
 
 
-  constructor(private ser: FuncionarioService, private route: Router, private activatedRoute: ActivatedRoute) {
+  constructor(
+    private ser: FuncionarioService,
+    private route: Router,
+    private activatedRoute: ActivatedRoute
+  ) {
   }
+
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(params => {
       this.funId = params.get('id');
@@ -28,11 +35,30 @@ export class EditComponent implements OnInit {
         this.ser.getFun(this.funId).subscribe(
           (s) => {
             this.fun = s;
-            }, () => { alert('Erro no servidor'); }
-            );
+          }, () => {
+            alert('Erro no servidor');
+          }
+        );
       } else {
         alert('Pagina não Encontrada');
-        history.go(-1);
+        this.route.navigate(['/funcionarios']);
+      }
+    });
+    this.validagerente();
+  }
+
+  validagerente() {
+    this.ser.getFuns().subscribe((s) => {
+      this.funcionarios = s;
+      if(this.fun.gerente) {
+        this.gerente = false;
+      } else {
+        for (let o of this.funcionarios) {
+          if (o.gerente === true) {
+            this.gerente = true;
+            break;
+          }
+        }
       }
     });
   }
@@ -60,7 +86,7 @@ export class EditComponent implements OnInit {
     this.ser.updat(this.funId, this.fun).subscribe(
       () => {
         alert('Edição concluido com sucesso');
-        history.go(-1);
+        this.route.navigate(['/funcionarios']);
       }, () => {
         alert('Erro na validação com o servidor');
       }

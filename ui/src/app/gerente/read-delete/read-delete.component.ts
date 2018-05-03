@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FuncionarioService} from '../funcionario.service';
 import {Router} from '@angular/router';
-import {MyMaskUtil} from '../../shared/mask/my-mask.util';
-import {funcionario} from '../funcionario';
+import {MyMaskUtil} from "../../shared/mask/my-mask.util";
 
 @Component({
   selector: 'app-read-delete',
@@ -10,6 +9,7 @@ import {funcionario} from '../funcionario';
   styleUrls: ['./read-delete.component.css']
 })
 export class ReadDeleteComponent implements OnInit {
+  public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
   constructor(private ser: FuncionarioService, private route: Router) {
   }
 

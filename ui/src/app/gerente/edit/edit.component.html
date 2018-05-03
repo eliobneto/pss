@@ -52,7 +52,7 @@
                    [ngClass]="(cargof.invalid && cargof.touched) ? 'is-invalid' : ''" class="form-control">
           </div>
           <div class="col-4 col-md-2" style="padding-left: 0;">
-            <input type="checkbox" [(ngModel)]="fun.gerente" #gerentef="ngModel" name="gerente" id="gerente"
+            <input type="checkbox" [(ngModel)]="fun.gerente" [disabled]="gerente" #gerentef="ngModel" name="gerente" id="gerente"
                    style="alignment: right">
             <label for="gerente" style="width: 15%">Gerente</label>
           </div>

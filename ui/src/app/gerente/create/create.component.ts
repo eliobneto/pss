@@ -3,6 +3,7 @@ import {AbstractControl, NgForm} from '@angular/forms';
 import {MyMaskUtil} from '../../shared/mask/my-mask.util';
 import {FuncionarioService} from '../funcionario.service';
 import {funcionario} from '../funcionario';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -14,11 +15,29 @@ export class CreateComponent implements OnInit {
   public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
   public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
   f = new funcionario();
+  fun: any;
+  gerente = false;
 
-  constructor(private ser: FuncionarioService) {
+  constructor(
+    private ser: FuncionarioService,
+    private route: Router
+  ) {
   }
 
   ngOnInit() {
+    this.validagerente()
+  }
+
+  validagerente(){
+    this.ser.getFuns().subscribe((s) => {
+      this.fun = s;
+      for (let o of this.fun) {
+        if (o.gerente === true) {
+          this.gerente = true;
+          break;
+        }
+      }
+    });
   }
 
 
@@ -48,7 +67,7 @@ export class CreateComponent implements OnInit {
     this.ser.criarFun(this.f).subscribe(
       () => {
         alert('Cadastro concluida com sucesso');
-        history.go(-1);
+        this.route.navigate(['/funcionarios']);
       }, (e) => {
         alert('CPF ou e-mail já cadastrado');
       }
