@@ -4,13 +4,14 @@
   </div>
 </div>
 <div class="container">
-  <div class="input-group">
-        <span class="input-group-btn">
-          <button class="btn btn-primary" type="button">Pesquisar</button>
-        </span>
-    <input type="text" class="form-group" placeholder="Pesquisar CPF">
+  <div class="input-group col-12 col-md-4">
+    <div class="input-group-append" >
+      <button class="btn btn-primary" style="border-bottom-left-radius: 25px; border-top-left-radius: 25px;"><i class="fas fa-search"></i></button>
+    </div>
+    <input type="text" class="form-control" ngModel [spMask]="cpfMask" [spKeepMask]="true" placeholder="Pesquisar CPF" style="border-bottom-right-radius: 25px; border-top-right-radius: 25px;">
   </div>
 </div>
+<br/>
 <div class="card" style="margin: 0 auto; width: 80%; margin-bottom: 5px; color: black;" *ngFor="let funcionario of fun">
   <div class="card-header row" style="color:#fff;background-color:#337ab7;border-color:#337ab7">
     <div class="col-sm-6">
