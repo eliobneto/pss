@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
@@ -16,6 +17,7 @@ public class Funcionario extends Usuario {
     private static final long serialVersionUID = 1L;
 
     @CPF
+    @Column(unique = true)
     private String cpf;
 
     public Funcionario() {
