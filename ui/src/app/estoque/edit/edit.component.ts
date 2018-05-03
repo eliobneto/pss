@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {NgForm, AbstractControl} from '@angular/forms';
 import {EstoqueService} from '../estoque.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CategoriasService} from '../../categorias/categorias.service';

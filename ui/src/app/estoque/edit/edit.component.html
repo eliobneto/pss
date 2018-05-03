@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-12 text-center">
-    <h1 class="text-center">{{ !update && "Inserir novo produto" || "Modificar produto" }}</h1>
+    <h1 class="text-center">{{"Modificar produto"}}</h1>
   </div>
 </div>
 <form #f="ngForm">
@@ -82,11 +82,16 @@
         </div>
         <div class="col-2"></div>
         <div class="col-5">
-          <button [disabled]="f.invalid" type="button" class="btn btn-primary btn-block" (click)="atualizarProduto()" >{{"Atualizar"}}
+          <button [disabled]="f.invalid" type="button" class="btn btn-primary btn-block" (click)="atualizarProduto()">{{"Atualizar"}}
           </button>
         </div>
       </div>
     </div>
 
+    <br/><br/><br/>
+
+    <div class="col-12 offset-md-3 col-md-4 row">
+      <span class="text-danger">*</span><span>Campos Obrigatórios</span>
+    </div>
   </div>
 </form>
