@@ -9,7 +9,9 @@ import {Estoque} from '../estoque.model';
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
+
 export class CreateComponent implements OnInit {
+
   msg: string;
   error = false;
   produtoId: string;
@@ -57,7 +59,7 @@ export class CreateComponent implements OnInit {
     );
   }
 
-  atualizarProduto(nome: string) {
+  atualizarProduto() {
       this.service.atualizarProduto(this.estoque.id, this.estoque).subscribe(
         (s) => {
           this.error = false;

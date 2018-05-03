@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {EstoqueRouting} from './estoque.routing';
 import {CurrencyMaskModule} from 'ng2-currency-mask';
+import {EditComponent} from './edit/edit.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {CurrencyMaskModule} from 'ng2-currency-mask';
   ],
   declarations: [
     CreateComponent,
-    ListComponent
+    ListComponent,
+    EditComponent
   ],
   exports: []
 })
