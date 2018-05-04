@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {EstoqueService} from '../estoque.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CategoriasService} from '../../categorias/categorias.service';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit',
@@ -10,7 +11,6 @@ import {CategoriasService} from '../../categorias/categorias.service';
 })
 
 export class EditComponent implements OnInit {
-
   estoqId: string;
   estoq: any;
   update = false;
@@ -32,11 +32,17 @@ export class EditComponent implements OnInit {
         this.ser.getOne(this.estoqId).subscribe(
           (s) => {
             this.estoq = s;
-          }, () => { alert('Erro no servidor'); }
+          },
+          () => {
+            swal(
+              'Erro!',
+              'Erro no servidor!',
+              'error'
+            );
+          }
         );
       } else {
-        alert('Página não encontrada');
-        history.go(-1);
+        this.route.navigate(['/produtos']);
       }
     });
     this.categoriaService.getAll().subscribe(
@@ -54,10 +60,13 @@ export class EditComponent implements OnInit {
     }
     this.ser.atualizarProduto(this.estoqId, this.estoq).subscribe(
       () => {
-        alert('Edição concluido com sucesso');
-        history.go(-1);
+        this.route.navigate(['/produtos']);
       }, () => {
-        alert('Erro na validação com o servidor');
+        swal(
+          'Erro!',
+          'Erro na validação com o servidor!',
+          'error'
+        );
       }
     );
   }

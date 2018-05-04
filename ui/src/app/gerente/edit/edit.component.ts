@@ -3,6 +3,7 @@ import {NgForm, AbstractControl} from '@angular/forms';
 import {MyMaskUtil} from '../../shared/mask/my-mask.util';
 import {FuncionarioService} from '../funcionario.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit',
@@ -36,11 +37,14 @@ export class EditComponent implements OnInit {
           (s) => {
             this.fun = s;
           }, () => {
-            alert('Erro no servidor');
+            swal(
+              'Erro!',
+              'Erro no servidor!',
+              'error'
+            );
           }
         );
       } else {
-        alert('Pagina não Encontrada');
         this.route.navigate(['/funcionarios']);
       }
     });
@@ -50,10 +54,10 @@ export class EditComponent implements OnInit {
   validagerente() {
     this.ser.getFuns().subscribe((s) => {
       this.funcionarios = s;
-      if(this.fun.gerente) {
+      if (this.fun.gerente) {
         this.gerente = false;
       } else {
-        for (let o of this.funcionarios) {
+        for (const o of this.funcionarios) {
           if (o.gerente === true) {
             this.gerente = true;
             break;
@@ -64,17 +68,11 @@ export class EditComponent implements OnInit {
   }
 
   valida(funform: NgForm): boolean {
-    if (funform.value.gerente === true) {
-      return true;
-    }
-    return false;
+    return funform.value.gerente === true;
   }
 
   confirmasenha(funform: NgForm, csa: AbstractControl): boolean {
-    if ((!csa.value && !funform.value.senha) || (funform.value.senha === csa.value)) {
-      return false;
-    }
-    return true;
+    return !((!csa.value && !funform.value.senha) || (funform.value.senha === csa.value));
   }
 
   confirma() {
@@ -85,10 +83,13 @@ export class EditComponent implements OnInit {
     }
     this.ser.updat(this.funId, this.fun).subscribe(
       () => {
-        alert('Edição concluido com sucesso');
         this.route.navigate(['/funcionarios']);
       }, () => {
-        alert('Erro na validação com o servidor');
+        swal(
+          'Erro!',
+          'CPF ou e-mail já cadastrado!',
+          'error'
+        );
       }
     );
   }

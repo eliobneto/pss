@@ -30,7 +30,7 @@ export class CategoriaListComponent implements OnInit {
     swal({
       type: 'warning',
       title: 'Confirmar exclusão?',
-      text: 'Tem certeza que deseja excluir Essa ação não poderá ser desfeita!',
+      text: 'Tem certeza que deseja excluir. Essa ação não poderá ser desfeita!',
       showCancelButton: true,
       confirmButtonText: 'Sim!',
       cancelButtonText: 'Não!',

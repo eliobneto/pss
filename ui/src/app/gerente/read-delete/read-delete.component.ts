@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FuncionarioService} from '../funcionario.service';
 import {Router} from '@angular/router';
-import {MyMaskUtil} from "../../shared/mask/my-mask.util";
+import {MyMaskUtil} from '../../shared/mask/my-mask.util';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-read-delete',
@@ -23,13 +24,32 @@ export class ReadDeleteComponent implements OnInit {
   }
 
   confirmaex(id: string) {
-    if (confirm('Você tem certeza que deseja excluir!\nEssa ação não poderá ser desfeita') === true) {
-      this.ser.excluir(id).subscribe(
-        () => {
-          alert('Cadastro excluido com sucesso');
-          this.populate();
-        },
-        (e) => {alert('Erro na validação com o servidor'); } );
-    }
+    swal({
+      type: 'warning',
+      title: 'Confirmar exclusão?',
+      text: 'Tem certeza que deseja excluir. Essa ação não poderá ser desfeita!',
+      showCancelButton: true,
+      confirmButtonText: 'Sim!',
+      cancelButtonText: 'Não!',
+      confirmButtonClass: 'btn btn-success space-left-alert',
+      cancelButtonClass: 'btn btn-danger',
+      buttonsStyling: false,
+      reverseButtons: true
+    }).then((result) => {
+      if (result.value) {
+        this.ser.excluir(id).subscribe(
+          (s) => {
+            swal({
+              title: 'Concluido!',
+              text: 'Excluido com sucesso!',
+              type: 'success',
+              confirmButtonClass: 'btn btn-success',
+              buttonsStyling: false
+            });
+            this.populate();
+          }
+        );
+      }
+    });
   }
 }
