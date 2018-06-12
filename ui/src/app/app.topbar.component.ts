@@ -26,14 +26,14 @@ export class AppTopBarComponent implements OnInit {
   }
 
   private updateLink() {
-    if (this.auth.get()===1) {
-      this.url = 'perfil';
-      this.base = 'admin';
-      this.name = 'Charles';
-    } else {
+    if (this.auth.get() === 3) {
       this.url = 'perfil';
       this.base = 'cliente';
-      this.name = 'Elio';
+      this.name = 'Cliente';
+    } else {
+      this.url = 'perfil';
+      this.base = 'admin';
+      this.name = 'Administrativo';
     }
   }
 

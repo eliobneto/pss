@@ -1,4 +1,4 @@
-<div class="login-panel ui-fluid" style="height: 125%">
+<div class="login-panel ui-fluid" style="min-height: 170%; display: inline-block">
   <div class="login-panel-header">
     <img src="assets/img/icon.png">
   </div>
@@ -75,7 +75,7 @@
           <div class="ui-g-12">
               <span class="md-inputfield">
                 <input type="text" name="cpf" id="cpf" [(ngModel)]="f.cpfres" #cpff="ngModel" class="ui-inputtext ui-corner-all ui-widget" required
-                       [spMask]="cpfMask" [spKeepMask]="true" pInputText [ngClass]="(cpff?.errors?.cpf || (cpff.touched && cpff.invalid)) ? 'is-invalid' : ''">
+                       [spMask]="cpfMask" maxlength="14" minlength="14" [spKeepMask]="true" pInputText [ngClass]="(cpff?.errors?.cpf || (cpff.touched && cpff.invalid)) ? 'is-invalid' : ''">
                 <label>CPF</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
                 <div class="ui-message ui-messages-error ui-corner-all" *ngIf="(cpff?.errors?.cpf && cpff.touched) || (cpff.touched && cpff.invalid)"> CPF Inválido</div>
               </span>
@@ -110,8 +110,8 @@
 
           <br/>
           <div class="ui-g-12">
-            <button class="ui-button-info" pButton label="Cadastrar-se" (click)="confirma()" type="submit"
-                    [disabled]="funform.invalid"></button>
+            <button class="ui-button-info" [disabled]="funform.invalid" pButton label="Cadastrar-se" (click)="confirma()" type="submit"
+                    ></button>
           </div>
 
           <br>

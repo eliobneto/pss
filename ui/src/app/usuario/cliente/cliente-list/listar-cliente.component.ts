@@ -12,7 +12,8 @@ import {Cliente} from '../cliente';
 })
 export class ListarClienteComponent implements OnInit {
 
-  public dynamicMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
+  public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
+  public cnpjMask = MyMaskUtil.CNPJ_MASK_GENERATOR;
   public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
   constructor(private ser: ClienteService, private route: Router) {
   }
