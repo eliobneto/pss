@@ -36,10 +36,10 @@ export class LoginComponent implements OnInit, OnDestroy {
     if (name === 'admin') {
       this.auth.login(1);
       this.router.navigate(['/admin']);
-    } else if(name === 'gerente') {
+    } else if (name === 'gerente') {
       this.auth.login(2);
       this.router.navigate(['/gerente']);
-    } else{
+    } else {
       this.router.navigate(['/cliente']);
     }
   }
