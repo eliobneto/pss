@@ -1,16 +1,12 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {MaskDirective} from './mask/mask.directive';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [
-    MaskDirective
-  ],
-  exports: [
-    MaskDirective
-  ]
+  declarations: [FooterComponent],
+  exports: [FooterComponent]
 })
 export class SharedModule { }
