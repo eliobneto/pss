@@ -38,14 +38,28 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
   }
 
   private updateNavbar() {
-    if (this.auth.get()) {
+    if (this.auth.get()===1) {
       this.model = [
         {label: 'Product', icon: 'store', routerLink: ['/product']},
         {label: 'Reports', icon: 'feedback', routerLink: ['/reports']},
-        {label: 'Payment', icon: 'account_balance_wallet', routerLink: ['/payment']}
+        {label: 'Payment', icon: 'account_balance_wallet', routerLink: ['/payment']},
+        {label: 'Clientes', icon:'people', routerLink: ['/listarClientes']}
       ];
       this.url = 'admin';
-    } else {
+    } else if(this.auth.get()===2){
+      this.model = [
+        {label: 'Product', icon: 'store', routerLink: ['/product']},
+        {label: 'Reports', icon: 'feedback', routerLink: ['/reports']},
+        {label: 'Payment', icon: 'account_balance_wallet', routerLink: ['/payment']},
+        {label: 'Usuários', icon:'people', items:
+            [
+              {label: 'Cadastrar Funcionário', routerLink: ['/criarFuncionario']},
+              {label: 'Listar', routerLink: ['/listarUsuarios']}
+            ]
+        }
+      ];
+      this.url = 'gerente';
+    } else{
       this.model = [
         {label: 'Store', icon: 'store', routerLink: ['/shop']},
         {label: 'My Orders', icon: 'shopping_basket', routerLink: ['/orders']},

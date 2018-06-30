@@ -33,11 +33,14 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   login(name: string) {
-    if (name !== 'admin') {
-      this.router.navigate(['/cliente']);
-    } else {
-      this.auth.login();
+    if (name === 'admin') {
+      this.auth.login(1);
       this.router.navigate(['/admin']);
+    } else if(name === 'gerente') {
+      this.auth.login(2);
+      this.router.navigate(['/gerente']);
+    } else{
+      this.router.navigate(['/cliente']);
     }
   }
 }

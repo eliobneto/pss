@@ -5,30 +5,35 @@
   <div class="login-panel-content">
     <div class="ui-g">
       <div class="ui-g-12">
-        <h1>Sign-in to BoxIt</h1>
+        <h1>Login BoxIt</h1>
       </div>
       <form #f="ngForm">
         <div class="ui-g-12">
                         <span class="md-inputfield">
-                            <input type="text" autocomplete="off" class="ui-inputtext ui-corner-all ui-widget" name="username" ngModel #user="ngModel">
-                            <label>Username</label>
+                            <input type="text" autocomplete="off" required
+                                   class="ui-inputtext ui-corner-all ui-widget" name="username" ngModel #user="ngModel">
+                            <label>CPF/CNPJ</label>
                         </span>
         </div>
         <div class="ui-g-12">
                         <span class="md-inputfield">
-                            <input type="password" autocomplete="off" class="ui-inputtext ui-corner-all ui-widget" ngModel name="password">
-                            <label>Password</label>
+                            <input type="password" autocomplete="off" required class="ui-inputtext ui-corner-all ui-widget" ngModel name="password">
+                            <label>Senha</label>
                         </span>
         </div>
         <div class="ui-g-12">
-          <button type="button" class="ui-button ui-widget ui-corner-all ui-button-text-icon-left" (click)=login(user.value)>
+          <input type="checkbox"><span>Lembrar credenciais</span>
+          <a routerLink="/recuperar" style="float: right;">Esqueceu a senha</a>
+        </div>
+        <div class="ui-g-12">
+          <button type="submit" class="ui-button ui-widget ui-corner-all ui-button-text-icon-left" [disabled]="f.invalid" (click)=login(user.value)>
             <span class="ui-button-icon-left fa ui-icon-person"></span>
-            <span class="ui-button-text">Sign In</span>
+            <span class="ui-button-text">Logar</span>
           </button>
         </div>
       </form>
       <div class="ui-g-12">
-        Don't have an account? <a routerLink="/signup">Sign Up</a> now.
+        Ainda não tem um conta? <a routerLink="/criarcliente">Cadastre-se</a> agora.
       </div>
     </div>
   </div>

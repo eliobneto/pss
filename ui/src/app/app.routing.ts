@@ -17,7 +17,6 @@ import {LoginComponent} from './auth/login/login.component';
 
 export const routes: Routes = [
     {path: '', component: LoginComponent},
-    {path: 'cliente', component: SampleDemoComponent},
     {path: 'cliente/perfil', component: FormsDemoComponent},
     {path: 'cliente/data', component: DataDemoComponent},
     {path: 'cliente/panels', component: PanelsDemoComponent},
@@ -29,7 +28,12 @@ export const routes: Routes = [
     {path: 'cliente/charts', component: ChartsDemoComponent},
     {path: 'cliente/file', component: FileDemoComponent},
     {path: 'cliente/utils', component: UtilsDemoComponent},
-    {path: 'admin', component: DocumentationComponent}
+    {path: 'cliente', component: SampleDemoComponent},
+    {path: 'admin', component: DocumentationComponent},
+    {path: 'gerente', component:DocumentationComponent},
+    {path: 'criarcliente', component:DocumentationComponent},
+    {path: 'recuperar', component:DocumentationComponent}
+
 ];
 
 export const AppRouting: ModuleWithProviders = RouterModule.forRoot(routes);

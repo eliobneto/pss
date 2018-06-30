@@ -4,21 +4,21 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  private admin: boolean;
+  private tipo: number;
 
   constructor() {
-    this.admin = false;
+    this.tipo = 3;
   }
 
-  login() {
-    this.admin = true;
+  login(tipo: number) {
+    this.tipo = tipo;
   }
 
   logout() {
-    this.admin = false;
+    this.tipo = 3;
   }
 
   get() {
-    return this.admin;
+    return this.tipo;
   }
 }
