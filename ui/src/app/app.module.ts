@@ -102,6 +102,15 @@ import {NodeService} from './demo/service/nodeservice';
 import {BreadcrumbService} from './breadcrumb.service';
 import {CoreModule} from './core/core.module';
 import {AuthService} from "./auth/auth.service";
+import {CadastrarFuncionarioComponent} from "./usuario/funcionario/cadastrar-funcionario/cadastrar-funcionario.component";
+
+import {EditarFuncionarioComponent} from "./usuario/funcionario/editar-funcionario/editar-funcionario.component";
+import {ListarFuncionarioComponent} from "./usuario/funcionario/listar-funcionario/listar-funcionario.component";
+import {CadastrarClienteComponent} from "./usuario/cliente/cadastrar-cliente/cadastrar-cliente.component";
+import {EditarClienteComponent} from "./usuario/cliente/editar-cliente/editar-cliente.component";
+
+import {ListarClienteComponent} from "./usuario/cliente/listar-cliente/listar-cliente.component";
+
 
 @NgModule({
     imports: [
@@ -199,7 +208,13 @@ import {AuthService} from "./auth/auth.service";
         EmptyDemoComponent,
         FileDemoComponent,
         UtilsDemoComponent,
-        DocumentationComponent
+        DocumentationComponent,
+        CadastrarFuncionarioComponent,
+        EditarFuncionarioComponent,
+        ListarFuncionarioComponent,
+        CadastrarClienteComponent,
+        EditarClienteComponent,
+        ListarClienteComponent,
     ],
     providers: [
         CarService, CountryService, EventService, NodeService, BreadcrumbService, AuthService

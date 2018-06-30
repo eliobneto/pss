@@ -1,0 +1,93 @@
+<form #funform="ngForm">
+
+  <div class="row">
+    <div class="col-12 offset-md-3 col-md-6">
+      <label for="nome">Nome Completo</label><span class="text-danger">*</span>
+      <input type="text" required name="nome" id="nome" placeholder="Elio Bolognese Neto" [(ngModel)]="f.nome"
+             #nomef="ngModel" [ngClass]="(nomef.invalid && nomef.touched) ? 'is-invalid' : ''" class="form-control">
+    </div>
+  </div>
+  <div class="row">
+
+  </div>
+  <div class="row">
+    <div class="col-12 offset-md-3 col-md-6">
+      <label for="celular">Celular</label><span class="text-danger">*</span>
+      <input type="text" class="form-control" #celularf="ngModel" name="celular" maxlength="15" minlength="15"
+             [(ngModel)]="f.telefone" [spMask]="phoneMask" placeholder="(33) 99848-6668" [spKeepMask]="true" required
+             ngModel id="celular" [ngClass]="(celularf.invalid && celularf.touched) ? 'is-invalid' : ''">
+      <div class="invalid-feedback" *ngIf="celularf.invalid && celularf.touched">Número Inválido</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 offset-md-3 col-md-6">
+      <label for="email">E-mail</label><span class="text-danger">*</span>
+      <input type="email" name="email" required email id="email"
+             [(ngModel)]="f.email" #emailf="ngModel" email
+             pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+             placeholder="eliobgz@gmail.com" [ngClass]="(emailf.invalid && emailf.touched) ? 'is-invalid' : ''"
+             class="form-control">
+      <div class="invalid-feedback" *ngIf="emailf.invalid && emailf.touched">E-mail Inválido</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 offset-md-3 col-md-6">
+      <label for="cargo">Cargo</label><span class="text-danger">*</span>
+      <div class="row">
+        <div class="col-8 col-md-10">
+          <input type="text" [disabled]="valida(funform)" name="cargo" required id="cargo" [(ngModel)]="f.cargo"
+                 #cargof="ngModel" placeholder="Estagiário"
+                 [ngClass]="(cargof.invalid && cargof.touched) ? 'is-invalid' : ''" class="form-control">
+        </div>
+        <div class="col-4 col-md-2" style="padding-left: 0;">
+          <input type="checkbox" [(ngModel)]="f.gerente" [disabled]="gerente" #gerentef="ngModel" name="gerente" id="gerente"
+                 style="alignment: right">
+          <label for="gerente" style="width: 15%">Gerente</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 offset-md-3 col-md-6">
+      <label for="senha" class="control-label">Senha</label><span class="text-danger">*</span>
+      <input id="senha" required type="password" name="senha" [(ngModel)]="f.password" #senhaf="ngModel"
+             [ngClass]="(senhaf.invalid && senhaf.touched) ? 'is-invalid' : ''"
+             class="form-control">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 offset-md-3 col-md-6">
+      <label for="csenha">Confirmar Senha</label><span class="text-danger">*</span>
+      <input name="csenha" required id="csenha" type="password" ngModel #csenhaf="ngModel"
+             [ngClass]="(csenhaf.invalid && csenhaf.touched) || (confirmasenha(funform,csenhaf)) ? 'is-invalid' : ''"
+             class="form-control">
+      <div class="invalid-feedback" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem</div>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-12 offset-md-3 col-md-6">
+      <button class="btn btn-primary btn-lg btn-block" (click)="confirma()" type="submit"
+              [disabled]="funform.invalid || confirmasenha(funform,csenhaf)"> Enviar
+      </button>
+    </div>
+  </div>
+</form>
+
+<br/>
+
+<div class="row">
+  <div class="col-12 offset-md-3 col-md-6">
+    <div class="text-justify" style="display: inline-block;">
+        <span style="text-align: center">Após preencher, clique no botão enviar para receber<span
+          class="text-danger">**</span> o seu código de usuário no e-mail cadastrado</span>
+      <br/>
+      <span class="text-danger">*</span>
+      <span>Campos Obrigatórios</span>
+      <br/>
+      <span><span class="text-danger">**</span>Prazo de 24h a confirmação de cadastro e envio de e-mail</span>
+    </div>
+  </div>
+</div>

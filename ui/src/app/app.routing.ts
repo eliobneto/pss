@@ -14,10 +14,15 @@ import {FileDemoComponent} from './demo/view/filedemo.component';
 import {UtilsDemoComponent} from './demo/view/utilsdemo.component';
 import {DocumentationComponent} from './demo/view/documentation.component';
 import {LoginComponent} from './auth/login/login.component';
+import {CadastrarFuncionarioComponent} from "./usuario/funcionario/cadastrar-funcionario/cadastrar-funcionario.component";
+import {EditarFuncionarioComponent} from "./usuario/funcionario/editar-funcionario/editar-funcionario.component";
+import {ListarFuncionarioComponent} from "./usuario/funcionario/listar-funcionario/listar-funcionario.component";
+import {ListarClienteComponent} from "./usuario/cliente/listar-cliente/listar-cliente.component";
+import {EditarClienteComponent} from "./usuario/cliente/editar-cliente/editar-cliente.component";
+import {CadastrarClienteComponent} from "./usuario/cliente/cadastrar-cliente/cadastrar-cliente.component";
 
 export const routes: Routes = [
     {path: '', component: LoginComponent},
-    {path: 'cliente/perfil', component: FormsDemoComponent},
     {path: 'cliente/data', component: DataDemoComponent},
     {path: 'cliente/panels', component: PanelsDemoComponent},
     {path: 'cliente/overlays', component: OverlaysDemoComponent},
@@ -32,7 +37,13 @@ export const routes: Routes = [
     {path: 'admin', component: DocumentationComponent},
     {path: 'gerente', component:DocumentationComponent},
     {path: 'criarcliente', component:DocumentationComponent},
-    {path: 'recuperar', component:DocumentationComponent}
+    {path: 'recuperar', component:DocumentationComponent},
+    {path: 'gerente/criarFuncionario', component:CadastrarFuncionarioComponent},
+    {path: 'editarFuncionario', component:EditarFuncionarioComponent},
+    {path: 'gerente/listarUsuarios', component:ListarFuncionarioComponent},
+    {path: 'admin/listarClientes', component:ListarClienteComponent},
+    {path: 'editarCliente', component:EditarClienteComponent},
+    {path: 'cadastrarCliente', component:CadastrarClienteComponent}
 
 ];
 

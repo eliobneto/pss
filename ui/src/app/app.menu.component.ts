@@ -53,8 +53,8 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
         {label: 'Payment', icon: 'account_balance_wallet', routerLink: ['/payment']},
         {label: 'Usuários', icon:'people', items:
             [
-              {label: 'Cadastrar Funcionário', routerLink: ['/criarFuncionario']},
-              {label: 'Listar', routerLink: ['/listarUsuarios']}
+              {label: 'Cadastrar Funcionário', routerLink: ['gerente/criarFuncionario']},
+              {label: 'Listar', routerLink: ['gerente/listarUsuarios']}
             ]
         }
       ];
