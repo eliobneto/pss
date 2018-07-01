@@ -21,7 +21,7 @@ export class ListarFuncionarioComponent implements OnInit {
   }
 
   populate() {
-    this.ser.getFuns().subscribe((s) => { this.fun = s; });
+    this.ser.getFuns().then(f => this.fun = f);
   }
 
   confirmaex(id: string) {

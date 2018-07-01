@@ -10,7 +10,8 @@ import { HttpClientModule} from "@angular/common/http";
 import { CadastrarFuncionarioComponent } from './cadastrar-funcionario/cadastrar-funcionario.component';
 import { ListarFuncionarioComponent } from './listar-funcionario/listar-funcionario.component';
 import { EditarFuncionarioComponent } from './editar-funcionario/editar-funcionario.component';
-
+import {DataViewModule} from "primeng/dataview";
+import {PanelModule} from "primeng/panel"
 @NgModule({
   imports: [
     CommonModule,
@@ -21,6 +22,8 @@ import { EditarFuncionarioComponent } from './editar-funcionario/editar-funciona
     RouterModule,
     AppRouting,
     HttpClientModule,
+    DataViewModule,
+    PanelModule
   ],
   declarations: [CadastrarFuncionarioComponent, ListarFuncionarioComponent, EditarFuncionarioComponent]
 })

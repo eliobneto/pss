@@ -1,52 +1,61 @@
-<div class="container">
-  <div class="input-group col-12 col-md-4">
-    <div class="input-group-append" >
-      <button class="btn btn-primary" style="border-bottom-left-radius: 25px; border-top-left-radius: 25px;"><i class="fas fa-search"></i></button>
-    </div>
-    <input type="text" class="form-control" ngModel [spMask]="cpfMask" [spKeepMask]="true" placeholder="Pesquisar CPF" style="border-bottom-right-radius: 25px; border-top-right-radius: 25px;">
-  </div>
-</div>
-<br/>
-<div class="card" style="margin: 0 auto; width: 80%; margin-bottom: 5px; color: black;" *ngFor="let funcionario of fun">
-  <div class="card-header row" style="color:#fff;background-color:#337ab7;border-color:#337ab7">
-    <div class="col-sm-6">
-      <h3> {{funcionario.nome}}</h3>
-    </div>
-    <div class="col-sm-1">
-      <button class="btn btn-success" routerLink="{{funcionario.id}}/edit">Editar</button>
-    </div>
-    <div class="col-sm-1">
-      <button class="btn btn-danger" (click)="confirmaex(funcionario.id)">Deletar</button>
-    </div>
-  </div>
+<div class="ui-g-12">
+  <div class="card card-w-title">
+    <p-dataView >
+      <p-header>
+        <div class="ui-helper-clearfix">
+          <div class="ui-g">
+            <div class="ui-g-6 ui-md-4 filter-container">
+              <div style="position:relative">
+                <input type="text" pInputText placeholder="Procurar por CPF">
+              </div>
+            </div>
+          </div>
+        </div>
+      </p-header>
+      <ng-template let-funcionario pTemplate="listItem">
+        <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
+          <div class="ui-g-12 ui-md-8">
+            <div class="ui-g">
+              <div class="ui-g-2 ui-sm-5">Nome: </div>
+              <div class="ui-g-8 ui-sm-5">
+                <b>{{funcionario.nome}}</b>
+              </div>
+              <div class="ui-sm-1">
+                <button class="ui-button-success" routerLink="{{funcionario.id}}/edit">Editar</button>
+              </div>
 
-  <div class="card-body">
-    <div class="row">
-      <div class="col-sm">
-        <div class="card-text">Nome: {{funcionario.nome}}</div>
-      </div>
-      <div class="col-sm">
-        <div class="card-text">CPF: {{funcionario.cpf}}</div>
-      </div>
-    </div>
+              <div class="ui-g-2 ui-sm-6">CPF: </div>
+              <div class="ui-g-10 ui-sm-6">
+                <b>{{funcionario.cpf}}</b>
+              </div>
 
-    <div class="row">
-      <div class="col-sm">
-        <div class="card-text">Celular: {{funcionario.telefone}}</div>
-      </div>
-      <div class="col-sm">
-        <div class="card-text">Email: {{funcionario.email}}</div>
-      </div>
-    </div>
+              <div class="ui-g-2 ui-sm-5">Numero: </div>
+              <div class="ui-g-8 ui-sm-5">
+                <b>{{funcionario.telefone}}</b>
+              </div>
+              <div class="ui-sm-1">
+                <button class="ui-button-danger" (click)="confirmaex(funcionario.id)">Deletar</button>
+              </div>
 
-    <div class="row">
-      <div class="col-sm" *ngIf="funcionario.gerente == false">
-        <div class="card-text">Cargo: {{funcionario.cargo}}</div>
-      </div>
-      <div class="col-sm">
-        <div class="card-text" *ngIf="funcionario.gerente == true">Cargo: Gerente</div>
-      </div>
-    </div>
+              <div class="ui-g-2 ui-sm-6">E-mail: </div>
+              <div class="ui-g-10 ui-sm-6">
+                <b>{{funcionario.email}}</b>
+              </div>
 
+              <div class="ui-g-2 ui-sm-6">Cargo: </div>
+              <div class="ui-g-10 ui-sm-6" *ngIf="funcionario.gerente == false">
+                <b>{{funcionario.cargo}}</b>
+              </div>
+              <div class="ui-g-10 ui-sm-6" *ngIf="funcionario.gerente == true">
+                <b>Gerente</b>
+              </div>
+            </div>
+          </div>
+          <div class="ui-g-12 ui-md-1 search-icon">
+            <button pButton type="button" icon="pi pi-search" ></button>
+          </div>
+        </div>
+      </ng-template>
+    </p-dataView>
   </div>
 </div>

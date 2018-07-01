@@ -40,7 +40,7 @@ export const routes: Routes = [
     {path: 'recuperar', component:DocumentationComponent},
     {path: 'gerente/criarFuncionario', component:CadastrarFuncionarioComponent},
     {path: 'editarFuncionario', component:EditarFuncionarioComponent},
-    {path: 'gerente/listarUsuarios', component:ListarFuncionarioComponent},
+    {path: 'gerente/listarFuncionarios', component:ListarFuncionarioComponent},
     {path: 'admin/listarClientes', component:ListarClienteComponent},
     {path: 'editarCliente', component:EditarClienteComponent},
     {path: 'cadastrarCliente', component:CadastrarClienteComponent}

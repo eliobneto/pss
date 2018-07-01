@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {funcionario} from './funcionario';
+import {Car} from "../../demo/domain/car";
 
 @Injectable()
 export class FuncionarioService {
@@ -10,7 +11,10 @@ export class FuncionarioService {
   constructor(private http: HttpClient, private router: Router) { }
 
   getFuns() {
-    return this.http.get(this.service);
+    return this.http.get<any>('assets/demo/data/Funcionario.json').toPromise()
+      .then(res => <funcionario[]> res.data)
+      .then(data => data);
+
   }
 
   excluir(id: string) {

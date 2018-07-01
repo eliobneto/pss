@@ -26,9 +26,9 @@ export class CadastrarFuncionarioComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.validagerente();
+    // this.validagerente();
   }
-
+/*
   validagerente() {
     this.ser.getFuns().subscribe((s) => {
       this.fun = s;
@@ -39,7 +39,7 @@ export class CadastrarFuncionarioComponent implements OnInit {
         }
       }
     });
-  }
+  }*/
 
 
   valida(funform: NgForm): boolean {

@@ -49,10 +49,10 @@ export class EditarFuncionarioComponent implements OnInit {
         this.route.navigate(['/funcionarios']);
       }
     });
-    this.validagerente();
+    // this.validagerente();
   }
 
-  validagerente() {
+/*  validagerente() {
     this.ser.getFuns().subscribe((s) => {
       this.funcionarios = s;
       if (this.fun.gerente) {
@@ -66,7 +66,7 @@ export class EditarFuncionarioComponent implements OnInit {
         }
       }
     });
-  }
+  }*/
 
   valida(funform: NgForm): boolean {
     return funform.value.gerente === true;
