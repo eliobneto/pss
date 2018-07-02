@@ -1,35 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
+import {Component, OnInit} from '@angular/core';
 import {NgForm, AbstractControl} from '@angular/forms';
 import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import {ActivatedRoute, Router} from '@angular/router';
 import swal from 'sweetalert2';
-import { ClienteService } from '../cliente.service';
-import { AuthService} from '../../../auth/auth.service';
->>>>>>> master
+import {ClienteService} from '../cliente.service';
+import {AuthService} from '../../../auth/auth.service';
 
 @Component({
   selector: 'app-editar-cliente',
   templateUrl: './editar-cliente.component.html',
   styleUrls: ['./editar-cliente.component.css']
 })
+
 export class EditarClienteComponent implements OnInit {
 
-<<<<<<< HEAD
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-=======
   public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
   public cnpjMask = MyMaskUtil.CNPJ_MASK_GENERATOR;
   public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
 
   cliId: string;
   cli: any;
-  clientes: any;
   update = false;
   disable = true;
 
@@ -83,5 +73,4 @@ export class EditarClienteComponent implements OnInit {
       }
     );
   }
->>>>>>> master
 }

@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import swal from 'sweetalert2';
-import { ClienteService } from '../cliente.service';
+import {ClienteService} from '../cliente.service';
 
 @Component({
   selector: 'app-listar-cliente',
