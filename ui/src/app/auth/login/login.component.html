@@ -1,0 +1,40 @@
+<div class="login-panel ui-fluid">
+  <div class="login-panel-header">
+    <img src="assets/img/icon.png">
+  </div>
+  <div class="login-panel-content">
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <h1>Login BoxIt</h1>
+      </div>
+      <form #f="ngForm">
+        <div class="ui-g-12">
+                        <span class="md-inputfield">
+                            <input type="text" autocomplete="off" required pInputText
+                                   class="ui-inputtext ui-corner-all ui-widget" name="username" ngModel #user="ngModel">
+                            <label>CPF/CNPJ</label>
+                        </span>
+        </div>
+        <div class="ui-g-12">
+                        <span class="md-inputfield">
+                            <input type="password" pInputText autocomplete="off" required class="ui-inputtext ui-corner-all ui-widget" ngModel name="password">
+                            <label>Senha</label>
+                        </span>
+        </div>
+        <div class="ui-g-12">
+          <input type="checkbox"><span>Lembrar credenciais</span>
+          <a routerLink="/recuperar" style="float: right;">Esqueceu a senha</a>
+        </div>
+        <div class="ui-g-12">
+          <button type="submit" class="ui-button ui-widget ui-corner-all ui-button-text-icon-left" [disabled]="f.invalid" (click)=login(user.value)>
+            <span class="ui-button-icon-left fa ui-icon-person"></span>
+            <span class="ui-button-text">Logar</span>
+          </button>
+        </div>
+      </form>
+      <div class="ui-g-12">
+        Ainda não tem um conta? <a routerLink="/criarcliente">Cadastre-se</a> agora.
+      </div>
+    </div>
+  </div>
+</div>

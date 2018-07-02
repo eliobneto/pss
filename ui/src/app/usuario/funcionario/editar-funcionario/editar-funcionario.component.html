@@ -1,0 +1,101 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <div class="card docs">
+
+
+      <form #funform="ngForm">
+        <div class="ui-g form-group">
+          <div class="ui-g-12">
+              <span class="md-inputfield">
+                <input [disabled]="disable"  type="text" required name="nome" id="nome"
+                       class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="fun.nome"
+                       #nomef="ngModel" pInputText>
+                <label>Nome Completo</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+              </span>
+          </div>
+
+          <div class="ui-g-12">
+              <span class="md-inputfield">
+                <input type="text" [disabled]="disable" name="cpf" id="cpf" [(ngModel)]="fun.cpf" #cpff="ngModel" class="ui-inputtext ui-corner-all ui-widget" required
+                       [spMask]="cpfMask" [spKeepMask]="true" pInputText [ngClass]="(cpff?.errors?.cpf || (cpff.touched && cpff.invalid)) ? 'is-invalid' : ''">
+                <label>CPF</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+                <div class="ui-message ui-messages-error ui-corner-all" *ngIf="(cpff?.errors?.cpf && cpff.touched) || (cpff.touched && cpff.invalid)"> CPF Inválido</div>
+              </span>
+          </div>
+
+          <div class="ui-g-12">
+              <span class="md-inputfield">
+                <input type="text" pInputText #celularf="ngModel" name="celular" maxlength="15" minlength="15"
+                       [(ngModel)]="fun.telefone" [spMask]="phoneMask" [spKeepMask]="true" required
+                       ngModel id="celular" class="ui-inputtext ui-corner-all ui-widget">
+                <label>Celular</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+              </span>
+          </div>
+
+          <div class="ui-g-12">
+              <span class="md-inputfield">
+                <input type="email" pInputText name="email" required email id="email"
+                       [(ngModel)]="fun.email" #emailf="ngModel" email
+                       pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+                       class="ui-inputtext ui-corner-all ui-widgetl">
+                <label>E-mail</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+              </span>
+          </div>
+
+
+
+          <div class="ui-g form-group">
+            <div class="ui-g-12">
+              <div class="ui-inputgroup">
+                <span class="md-inputfield">
+                  <input type="text" [disabled]="valida(funform) || disable" name="cargo" required id="cargo" [(ngModel)]="fun.cargo"
+                         #cargof="ngModel" pInputText
+                         [ngClass]="(cargof.invalid && cargof.touched) ? 'is-invalid' : ''" class="ui-inputtext ui-corner-all ui-widgetl">
+                  <label>Cargo</label>
+                </span>
+                <span class="ui-inputgroup-addon">
+                  <input type="checkbox" [(ngModel)]="fun.gerente" [disabled]="gerente || disable" #gerentef="ngModel" name="gerente" id="gerente">
+                  <label for="gerente" style="width: 15%">Gerente</label>
+                </span>
+                <span class="ui-corner-all" style="color: red; font-size: 10px">  *</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="ui-g-12">
+              <span class="md-inputfield">
+                <input id="senha" pInputText required type="password" name="senha" [(ngModel)]="fun.password" #senhaf="ngModel"
+                       class="ui-inputtext ui-corner-all ui-widget">
+                <label>Senha</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+              </span>
+          </div>
+
+          <div class="ui-g-12">
+              <span class="md-inputfield">
+                <input name="csenha" pInputText required id="csenha" type="password" ngModel #csenhaf="ngModel"
+                       [ngClass]="(csenhaf.invalid && csenhaf.touched) || (csenhaf.touched && confirmasenha(funform,csenhaf)) ? 'is-invalid' : ''"
+                       class="ui-inputtext ui-corner-all ui-widget">
+                <label>Confirmar Senha</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+                <div class="ui-message ui-messages-error ui-corner-all" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem</div>
+              </span>
+          </div>
+
+          <br/>
+          <div class="ui-g-12">
+            <button class="ui-button-info" pButton label="Enviar" (click)="confirma()" type="submit"
+                    [disabled]="funform.invalid || confirmasenha(funform,csenhaf)"></button>
+          </div>
+
+          <br>
+
+          <div class="ui-g-12">
+            <div class="fa-align-justify">
+              <span style="text-align: center"><span style="color: red">*</span> Campos Obrigatórios</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
