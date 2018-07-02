@@ -7,7 +7,7 @@
         <div class="ui-g form-group">
           <div class="ui-g-12">
               <span class="md-inputfield">
-                <input type="text" required name="nome" id="nome"
+                <input [disabled]="disable"  type="text" required name="nome" id="nome"
                        class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="fun.nome"
                        #nomef="ngModel" pInputText>
                 <label>Nome Completo</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
@@ -16,7 +16,7 @@
 
           <div class="ui-g-12">
               <span class="md-inputfield">
-                <input type="text" name="cpf" id="cpf" [(ngModel)]="fun.cpf" #cpff="ngModel" class="ui-inputtext ui-corner-all ui-widget" required
+                <input type="text" [disabled]="disable" name="cpf" id="cpf" [(ngModel)]="fun.cpf" #cpff="ngModel" class="ui-inputtext ui-corner-all ui-widget" required
                        [spMask]="cpfMask" [spKeepMask]="true" pInputText [ngClass]="(cpff?.errors?.cpf || (cpff.touched && cpff.invalid)) ? 'is-invalid' : ''">
                 <label>CPF</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
                 <div class="ui-message ui-messages-error ui-corner-all" *ngIf="(cpff?.errors?.cpf && cpff.touched) || (cpff.touched && cpff.invalid)"> CPF Inválido</div>
@@ -48,13 +48,13 @@
             <div class="ui-g-12">
               <div class="ui-inputgroup">
                 <span class="md-inputfield">
-                  <input type="text" [disabled]="valida(funform)" name="cargo" required id="cargo" [(ngModel)]="f.cargo"
+                  <input type="text" [disabled]="valida(funform) || disable" name="cargo" required id="cargo" [(ngModel)]="fun.cargo"
                          #cargof="ngModel" pInputText
                          [ngClass]="(cargof.invalid && cargof.touched) ? 'is-invalid' : ''" class="ui-inputtext ui-corner-all ui-widgetl">
                   <label>Cargo</label>
                 </span>
                 <span class="ui-inputgroup-addon">
-                  <input type="checkbox" [(ngModel)]="fun.gerente" [disabled]="gerente" #gerentef="ngModel" name="gerente" id="gerente">
+                  <input type="checkbox" [(ngModel)]="fun.gerente" [disabled]="gerente || disable" #gerentef="ngModel" name="gerente" id="gerente">
                   <label for="gerente" style="width: 15%">Gerente</label>
                 </span>
                 <span class="ui-corner-all" style="color: red; font-size: 10px">  *</span>

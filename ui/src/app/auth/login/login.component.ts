@@ -1,7 +1,11 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import * as $ from 'jquery';
 import {Router} from '@angular/router';
+<<<<<<< HEAD
 import {AuthService} from "../auth.service";
+=======
+import {AuthService} from '../auth.service';
+>>>>>>> master
 
 @Component({
   selector: 'app-login',
@@ -10,13 +14,23 @@ import {AuthService} from "../auth.service";
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
+<<<<<<< HEAD
   constructor(private router: Router, private auth: AuthService) { }
+=======
+  constructor(private router: Router, private auth: AuthService) {
+  }
+>>>>>>> master
 
   ngOnInit() {
     $('body').addClass('login-body');
     $('app-menu,app-footer,app-breadcrumb,app-topbar').hide();
+<<<<<<< HEAD
     $(function() {
       $('input').on('blur', function(e) {
+=======
+    $(function () {
+      $('input').on('blur', function (e) {
+>>>>>>> master
         const el = $(this);
         if (el.val() !== '') {
           el.addClass('ui-state-filled');
@@ -34,12 +48,22 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   login(name: string) {
     if (name === 'admin') {
+<<<<<<< HEAD
       this.auth.login(1);
       this.router.navigate(['/admin']);
     } else if (name === 'gerente') {
       this.auth.login(2);
       this.router.navigate(['/gerente']);
     } else {
+=======
+      this.auth.login(2);
+      this.router.navigate(['/admin']);
+    } else if (name === 'gerente') {
+      this.auth.login(1);
+      this.router.navigate(['/gerente']);
+    } else {
+      this.auth.login(3);
+>>>>>>> master
       this.router.navigate(['/cliente']);
     }
   }

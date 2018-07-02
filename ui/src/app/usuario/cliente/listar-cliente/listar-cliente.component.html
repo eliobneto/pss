@@ -17,6 +17,7 @@
           <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
             <div class="ui-g-12 ui-md-8">
               <div class="ui-g">
+<<<<<<< HEAD
                 <div class="ui-g-2 ui-sm-2">Nome: </div>
                 <div class="ui-g-10 ui-sm-10">
                   <b>{{funcionario.nome}}</b>
@@ -50,6 +51,64 @@
                 <div class="ui-g-10 ui-sm-10" *ngIf="funcionario.gerente == true">
                   <b>Gerente</b>
                 </div>
+=======
+                <div class="ui-g-4 ui-sm-4">Razão Social: </div>
+                <div class="ui-g-8 ui-sm-8">
+                  <b>{{cliente.razao}}</b>
+                </div>
+
+                <div class="ui-g-4 ui-sm-4">CNPJ: </div>
+                <div class="ui-g-6 ui-sm-6">
+                  <b>{{cliente.cnpj}}</b>
+                </div>
+                <div class="ui-sm-1">
+                  <button pButton type="button" icon="ui-icon-edit" routerLink="{{cliente.id}}/edit"></button>
+                </div>
+
+                <div class="ui-g-4 ui-sm-4">Numero: </div>
+                <div class="ui-g-8 ui-sm-8">
+                  <b>{{cliente.telefone}}</b>
+                </div>
+
+                <div class="ui-g-4 ui-sm-4">E-mail: </div>
+                <div class="ui-g-6 ui-sm-6">
+                  <b>{{cliente.email}}</b>
+                </div>
+                <div class="ui-sm-1">
+                  <button pButton type="button" icon="ui-icon-delete" class="ui-button-danger" (click)="confirmaex(cliente.id)"></button>
+                </div>
+
+                <div class="ui-g-4 ui-sm-4">Nome do Responsavel: </div>
+                <div class="ui-g-8 ui-sm-8" >
+                  <b>{{cliente.responsavel}}</b>
+                </div>
+
+                <div class="ui-g-4 ui-sm-4">CPF do Responsavel: </div>
+                <div class="ui-g-8 ui-sm-8" >
+                  <b>{{cliente.cpfres}}</b>
+                </div>
+
+                <div class="ui-g-4 ui-sm-4">CEP: </div>
+                <div class="ui-g-8 ui-sm-8" >
+                  <b>{{cliente.cep}}</b>
+                </div>
+
+                <div class="ui-g-4 ui-sm-4">Endereço: </div>
+                <div class="ui-g-8 ui-sm-8" >
+                  <b>{{cliente.endereco}}</b>
+                </div>
+
+                <div class="ui-g-4 ui-sm-4">Cidade: </div>
+                <div class="ui-g-8 ui-sm-8" >
+                  <b>{{cliente.cidade}}</b>
+                </div>
+
+                <div class="ui-g-4 ui-sm-4" *ngIf="cliente.complemento != null ">Complemento: </div>
+                <div class="ui-g-8 ui-sm-8" >
+                  <b>{{cliente.complemento}}</b>
+                </div>
+
+>>>>>>> master
               </div>
             </div>
           </div>

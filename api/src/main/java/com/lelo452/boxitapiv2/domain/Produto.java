@@ -28,6 +28,8 @@ public class Produto implements Serializable {
     private String descricao;
     private Integer qtdLote;
     private Integer quantidade;
+
+    @Column(unique = true)
     private String sku;
 
     @JsonIgnore
