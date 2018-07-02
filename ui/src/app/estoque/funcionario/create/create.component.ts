@@ -3,6 +3,7 @@ import {Estoque} from '../estoque';
 import {ActivatedRoute, Router} from '@angular/router';
 import swal from 'sweetalert2';
 import {EstoqueService} from '../estoque.service';
+import {ButtonModule} from 'primeng/button';
 
 @Component({
   selector: 'app-create',
