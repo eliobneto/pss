@@ -1,20 +1,219 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {
+  AccordionModule,
+  AutoCompleteModule,
+  BreadcrumbModule,
+  ButtonModule,
+  CalendarModule,
+  CarouselModule,
+  ChartModule,
+  CheckboxModule,
+  ChipsModule,
+  CodeHighlighterModule,
+  ColorPickerModule,
+  ConfirmDialogModule,
+  ContextMenuModule,
+  DataGridModule,
+  DataListModule,
+  DataScrollerModule,
+  DataTableModule,
+  DialogModule,
+  DragDropModule,
+  DropdownModule,
+  EditorModule,
+  FieldsetModule,
+  FileUploadModule,
+  GalleriaModule,
+  GMapModule,
+  GrowlModule,
+  InputMaskModule,
+  InputSwitchModule,
+  InputTextareaModule,
+  InputTextModule,
+  LightboxModule,
+  ListboxModule,
+  MegaMenuModule,
+  MenubarModule,
+  MenuModule,
+  MessagesModule,
+  MultiSelectModule,
+  OrderListModule,
+  OrganizationChartModule,
+  OverlayPanelModule,
+  PaginatorModule,
+  PanelMenuModule,
+  PanelModule,
+  PasswordModule,
+  PickListModule,
+  ProgressBarModule,
+  RadioButtonModule,
+  RatingModule,
+  ScheduleModule,
+  SelectButtonModule,
+  SharedModule,
+  SlideMenuModule,
+  SliderModule,
+  SpinnerModule,
+  SplitButtonModule,
+  StepsModule,
+  TabMenuModule,
+  TabViewModule,
+  TerminalModule,
+  TieredMenuModule,
+  ToggleButtonModule,
+  ToolbarModule,
+  TooltipModule,
+  TreeModule,
+  TreeTableModule
+} from 'primeng/primeng';
+import {DataViewModule} from 'primeng/dataview';
+import {ScrollPanelModule} from 'primeng/scrollpanel';
+import {TableModule} from 'primeng/table';
 
 import {AppComponent} from './app.component';
+import {AppMenuComponent, AppSubMenuComponent} from './app.menu.component';
+import {AppBreadcrumbComponent} from './app.breadcrumb.component';
+import {AppTopBarComponent} from './app.topbar.component';
+import {DashboardComponent} from './demo/view/dashboard.component';
+import {SampleDemoComponent} from './demo/view/sampledemo.component';
+import {FormsDemoComponent} from './demo/view/formsdemo.component';
+import {DataDemoComponent} from './demo/view/datademo.component';
+import {PanelsDemoComponent} from './demo/view/panelsdemo.component';
+import {OverlaysDemoComponent} from './demo/view/overlaysdemo.component';
+import {MenusDemoComponent} from './demo/view/menusdemo.component';
+import {MessagesDemoComponent} from './demo/view/messagesdemo.component';
+import {MiscDemoComponent} from './demo/view/miscdemo.component';
+import {EmptyDemoComponent} from './demo/view/emptydemo.component';
+import {ChartsDemoComponent} from './demo/view/chartsdemo.component';
+import {FileDemoComponent} from './demo/view/filedemo.component';
+import {UtilsDemoComponent} from './demo/view/utilsdemo.component';
+import {DocumentationComponent} from './demo/view/documentation.component';
+
+import {CarService} from './demo/service/carservice';
+import {CountryService} from './demo/service/countryservice';
+import {EventService} from './demo/service/eventservice';
+import {NodeService} from './demo/service/nodeservice';
+
+import {BreadcrumbService} from './breadcrumb.service';
 import {CoreModule} from './core/core.module';
-import {RouterModule} from '@angular/router';
+import {AuthService} from './auth/auth.service';
+
+import {CreateComponent} from './estoque/funcionario/create/create.component';
+import {EditComponent} from './estoque/funcionario/edit/edit.component';
+import {ListComponent} from './estoque/funcionario/list/list.component';
+import {EstoqueService} from './estoque/funcionario/estoque.service';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
   imports: [
     BrowserModule,
-    CoreModule,
-    RouterModule
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AccordionModule,
+    AutoCompleteModule,
+    BreadcrumbModule,
+    ButtonModule,
+    CalendarModule,
+    CarouselModule,
+    ChartModule,
+    CheckboxModule,
+    ChipsModule,
+    CodeHighlighterModule,
+    ConfirmDialogModule,
+    ColorPickerModule,
+    SharedModule,
+    ContextMenuModule,
+    DataGridModule,
+    DataListModule,
+    DataScrollerModule,
+    DataTableModule,
+    DataViewModule,
+    DialogModule,
+    DragDropModule,
+    DropdownModule,
+    EditorModule,
+    FieldsetModule,
+    FileUploadModule,
+    GalleriaModule,
+    GMapModule,
+    GrowlModule,
+    InputMaskModule,
+    InputSwitchModule,
+    InputTextModule,
+    InputTextareaModule,
+    LightboxModule,
+    ListboxModule,
+    MegaMenuModule,
+    MenuModule,
+    MenubarModule,
+    MessagesModule,
+    MultiSelectModule,
+    OrderListModule,
+    OrganizationChartModule,
+    OverlayPanelModule,
+    PaginatorModule,
+    PanelModule,
+    PanelMenuModule,
+    PasswordModule,
+    PickListModule,
+    ProgressBarModule,
+    RadioButtonModule,
+    RatingModule,
+    ScheduleModule,
+    ScrollPanelModule,
+    SelectButtonModule,
+    SlideMenuModule,
+    SliderModule,
+    SpinnerModule,
+    SplitButtonModule,
+    StepsModule,
+    TableModule,
+    TabMenuModule,
+    TabViewModule,
+    TerminalModule,
+    TieredMenuModule,
+    ToggleButtonModule,
+    ToolbarModule,
+    TooltipModule,
+    TreeModule,
+    TreeTableModule,
+    CoreModule
   ],
-  providers: [],
+  declarations: [
+    AppComponent,
+    AppMenuComponent,
+    AppSubMenuComponent,
+    AppBreadcrumbComponent,
+    AppTopBarComponent,
+    DashboardComponent,
+    SampleDemoComponent,
+    FormsDemoComponent,
+    DataDemoComponent,
+    PanelsDemoComponent,
+    OverlaysDemoComponent,
+    MenusDemoComponent,
+    MessagesDemoComponent,
+    MessagesDemoComponent,
+    MiscDemoComponent,
+    ChartsDemoComponent,
+    EmptyDemoComponent,
+    FileDemoComponent,
+    UtilsDemoComponent,
+    DocumentationComponent,
+    CreateComponent,
+    EditComponent,
+    ListComponent,
+  ],
+  providers: [
+    CarService, CountryService, EventService, NodeService, BreadcrumbService, AuthService, EstoqueService
+  ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

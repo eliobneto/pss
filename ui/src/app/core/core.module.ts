@@ -1,41 +1,19 @@
-import {LOCALE_ID, NgModule} from '@angular/core';
-import {CommonModule, registerLocaleData} from '@angular/common';
-import {CategoriasModule} from '../categorias/categorias.module';
-import {CategoriasService} from '../categorias/categorias.service';
-
-import localePt from '@angular/common/locales/pt';
-import {HttpClient} from '@angular/common/http';
-import {RouterModule} from '@angular/router';
-import {NavbarComponent} from './navbar/navbar.component';
-import {GerenteModule} from '../gerente/gerente.module';
-import {EstoqueModule} from '../estoque/estoque.module';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {AuthModule} from '../auth/auth.module';
 import {AppRouting} from '../app.routing';
-import {EstoqueService} from '../estoque/estoque.service';
-import {FuncionarioService} from '../gerente/funcionario.service';
-
-registerLocaleData(localePt, 'pt-BR');
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule,
+    AuthModule,
     AppRouting,
-    CategoriasModule,
-    EstoqueModule,
-    GerenteModule
+    SharedModule
   ],
-  declarations: [
-    NavbarComponent
-  ],
+  declarations: [],
   exports: [
-    NavbarComponent
-  ],
-  providers: [
-    CategoriasService,
-    EstoqueService,
-    FuncionarioService,
-    { provide: LOCALE_ID, useValue: 'pt-BR' },
-    HttpClient
+    SharedModule
   ]
 })
 export class CoreModule { }
