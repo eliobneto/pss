@@ -113,6 +113,7 @@ import {ListarClienteComponent} from './usuario/cliente/listar-cliente/listar-cl
 import {FuncionarioService} from './usuario/funcionario/funcionario.service';
 import {ClienteService} from './usuario/cliente/cliente.service';
 import {AuthGuard} from './auth/auth.gard';
+import {CategoriaService} from './categoria/categoria.service';
 
 @NgModule({
   imports: [
@@ -227,7 +228,8 @@ import {AuthGuard} from './auth/auth.gard';
     AuthService,
     ClienteService,
     FuncionarioService,
-    AuthGuard
+    AuthGuard,
+    CategoriaService
   ],
   bootstrap: [AppComponent]
 })

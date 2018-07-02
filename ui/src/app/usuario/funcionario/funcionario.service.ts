@@ -13,7 +13,6 @@ export class FuncionarioService {
     return this.http.get<any>('assets/demo/data/funcionario.json').toPromise()
       .then(res => <funcionario[]> res.data)
       .then(data => data);
-
   }
 
   excluir(id: string) {

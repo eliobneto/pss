@@ -23,6 +23,9 @@ import {CadastrarClienteComponent} from './usuario/cliente/cadastrar-cliente/cad
 import {UnauthorizedComponent} from './shared/unauthorized/unauthorized.component';
 import {NotFoundComponent} from './shared/not-found/not-found.component';
 import {AuthGuard} from './auth/auth.gard';
+import {CategoriaListComponent} from './categoria/categoria-list/categoria-list.component';
+import {GerenteHomeComponent} from './gerente/gerente-home/gerente-home.component';
+import {AdminHomeComponent} from './admin/admin-home/admin-home.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -38,8 +41,8 @@ export const routes: Routes = [
   {path: 'cliente/file', component: FileDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
   {path: 'cliente/utils', component: UtilsDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
   {path: 'cliente', component: SampleDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
-  {path: 'admin', component: DocumentationComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
-  {path: 'gerente', component: DocumentationComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
+  {path: 'admin', component: AdminHomeComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
+  {path: 'gerente', component: GerenteHomeComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
   {path: 'recuperar', component: DocumentationComponent},
   {path: 'gerente/criarFuncionario', component: CadastrarFuncionarioComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
   {path: 'gerente/listarFuncionarios/:id/edit', component: EditarFuncionarioComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
@@ -47,6 +50,7 @@ export const routes: Routes = [
   {path: 'listarClientes', component: ListarClienteComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
   {path: 'editarCliente/:id/edit', component: EditarClienteComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
   {path: 'criarcliente', component: CadastrarClienteComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
+  {path: 'admin/categoria/list', component: CategoriaListComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
   {path: 'unauthorized', component: UnauthorizedComponent},
   {path: 'not-found', component: NotFoundComponent},
   { path: '**', redirectTo: 'not-found' }

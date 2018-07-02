@@ -6,6 +6,8 @@ import { CategoriaListComponent } from './categoria-list/categoria-list.componen
   imports: [
     CommonModule
   ],
-  declarations: [CategoriaListComponent]
+  declarations: [
+    CategoriaListComponent
+  ]
 })
 export class CategoriaModule { }
