@@ -10,7 +10,7 @@ export class EstoqueService {
   constructor(private http: HttpClient, private router: Router) { }
 
   getAllEstoque() {
-    return this.http.get<any>('assets/demo/data/Estoque.json').toPromise()
+    return this.http.get<any>('assets/demo/data/estoque.json').toPromise()
       .then(res => <Estoque[]> res.data)
       .then(data => data);
   }

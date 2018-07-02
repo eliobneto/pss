@@ -1,8 +1,0 @@
-{
-  "data": [
-    {"id": "1", "cargo": "", "cpf": "123.456.789-11", "email": "gmail@gmail.com", "gerente": true, "nome": "Carlos", "telefone": "(44) 998282751"},
-    {"id": "2", "cargo": "Estagiário", "cpf": "123.456.789-12", "email": "gmai@gmai.com", "gerente": false, "nome": "Carlos Maluf", "telefone": "(43) 998282751"},
-    {"id": "3", "cargo": "Contador", "cpf": "523.456.789-12", "email": "g@g.com", "gerente": false, "nome": "Maluf", "telefone": "(42) 998282751"}
-
-  ]
-}

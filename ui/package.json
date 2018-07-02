@@ -32,7 +32,6 @@
     "primeng": "6.0.0",
     "quill": "1.1.8",
     "rxjs": "6.2.0",
-    "sweetalert": "^2.1.0",
     "sweetalert2": "^7.24.4",
     "web-animations-js": "2.3.1",
     "zone.js": "0.8.26"

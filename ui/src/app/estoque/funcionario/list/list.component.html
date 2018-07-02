@@ -19,28 +19,28 @@
               <div class="ui-g">
                 <div class="ui-g-2 ui-sm-2">Nome: </div>
                 <div class="ui-g-10 ui-sm-10">
-                  <b>{{stock.nome}}</b>
+                  <b>{{estoque.nome}}</b>
                 </div>
 
-                <div class="ui-g-2 ui-sm-2">CPF: </div>
+                <div class="ui-g-2 ui-sm-2">Categoria: </div>
                 <div class="ui-g-8 ui-sm-8">
-                  <b>{{stock.categoria}}</b>
+                  <b>{{estoque.categoria}}</b>
                 </div>
                 <div class="ui-sm-1">
-                  <button pButton type="button" icon="ui-icon-edit" routerLink="{{stock.id}}/edit"></button>
+                  <button pButton type="button" icon="ui-icon-edit" routerLink="{{estoque.id}}/edit"></button>
                 </div>
 
-                <div class="ui-g-2 ui-sm-2">Numero: </div>
+                <div class="ui-g-2 ui-sm-2">Un/Lote: </div>
                 <div class="ui-g-10 ui-sm-10">
-                  <b>{{stock.lote}}</b>
+                  <b>{{estoque.lote}}</b>
                 </div>
 
-                <div class="ui-g-2 ui-sm-2">E-mail: </div>
+                <div class="ui-g-2 ui-sm-2">Preco: </div>
                 <div class="ui-g-8 ui-sm-8">
-                  <b>{{stock.preco}}</b>
+                  <b>R$ {{estoque.preco}}</b>
                 </div>
                 <div class="ui-sm-1">
-                  <button pButton type="button" icon="ui-icon-delete" class="ui-button-danger" (click)="confirmarExclusao(stock.id)"></button>
+                  <button pButton type="button" icon="ui-icon-delete" class="ui-button-danger" (click)="confirmarExclusao(estoque.id)"></button>
                 </div>
 
 

@@ -1,0 +1,1804 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "cargo": "funcionario",
+      "cpf": "621.368.896-05",
+      "email": "viniciosaggrizzi@gmail.com",
+      "gerente": "true",
+      "nome": "Larissa Santos",
+      "telefone": "897-260-2828"
+    },
+    {
+      "id": 2,
+      "cargo": "estagiario",
+      "cpf": "583.574.618-08",
+      "email": "estermaria@gmail.com",
+      "gerente": "false",
+      "nome": "Davi Dal Piaz",
+      "telefone": "580-430-5326"
+    },
+    {
+      "id": 3,
+      "cargo": "funcionario",
+      "cpf": "275.073.555-60",
+      "email": "biancafregolent@gmail.com",
+      "gerente": "true",
+      "nome": "Fernanda Bassetti",
+      "telefone": "445-605-6026"
+    },
+    {
+      "id": 4,
+      "cargo": "estagiario",
+      "cpf": "107.620.373-69",
+      "email": "ricardochrist@gmail.com",
+      "gerente": "true",
+      "nome": "Paulo Azevedo",
+      "telefone": "423-356-7092"
+    },
+    {
+      "id": 5,
+      "cargo": "funcionario",
+      "cpf": "990.242.642-51",
+      "email": "lviapazeto@gmail.com",
+      "gerente": "true",
+      "nome": "Afonso Roza",
+      "telefone": "867-556-1822"
+    },
+    {
+      "id": 6,
+      "cargo": "estagiario",
+      "cpf": "687.515.634-28",
+      "email": "lourenomerigue@gmail.com",
+      "gerente": "false",
+      "nome": "Lucca Mosquini",
+      "telefone": "733-336-2093"
+    },
+    {
+      "id": 7,
+      "cargo": "estagiario",
+      "cpf": "294.973.786-29",
+      "email": "lismarquio@gmail.com",
+      "gerente": "true",
+      "nome": "Flávio Jacomelli",
+      "telefone": "213-531-6411"
+    },
+    {
+      "id": 8,
+      "cargo": "contador",
+      "cpf": "334.045.668-23",
+      "email": "fredericofvero@gmail.com",
+      "gerente": "false",
+      "nome": "Lívia Maróquio",
+      "telefone": "966-180-7570"
+    },
+    {
+      "id": 9,
+      "cargo": "contador",
+      "cpf": "631.618.714-99",
+      "email": "maitoliveira@gmail.com",
+      "gerente": "false",
+      "nome": "Calebe Guidolini",
+      "telefone": "874-304-6814"
+    },
+    {
+      "id": 10,
+      "cargo": "estagiario",
+      "cpf": "819.976.782-09",
+      "email": "ricardocastro@gmail.com",
+      "gerente": "true",
+      "nome": "Bernardo De Angeli",
+      "telefone": "479-347-4453"
+    },
+    {
+      "id": 11,
+      "cargo": "estagiario",
+      "cpf": "405.173.651-20",
+      "email": "theodarroz@gmail.com",
+      "gerente": "true",
+      "nome": "Cloe Mendes",
+      "telefone": "629-582-9480"
+    },
+    {
+      "id": 12,
+      "cargo": "estagiario",
+      "cpf": "042.340.618-32",
+      "email": "nicoleminet@gmail.com",
+      "gerente": "false",
+      "nome": "Íris Vargas",
+      "telefone": "735-535-6758"
+    },
+    {
+      "id": 13,
+      "cargo": "funcionario",
+      "cpf": "844.325.355-04",
+      "email": "helosasantos@gmail.com",
+      "gerente": "true",
+      "nome": "Laura Ambrozin",
+      "telefone": "765-986-0485"
+    },
+    {
+      "id": 14,
+      "cargo": "funcionario",
+      "cpf": "749.192.083-75",
+      "email": "masaguilherme@gmail.com",
+      "gerente": "false",
+      "nome": "Benjamin Macedo",
+      "telefone": "977-852-6802"
+    },
+    {
+      "id": 15,
+      "cargo": "funcionario",
+      "cpf": "815.518.716-02",
+      "email": "alicebernab@gmail.com",
+      "gerente": "false",
+      "nome": "Miguel Rigone",
+      "telefone": "115-658-4903"
+    },
+    {
+      "id": 16,
+      "cargo": "estagiario",
+      "cpf": "416.611.275-92",
+      "email": "jooschulthais@gmail.com",
+      "gerente": "true",
+      "nome": "Maria Handler",
+      "telefone": "702-413-6018"
+    },
+    {
+      "id": 17,
+      "cargo": "contador",
+      "cpf": "186.001.576-09",
+      "email": "catarinavervloet@gmail.com",
+      "gerente": "true",
+      "nome": "Renato Tonoli",
+      "telefone": "906-219-3286"
+    },
+    {
+      "id": 18,
+      "cargo": "contador",
+      "cpf": "752.604.007-20",
+      "email": "joomonteiro@gmail.com",
+      "gerente": "true",
+      "nome": "Pedro Coelha",
+      "telefone": "394-524-2555"
+    },
+    {
+      "id": 19,
+      "cargo": "contador",
+      "cpf": "214.360.696-61",
+      "email": "helosalima@gmail.com",
+      "gerente": "false",
+      "nome": "Júlia Néspoli",
+      "telefone": "326-486-9521"
+    },
+    {
+      "id": 20,
+      "cargo": "contador",
+      "cpf": "264.681.313-91",
+      "email": "valentimwoodward@gmail.com",
+      "gerente": "false",
+      "nome": "Anabela Scott",
+      "telefone": "748-714-3474"
+    },
+    {
+      "id": 21,
+      "cargo": "contador",
+      "cpf": "176.447.157-11",
+      "email": "rafaeladagloria@gmail.com",
+      "gerente": "false",
+      "nome": "Renan Côgo",
+      "telefone": "857-450-0290"
+    },
+    {
+      "id": 22,
+      "cargo": "estagiario",
+      "cpf": "085.886.883-01",
+      "email": "davitozi@gmail.com",
+      "gerente": "false",
+      "nome": "Hugo de Gois",
+      "telefone": "749-208-4959"
+    },
+    {
+      "id": 23,
+      "cargo": "funcionario",
+      "cpf": "223.806.354-47",
+      "email": "abigailpescador@gmail.com",
+      "gerente": "false",
+      "nome": "João Barroso",
+      "telefone": "838-657-6647"
+    },
+    {
+      "id": 24,
+      "cargo": "estagiario",
+      "cpf": "308.892.544-00",
+      "email": "jorgedelima@gmail.com",
+      "gerente": "true",
+      "nome": "Esther Romanini",
+      "telefone": "648-571-7215"
+    },
+    {
+      "id": 25,
+      "cargo": "funcionario",
+      "cpf": "886.154.498-30",
+      "email": "leticiabrancaglioni@gmail.com",
+      "gerente": "true",
+      "nome": "Laís Piassi",
+      "telefone": "848-944-3683"
+    },
+    {
+      "id": 26,
+      "cargo": "contador",
+      "cpf": "512.321.453-43",
+      "email": "samuelnielsdatter@gmail.com",
+      "gerente": "true",
+      "nome": "Clara Uliana",
+      "telefone": "322-105-6007"
+    },
+    {
+      "id": 27,
+      "cargo": "contador",
+      "cpf": "407.494.607-68",
+      "email": "tiagoleal@gmail.com",
+      "gerente": "false",
+      "nome": "Lara Brandão",
+      "telefone": "141-965-1927"
+    },
+    {
+      "id": 28,
+      "cargo": "contador",
+      "cpf": "823.952.554-75",
+      "email": "cecliaminette@gmail.com",
+      "gerente": "false",
+      "nome": "Clara Camporez",
+      "telefone": "238-858-5027"
+    },
+    {
+      "id": 29,
+      "cargo": "funcionario",
+      "cpf": "867.250.439-92",
+      "email": "franciscomoscon@gmail.com",
+      "gerente": "true",
+      "nome": "Ana Sagers",
+      "telefone": "955-795-5359"
+    },
+    {
+      "id": 30,
+      "cargo": "contador",
+      "cpf": "604.529.484-01",
+      "email": "danielasperandio@gmail.com",
+      "gerente": "true",
+      "nome": "Murilo Rigotto",
+      "telefone": "143-731-6783"
+    },
+    {
+      "id": 31,
+      "cargo": "estagiario",
+      "cpf": "905.159.667-70",
+      "email": "helenaconceicao@gmail.com",
+      "gerente": "false",
+      "nome": "Isadora Muniz",
+      "telefone": "460-164-6967"
+    },
+    {
+      "id": 32,
+      "cargo": "contador",
+      "cpf": "039.466.915-01",
+      "email": "rafaelajuvanhol@gmail.com",
+      "gerente": "false",
+      "nome": "Daniel Masut",
+      "telefone": "633-407-2952"
+    },
+    {
+      "id": 33,
+      "cargo": "funcionario",
+      "cpf": "019.849.691-53",
+      "email": "tomsboldrine@gmail.com",
+      "gerente": "false",
+      "nome": "Vitor Bonicenha",
+      "telefone": "303-861-8033"
+    },
+    {
+      "id": 34,
+      "cargo": "contador",
+      "cpf": "963.703.318-13",
+      "email": "joopassamani@gmail.com",
+      "gerente": "false",
+      "nome": "César Smith",
+      "telefone": "257-706-1487"
+    },
+    {
+      "id": 35,
+      "cargo": "funcionario",
+      "cpf": "478.624.069-90",
+      "email": "anamariane@gmail.com",
+      "gerente": "true",
+      "nome": "Victor Henrichsen",
+      "telefone": "315-134-5031"
+    },
+    {
+      "id": 36,
+      "cargo": "contador",
+      "cpf": "992.517.814-27",
+      "email": "joostelzer@gmail.com",
+      "gerente": "true",
+      "nome": "Catarina Butler",
+      "telefone": "682-666-8749"
+    },
+    {
+      "id": 37,
+      "cargo": "contador",
+      "cpf": "681.016.908-32",
+      "email": "benjaminmoraes@gmail.com",
+      "gerente": "false",
+      "nome": "Ian di Balliana",
+      "telefone": "219-475-4354"
+    },
+    {
+      "id": 38,
+      "cargo": "estagiario",
+      "cpf": "874.525.212-26",
+      "email": "marinabattagnoli@gmail.com",
+      "gerente": "false",
+      "nome": "Tomás Fardin",
+      "telefone": "855-615-9580"
+    },
+    {
+      "id": 39,
+      "cargo": "estagiario",
+      "cpf": "994.071.665-62",
+      "email": "guilhermedurfee@gmail.com",
+      "gerente": "false",
+      "nome": "Octávio Dalvi",
+      "telefone": "643-841-6210"
+    },
+    {
+      "id": 40,
+      "cargo": "estagiario",
+      "cpf": "994.801.811-77",
+      "email": "afonsomarinho@gmail.com",
+      "gerente": "true",
+      "nome": "Flávio Alves",
+      "telefone": "877-853-8542"
+    },
+    {
+      "id": 41,
+      "cargo": "estagiario",
+      "cpf": "519.140.886-11",
+      "email": "jliajacobsen@gmail.com",
+      "gerente": "true",
+      "nome": "Valentim Sangali",
+      "telefone": "415-970-7247"
+    },
+    {
+      "id": 42,
+      "cargo": "funcionario",
+      "cpf": "404.006.290-62",
+      "email": "murilolucca@gmail.com",
+      "gerente": "false",
+      "nome": "Carolina Breda",
+      "telefone": "631-690-6372"
+    },
+    {
+      "id": 43,
+      "cargo": "estagiario",
+      "cpf": "897.165.805-33",
+      "email": "guilhermesalomo@gmail.com",
+      "gerente": "true",
+      "nome": "Yasmin Warner",
+      "telefone": "388-240-3240"
+    },
+    {
+      "id": 44,
+      "cargo": "contador",
+      "cpf": "919.505.196-19",
+      "email": "fernandoalvernaz@gmail.com",
+      "gerente": "false",
+      "nome": "Felipe Rufino",
+      "telefone": "250-424-4549"
+    },
+    {
+      "id": 45,
+      "cargo": "estagiario",
+      "cpf": "694.685.259-10",
+      "email": "palomaloss@gmail.com",
+      "gerente": "false",
+      "nome": "Alice Moser",
+      "telefone": "115-735-4455"
+    },
+    {
+      "id": 46,
+      "cargo": "funcionario",
+      "cpf": "147.013.255-97",
+      "email": "olviacorreia@gmail.com",
+      "gerente": "false",
+      "nome": "Carolina Klein",
+      "telefone": "266-748-5620"
+    },
+    {
+      "id": 47,
+      "cargo": "funcionario",
+      "cpf": "092.575.068-94",
+      "email": "elisahansdatter@gmail.com",
+      "gerente": "false",
+      "nome": "Manuela Siciliano",
+      "telefone": "534-463-7278"
+    },
+    {
+      "id": 48,
+      "cargo": "contador",
+      "cpf": "621.805.746-14",
+      "email": "arthurlaures@gmail.com",
+      "gerente": "false",
+      "nome": "Emanuelle Casteluber",
+      "telefone": "296-498-2458"
+    },
+    {
+      "id": 49,
+      "cargo": "funcionario",
+      "cpf": "113.201.043-80",
+      "email": "carloscarvalhido@gmail.com",
+      "gerente": "false",
+      "nome": "Agatha Ragazzo",
+      "telefone": "422-819-6668"
+    },
+    {
+      "id": 50,
+      "cargo": "contador",
+      "cpf": "161.838.615-88",
+      "email": "isabellythiago@gmail.com",
+      "gerente": "false",
+      "nome": "Daniel Tonon",
+      "telefone": "540-930-0816"
+    },
+    {
+      "id": 51,
+      "cargo": "contador",
+      "cpf": "123.568.288-93",
+      "email": "valentinachristiansdatter@gmail.com",
+      "gerente": "true",
+      "nome": "Estela Albani",
+      "telefone": "808-999-0029"
+    },
+    {
+      "id": 52,
+      "cargo": "contador",
+      "cpf": "604.616.660-81",
+      "email": "luisatedesco@gmail.com",
+      "gerente": "true",
+      "nome": "Yasmine Monteiro",
+      "telefone": "478-402-9701"
+    },
+    {
+      "id": 53,
+      "cargo": "funcionario",
+      "cpf": "164.112.128-99",
+      "email": "helenaperiordi@gmail.com",
+      "gerente": "false",
+      "nome": "Elisa Marquette",
+      "telefone": "283-674-5273"
+    },
+    {
+      "id": 54,
+      "cargo": "estagiario",
+      "cpf": "647.803.619-74",
+      "email": "kevinmariani@gmail.com",
+      "gerente": "false",
+      "nome": "Helena Campagnaro",
+      "telefone": "483-378-5283"
+    },
+    {
+      "id": 55,
+      "cargo": "contador",
+      "cpf": "131.086.621-04",
+      "email": "murilobezerra@gmail.com",
+      "gerente": "true",
+      "nome": "Gustavo Franceschetto",
+      "telefone": "612-443-4140"
+    },
+    {
+      "id": 56,
+      "cargo": "funcionario",
+      "cpf": "656.485.208-83",
+      "email": "raullizabo@gmail.com",
+      "gerente": "true",
+      "nome": "Júlia Antoniazzi",
+      "telefone": "502-590-5480"
+    },
+    {
+      "id": 57,
+      "cargo": "funcionario",
+      "cpf": "139.932.273-79",
+      "email": "luccademoraes@gmail.com",
+      "gerente": "true",
+      "nome": "Rebeca Reinehr",
+      "telefone": "504-585-3489"
+    },
+    {
+      "id": 58,
+      "cargo": "estagiario",
+      "cpf": "335.741.491-07",
+      "email": "carlosjensen@gmail.com",
+      "gerente": "false",
+      "nome": "Caio Dias",
+      "telefone": "526-149-0264"
+    },
+    {
+      "id": 59,
+      "cargo": "funcionario",
+      "cpf": "932.684.667-96",
+      "email": "julianomoscon@gmail.com",
+      "gerente": "false",
+      "nome": "Ana Castro",
+      "telefone": "744-201-3599"
+    },
+    {
+      "id": 60,
+      "cargo": "funcionario",
+      "cpf": "404.367.362-09",
+      "email": "gabrielminet@gmail.com",
+      "gerente": "false",
+      "nome": "Sofia Magaldi",
+      "telefone": "869-973-6401"
+    },
+    {
+      "id": 61,
+      "cargo": "estagiario",
+      "cpf": "593.642.232-17",
+      "email": "murielnos@gmail.com",
+      "gerente": "false",
+      "nome": "Joaquim Chiecan",
+      "telefone": "603-833-1655"
+    },
+    {
+      "id": 62,
+      "cargo": "contador",
+      "cpf": "465.581.454-30",
+      "email": "raulpilato@gmail.com",
+      "gerente": "false",
+      "nome": "Lucas Fregolent",
+      "telefone": "706-410-3803"
+    },
+    {
+      "id": 63,
+      "cargo": "contador",
+      "cpf": "893.732.207-21",
+      "email": "joslaures@gmail.com",
+      "gerente": "true",
+      "nome": "Bernardo Marcarini",
+      "telefone": "648-788-2238"
+    },
+    {
+      "id": 64,
+      "cargo": "contador",
+      "cpf": "498.217.611-60",
+      "email": "otviobraido@gmail.com",
+      "gerente": "false",
+      "nome": "Ramom Battistella",
+      "telefone": "464-697-2562"
+    },
+    {
+      "id": 65,
+      "cargo": "estagiario",
+      "cpf": "906.032.195-27",
+      "email": "heitordallarmellina@gmail.com",
+      "gerente": "true",
+      "nome": "Guilherme Barazzuol",
+      "telefone": "368-213-7669"
+    },
+    {
+      "id": 66,
+      "cargo": "funcionario",
+      "cpf": "590.581.912-22",
+      "email": "otviogabriel@gmail.com",
+      "gerente": "true",
+      "nome": "Ariela Selva",
+      "telefone": "478-631-9420"
+    },
+    {
+      "id": 67,
+      "cargo": "estagiario",
+      "cpf": "599.992.711-03",
+      "email": "marianabassetti@gmail.com",
+      "gerente": "false",
+      "nome": "Frederico Valoto",
+      "telefone": "114-758-7123"
+    },
+    {
+      "id": 68,
+      "cargo": "estagiario",
+      "cpf": "217.806.981-94",
+      "email": "bernardorasmussen@gmail.com",
+      "gerente": "true",
+      "nome": "Luis Fim",
+      "telefone": "552-320-9755"
+    },
+    {
+      "id": 69,
+      "cargo": "funcionario",
+      "cpf": "793.309.962-99",
+      "email": "ivanminiguite@gmail.com",
+      "gerente": "false",
+      "nome": "Carolina Rauta",
+      "telefone": "282-937-0234"
+    },
+    {
+      "id": 70,
+      "cargo": "estagiario",
+      "cpf": "441.345.508-82",
+      "email": "helenasantanna@gmail.com",
+      "gerente": "false",
+      "nome": "Jessica Amaral",
+      "telefone": "756-657-1475"
+    },
+    {
+      "id": 71,
+      "cargo": "estagiario",
+      "cpf": "433.677.086-74",
+      "email": "vitormilaneze@gmail.com",
+      "gerente": "true",
+      "nome": "Santiago Guilherme",
+      "telefone": "778-755-1909"
+    },
+    {
+      "id": 72,
+      "cargo": "contador",
+      "cpf": "956.518.620-30",
+      "email": "alciamonstans@gmail.com",
+      "gerente": "true",
+      "nome": "Yara Faria",
+      "telefone": "320-617-6709"
+    },
+    {
+      "id": 73,
+      "cargo": "contador",
+      "cpf": "600.225.734-96",
+      "email": "lucaslessa@gmail.com",
+      "gerente": "true",
+      "nome": "Bruno Seraco",
+      "telefone": "249-549-2240"
+    },
+    {
+      "id": 74,
+      "cargo": "funcionario",
+      "cpf": "863.319.720-05",
+      "email": "melissapizetta@gmail.com",
+      "gerente": "false",
+      "nome": "Iara Rui",
+      "telefone": "746-256-8694"
+    },
+    {
+      "id": 75,
+      "cargo": "contador",
+      "cpf": "547.066.046-05",
+      "email": "wilianrabello@gmail.com",
+      "gerente": "false",
+      "nome": "Ivan Cittera",
+      "telefone": "801-433-0915"
+    },
+    {
+      "id": 76,
+      "cargo": "funcionario",
+      "cpf": "550.462.227-10",
+      "email": "letciagrolla@gmail.com",
+      "gerente": "true",
+      "nome": "Joaquim Batista",
+      "telefone": "782-136-0441"
+    },
+    {
+      "id": 77,
+      "cargo": "estagiario",
+      "cpf": "107.260.379-90",
+      "email": "tiagosartrio@gmail.com",
+      "gerente": "true",
+      "nome": "Heitor Rúbia",
+      "telefone": "543-159-2940"
+    },
+    {
+      "id": 78,
+      "cargo": "estagiario",
+      "cpf": "395.634.101-57",
+      "email": "biancasalome@gmail.com",
+      "gerente": "true",
+      "nome": "Joana Acátolli",
+      "telefone": "875-453-6838"
+    },
+    {
+      "id": 79,
+      "cargo": "estagiario",
+      "cpf": "703.567.615-50",
+      "email": "fabrcioseguro@gmail.com",
+      "gerente": "false",
+      "nome": "Giovana Cervantes",
+      "telefone": "970-456-9947"
+    },
+    {
+      "id": 80,
+      "cargo": "estagiario",
+      "cpf": "544.499.714-26",
+      "email": "lorenadiboscarato@gmail.com",
+      "gerente": "false",
+      "nome": "Daniel Fabre",
+      "telefone": "404-768-2419"
+    },
+    {
+      "id": 81,
+      "cargo": "estagiario",
+      "cpf": "263.386.311-65",
+      "email": "nicolasbell@gmail.com",
+      "gerente": "false",
+      "nome": "Marcela Cecote",
+      "telefone": "868-752-3152"
+    },
+    {
+      "id": 82,
+      "cargo": "funcionario",
+      "cpf": "661.790.621-70",
+      "email": "marinaalves@gmail.com",
+      "gerente": "true",
+      "nome": "Santiago Pegovaro",
+      "telefone": "468-526-2568"
+    },
+    {
+      "id": 83,
+      "cargo": "funcionario",
+      "cpf": "731.096.281-80",
+      "email": "enzosilva@gmail.com",
+      "gerente": "true",
+      "nome": "Kelly Lorenzon",
+      "telefone": "510-758-0120"
+    },
+    {
+      "id": 84,
+      "cargo": "estagiario",
+      "cpf": "888.173.911-90",
+      "email": "fabrciomanoel@gmail.com",
+      "gerente": "true",
+      "nome": "Raul Vervloet",
+      "telefone": "108-854-0926"
+    },
+    {
+      "id": 85,
+      "cargo": "funcionario",
+      "cpf": "420.073.850-31",
+      "email": "biancaockerman@gmail.com",
+      "gerente": "true",
+      "nome": "Lavínia Jacoboski",
+      "telefone": "530-542-6789"
+    },
+    {
+      "id": 86,
+      "cargo": "contador",
+      "cpf": "175.737.727-18",
+      "email": "maurcioburgues@gmail.com",
+      "gerente": "false",
+      "nome": "Clarisse Delaparte",
+      "telefone": "298-860-6514"
+    },
+    {
+      "id": 87,
+      "cargo": "contador",
+      "cpf": "554.328.508-69",
+      "email": "adrianomaroto@gmail.com",
+      "gerente": "true",
+      "nome": "Henrique Almeida",
+      "telefone": "448-197-8431"
+    },
+    {
+      "id": 88,
+      "cargo": "funcionario",
+      "cpf": "315.346.508-81",
+      "email": "talitanspoli@gmail.com",
+      "gerente": "true",
+      "nome": "Antônio Blanco",
+      "telefone": "475-296-8716"
+    },
+    {
+      "id": 89,
+      "cargo": "contador",
+      "cpf": "839.870.371-72",
+      "email": "filipefabis@gmail.com",
+      "gerente": "false",
+      "nome": "Iara Toè",
+      "telefone": "798-506-7942"
+    },
+    {
+      "id": 90,
+      "cargo": "estagiario",
+      "cpf": "982.894.134-16",
+      "email": "fredericobattistela@gmail.com",
+      "gerente": "false",
+      "nome": "Luisa Pino",
+      "telefone": "476-144-1816"
+    },
+    {
+      "id": 91,
+      "cargo": "contador",
+      "cpf": "957.268.810-36",
+      "email": "pietrabalestre@gmail.com",
+      "gerente": "false",
+      "nome": "Davi Michelsen",
+      "telefone": "798-879-0895"
+    },
+    {
+      "id": 92,
+      "cargo": "contador",
+      "cpf": "610.472.064-12",
+      "email": "anacansian@gmail.com",
+      "gerente": "true",
+      "nome": "Rafael Roncheti",
+      "telefone": "121-348-0811"
+    },
+    {
+      "id": 93,
+      "cargo": "funcionario",
+      "cpf": "214.376.320-41",
+      "email": "sabrinapandini@gmail.com",
+      "gerente": "true",
+      "nome": "Lucca da Conceicao",
+      "telefone": "642-348-0197"
+    },
+    {
+      "id": 94,
+      "cargo": "estagiario",
+      "cpf": "686.449.947-27",
+      "email": "henriquehansdatter@gmail.com",
+      "gerente": "false",
+      "nome": "Aurora Boiago",
+      "telefone": "609-128-6428"
+    },
+    {
+      "id": 95,
+      "cargo": "funcionario",
+      "cpf": "153.671.424-00",
+      "email": "viniciosmalta@gmail.com",
+      "gerente": "false",
+      "nome": "José Luis",
+      "telefone": "308-480-3274"
+    },
+    {
+      "id": 96,
+      "cargo": "contador",
+      "cpf": "108.924.070-85",
+      "email": "brunoalbino@gmail.com",
+      "gerente": "true",
+      "nome": "Fernando Appolinario",
+      "telefone": "583-727-2286"
+    },
+    {
+      "id": 97,
+      "cargo": "funcionario",
+      "cpf": "550.702.035-33",
+      "email": "gustavorissari@gmail.com",
+      "gerente": "true",
+      "nome": "Fernanda Vaz",
+      "telefone": "646-721-7996"
+    },
+    {
+      "id": 98,
+      "cargo": "estagiario",
+      "cpf": "397.020.262-02",
+      "email": "luccamarotto@gmail.com",
+      "gerente": "false",
+      "nome": "Letícia Herculano",
+      "telefone": "463-429-8179"
+    },
+    {
+      "id": 99,
+      "cargo": "estagiario",
+      "cpf": "948.082.614-30",
+      "email": "diegofazoli@gmail.com",
+      "gerente": "true",
+      "nome": "Aline Ostiguy Domingue",
+      "telefone": "424-246-6978"
+    },
+    {
+      "id": 100,
+      "cargo": "funcionario",
+      "cpf": "112.447.565-63",
+      "email": "ianfaco@gmail.com",
+      "gerente": "false",
+      "nome": "Karen Rugero",
+      "telefone": "795-752-2186"
+    },
+    {
+      "id": 101,
+      "cargo": "estagiario",
+      "cpf": "710.362.757-60",
+      "email": "henriquegranzotto@gmail.com",
+      "gerente": "true",
+      "nome": "Amanda Shonio",
+      "telefone": "498-957-3228"
+    },
+    {
+      "id": 102,
+      "cargo": "estagiario",
+      "cpf": "119.182.018-11",
+      "email": "edgargrasseto@gmail.com",
+      "gerente": "true",
+      "nome": "Vitória Zulianni",
+      "telefone": "199-116-4325"
+    },
+    {
+      "id": 103,
+      "cargo": "contador",
+      "cpf": "389.542.577-04",
+      "email": "giovanamarcarini@gmail.com",
+      "gerente": "false",
+      "nome": "Pamela Valiatti",
+      "telefone": "308-531-9807"
+    },
+    {
+      "id": 104,
+      "cargo": "contador",
+      "cpf": "591.078.440-42",
+      "email": "octviofvero@gmail.com",
+      "gerente": "true",
+      "nome": "Vinicios Frade",
+      "telefone": "104-442-2840"
+    },
+    {
+      "id": 105,
+      "cargo": "contador",
+      "cpf": "577.074.571-10",
+      "email": "aarbjerke@gmail.com",
+      "gerente": "true",
+      "nome": "Miguel Ferraco",
+      "telefone": "176-461-5153"
+    },
+    {
+      "id": 106,
+      "cargo": "contador",
+      "cpf": "941.183.139-79",
+      "email": "vitorfiorini@gmail.com",
+      "gerente": "true",
+      "nome": "Ana Provendel",
+      "telefone": "674-325-7128"
+    },
+    {
+      "id": 107,
+      "cargo": "estagiario",
+      "cpf": "433.539.925-10",
+      "email": "risarmellin@gmail.com",
+      "gerente": "false",
+      "nome": "Cloe Pitanga",
+      "telefone": "193-138-5019"
+    },
+    {
+      "id": 108,
+      "cargo": "contador",
+      "cpf": "813.053.717-63",
+      "email": "caiomendes@gmail.com",
+      "gerente": "false",
+      "nome": "Amanda Gregio",
+      "telefone": "278-877-0259"
+    },
+    {
+      "id": 109,
+      "cargo": "contador",
+      "cpf": "848.026.227-32",
+      "email": "fredericoloreno@gmail.com",
+      "gerente": "false",
+      "nome": "Ingrid Lourenço",
+      "telefone": "156-276-0914"
+    },
+    {
+      "id": 110,
+      "cargo": "funcionario",
+      "cpf": "699.375.925-00",
+      "email": "pietrobolzan@gmail.com",
+      "gerente": "true",
+      "nome": "Fernanda Zampirolli",
+      "telefone": "362-265-5722"
+    },
+    {
+      "id": 111,
+      "cargo": "funcionario",
+      "cpf": "315.352.748-24",
+      "email": "luisajacobsen@gmail.com",
+      "gerente": "true",
+      "nome": "Yara Fileti",
+      "telefone": "762-208-4212"
+    },
+    {
+      "id": 112,
+      "cargo": "contador",
+      "cpf": "944.079.062-86",
+      "email": "afonsocareta@gmail.com",
+      "gerente": "true",
+      "nome": "Renan Agrisi",
+      "telefone": "282-642-4213"
+    },
+    {
+      "id": 113,
+      "cargo": "contador",
+      "cpf": "002.634.256-14",
+      "email": "otviobravin@gmail.com",
+      "gerente": "true",
+      "nome": "Melissa da Rocha",
+      "telefone": "532-788-8898"
+    },
+    {
+      "id": 114,
+      "cargo": "estagiario",
+      "cpf": "486.831.062-33",
+      "email": "felipepianezolla@gmail.com",
+      "gerente": "true",
+      "nome": "João Fiorini",
+      "telefone": "672-215-6943"
+    },
+    {
+      "id": 115,
+      "cargo": "funcionario",
+      "cpf": "168.712.162-19",
+      "email": "lasmariani@gmail.com",
+      "gerente": "false",
+      "nome": "Caio Colli",
+      "telefone": "619-468-3798"
+    },
+    {
+      "id": 116,
+      "cargo": "funcionario",
+      "cpf": "476.010.590-57",
+      "email": "santiagosalgado@gmail.com",
+      "gerente": "true",
+      "nome": "Pedro Sancao",
+      "telefone": "331-376-9613"
+    },
+    {
+      "id": 117,
+      "cargo": "contador",
+      "cpf": "653.395.359-16",
+      "email": "emanuelfernandez@gmail.com",
+      "gerente": "false",
+      "nome": "Vitor de Chaves",
+      "telefone": "253-667-8850"
+    },
+    {
+      "id": 118,
+      "cargo": "estagiario",
+      "cpf": "825.483.694-98",
+      "email": "migueldardengo@gmail.com",
+      "gerente": "true",
+      "nome": "Alexander Calabrez",
+      "telefone": "533-372-4378"
+    },
+    {
+      "id": 119,
+      "cargo": "funcionario",
+      "cpf": "851.928.356-07",
+      "email": "caroldelarmelina@gmail.com",
+      "gerente": "true",
+      "nome": "Patrícia Colli",
+      "telefone": "764-122-1174"
+    },
+    {
+      "id": 120,
+      "cargo": "contador",
+      "cpf": "505.230.758-63",
+      "email": "helenamutk@gmail.com",
+      "gerente": "true",
+      "nome": "Samuel do Couto",
+      "telefone": "165-519-4005"
+    },
+    {
+      "id": 121,
+      "cargo": "funcionario",
+      "cpf": "593.147.391-20",
+      "email": "rafaelragazzo@gmail.com",
+      "gerente": "true",
+      "nome": "Vitória Akechi",
+      "telefone": "263-537-5507"
+    },
+    {
+      "id": 122,
+      "cargo": "funcionario",
+      "cpf": "344.448.402-00",
+      "email": "alicerasmussen@gmail.com",
+      "gerente": "false",
+      "nome": "Maria Battistella",
+      "telefone": "412-336-7455"
+    },
+    {
+      "id": 123,
+      "cargo": "contador",
+      "cpf": "765.703.770-94",
+      "email": "mariagomes@gmail.com",
+      "gerente": "true",
+      "nome": "Bernardo Avelar",
+      "telefone": "652-771-8867"
+    },
+    {
+      "id": 124,
+      "cargo": "funcionario",
+      "cpf": "679.220.289-46",
+      "email": "ingridnagem@gmail.com",
+      "gerente": "false",
+      "nome": "Joaquim Lerner",
+      "telefone": "118-903-3396"
+    },
+    {
+      "id": 125,
+      "cargo": "estagiario",
+      "cpf": "477.604.785-34",
+      "email": "caiodonati@gmail.com",
+      "gerente": "true",
+      "nome": "Caio Faria",
+      "telefone": "932-901-3280"
+    },
+    {
+      "id": 126,
+      "cargo": "estagiario",
+      "cpf": "458.736.350-21",
+      "email": "maurciodancy@gmail.com",
+      "gerente": "true",
+      "nome": "Miguel Aggrizzi",
+      "telefone": "450-751-0716"
+    },
+    {
+      "id": 127,
+      "cargo": "funcionario",
+      "cpf": "638.167.389-31",
+      "email": "jliotessaro@gmail.com",
+      "gerente": "true",
+      "nome": "Theo Da Dalt",
+      "telefone": "492-287-3556"
+    },
+    {
+      "id": 128,
+      "cargo": "funcionario",
+      "cpf": "088.879.876-88",
+      "email": "priscilapiovezan@gmail.com",
+      "gerente": "true",
+      "nome": "Pedro Maria",
+      "telefone": "368-298-8374"
+    },
+    {
+      "id": 129,
+      "cargo": "funcionario",
+      "cpf": "940.390.640-54",
+      "email": "yarateves@gmail.com",
+      "gerente": "false",
+      "nome": "Octávio Mauro",
+      "telefone": "164-578-1167"
+    },
+    {
+      "id": 130,
+      "cargo": "estagiario",
+      "cpf": "905.340.838-03",
+      "email": "lailamontemor@gmail.com",
+      "gerente": "false",
+      "nome": "Ramom Poloni",
+      "telefone": "766-876-8880"
+    },
+    {
+      "id": 131,
+      "cargo": "contador",
+      "cpf": "029.406.453-29",
+      "email": "michaelminiguiti@gmail.com",
+      "gerente": "true",
+      "nome": "Sofia Cricco",
+      "telefone": "722-168-0235"
+    },
+    {
+      "id": 132,
+      "cargo": "funcionario",
+      "cpf": "426.686.229-64",
+      "email": "yasmincamillete@gmail.com",
+      "gerente": "true",
+      "nome": "Cristiano da Camara",
+      "telefone": "168-547-0300"
+    },
+    {
+      "id": 133,
+      "cargo": "estagiario",
+      "cpf": "160.857.651-50",
+      "email": "marcelacampos@gmail.com",
+      "gerente": "false",
+      "nome": "Matheus Peixoto",
+      "telefone": "563-718-0499"
+    },
+    {
+      "id": 134,
+      "cargo": "estagiario",
+      "cpf": "709.283.890-81",
+      "email": "lviaraposo@gmail.com",
+      "gerente": "false",
+      "nome": "Emanuel Ostity Domingue",
+      "telefone": "865-310-8902"
+    },
+    {
+      "id": 135,
+      "cargo": "estagiario",
+      "cpf": "063.465.728-30",
+      "email": "marcospizzeta@gmail.com",
+      "gerente": "false",
+      "nome": "Helena Cola",
+      "telefone": "327-956-5051"
+    },
+    {
+      "id": 136,
+      "cargo": "funcionario",
+      "cpf": "942.196.413-60",
+      "email": "kelvinscharra@gmail.com",
+      "gerente": "true",
+      "nome": "Alana de Martin",
+      "telefone": "603-830-2568"
+    },
+    {
+      "id": 137,
+      "cargo": "estagiario",
+      "cpf": "650.865.313-06",
+      "email": "lucasjosefa@gmail.com",
+      "gerente": "true",
+      "nome": "Lavínia Botti",
+      "telefone": "628-775-2158"
+    },
+    {
+      "id": 138,
+      "cargo": "funcionario",
+      "cpf": "357.355.058-40",
+      "email": "causobrinho@gmail.com",
+      "gerente": "true",
+      "nome": "Bianca Correia",
+      "telefone": "697-376-2058"
+    },
+    {
+      "id": 139,
+      "cargo": "contador",
+      "cpf": "955.389.280-98",
+      "email": "carolferreirabraga@gmail.com",
+      "gerente": "false",
+      "nome": "Enzo Bourguignon",
+      "telefone": "521-902-4396"
+    },
+    {
+      "id": 140,
+      "cargo": "contador",
+      "cpf": "695.558.876-16",
+      "email": "lavniaandrio@gmail.com",
+      "gerente": "true",
+      "nome": "Pedro Pezzin",
+      "telefone": "185-929-5281"
+    },
+    {
+      "id": 141,
+      "cargo": "funcionario",
+      "cpf": "417.086.167-13",
+      "email": "murielmoura@gmail.com",
+      "gerente": "false",
+      "nome": "Samuel de Lima",
+      "telefone": "228-954-5032"
+    },
+    {
+      "id": 142,
+      "cargo": "funcionario",
+      "cpf": "931.484.555-92",
+      "email": "rafaelalzia@gmail.com",
+      "gerente": "true",
+      "nome": "Davi Maremiori",
+      "telefone": "456-791-6253"
+    },
+    {
+      "id": 143,
+      "cargo": "estagiario",
+      "cpf": "742.683.557-07",
+      "email": "henriqueragazzo@gmail.com",
+      "gerente": "true",
+      "nome": "Felipe Légora ",
+      "telefone": "872-829-8559"
+    },
+    {
+      "id": 144,
+      "cargo": "estagiario",
+      "cpf": "758.122.241-10",
+      "email": "wilianbusetti@gmail.com",
+      "gerente": "false",
+      "nome": "Valentina Oliveria",
+      "telefone": "559-811-9811"
+    },
+    {
+      "id": 145,
+      "cargo": "funcionario",
+      "cpf": "976.649.568-89",
+      "email": "flviosimoes@gmail.com",
+      "gerente": "false",
+      "nome": "Olívia Marchese",
+      "telefone": "103-613-1321"
+    },
+    {
+      "id": 146,
+      "cargo": "contador",
+      "cpf": "549.759.116-71",
+      "email": "duartealberto@gmail.com",
+      "gerente": "false",
+      "nome": "Mariana Capelini",
+      "telefone": "831-815-0700"
+    },
+    {
+      "id": 147,
+      "cargo": "estagiario",
+      "cpf": "022.024.607-64",
+      "email": "heitortaylor@gmail.com",
+      "gerente": "false",
+      "nome": "Emanuelly Thiago",
+      "telefone": "793-862-1151"
+    },
+    {
+      "id": 148,
+      "cargo": "estagiario",
+      "cpf": "649.046.156-03",
+      "email": "gabrielcarrer@gmail.com",
+      "gerente": "false",
+      "nome": "Theo Libardi",
+      "telefone": "723-894-0159"
+    },
+    {
+      "id": 149,
+      "cargo": "funcionario",
+      "cpf": "228.295.686-99",
+      "email": "anakiefer@gmail.com",
+      "gerente": "false",
+      "nome": "Miguel Boarin",
+      "telefone": "140-857-2115"
+    },
+    {
+      "id": 150,
+      "cargo": "funcionario",
+      "cpf": "669.725.325-82",
+      "email": "jliatonon@gmail.com",
+      "gerente": "false",
+      "nome": "Aquiles Fraga",
+      "telefone": "504-909-4616"
+    },
+    {
+      "id": 151,
+      "cargo": "estagiario",
+      "cpf": "934.842.596-04",
+      "email": "lavniapereira@gmail.com",
+      "gerente": "false",
+      "nome": "Beatriz Bonadiman",
+      "telefone": "666-302-1862"
+    },
+    {
+      "id": 152,
+      "cargo": "contador",
+      "cpf": "909.644.310-17",
+      "email": "tomsdossantos@gmail.com",
+      "gerente": "false",
+      "nome": "Theo Piccin",
+      "telefone": "887-263-8547"
+    },
+    {
+      "id": 153,
+      "cargo": "funcionario",
+      "cpf": "786.447.945-66",
+      "email": "lismoura@gmail.com",
+      "gerente": "false",
+      "nome": "Brenda Zerboni",
+      "telefone": "597-919-0107"
+    },
+    {
+      "id": 154,
+      "cargo": "contador",
+      "cpf": "202.833.849-05",
+      "email": "bernardofirio@gmail.com",
+      "gerente": "true",
+      "nome": "Alice Barreto",
+      "telefone": "972-200-8029"
+    },
+    {
+      "id": 155,
+      "cargo": "contador",
+      "cpf": "672.169.807-27",
+      "email": "manuelabertone@gmail.com",
+      "gerente": "true",
+      "nome": "Ana Serafim",
+      "telefone": "422-374-2165"
+    },
+    {
+      "id": 156,
+      "cargo": "estagiario",
+      "cpf": "165.949.182-73",
+      "email": "lviamoschon@gmail.com",
+      "gerente": "true",
+      "nome": "Giovanna Appolinario",
+      "telefone": "626-769-4450"
+    },
+    {
+      "id": 157,
+      "cargo": "funcionario",
+      "cpf": "359.689.275-93",
+      "email": "maitguarnier@gmail.com",
+      "gerente": "true",
+      "nome": "Eduarda Correia",
+      "telefone": "874-280-7890"
+    },
+    {
+      "id": 158,
+      "cargo": "funcionario",
+      "cpf": "659.480.022-17",
+      "email": "anatiborcio@gmail.com",
+      "gerente": "false",
+      "nome": "Daniel Capelini",
+      "telefone": "102-795-3098"
+    },
+    {
+      "id": 159,
+      "cargo": "contador",
+      "cpf": "341.112.134-30",
+      "email": "duartebaptista@gmail.com",
+      "gerente": "false",
+      "nome": "Artur Rago",
+      "telefone": "635-614-8808"
+    },
+    {
+      "id": 160,
+      "cargo": "funcionario",
+      "cpf": "285.256.571-40",
+      "email": "aquilesdenadai@gmail.com",
+      "gerente": "false",
+      "nome": "Mariana Onhas",
+      "telefone": "266-978-5029"
+    },
+    {
+      "id": 161,
+      "cargo": "funcionario",
+      "cpf": "396.367.953-04",
+      "email": "rebecacarniele@gmail.com",
+      "gerente": "false",
+      "nome": "Juliana Souza",
+      "telefone": "657-200-0485"
+    },
+    {
+      "id": 162,
+      "cargo": "estagiario",
+      "cpf": "078.476.478-69",
+      "email": "danielzanichelli@gmail.com",
+      "gerente": "false",
+      "nome": "Yasmine Bozzi",
+      "telefone": "197-903-3759"
+    },
+    {
+      "id": 163,
+      "cargo": "contador",
+      "cpf": "983.879.860-62",
+      "email": "marinabortoloth@gmail.com",
+      "gerente": "true",
+      "nome": "Luiza Guilherme",
+      "telefone": "519-219-5802"
+    },
+    {
+      "id": 164,
+      "cargo": "contador",
+      "cpf": "616.789.823-50",
+      "email": "marianacaversani@gmail.com",
+      "gerente": "false",
+      "nome": "Marcela da Camara",
+      "telefone": "631-130-5263"
+    },
+    {
+      "id": 165,
+      "cargo": "estagiario",
+      "cpf": "413.793.074-06",
+      "email": "kevinviebrantz@gmail.com",
+      "gerente": "true",
+      "nome": "Isabella Oliveria",
+      "telefone": "803-581-0358"
+    },
+    {
+      "id": 166,
+      "cargo": "funcionario",
+      "cpf": "360.449.824-40",
+      "email": "manuelakristiansen@gmail.com",
+      "gerente": "false",
+      "nome": "Lucas Ferrari",
+      "telefone": "318-856-3753"
+    },
+    {
+      "id": 167,
+      "cargo": "funcionario",
+      "cpf": "345.140.512-17",
+      "email": "tomsberg@gmail.com",
+      "gerente": "true",
+      "nome": "Alice Novo",
+      "telefone": "330-438-2884"
+    },
+    {
+      "id": 168,
+      "cargo": "contador",
+      "cpf": "269.147.307-41",
+      "email": "otvioorsato@gmail.com",
+      "gerente": "false",
+      "nome": "Francisco Nascimento",
+      "telefone": "642-173-5905"
+    },
+    {
+      "id": 169,
+      "cargo": "estagiario",
+      "cpf": "095.179.856-14",
+      "email": "manuelamaia@gmail.com",
+      "gerente": "true",
+      "nome": "Lourenço Miquelin",
+      "telefone": "559-663-4904"
+    },
+    {
+      "id": 170,
+      "cargo": "contador",
+      "cpf": "019.168.360-46",
+      "email": "emanuelatrindade@gmail.com",
+      "gerente": "true",
+      "nome": "Bernardo Falquetto",
+      "telefone": "906-116-6346"
+    },
+    {
+      "id": 171,
+      "cargo": "funcionario",
+      "cpf": "139.432.141-41",
+      "email": "joocheibub@gmail.com",
+      "gerente": "true",
+      "nome": "Kelvin Pillon",
+      "telefone": "305-975-7130"
+    },
+    {
+      "id": 172,
+      "cargo": "contador",
+      "cpf": "325.510.993-07",
+      "email": "samuelcardoso@gmail.com",
+      "gerente": "true",
+      "nome": "Francisco Caretta",
+      "telefone": "932-547-2030"
+    },
+    {
+      "id": 173,
+      "cargo": "estagiario",
+      "cpf": "811.556.315-36",
+      "email": "valentinademoraes@gmail.com",
+      "gerente": "false",
+      "nome": "Juliano Tavares",
+      "telefone": "251-849-6933"
+    },
+    {
+      "id": 174,
+      "cargo": "contador",
+      "cpf": "800.115.571-41",
+      "email": "marianaknudsen@gmail.com",
+      "gerente": "true",
+      "nome": "Valentim Zandonadi",
+      "telefone": "409-244-1052"
+    },
+    {
+      "id": 175,
+      "cargo": "estagiario",
+      "cpf": "465.815.149-93",
+      "email": "leticiaconciani@gmail.com",
+      "gerente": "true",
+      "nome": "Yara Vadagnin",
+      "telefone": "132-429-8332"
+    },
+    {
+      "id": 176,
+      "cargo": "estagiario",
+      "cpf": "553.912.997-05",
+      "email": "joaquimbreziniscki@gmail.com",
+      "gerente": "true",
+      "nome": "Natália Rochetti",
+      "telefone": "938-858-8273"
+    },
+    {
+      "id": 177,
+      "cargo": "funcionario",
+      "cpf": "263.063.116-88",
+      "email": "giovanamathiello@gmail.com",
+      "gerente": "false",
+      "nome": "Anabela Fittipaldi",
+      "telefone": "484-592-6120"
+    },
+    {
+      "id": 178,
+      "cargo": "estagiario",
+      "cpf": "219.638.048-21",
+      "email": "julianoferrari@gmail.com",
+      "gerente": "false",
+      "nome": "Rebeca Rodrigues",
+      "telefone": "538-735-0886"
+    },
+    {
+      "id": 179,
+      "cargo": "contador",
+      "cpf": "132.930.756-90",
+      "email": "mateusbottega@gmail.com",
+      "gerente": "true",
+      "nome": "Rodrigo Caprini",
+      "telefone": "455-464-7083"
+    },
+    {
+      "id": 180,
+      "cargo": "funcionario",
+      "cpf": "045.422.817-10",
+      "email": "pedroandersen@gmail.com",
+      "gerente": "true",
+      "nome": "Jessica Bernadot",
+      "telefone": "328-635-6808"
+    },
+    {
+      "id": 181,
+      "cargo": "estagiario",
+      "cpf": "906.028.617-05",
+      "email": "antniograssi@gmail.com",
+      "gerente": "true",
+      "nome": "Brenda Berg",
+      "telefone": "567-499-4703"
+    },
+    {
+      "id": 182,
+      "cargo": "funcionario",
+      "cpf": "644.186.063-51",
+      "email": "jliamuniz@gmail.com",
+      "gerente": "false",
+      "nome": "Elisa Giacomele",
+      "telefone": "588-320-6886"
+    },
+    {
+      "id": 183,
+      "cargo": "estagiario",
+      "cpf": "004.080.184-53",
+      "email": "gustavovanzan@gmail.com",
+      "gerente": "true",
+      "nome": "Marcelo Doimo",
+      "telefone": "245-261-1335"
+    },
+    {
+      "id": 184,
+      "cargo": "estagiario",
+      "cpf": "153.077.505-10",
+      "email": "gabrielmarcarini@gmail.com",
+      "gerente": "true",
+      "nome": "Henrique Barreira",
+      "telefone": "185-626-3046"
+    },
+    {
+      "id": 185,
+      "cargo": "contador",
+      "cpf": "689.202.068-21",
+      "email": "helenapalermo@gmail.com",
+      "gerente": "true",
+      "nome": "Taís Zucoloto",
+      "telefone": "107-172-9611"
+    },
+    {
+      "id": 186,
+      "cargo": "funcionario",
+      "cpf": "121.859.039-42",
+      "email": "fernandomontemor@gmail.com",
+      "gerente": "true",
+      "nome": "Aline de Oliveira",
+      "telefone": "914-353-4824"
+    },
+    {
+      "id": 187,
+      "cargo": "estagiario",
+      "cpf": "010.294.531-44",
+      "email": "arielabernardes@gmail.com",
+      "gerente": "true",
+      "nome": "Nicolas Sperandio",
+      "telefone": "166-303-2886"
+    },
+    {
+      "id": 188,
+      "cargo": "estagiario",
+      "cpf": "453.802.462-73",
+      "email": "franciscokuiger@gmail.com",
+      "gerente": "false",
+      "nome": "Jonathan Gaucci",
+      "telefone": "534-181-0596"
+    },
+    {
+      "id": 189,
+      "cargo": "funcionario",
+      "cpf": "032.359.693-22",
+      "email": "caiosgulmaro@gmail.com",
+      "gerente": "false",
+      "nome": "Beatriz Brandão",
+      "telefone": "904-952-4794"
+    },
+    {
+      "id": 190,
+      "cargo": "contador",
+      "cpf": "366.872.383-45",
+      "email": "alciacattelan@gmail.com",
+      "gerente": "false",
+      "nome": "Miguel Fiorim",
+      "telefone": "730-175-9868"
+    },
+    {
+      "id": 191,
+      "cargo": "estagiario",
+      "cpf": "351.701.167-30",
+      "email": "matheusdemoraes@gmail.com",
+      "gerente": "true",
+      "nome": "Frederico Zorzal",
+      "telefone": "589-154-7104"
+    },
+    {
+      "id": 192,
+      "cargo": "estagiario",
+      "cpf": "813.143.975-59",
+      "email": "gabrielcalazans@gmail.com",
+      "gerente": "true",
+      "nome": "Milene Guedes",
+      "telefone": "596-232-8011"
+    },
+    {
+      "id": 193,
+      "cargo": "estagiario",
+      "cpf": "963.343.794-61",
+      "email": "luispase@gmail.com",
+      "gerente": "true",
+      "nome": "Bruno Destéfani",
+      "telefone": "140-512-4760"
+    },
+    {
+      "id": 194,
+      "cargo": "estagiario",
+      "cpf": "088.946.199-66",
+      "email": "yasminoliveria@gmail.com",
+      "gerente": "true",
+      "nome": "Nicolas Shael",
+      "telefone": "401-561-9033"
+    },
+    {
+      "id": 195,
+      "cargo": "funcionario",
+      "cpf": "867.368.084-05",
+      "email": "luizacosta@gmail.com",
+      "gerente": "true",
+      "nome": "Vinicius Mork",
+      "telefone": "454-724-3259"
+    },
+    {
+      "id": 196,
+      "cargo": "contador",
+      "cpf": "304.137.056-50",
+      "email": "danielbossoli@gmail.com",
+      "gerente": "true",
+      "nome": "Melissa Riatto",
+      "telefone": "167-235-0501"
+    },
+    {
+      "id": 197,
+      "cargo": "funcionario",
+      "cpf": "967.352.346-00",
+      "email": "ianmace@gmail.com",
+      "gerente": "true",
+      "nome": "Laura Pavan",
+      "telefone": "859-804-2930"
+    },
+    {
+      "id": 198,
+      "cargo": "contador",
+      "cpf": "588.680.133-20",
+      "email": "ricardohoracio@gmail.com",
+      "gerente": "false",
+      "nome": "Joana Conterini",
+      "telefone": "137-827-0932"
+    },
+    {
+      "id": 199,
+      "cargo": "funcionario",
+      "cpf": "766.559.018-71",
+      "email": "carolinadafraga@gmail.com",
+      "gerente": "false",
+      "nome": "Isabelly Cocco",
+      "telefone": "585-718-8655"
+    },
+    {
+      "id": 200,
+      "cargo": "estagiario",
+      "cpf": "952.092.843-01",
+      "email": "anabalestre@gmail.com",
+      "gerente": "false",
+      "nome": "Lucas La Point",
+      "telefone": "882-621-9549"
+    }
+  ]
+}
