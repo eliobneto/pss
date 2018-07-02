@@ -113,7 +113,6 @@ import {ListarClienteComponent} from './usuario/cliente/listar-cliente/listar-cl
 import {FuncionarioService} from './usuario/funcionario/funcionario.service';
 import {ClienteService} from "./usuario/cliente/cliente.service";
 
-
 @NgModule({
     imports: [
         BrowserModule,

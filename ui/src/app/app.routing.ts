@@ -43,7 +43,6 @@ export const routes: Routes = [
     {path: 'listarClientes', component:ListarClienteComponent},
     {path: 'editarCliente/:id/edit', component:EditarClienteComponent},
     {path: 'criarcliente', component:CadastrarClienteComponent}
-
 ];
 
 export const AppRouting: ModuleWithProviders = RouterModule.forRoot(routes);
