@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
 
-    if (this.auth.get() >= 1 && this.auth.get() <= 4) {
+    if (this.auth.get() >= 1 && this.auth.get() <= 3) {
       if (next.data.nivel && this.auth.temPermissao(next.data.nivel)) {
         return true;
       } else {
