@@ -17,6 +17,7 @@ export class AuthService {
     this.tipo = tipo;
     if (tipo === 1) {
       this.gerente = true;
+      this.admin = true;
     } else if (tipo === 2) {
       this.admin = true;
     } else if (tipo === 3) {
