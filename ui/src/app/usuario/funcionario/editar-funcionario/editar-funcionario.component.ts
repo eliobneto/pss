@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NgForm, AbstractControl} from '@angular/forms';
 import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import {ActivatedRoute, Router} from '@angular/router';
 import swal from 'sweetalert2';
-import { FuncionarioService } from '../funcionario.service';
-import { AuthService} from "../../../auth/auth.service";
+import {FuncionarioService} from '../funcionario.service';
+import {AuthService} from '../../../auth/auth.service';
 
 @Component({
   selector: 'app-editar-funcionario',
@@ -27,7 +27,8 @@ export class EditarFuncionarioComponent implements OnInit {
   constructor(
     private ser: FuncionarioService,
     private route: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private auth: AuthService
   ) {
   }
 
@@ -51,27 +52,27 @@ export class EditarFuncionarioComponent implements OnInit {
         this.route.navigate(['gerente']);
       }
     });
-    if (this.auth.get()===2){
+    if (this.auth.get() === 2) {
       this.disable = false;
     }
     //this.validagerente();
   }
 
-/*  validagerente() {
-    this.ser.getFuns().subscribe((s) => {
-      this.funcionarios = s;
-      if (this.fun.gerente) {
-        this.gerente = false;
-      } else {
-        for (const o of this.funcionarios) {
-          if (o.gerente === true) {
-            this.gerente = true;
-            break;
+  /*  validagerente() {
+      this.ser.getFuns().subscribe((s) => {
+        this.funcionarios = s;
+        if (this.fun.gerente) {
+          this.gerente = false;
+        } else {
+          for (const o of this.funcionarios) {
+            if (o.gerente === true) {
+              this.gerente = true;
+              break;
+            }
           }
         }
-      }
-    });
-  }*/
+      });
+    }*/
 
   valida(funform: NgForm): boolean {
     return funform.value.gerente === true;

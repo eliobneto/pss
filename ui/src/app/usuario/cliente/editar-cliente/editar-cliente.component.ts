@@ -4,7 +4,7 @@ import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import {ActivatedRoute, Router} from '@angular/router';
 import swal from 'sweetalert2';
 import { ClienteService } from '../cliente.service';
-import { AuthService} from "../../../auth/auth.service";
+import { AuthService} from '../../../auth/auth.service';
 
 @Component({
   selector: 'app-editar-cliente',
@@ -26,7 +26,8 @@ export class EditarClienteComponent implements OnInit {
   constructor(
     private ser: ClienteService,
     private route: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private auth: AuthService
   ) {
   }
 
@@ -50,7 +51,7 @@ export class EditarClienteComponent implements OnInit {
         this.route.navigate(['admin']);
       }
     });
-    if (this.auth.get()===2){
+    if (this.auth.get() === 2) {
       this.disable = false;
     }
   }
