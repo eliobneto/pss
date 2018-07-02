@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import swal from 'sweetalert2';
 import {EstoqueService} from '../estoque.service';
@@ -19,12 +19,9 @@ export class ListComponent implements OnInit {
   stock: any;
 
   ngOnInit() {
-    this.populate();
-  }
-
-  populate() {
     this.service.getAllEstoque().then(s => this.stock = s);
   }
+
 
   confirmarExclusao(id: string) {
     swal({
@@ -49,7 +46,7 @@ export class ListComponent implements OnInit {
               confirmButtonClass: 'btn btn-success',
               buttonsStyling: false
             });
-            this.populate();
+            this.ngOnInit();
           }
         );
       }

@@ -38,7 +38,7 @@ export class EditComponent implements OnInit {
           }
         );
       } else {
-        this.route.navigate(['/estoque']);
+        this.route.navigate(['assets/demo/data/estoque.json']);
       }
     });
   }
@@ -51,7 +51,7 @@ export class EditComponent implements OnInit {
     }
     this.service.updateEstoque(this.stock, this.stock).subscribe(
       () => {
-        this.route.navigate(['/produtos']);
+        this.route.navigate(['/estoque']);
         swal({
           type: 'success',
           title: 'Erro!',

@@ -1,13 +1,16 @@
 <div class="ui-g">
   <div class="ui-g-12">
     <div class="card card-w-title">
-      <p-dataView [value]="stock" [paginator]="true" [rows]="10">
+      <p-dataView #pt [value]="stock" [paginator]="true" [rows]="10">
         <p-header>
           <div class="ui-helper-clearfix">
             <div class="ui-g">
               <div class="ui-g-6 ui-md-4 filter-container">
                 <div style="position:relative">
-                  <input type="text" pInputText placeholder="Procurar por nome">
+                  <input type="text" pInputText size="50" placeholder="Buscar por nome"
+                         class="ui-inputtext ui-corner-all ui-state-default ui-widget black"
+                         (input)="pt.filterGlobal($event.target.value, 'contains')" style="width: auto;"
+                  >
                 </div>
               </div>
             </div>
@@ -26,8 +29,9 @@
                 <div class="ui-g-8 ui-sm-8">
                   <b>{{estoque.categoria}}</b>
                 </div>
+
                 <div class="ui-sm-1">
-                  <button pButton type="button" icon="ui-icon-edit" routerLink="{{estoque.id}}/edit"></button>
+                  <button pButton type="button" icon="ui-icon-edit" routerLink="{{stock.id}}/edit"></button>
                 </div>
 
                 <div class="ui-g-2 ui-sm-2">Un/Lote: </div>
@@ -39,10 +43,15 @@
                 <div class="ui-g-8 ui-sm-8">
                   <b>R$ {{estoque.preco}}</b>
                 </div>
+
                 <div class="ui-sm-1">
                   <button pButton type="button" icon="ui-icon-delete" class="ui-button-danger" (click)="confirmarExclusao(estoque.id)"></button>
                 </div>
 
+                <div class="ui-g-2 ui-sm-2">Descrição: </div>
+                <div class="ui-g-8 ui-sm-8">
+                  <b>{{estoque.descricao}}</b>
+                </div>
 
               </div>
             </div>
