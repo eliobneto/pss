@@ -55,7 +55,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
             [
               {label: 'Cadastrar Funcionário', routerLink: ['gerente/criarFuncionario']},
               {label: 'Listar Funcionarios', routerLink: ['gerente/listarFuncionarios']},
-              {label: 'Listar Clientes', routerLink: ['gerente/listarClientes']}
+              {label: 'Listar Clientes', routerLink: ['listarClientes']}
             ]
         }
       ];

@@ -36,14 +36,13 @@ export const routes: Routes = [
     {path: 'cliente', component: SampleDemoComponent},
     {path: 'admin', component: DocumentationComponent},
     {path: 'gerente', component:DocumentationComponent},
-    {path: 'criarcliente', component:DocumentationComponent},
     {path: 'recuperar', component:DocumentationComponent},
     {path: 'gerente/criarFuncionario', component:CadastrarFuncionarioComponent},
-    {path: 'editarFuncionario', component:EditarFuncionarioComponent},
+    {path: 'editarFuncionario/:id/edit', component:EditarFuncionarioComponent},
     {path: 'gerente/listarFuncionarios', component:ListarFuncionarioComponent},
-    {path: 'admin/listarClientes', component:ListarClienteComponent},
-    {path: 'editarCliente', component:EditarClienteComponent},
-    {path: 'cadastrarCliente', component:CadastrarClienteComponent}
+    {path: 'listarClientes', component:ListarClienteComponent},
+    {path: 'editarCliente/:id/edit', component:EditarClienteComponent},
+    {path: 'criarcliente', component:CadastrarClienteComponent}
 
 ];
 

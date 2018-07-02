@@ -61,11 +61,11 @@ export class CadastrarFuncionarioComponent implements OnInit {
     }
     this.ser.criarFun(this.f).subscribe(
       () => {
-        this.route.navigate(['/funcionarios']);
+        this.route.navigate(['gerente']);
       }, (e) => {
         swal(
           'Erro!',
-          'CPF ou e-mail já cadastrado!',
+          'CPF já cadastrado!',
           'error'
         );
       }

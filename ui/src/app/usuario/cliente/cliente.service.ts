@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
-import {Cliente} from './cliente';
+import {cliente} from './cliente';
 
 @Injectable()
 export class ClienteService {
@@ -9,8 +9,8 @@ export class ClienteService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  getFuns() {
-    return this.http.get<any>('assets/demo/data/Cliente.json').toPromise()
+  getClientes() {
+    return this.http.get<any>('assets/demo/data/cliente.json').toPromise()
       .then(res => <cliente[]> res.data)
       .then(data => data);
 
@@ -20,33 +20,41 @@ export class ClienteService {
     return this.http.delete(this.service + id);
   }
 
-  getFun(id: string) {
+  getCli(id: string) {
     return this.http.get<cliente>(this.service + id);
   }
 
-  criarFun(clien: cliente) {
-    const cargo = func.cargo;
-    const telefone = func.telefone;
-    const cpf = func.cpf;
-    const email = func.email;
-    const gerente = func.gerente;
-    const password = func.password;
-    const nome = func.nome;
-    return this.http.post(this.service, {cargo, telefone, cpf, email, nome, password, gerente});
+  criarCli(clien: cliente) {
+    const cnpj = clien.cnpj;
+    const telefone = clien.telefone;
+    const email = clien.email;
+    const password = clien.password;
+    const razao = clien.razao;
+    const responsavel= clien.responsavel;
+    const cpfres = clien.cpfres;
+    const cep = clien.cep;
+    const endereco = clien.endereco;
+    const cidade = clien.cidade;
+    const complemento = clien.complemento;
+    return this.http.post(this.service, {cnpj, telefone, email, password, razao, responsavel, cpfres, cep, endereco, cidade, complemento});
   }
 
   updat(id: string, clien: cliente) {
-    const cargo = func.cargo;
-    const telefone = func.telefone;
-    const cpf = func.cpf;
-    const email = func.email;
-    const gerente = func.gerente;
-    const password = func.password;
-    const nome = func.nome;
+    const cnpj = clien.cnpj;
+    const telefone = clien.telefone;
+    const email = clien.email;
+    const password = clien.password;
+    const razao = clien.razao;
+    const responsavel= clien.responsavel;
+    const cpfres = clien.cpfres;
+    const cep = clien.cep;
+    const endereco = clien.endereco;
+    const cidade = clien.cidade;
+    const complemento = clien.complemento;
     if(password) {
-      return this.http.put(this.service + id, {cargo, id, telefone, cpf, email, nome, password, gerente});
+      return this.http.put(this.service + id, {cnpj, telefone, email, password, razao, responsavel, cpfres, cep, endereco, cidade, complemento});
     } else {
-      return this.http.put(this.service + id, {cargo, id, telefone, cpf, email, nome, gerente});
+      return this.http.put(this.service + id, {cnpj, telefone, email, razao, responsavel, cpfres, cep, endereco, cidade, complemento});
     }
   }
 

@@ -1,10 +1,14 @@
 export class cliente {
   id: string;
-  cargo: string;
-  cpf:	string;
-  email:	string;
-  gerente:	boolean;
-  nome:	string;
-  password:	string;
+  cnpj: string;
   telefone:	string;
+  email:	string;
+  password:	string;
+  razao:	string;
+  responsavel:	string;
+  cpfres:	string;
+  cep: string;
+  endereco: string;
+  cidade: string;
+  complemento: string;
 }

@@ -1,0 +1,454 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "cargo": "contador",
+      "cpf": "227.654.155-52",
+      "email": "mkoppen0@reuters.com",
+      "gerente": false,
+      "nome": "Mohandis",
+      "telefone": "364-802-2498"
+    },
+    {
+      "id": 2,
+      "cargo": "funcionario",
+      "cpf": "544.474.433-33",
+      "email": "shefner1@yellowpages.com",
+      "gerente": false,
+      "nome": "Skye",
+      "telefone": "275-396-5578"
+    },
+    {
+      "id": 3,
+      "cargo": "funcionario",
+      "cpf": "115.982.421-56",
+      "email": "cabilowitz2@cnet.com",
+      "gerente": false,
+      "nome": "Cathrin",
+      "telefone": "998-627-5032"
+    },
+    {
+      "id": 4,
+      "cargo": "contador",
+      "cpf": "356.878.356-87",
+      "email": "gcroson3@elpais.com",
+      "gerente": false,
+      "nome": "Griz",
+      "telefone": "675-820-9446"
+    },
+    {
+      "id": 5,
+      "cargo": "estagiario",
+      "cpf": "563.238.676-72",
+      "email": "swells4@mtv.com",
+      "gerente": false,
+      "nome": "Sabine",
+      "telefone": "264-293-3614"
+    },
+    {
+      "id": 6,
+      "cargo": "estagiario",
+      "cpf": "121.443.152-64",
+      "email": "agillebride5@xing.com",
+      "gerente": false,
+      "nome": "Aurilia",
+      "telefone": "929-716-5847"
+    },
+    {
+      "id": 7,
+      "cargo": "estagiario",
+      "cpf": "354.467.258-83",
+      "email": "bhailston6@washingtonpost.com",
+      "gerente": false,
+      "nome": "Bradly",
+      "telefone": "884-324-7796"
+    },
+    {
+      "id": 8,
+      "cargo": "contador",
+      "cpf": "364.122.445-49",
+      "email": "jwebborn7@bluehost.com",
+      "gerente": false,
+      "nome": "Job",
+      "telefone": "527-462-9384"
+    },
+    {
+      "id": 9,
+      "cargo": "contador",
+      "cpf": "424.236.382-64",
+      "email": "bkochl8@yahoo.com",
+      "gerente": false,
+      "nome": "Bill",
+      "telefone": "834-451-0004"
+    },
+    {
+      "id": 10,
+      "cargo": "contador",
+      "cpf": "717.844.581-55",
+      "email": "crichly9@eepurl.com",
+      "gerente": false,
+      "nome": "Cob",
+      "telefone": "131-597-0770"
+    },
+    {
+      "id": 11,
+      "cargo": "contador",
+      "cpf": "627.554.166-02",
+      "email": "jspellissya@about.me",
+      "gerente": false,
+      "nome": "Jereme",
+      "telefone": "526-155-8448"
+    },
+    {
+      "id": 12,
+      "cargo": "funcionario",
+      "cpf": "422.164.588-13",
+      "email": "avogeleinb@bing.com",
+      "gerente": false,
+      "nome": "Aristotle",
+      "telefone": "499-806-6006"
+    },
+    {
+      "id": 13,
+      "cargo": "estagiario",
+      "cpf": "338.517.425-24",
+      "email": "gseedhousec@msu.edu",
+      "gerente": false,
+      "nome": "Gordy",
+      "telefone": "543-598-2916"
+    },
+    {
+      "id": 14,
+      "cargo": "funcionario",
+      "cpf": "875.757.713-79",
+      "email": "ctresvinad@ebay.com",
+      "gerente": false,
+      "nome": "Carlie",
+      "telefone": "639-442-1195"
+    },
+    {
+      "id": 15,
+      "cargo": "estagiario",
+      "cpf": "331.173.381-95",
+      "email": "myanshine@java.com",
+      "gerente": false,
+      "nome": "Mirabelle",
+      "telefone": "249-979-2859"
+    },
+    {
+      "id": 16,
+      "cargo": "estagiario",
+      "cpf": "856.883.755-74",
+      "email": "aguittf@t.co",
+      "gerente": false,
+      "nome": "Archambault",
+      "telefone": "436-269-9232"
+    },
+    {
+      "id": 17,
+      "cargo": "estagiario",
+      "cpf": "828.487.733-32",
+      "email": "bboundsg@about.me",
+      "gerente": false,
+      "nome": "Barny",
+      "telefone": "230-577-5999"
+    },
+    {
+      "id": 18,
+      "cargo": "estagiario",
+      "cpf": "885.328.437-43",
+      "email": "aforrestillh@bloglines.com",
+      "gerente": false,
+      "nome": "Antoinette",
+      "telefone": "180-236-0965"
+    },
+    {
+      "id": 19,
+      "cargo": "contador",
+      "cpf": "877.463.153-56",
+      "email": "mketcheni@wix.com",
+      "gerente": false,
+      "nome": "Moss",
+      "telefone": "358-539-9130"
+    },
+    {
+      "id": 20,
+      "cargo": "funcionario",
+      "cpf": "448.131.588-11",
+      "email": "icessj@tumblr.com",
+      "gerente": false,
+      "nome": "Idette",
+      "telefone": "219-874-1950"
+    },
+    {
+      "id": 21,
+      "cargo": "funcionario",
+      "cpf": "721.188.622-61",
+      "email": "bchismonk@surveymonkey.com",
+      "gerente": false,
+      "nome": "Bekki",
+      "telefone": "730-472-4500"
+    },
+    {
+      "id": 22,
+      "cargo": "funcionario",
+      "cpf": "675.463.361-12",
+      "email": "aruberyl@latimes.com",
+      "gerente": false,
+      "nome": "Aloysius",
+      "telefone": "747-267-3913"
+    },
+    {
+      "id": 23,
+      "cargo": "estagiario",
+      "cpf": "776.132.156-60",
+      "email": "lyanukhinm@umn.edu",
+      "gerente": false,
+      "nome": "Lesly",
+      "telefone": "391-876-2982"
+    },
+    {
+      "id": 24,
+      "cargo": "estagiario",
+      "cpf": "155.146.165-09",
+      "email": "cjarrittn@geocities.jp",
+      "gerente": false,
+      "nome": "Clyde",
+      "telefone": "489-257-8584"
+    },
+    {
+      "id": 25,
+      "cargo": "contador",
+      "cpf": "147.315.863-05",
+      "email": "bcrickmoreo@comcast.net",
+      "gerente": false,
+      "nome": "Buckie",
+      "telefone": "454-406-8627"
+    },
+    {
+      "id": 26,
+      "cargo": "funcionario",
+      "cpf": "389.478.263-32",
+      "email": "vquaifep@ftc.gov",
+      "gerente": false,
+      "nome": "Virginia",
+      "telefone": "504-815-3421"
+    },
+    {
+      "id": 27,
+      "cargo": "funcionario",
+      "cpf": "428.235.758-47",
+      "email": "egreenleafq@elegantthemes.com",
+      "gerente": false,
+      "nome": "Eleanore",
+      "telefone": "378-282-3822"
+    },
+    {
+      "id": 28,
+      "cargo": "estagiario",
+      "cpf": "467.182.323-35",
+      "email": "gwakerleyr@dot.gov",
+      "gerente": false,
+      "nome": "Giorgio",
+      "telefone": "157-671-0331"
+    },
+    {
+      "id": 29,
+      "cargo": "contador",
+      "cpf": "611.552.181-59",
+      "email": "kgorlers@so-net.ne.jp",
+      "gerente": false,
+      "nome": "Klara",
+      "telefone": "756-736-3854"
+    },
+    {
+      "id": 30,
+      "cargo": "contador",
+      "cpf": "131.483.417-75",
+      "email": "dtomett@list-manage.com",
+      "gerente": false,
+      "nome": "Deny",
+      "telefone": "887-395-3517"
+    },
+    {
+      "id": 31,
+      "cargo": "funcionario",
+      "cpf": "133.151.869-52",
+      "email": "hstoateu@google.cn",
+      "gerente": false,
+      "nome": "Hillery",
+      "telefone": "968-281-4326"
+    },
+    {
+      "id": 32,
+      "cargo": "funcionario",
+      "cpf": "263.544.741-17",
+      "email": "shannentv@gnu.org",
+      "gerente": false,
+      "nome": "Sally",
+      "telefone": "559-936-2734"
+    },
+    {
+      "id": 33,
+      "cargo": "contador",
+      "cpf": "261.175.334-20",
+      "email": "ztoozew@thetimes.co.uk",
+      "gerente": false,
+      "nome": "Zita",
+      "telefone": "584-277-3350"
+    },
+    {
+      "id": 34,
+      "cargo": "estagiario",
+      "cpf": "776.586.712-15",
+      "email": "bramsteadx@webs.com",
+      "gerente": false,
+      "nome": "Blanch",
+      "telefone": "258-160-9321"
+    },
+    {
+      "id": 35,
+      "cargo": "estagiario",
+      "cpf": "214.337.672-36",
+      "email": "kaumerley@rediff.com",
+      "gerente": false,
+      "nome": "Kiele",
+      "telefone": "679-523-0891"
+    },
+    {
+      "id": 36,
+      "cargo": "funcionario",
+      "cpf": "277.385.553-19",
+      "email": "fdaughteryz@google.co.jp",
+      "gerente": false,
+      "nome": "Finn",
+      "telefone": "529-657-2778"
+    },
+    {
+      "id": 37,
+      "cargo": "estagiario",
+      "cpf": "137.616.376-40",
+      "email": "sgoodbairn10@ycombinator.com",
+      "gerente": false,
+      "nome": "Shurwood",
+      "telefone": "174-595-7560"
+    },
+    {
+      "id": 38,
+      "cargo": "contador",
+      "cpf": "188.319.454-75",
+      "email": "hhofner11@hostgator.com",
+      "gerente": false,
+      "nome": "Huntley",
+      "telefone": "833-659-9734"
+    },
+    {
+      "id": 39,
+      "cargo": "estagiario",
+      "cpf": "225.554.383-43",
+      "email": "rbuss12@latimes.com",
+      "gerente": false,
+      "nome": "Reine",
+      "telefone": "167-344-9860"
+    },
+    {
+      "id": 40,
+      "cargo": "contador",
+      "cpf": "854.377.144-75",
+      "email": "erodway13@topsy.com",
+      "gerente": false,
+      "nome": "Ernestus",
+      "telefone": "811-550-9566"
+    },
+    {
+      "id": 41,
+      "cargo": "contador",
+      "cpf": "887.526.448-12",
+      "email": "mgooms14@webs.com",
+      "gerente": false,
+      "nome": "Meredith",
+      "telefone": "956-520-7616"
+    },
+    {
+      "id": 42,
+      "cargo": "funcionario",
+      "cpf": "584.117.674-93",
+      "email": "kbiddlestone15@csmonitor.com",
+      "gerente": false,
+      "nome": "Kayne",
+      "telefone": "924-551-6295"
+    },
+    {
+      "id": 43,
+      "cargo": "funcionario",
+      "cpf": "223.523.957-98",
+      "email": "eshapland16@gov.uk",
+      "gerente": false,
+      "nome": "Elie",
+      "telefone": "341-208-5595"
+    },
+    {
+      "id": 44,
+      "cargo": "funcionario",
+      "cpf": "873.162.732-32",
+      "email": "lchurchill17@e-recht24.de",
+      "gerente": false,
+      "nome": "Loleta",
+      "telefone": "188-100-5970"
+    },
+    {
+      "id": 45,
+      "cargo": "funcionario",
+      "cpf": "576.546.158-17",
+      "email": "cdurno18@mail.ru",
+      "gerente": false,
+      "nome": "Charlie",
+      "telefone": "370-696-2935"
+    },
+    {
+      "id": 46,
+      "cargo": "funcionario",
+      "cpf": "136.458.821-89",
+      "email": "vventham19@tmall.com",
+      "gerente": false,
+      "nome": "Valida",
+      "telefone": "953-770-4337"
+    },
+    {
+      "id": 47,
+      "cargo": "funcionario",
+      "cpf": "837.726.124-31",
+      "email": "amarchent1a@jugem.jp",
+      "gerente": false,
+      "nome": "Antonina",
+      "telefone": "636-729-3952"
+    },
+    {
+      "id": 48,
+      "cargo": "contador",
+      "cpf": "417.776.441-86",
+      "email": "cpettie1b@cargocollective.com",
+      "gerente": false,
+      "nome": "Chrysa",
+      "telefone": "686-797-3316"
+    },
+    {
+      "id": 49,
+      "cargo": "funcionario",
+      "cpf": "257.151.796-10",
+      "email": "mchannon1c@cyberchimps.com",
+      "gerente": false,
+      "nome": "Marlena",
+      "telefone": "572-793-8259"
+    },
+    {
+      "id": 50,
+      "cargo": "funcionario",
+      "cpf": "762.283.766-08",
+      "email": "wconnold1d@google.nl",
+      "gerente": true,
+      "nome": "Winifred",
+      "telefone": "617-577-2851"
+    }
+  ]
+}

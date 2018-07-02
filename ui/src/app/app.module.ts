@@ -111,6 +111,7 @@ import {EditarClienteComponent} from './usuario/cliente/editar-cliente/editar-cl
 
 import {ListarClienteComponent} from './usuario/cliente/listar-cliente/listar-cliente.component';
 import {FuncionarioService} from './usuario/funcionario/funcionario.service';
+import {ClienteService} from "./usuario/cliente/cliente.service";
 
 
 @NgModule({
@@ -218,7 +219,7 @@ import {FuncionarioService} from './usuario/funcionario/funcionario.service';
         ListarClienteComponent,
     ],
     providers: [
-        CarService, CountryService, EventService, NodeService, BreadcrumbService, AuthService, FuncionarioService
+        CarService, CountryService, EventService, NodeService, BreadcrumbService, AuthService, ClienteService, FuncionarioService
     ],
     bootstrap: [AppComponent]
 })
