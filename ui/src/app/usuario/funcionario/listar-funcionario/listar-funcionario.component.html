@@ -1,6 +1,7 @@
+<div class="ui-g">
 <div class="ui-g-12">
   <div class="card card-w-title">
-    <p-dataView >
+    <p-dataView [value]="fun" [paginator]="true" [rows]="10">
       <p-header>
         <div class="ui-helper-clearfix">
           <div class="ui-g">
@@ -16,46 +17,44 @@
         <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
           <div class="ui-g-12 ui-md-8">
             <div class="ui-g">
-              <div class="ui-g-2 ui-sm-5">Nome: </div>
-              <div class="ui-g-8 ui-sm-5">
+              <div class="ui-g-2 ui-sm-2">Nome: </div>
+              <div class="ui-g-10 ui-sm-10">
                 <b>{{funcionario.nome}}</b>
               </div>
-              <div class="ui-sm-1">
-                <button class="ui-button-success" routerLink="{{funcionario.id}}/edit">Editar</button>
-              </div>
 
-              <div class="ui-g-2 ui-sm-6">CPF: </div>
-              <div class="ui-g-10 ui-sm-6">
+              <div class="ui-g-2 ui-sm-2">CPF: </div>
+              <div class="ui-g-8 ui-sm-8">
                 <b>{{funcionario.cpf}}</b>
               </div>
+              <div class="ui-sm-1">
+                <button pButton type="button" icon="ui-icon-edit" routerLink="{{funcionario.id}}/edit"></button>
+              </div>
 
-              <div class="ui-g-2 ui-sm-5">Numero: </div>
-              <div class="ui-g-8 ui-sm-5">
+              <div class="ui-g-2 ui-sm-2">Numero: </div>
+              <div class="ui-g-10 ui-sm-10">
                 <b>{{funcionario.telefone}}</b>
               </div>
-              <div class="ui-sm-1">
-                <button class="ui-button-danger" (click)="confirmaex(funcionario.id)">Deletar</button>
-              </div>
 
-              <div class="ui-g-2 ui-sm-6">E-mail: </div>
-              <div class="ui-g-10 ui-sm-6">
+              <div class="ui-g-2 ui-sm-2">E-mail: </div>
+              <div class="ui-g-8 ui-sm-8">
                 <b>{{funcionario.email}}</b>
               </div>
+              <div class="ui-sm-1">
+                <button pButton type="button" icon="ui-icon-delete" class="ui-button-danger" (click)="confirmaex(funcionario.id)"></button>
+              </div>
 
-              <div class="ui-g-2 ui-sm-6">Cargo: </div>
-              <div class="ui-g-10 ui-sm-6" *ngIf="funcionario.gerente == false">
+              <div class="ui-g-2 ui-sm-2">Cargo: </div>
+              <div class="ui-g-10 ui-sm-10" *ngIf="funcionario.gerente == false">
                 <b>{{funcionario.cargo}}</b>
               </div>
-              <div class="ui-g-10 ui-sm-6" *ngIf="funcionario.gerente == true">
+              <div class="ui-g-10 ui-sm-10" *ngIf="funcionario.gerente == true">
                 <b>Gerente</b>
               </div>
             </div>
-          </div>
-          <div class="ui-g-12 ui-md-1 search-icon">
-            <button pButton type="button" icon="pi pi-search" ></button>
           </div>
         </div>
       </ng-template>
     </p-dataView>
   </div>
+</div>
 </div>

@@ -49,7 +49,7 @@ export class EditarFuncionarioComponent implements OnInit {
         this.route.navigate(['/funcionarios']);
       }
     });
-    // this.validagerente();
+    //this.validagerente();
   }
 
 /*  validagerente() {
