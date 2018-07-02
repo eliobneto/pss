@@ -1,10 +1,11 @@
-<div class="ui-g">
-  <div class="ui-g-12">
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-lg-12">
     <div class="card docs">
 
 
       <form #funform="ngForm">
         <div class="ui-g form-group">
+
             <div class="ui-g-12">
               <span class="md-inputfield">
                 <input type="text" required name="nome" id="nome"
@@ -23,7 +24,7 @@
               </span>
             </div>
 
-            <div class="ui-g-12">
+            <div class="ui-g-12 ui-md-12">
               <span class="md-inputfield">
                 <input type="text" pInputText #celularf="ngModel" name="celular" maxlength="15" minlength="15"
                        [(ngModel)]="f.telefone" [spMask]="phoneMask" [spKeepMask]="true" required
@@ -44,7 +45,6 @@
 
 
 
-          <div class="ui-g form-group">
             <div class="ui-g-12">
               <div class="ui-inputgroup">
                 <span class="md-inputfield">
@@ -55,12 +55,11 @@
                 </span>
                 <span class="ui-inputgroup-addon">
                   <input type="checkbox" [(ngModel)]="f.gerente" [disabled]="gerente" #gerentef="ngModel" name="gerente" id="gerente">
-                  <label for="gerente" style="width: 15%">Gerente</label>
+                  <label>Gerente</label>
                 </span>
-                <span class="ui-corner-all" style="color: red; font-size: 10px">  *</span>
               </div>
+              <div class="ui-corner-all" style="color: red; font-size: 10px">  *</div>
             </div>
-          </div>
 
 
             <div class="ui-g-12">
@@ -77,7 +76,7 @@
                        [ngClass]="(csenhaf.invalid && csenhaf.touched) || (csenhaf.touched && confirmasenha(funform,csenhaf)) ? 'is-invalid' : ''"
                        class="ui-inputtext ui-corner-all ui-widget">
                 <label>Confirmar Senha</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
-                <div class="ui-message ui-messages-error ui-corner-all" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem</div>
+<span class="ui-message ui-messages-error ui-corner-all" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem</span>
               </span>
             </div>
 
@@ -89,13 +88,13 @@
 
           <br>
 
-          <div class="ui-g-12">
-            <div class="fa-align-justify">
-              <span style="text-align: center">Após preencher, clique no botão enviar para receber <span style="color: red"> ** </span> o seu código de usuário no e-mail cadastrado</span>
+          <div class="ui-g-12 ui-lg-12">
+            <div style="text-align: center">
+              <span>Após preencher, clique no botão enviar para receber <span style="color: red"> ** </span> o seu código de usuário no e-mail cadastrado</span>
               <br/>
-              <span style="text-align: center"><span style="color: red">*</span> Campos Obrigatórios</span>
+              <span ><span style="color: red">*</span> Campos Obrigatórios</span>
               <br/>
-              <span style="text-align: center"><span style="color: red">**</span> Prazo de 24h a confirmação de cadastro e envio de e-mail</span>
+              <span ><span style="color: red">**</span> Prazo de 24h a confirmação de cadastro e envio de e-mail</span>
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ export const routes: Routes = [
   {path: 'gerente', component: DocumentationComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
   {path: 'recuperar', component: DocumentationComponent},
   {path: 'gerente/criarFuncionario', component: CadastrarFuncionarioComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
-  {path: 'editarFuncionario/:id/edit', component: EditarFuncionarioComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
+  {path: 'gerente/listarFuncionarios/:id/edit', component: EditarFuncionarioComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
   {path: 'gerente/listarFuncionarios', component: ListarFuncionarioComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
   {path: 'listarClientes', component: ListarClienteComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
   {path: 'editarCliente/:id/edit', component: EditarClienteComponent},
