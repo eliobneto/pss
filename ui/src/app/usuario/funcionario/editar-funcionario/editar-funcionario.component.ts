@@ -15,7 +15,6 @@ export class EditarFuncionarioComponent implements OnInit {
 
   public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
   public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
-
   disable = true;
   funId: string;
   fun: any;
@@ -55,24 +54,7 @@ export class EditarFuncionarioComponent implements OnInit {
     if (this.auth.get() === 2) {
       this.disable = false;
     }
-    //this.validagerente();
   }
-
-  /*  validagerente() {
-      this.ser.getFuns().subscribe((s) => {
-        this.funcionarios = s;
-        if (this.fun.gerente) {
-          this.gerente = false;
-        } else {
-          for (const o of this.funcionarios) {
-            if (o.gerente === true) {
-              this.gerente = true;
-              break;
-            }
-          }
-        }
-      });
-    }*/
 
   valida(funform: NgForm): boolean {
     return funform.value.gerente === true;

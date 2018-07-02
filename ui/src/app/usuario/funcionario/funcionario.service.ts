@@ -42,7 +42,7 @@ export class FuncionarioService {
     const gerente = func.gerente;
     const password = func.password;
     const nome = func.nome;
-    if(password) {
+    if (password) {
       return this.http.put(this.service + id, {cargo, id, telefone, cpf, email, nome, password, gerente});
     } else {
       return this.http.put(this.service + id, {cargo, id, telefone, cpf, email, nome, gerente});

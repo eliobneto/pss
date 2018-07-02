@@ -1,30 +1,29 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import swal from 'sweetalert2';
-import {ClienteService} from '../cliente.service';
+import {EstoqueService} from '../estoque.service';
 
 @Component({
-  selector: 'app-listar-cliente',
-  templateUrl: './listar-cliente.component.html',
-  styleUrls: ['./listar-cliente.component.css']
+  selector: 'app-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.css']
 })
-export class ListarClienteComponent implements OnInit {
 
-  public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
-  constructor(private ser: ClienteService, private route: Router) {
-  }
+export class ListComponent implements OnInit {
 
-  cli: any;
+  constructor(
+    private service: EstoqueService,
+    private route: Router
+  ) {}
+
+  stock: any;
+
   ngOnInit() {
-    this.populate();
+    this.service.getAllEstoque().then(s => this.stock = s);
   }
 
-  populate() {
-    this.ser.getClientes().then(f => this.cli = f);
-  }
 
-  confirmaex(id: string) {
+  confirmarExclusao(id: string) {
     swal({
       type: 'warning',
       title: 'Confirmar exclusão?',
@@ -38,16 +37,16 @@ export class ListarClienteComponent implements OnInit {
       reverseButtons: true
     }).then((result) => {
       if (result.value) {
-        this.ser.excluir(id).subscribe(
-          (s) => {
+        this.service.deleteEstoque(id).subscribe(
+          () => {
             swal({
+              type: 'success',
               title: 'Concluido!',
               text: 'Excluido com sucesso!',
-              type: 'success',
               confirmButtonClass: 'btn btn-success',
               buttonsStyling: false
             });
-            this.populate();
+            this.ngOnInit();
           }
         );
       }

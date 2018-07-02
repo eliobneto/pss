@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NgForm, AbstractControl} from '@angular/forms';
 import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import {ActivatedRoute, Router} from '@angular/router';
 import swal from 'sweetalert2';
-import { ClienteService } from '../cliente.service';
-import { AuthService} from '../../../auth/auth.service';
+import {ClienteService} from '../cliente.service';
+import {AuthService} from '../../../auth/auth.service';
 
 @Component({
   selector: 'app-editar-cliente',
   templateUrl: './editar-cliente.component.html',
   styleUrls: ['./editar-cliente.component.css']
 })
+
 export class EditarClienteComponent implements OnInit {
 
   public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
@@ -19,7 +20,6 @@ export class EditarClienteComponent implements OnInit {
 
   cliId: string;
   cli: any;
-  clientes: any;
   update = false;
   disable = true;
 

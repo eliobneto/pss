@@ -11,6 +11,7 @@ export class AuthService {
 
   constructor() {
     this.tipo = 4;
+
   }
 
   login(tipo: number) {

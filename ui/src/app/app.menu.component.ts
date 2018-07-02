@@ -55,12 +55,17 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
         {label: 'Product', icon: 'store', routerLink: ['/product']},
         {label: 'Reports', icon: 'feedback', routerLink: ['/reports']},
         {label: 'Payment', icon: 'account_balance_wallet', routerLink: ['/payment']},
-        {
-          label: 'Usuários', icon: 'people', items:
+        {label: 'Usuários', icon: 'people', items:
             [
               {label: 'Cadastrar Funcionário', routerLink: ['gerente/criarFuncionario']},
               {label: 'Listar Funcionarios', routerLink: ['gerente/listarFuncionarios']},
               {label: 'Listar Clientes', routerLink: ['listarClientes']}
+            ]
+        },
+        {label: 'Estoque', icon: 'store', items:
+            [
+              {label: 'Cadastrar Produto', routerLink: ['/create']},
+              {label: 'Listar Produtos', routerLink: ['/list']},
             ]
         }
       ];
