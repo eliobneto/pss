@@ -38,35 +38,37 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
   }
 
   private updateNavbar() {
-    if (this.auth.get()===2) {
-      this.model = [
-        {label: 'Product', icon: 'store', routerLink: ['/product']},
-        {label: 'Reports', icon: 'feedback', routerLink: ['/reports']},
-        {label: 'Payment', icon: 'account_balance_wallet', routerLink: ['/payment']},
-        {label: 'Clientes', icon:'people', routerLink: ['/listarClientes']}
-      ];
+    if (this.auth.get() === 1) {
       this.url = 'admin';
-    } else if(this.auth.get()===1){
-      this.model = [
-        {label: 'Product', icon: 'store', routerLink: ['/product']},
-        {label: 'Reports', icon: 'feedback', routerLink: ['/reports']},
-        {label: 'Payment', icon: 'account_balance_wallet', routerLink: ['/payment']},
-        {label: 'Usuários', icon:'people', items:
-            [
-              {label: 'Cadastrar Funcionário', routerLink: ['gerente/criarFuncionario']},
-              {label: 'Listar Funcionarios', routerLink: ['gerente/listarFuncionarios']},
-              {label: 'Listar Clientes', routerLink: ['listarClientes']}
-            ]
-        }
-      ];
+    } else if (this.auth.get() === 2) {
       this.url = 'gerente';
-    } else{
+    } else {
       this.model = [
         {label: 'Store', icon: 'store', routerLink: ['/shop']},
         {label: 'My Orders', icon: 'shopping_basket', routerLink: ['/orders']},
         {label: 'My Cart', icon: 'shopping_cart', routerLink: ['/cart']}
       ];
       this.url = 'cliente';
+    }
+    if (this.auth.get() >= 1 && this.auth.get() <= 2) {
+      this.model = [
+        {label: 'Product', icon: 'store', routerLink: ['/product']},
+        {label: 'Reports', icon: 'feedback', routerLink: ['/reports']},
+        {label: 'Payment', icon: 'account_balance_wallet', routerLink: ['/payment']},
+        {label: 'Usuários', icon: 'people', items:
+            [
+              {label: 'Cadastrar Funcionário', routerLink: ['gerente/criarFuncionario']},
+              {label: 'Listar Funcionarios', routerLink: ['gerente/listarFuncionarios']},
+              {label: 'Listar Clientes', routerLink: ['listarClientes']}
+            ]
+        },
+        {label: 'Estoque', icon: 'store', items:
+            [
+              {label: 'Cadastrar Produto', routerLink: ['/create']},
+              {label: 'Listar Produtos', routerLink: ['/list']},
+            ]
+        }
+      ];
     }
   }
 }

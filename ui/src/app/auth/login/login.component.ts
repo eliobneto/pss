@@ -9,9 +9,7 @@ import {AuthService} from '../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit, OnDestroy {
-
-  constructor(private router: Router, private auth: AuthService) {
-  }
+  constructor(private router: Router, private auth: AuthService) { }
 
   ngOnInit() {
     $('body').addClass('login-body');
