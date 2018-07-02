@@ -38,7 +38,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
   }
 
   private updateNavbar() {
-    if (this.auth.get()===1) {
+    if (this.auth.get()===2) {
       this.model = [
         {label: 'Product', icon: 'store', routerLink: ['/product']},
         {label: 'Reports', icon: 'feedback', routerLink: ['/reports']},
@@ -46,7 +46,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
         {label: 'Clientes', icon:'people', routerLink: ['/listarClientes']}
       ];
       this.url = 'admin';
-    } else if(this.auth.get()===2){
+    } else if(this.auth.get()===1){
       this.model = [
         {label: 'Product', icon: 'store', routerLink: ['/product']},
         {label: 'Reports', icon: 'feedback', routerLink: ['/reports']},
