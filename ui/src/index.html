@@ -1,18 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Boxit</title>
+  <title>BoxIt</title>
   <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <script defer src="assets/js/fontawesome-all.min.js"></script>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+  <link id="theme-css" rel="stylesheet" type="text/css" href="assets/theme/theme-lightblue.css">
+  <link id="layout-css" rel="stylesheet" type="text/css" href="assets/layout/css/layout-lightblue.css">
 </head>
 <body>
-<app-root></app-root>
-<script defer src="assets/js/jquery.min.js"></script>
-<script defer src="assets/js/popper.min.js"></script>
-<script defer src="assets/js/bootstrap.min.js"></script>
+<app-root>
+  <div class="splash-screen">
+    <div class="splash-loader-container">
+      <svg class="splash-loader" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+      </svg>
+    </div>
+  </div>
+</app-root>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/5b328daed0b5a547968232fd/default';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

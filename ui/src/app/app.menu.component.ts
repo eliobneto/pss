@@ -51,10 +51,11 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
         {label: 'Product', icon: 'store', routerLink: ['/product']},
         {label: 'Reports', icon: 'feedback', routerLink: ['/reports']},
         {label: 'Payment', icon: 'account_balance_wallet', routerLink: ['/payment']},
-        {label: 'Estoque', icon:'people', items:
+        {label: 'Usuários', icon:'people', items:
             [
-              {label: 'Cadastrar Produto', routerLink: ['create']},
-              {label: 'Listar Produtos', routerLink: ['list']}
+              {label: 'Cadastrar Funcionário', routerLink: ['gerente/criarFuncionario']},
+              {label: 'Listar Funcionarios', routerLink: ['gerente/listarFuncionarios']},
+              {label: 'Listar Clientes', routerLink: ['gerente/listarClientes']}
             ]
         }
       ];
@@ -85,6 +86,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
           <i class="material-icons layout-submenu-toggler" *ngIf="child.items">keyboard_arrow_down</i>
           <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
         </a>
+
         <a (click)="itemClick($event,child,i)" *ngIf="child.routerLink"
            [routerLink]="child.routerLink" routerLinkActive="active-menuitem-routerlink"
            [routerLinkActiveOptions]="{exact: true}" [attr.tabindex]="!visible ? '-1' : null"
