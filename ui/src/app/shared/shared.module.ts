@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FooterComponent } from './footer/footer.component';
-import { MaskDirective} from "./mask/mask.directive";
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FooterComponent} from './footer/footer.component';
+import {MaskDirective} from './mask/mask.directive';
+import {UnauthorizedComponent} from './unauthorized/unauthorized.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   imports: [
@@ -9,11 +11,16 @@ import { MaskDirective} from "./mask/mask.directive";
   ],
   declarations: [
     FooterComponent,
-    MaskDirective
+    MaskDirective,
+    UnauthorizedComponent,
+    NotFoundComponent
   ],
   exports: [
     FooterComponent,
-    MaskDirective
+    MaskDirective,
+    UnauthorizedComponent,
+    NotFoundComponent
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

@@ -20,29 +20,36 @@ import {ListarFuncionarioComponent} from './usuario/funcionario/listar-funcionar
 import {ListarClienteComponent} from './usuario/cliente/listar-cliente/listar-cliente.component';
 import {EditarClienteComponent} from './usuario/cliente/editar-cliente/editar-cliente.component';
 import {CadastrarClienteComponent} from './usuario/cliente/cadastrar-cliente/cadastrar-cliente.component';
+import {UnauthorizedComponent} from './shared/unauthorized/unauthorized.component';
+import {NotFoundComponent} from './shared/not-found/not-found.component';
+import {AuthGuard} from './auth/auth.gard';
 
 export const routes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'cliente/data', component: DataDemoComponent},
-  {path: 'cliente/panels', component: PanelsDemoComponent},
-  {path: 'cliente/overlays', component: OverlaysDemoComponent},
-  {path: 'cliente/menus', component: MenusDemoComponent},
-  {path: 'cliente/messages', component: MessagesDemoComponent},
-  {path: 'cliente/misc', component: MiscDemoComponent},
-  {path: 'cliente/empty', component: EmptyDemoComponent},
-  {path: 'cliente/charts', component: ChartsDemoComponent},
-  {path: 'cliente/file', component: FileDemoComponent},
-  {path: 'cliente/utils', component: UtilsDemoComponent},
-  {path: 'cliente', component: SampleDemoComponent},
-  {path: 'admin', component: DocumentationComponent},
-  {path: 'gerente', component: DocumentationComponent},
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  {path: 'login', component: LoginComponent},
+  {path: 'cliente/data', component: DataDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'cliente/panels', component: PanelsDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'cliente/overlays', component: OverlaysDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'cliente/menus', component: MenusDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'cliente/messages', component: MessagesDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'cliente/misc', component: MiscDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'cliente/empty', component: EmptyDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'cliente/charts', component: ChartsDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'cliente/file', component: FileDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'cliente/utils', component: UtilsDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'cliente', component: SampleDemoComponent, canActivate: [ AuthGuard ], data: { nivel: 'cliente' } },
+  {path: 'admin', component: DocumentationComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
+  {path: 'gerente', component: DocumentationComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
   {path: 'recuperar', component: DocumentationComponent},
-  {path: 'gerente/criarFuncionario', component: CadastrarFuncionarioComponent},
-  {path: 'gerente/listarFuncionarios/:id/edit', component: EditarFuncionarioComponent},
-  {path: 'gerente/listarFuncionarios', component: ListarFuncionarioComponent},
-  {path: 'listarClientes', component: ListarClienteComponent},
-  {path: 'editarCliente/:id/edit', component: EditarClienteComponent},
-  {path: 'criarcliente', component: CadastrarClienteComponent}
+  {path: 'gerente/criarFuncionario', component: CadastrarFuncionarioComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
+  {path: 'gerente/listarFuncionarios/:id/edit', component: EditarFuncionarioComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
+  {path: 'gerente/listarFuncionarios', component: ListarFuncionarioComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
+  {path: 'listarClientes', component: ListarClienteComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
+  {path: 'editarCliente/:id/edit', component: EditarClienteComponent, canActivate: [ AuthGuard ], data: { nivel: 'gerente' } },
+  {path: 'criarcliente', component: CadastrarClienteComponent, canActivate: [ AuthGuard ], data: { nivel: 'admin' } },
+  {path: 'unauthorized', component: UnauthorizedComponent},
+  {path: 'not-found', component: NotFoundComponent},
+  { path: '**', redirectTo: 'not-found' }
 ];
 
 export const AppRouting: ModuleWithProviders = RouterModule.forRoot(routes);

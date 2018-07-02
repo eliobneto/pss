@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import * as $ from 'jquery';
 import {Router} from '@angular/router';
-import {AuthService} from "../auth.service";
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +10,14 @@ import {AuthService} from "../auth.service";
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
-  constructor(private router: Router, private auth: AuthService) { }
+  constructor(private router: Router, private auth: AuthService) {
+  }
 
   ngOnInit() {
     $('body').addClass('login-body');
     $('app-menu,app-footer,app-breadcrumb,app-topbar').hide();
-    $(function() {
-      $('input').on('blur', function(e) {
+    $(function () {
+      $('input').on('blur', function (e) {
         const el = $(this);
         if (el.val() !== '') {
           el.addClass('ui-state-filled');
@@ -34,12 +35,13 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   login(name: string) {
     if (name === 'admin') {
-      this.auth.login(1);
+      this.auth.login(2);
       this.router.navigate(['/admin']);
     } else if (name === 'gerente') {
-      this.auth.login(2);
+      this.auth.login(1);
       this.router.navigate(['/gerente']);
     } else {
+      this.auth.login(3);
       this.router.navigate(['/cliente']);
     }
   }
