@@ -1,0 +1,63 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <div class="card card-w-title">
+      <p-dataView #pt [value]="stock" [paginator]="true" [rows]="10">
+        <p-header>
+          <div class="ui-helper-clearfix">
+            <div class="ui-g">
+              <div class="ui-g-6 ui-md-4 filter-container">
+                <div style="position:relative">
+                  <input type="text" pInputText size="50" placeholder="Buscar por nome"
+                         class="ui-inputtext ui-corner-all ui-state-default ui-widget black"
+                         (input)="pt.filterGlobal($event.target.value, 'contains')" style="width: auto;"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </p-header>
+        <ng-template let-estoque pTemplate="listItem">
+          <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
+            <div class="ui-g-12 ui-md-8">
+              <div class="ui-g">
+                <div class="ui-g-2 ui-sm-2">Nome: </div>
+                <div class="ui-g-10 ui-sm-10">
+                  <b>{{estoque.nome}}</b>
+                </div>
+
+                <div class="ui-g-2 ui-sm-2">Categoria: </div>
+                <div class="ui-g-8 ui-sm-8">
+                  <b>{{estoque.categoria}}</b>
+                </div>
+
+                <div class="ui-sm-1">
+                  <button pButton type="button" icon="ui-icon-edit" routerLink="{{stock.id}}/edit"></button>
+                </div>
+
+                <div class="ui-g-2 ui-sm-2">Un/Lote: </div>
+                <div class="ui-g-10 ui-sm-10">
+                  <b>{{estoque.lote}}</b>
+                </div>
+
+                <div class="ui-g-2 ui-sm-2">Preco: </div>
+                <div class="ui-g-8 ui-sm-8">
+                  <b>R$ {{estoque.preco}}</b>
+                </div>
+
+                <div class="ui-sm-1">
+                  <button pButton type="button" icon="ui-icon-delete" class="ui-button-danger" (click)="confirmarExclusao(estoque.id)"></button>
+                </div>
+
+                <div class="ui-g-2 ui-sm-2">Descrição: </div>
+                <div class="ui-g-8 ui-sm-8">
+                  <b>{{estoque.descricao}}</b>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-dataView>
+    </div>
+  </div>
+</div>

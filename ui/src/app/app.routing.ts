@@ -14,6 +14,7 @@ import {FileDemoComponent} from './demo/view/filedemo.component';
 import {UtilsDemoComponent} from './demo/view/utilsdemo.component';
 import {DocumentationComponent} from './demo/view/documentation.component';
 import {LoginComponent} from './auth/login/login.component';
+
 import {CadastrarFuncionarioComponent} from './usuario/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
 import {EditarFuncionarioComponent} from './usuario/funcionario/editar-funcionario/editar-funcionario.component';
 import {ListarFuncionarioComponent} from './usuario/funcionario/listar-funcionario/listar-funcionario.component';
@@ -26,6 +27,9 @@ import {AuthGuard} from './auth/auth.gard';
 import {CategoriaListComponent} from './categoria/categoria-list/categoria-list.component';
 import {GerenteHomeComponent} from './gerente/gerente-home/gerente-home.component';
 import {AdminHomeComponent} from './admin/admin-home/admin-home.component';
+import {CreateComponent} from './estoque/funcionario/create/create.component';
+import {EditComponent} from './estoque/funcionario/edit/edit.component';
+import {ListComponent} from './estoque/funcionario/list/list.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -53,6 +57,9 @@ export const routes: Routes = [
   {path: 'admin/categoria/list', component: CategoriaListComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
   {path: 'unauthorized', component: UnauthorizedComponent},
   {path: 'not-found', component: NotFoundComponent},
+  {path: 'create', component: CreateComponent},
+  {path: 'edit', component: EditComponent},
+  {path: 'list', component: ListComponent},
   {path: '**', redirectTo: 'not-found'}
 ];
 
@@ -60,3 +67,4 @@ export const AppRouting: ModuleWithProviders = RouterModule.forRoot(routes);
 
 export class AppRoutingModule {
 }
+

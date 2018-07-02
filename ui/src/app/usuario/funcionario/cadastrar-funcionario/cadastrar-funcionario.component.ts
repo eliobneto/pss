@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AbstractControl, NgForm} from '@angular/forms';
 import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import {funcionario} from '../funcionario';
@@ -26,20 +26,9 @@ export class CadastrarFuncionarioComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.validagerente();
+
   }
-/*
-  validagerente() {
-    this.ser.getFuns().subscribe((s) => {
-      this.fun = s;
-      for (const o of this.fun) {
-        if (o.gerente === true) {
-          this.gerente = true;
-          break;
-        }
-      }
-    });
-  }*/
+
 
 
   valida(funform: NgForm): boolean {
