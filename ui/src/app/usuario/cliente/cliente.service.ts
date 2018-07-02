@@ -9,9 +9,9 @@ export class ClienteService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  getFuns() {
+  getClientes() {
     return this.http.get<any>('assets/demo/data/Cliente.json').toPromise()
-      .then(res => <cliente[]> res.data)
+      .then(res => <Cliente[]> res.data)
       .then(data => data);
 
   }
@@ -21,28 +21,28 @@ export class ClienteService {
   }
 
   getFun(id: string) {
-    return this.http.get<cliente>(this.service + id);
+    return this.http.get<Cliente>(this.service + id);
   }
 
-  criarFun(clien: cliente) {
-    const cargo = func.cargo;
-    const telefone = func.telefone;
-    const cpf = func.cpf;
-    const email = func.email;
-    const gerente = func.gerente;
-    const password = func.password;
-    const nome = func.nome;
+  criarFun(clien: Cliente) {
+    const cargo = clien.cargo;
+    const telefone = clien.telefone;
+    const cpf = clien.cpf;
+    const email = clien.email;
+    const gerente = clien.gerente;
+    const password = clien.password;
+    const nome = clien.nome;
     return this.http.post(this.service, {cargo, telefone, cpf, email, nome, password, gerente});
   }
 
-  updat(id: string, clien: cliente) {
-    const cargo = func.cargo;
-    const telefone = func.telefone;
-    const cpf = func.cpf;
-    const email = func.email;
-    const gerente = func.gerente;
-    const password = func.password;
-    const nome = func.nome;
+  updat(id: string, clien: Cliente) {
+    const cargo = clien.cargo;
+    const telefone = clien.telefone;
+    const cpf = clien.cpf;
+    const email = clien.email;
+    const gerente = clien.gerente;
+    const password = clien.password;
+    const nome = clien.nome;
     if(password) {
       return this.http.put(this.service + id, {cargo, id, telefone, cpf, email, nome, password, gerente});
     } else {

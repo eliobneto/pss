@@ -102,15 +102,19 @@ import {NodeService} from './demo/service/nodeservice';
 import {BreadcrumbService} from './breadcrumb.service';
 import {CoreModule} from './core/core.module';
 import {AuthService} from './auth/auth.service';
-import {CadastrarFuncionarioComponent} from './usuario/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
 
+import {CadastrarFuncionarioComponent} from './usuario/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
 import {EditarFuncionarioComponent} from './usuario/funcionario/editar-funcionario/editar-funcionario.component';
 import {ListarFuncionarioComponent} from './usuario/funcionario/listar-funcionario/listar-funcionario.component';
 import {CadastrarClienteComponent} from './usuario/cliente/cadastrar-cliente/cadastrar-cliente.component';
 import {EditarClienteComponent} from './usuario/cliente/editar-cliente/editar-cliente.component';
-
 import {ListarClienteComponent} from './usuario/cliente/listar-cliente/listar-cliente.component';
 import {FuncionarioService} from './usuario/funcionario/funcionario.service';
+
+import {CreateComponent} from './estoque/funcionario/create/create.component';
+import {EditComponent} from './estoque/funcionario/edit/edit.component';
+import {ListComponent} from './estoque/funcionario/list/list.component';
+import {EstoqueService} from './estoque/funcionario/estoque.service';
 
 
 @NgModule({
@@ -216,9 +220,12 @@ import {FuncionarioService} from './usuario/funcionario/funcionario.service';
         CadastrarClienteComponent,
         EditarClienteComponent,
         ListarClienteComponent,
+        CreateComponent,
+        EditComponent,
+        ListComponent
     ],
     providers: [
-        CarService, CountryService, EventService, NodeService, BreadcrumbService, AuthService, FuncionarioService
+        CarService, CountryService, EventService, NodeService, BreadcrumbService, AuthService, FuncionarioService, EstoqueService
     ],
     bootstrap: [AppComponent]
 })

@@ -20,6 +20,9 @@ import {ListarFuncionarioComponent} from "./usuario/funcionario/listar-funcionar
 import {ListarClienteComponent} from "./usuario/cliente/listar-cliente/listar-cliente.component";
 import {EditarClienteComponent} from "./usuario/cliente/editar-cliente/editar-cliente.component";
 import {CadastrarClienteComponent} from "./usuario/cliente/cadastrar-cliente/cadastrar-cliente.component";
+import {CreateComponent} from './estoque/funcionario/create/create.component';
+import {EditComponent} from './estoque/funcionario/edit/edit.component';
+import {ListComponent} from './estoque/funcionario/list/list.component';
 
 export const routes: Routes = [
     {path: '', component: LoginComponent},
@@ -43,8 +46,10 @@ export const routes: Routes = [
     {path: 'gerente/listarFuncionarios', component:ListarFuncionarioComponent},
     {path: 'admin/listarClientes', component:ListarClienteComponent},
     {path: 'editarCliente', component:EditarClienteComponent},
-    {path: 'cadastrarCliente', component:CadastrarClienteComponent}
-
+    {path: 'cadastrarCliente', component:CadastrarClienteComponent},
+    {path: 'create', component:CreateComponent},
+    {path: 'edit', component:EditComponent},
+    {path: 'list', component:ListComponent}
 ];
 
 export const AppRouting: ModuleWithProviders = RouterModule.forRoot(routes);
