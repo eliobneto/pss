@@ -17,7 +17,8 @@
         </div>
         <div class="ui-g-12">
                         <span class="md-inputfield">
-                            <input type="password" pInputText autocomplete="off" required class="ui-inputtext ui-corner-all ui-widget" ngModel name="password">
+                            <input type="password" pInputText autocomplete="off" required
+                                   class="ui-inputtext ui-corner-all ui-widget" ngModel name="password">
                             <label>Senha</label>
                         </span>
         </div>
@@ -26,7 +27,8 @@
           <a routerLink="/recuperar" style="float: right;">Esqueceu a senha</a>
         </div>
         <div class="ui-g-12">
-          <button type="submit" class="ui-button ui-widget ui-corner-all ui-button-text-icon-left" [disabled]="f.invalid" (click)=login(user.value)>
+          <button type="submit" class="ui-button ui-widget ui-corner-all ui-button-text-icon-left"
+                  [disabled]="f.invalid" (click)=login(user.value)>
             <span class="ui-button-icon-left fa ui-icon-person"></span>
             <span class="ui-button-text">Logar</span>
           </button>

@@ -1,13 +1,13 @@
 <div class="card card-w-title">
-  <p-table #pt [value]="cat" [columns]="cols" [paginator]="true" [rows]="10" [responsive]="true">
+  <p-table #pt [value]="cat" [columns]="cols" [paginator]="true" [rows]="10" [responsive]="true"
+           selectionMode="single" [(selection)]="selectedCat" (onRowSelect)="onRowSelect($event)">
     <ng-template pTemplate="caption">
       <div class="ui-table-caption ui-widget-header">
         <div class="ui-g">
           <div class="ui-g-12 ui-md-12">
             <input type="text" pInputText size="50" placeholder="Buscar por nome"
                    class="ui-inputtext ui-corner-all ui-state-default ui-widget black"
-                   (input)="pt.filterGlobal($event.target.value, 'contains')" style="width: auto;"
-            >
+                   (input)="pt.filterGlobal($event.target.value, 'contains')" style="width: auto;">
           </div>
         </div>
       </div>
@@ -21,9 +21,37 @@
       </tr>
     </ng-template>
     <ng-template let-column pTemplate="body">
-      <tr>
+      <tr [pSelectableRow]="column">
         <td *ngFor="let col of cols">{{column[col.field]}}</td>
       </tr>
     </ng-template>
+    <ng-template pTemplate="summary" let-rowData>
+      <div style="text-align:left">
+        <button type="button" pButton icon="ui-icon-add" (click)="showAdd()" label="Add"></button>
+      </div>
+    </ng-template>
   </p-table>
 </div>
+
+<p-dialog header="Detalhe da Categoria" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true"
+          [width]="300">
+  <div class="ui-g" *ngIf="catego">
+    <div class="ui-g-12 ui-fluid">
+      <span class="md-inputfield">
+        <input type="text" pInputText placeholder="Nome" class="ui-inputtext ui-corner-all ui-widget" name="username" [(ngModel)]="catego.name">
+      </span>
+    </div>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <div class="ui-g">
+        <div class="ui-g-6 ui-fluid">
+          <button type="button" pButton icon="ui-icon-check" (click)="save()" label="Save"></button>
+        </div>
+        <div class="ui-g-6 ui-fluid">
+          <button type="button" pButton icon="ui-icon-close" (click)="delete()" label="Delete"></button>
+        </div>
+      </div>
+    </div>
+  </p-footer>
+</p-dialog>
