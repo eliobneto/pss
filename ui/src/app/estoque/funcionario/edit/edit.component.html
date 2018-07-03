@@ -4,12 +4,21 @@
       <h1>Modificar produto</h1>
       <div class="ui-g form-group">
 
-        <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-12 ui-md-6">
           <span class="md-inputfield">
             <input type="text" required name="nome" id="nome"
                    class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="stock.nome"
                    #nomef="ngModel" pInputText>
             <label>Nome do Produto</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+          </span>
+        </div>
+
+        <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <p-inputMask mask="9?99999999" type="text" required name="preco" id="preco"
+                         class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="stock.preco"
+                         #nomef="ngModel" pInputText></p-inputMask>
+            <label>Preço</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
           </span>
         </div>
 
@@ -24,18 +33,18 @@
 
         <div class="ui-g-12 ui-md-4">
           <span class="md-inputfield">
-            <input type="text" required name="qtd" id="qtd"
-                   class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="stock.qtd"
-                   #nomef="ngModel" pInputText>
+            <p-inputMask mask="9?99999" type="text" required name="qtd" id="qtd"
+                         class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="stock.qtd"
+                         #nomef="ngModel" pInputText></p-inputMask>
             <label>Quantidade</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
           </span>
         </div>
 
         <div class="ui-g-12 ui-md-4">
           <span class="md-inputfield">
-            <input type="text" required name="lote" id="lote"
-                   class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="stock.lote"
-                   #nomef="ngModel" pInputText>
+            <p-inputMask mask="9?99999" type="text" required name="lote" id="lote"
+                         class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="stock.lote"
+                         #nomef="ngModel" pInputText></p-inputMask>
             <label>Un/Lote</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
           </span>
         </div>

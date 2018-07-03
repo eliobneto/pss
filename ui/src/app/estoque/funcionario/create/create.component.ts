@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {Estoque} from '../estoque';
+import {Estoque} from '../../estoque';
 import {ActivatedRoute, Router} from '@angular/router';
 import swal from 'sweetalert2';
-import {EstoqueService} from '../estoque.service';
+import {EstoqueService} from '../../estoque.service';
 import {ButtonModule} from 'primeng/button';
+import {InputMaskModule} from 'primeng/inputmask';
 
 @Component({
   selector: 'app-create',

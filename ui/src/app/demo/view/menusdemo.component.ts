@@ -316,7 +316,7 @@ export class MenusDemoComponent implements OnInit {
                     },
                     {
                         label: 'Other',
-                        icon: 'ui-icon-list',
+                        icon: 'ui-icon-lista',
                         items: [
                             {label: 'Delete', icon: 'ui-icon-delete'}
                         ]

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import swal from 'sweetalert2';
-import {EstoqueService} from '../estoque.service';
+import {EstoqueService} from '../../estoque.service';
 
 @Component({
   selector: 'app-edit',

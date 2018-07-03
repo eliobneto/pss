@@ -1,10 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {AbstractControl, NgForm} from '@angular/forms';
 import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
-import {funcionario} from '../funcionario';
+import {Funcionario} from '../funcionario';
 import {Router} from '@angular/router';
-import swal from 'sweetalert2';
-import { FuncionarioService } from '../funcionario.service';
+import {FuncionarioService} from '../funcionario.service';
 
 @Component({
   selector: 'app-cadastrar-funcionario',
@@ -15,7 +14,7 @@ export class CadastrarFuncionarioComponent implements OnInit {
 
   public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
   public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
-  f = new funcionario();
+  f = new Funcionario();
   fun: any;
   gerente = false;
 
@@ -48,16 +47,5 @@ export class CadastrarFuncionarioComponent implements OnInit {
     } else {
       this.f.cargo = null;
     }
-    this.ser.criarFun(this.f).subscribe(
-      () => {
-        this.route.navigate(['gerente']);
-      }, (e) => {
-        swal(
-          'Erro!',
-          'CPF já cadastrado!',
-          'error'
-        );
-      }
-    );
   }
 }

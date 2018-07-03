@@ -14,7 +14,6 @@ import {FileDemoComponent} from './demo/view/filedemo.component';
 import {UtilsDemoComponent} from './demo/view/utilsdemo.component';
 import {DocumentationComponent} from './demo/view/documentation.component';
 import {LoginComponent} from './auth/login/login.component';
-
 import {CadastrarFuncionarioComponent} from './usuario/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
 import {EditarFuncionarioComponent} from './usuario/funcionario/editar-funcionario/editar-funcionario.component';
 import {ListarFuncionarioComponent} from './usuario/funcionario/listar-funcionario/listar-funcionario.component';
@@ -30,35 +29,20 @@ import {AdminHomeComponent} from './admin/admin-home/admin-home.component';
 import {CreateComponent} from './estoque/funcionario/create/create.component';
 import {EditComponent} from './estoque/funcionario/edit/edit.component';
 import {ListComponent} from './estoque/funcionario/list/list.component';
+import {ListaComponent} from './estoque/cliente/lista/lista.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
-  {path: 'cliente/data', component: DataDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente/panels', component: PanelsDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente/overlays', component: OverlaysDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente/menus', component: MenusDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente/messages', component: MessagesDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente/misc', component: MiscDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente/empty', component: EmptyDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente/charts', component: ChartsDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente/file', component: FileDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente/utils', component: UtilsDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente', component: SampleDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'admin', component: AdminHomeComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
-  {path: 'gerente', component: GerenteHomeComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
+  {path: 'cliente', component: ListaComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
   {path: 'recuperar', component: DocumentationComponent},
-  {path: 'gerente/criarFuncionario', component: CadastrarFuncionarioComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
-  {path: 'gerente/listarFuncionarios/:id/edit', component: EditarFuncionarioComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
-  {path: 'gerente/listarFuncionarios', component: ListarFuncionarioComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
-  {path: 'listarClientes', component: ListarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
-  {path: 'listarClientes/:id/edit', component: EditarClienteComponent},
-  {path: 'criarcliente', component: CadastrarClienteComponent},
+  {path: 'admin', component: CategoriaListComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
+  {path: 'gerente', component: ListComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: 'unauthorized', component: UnauthorizedComponent},
   {path: 'not-found', component: NotFoundComponent},
-  {path: 'create', component: CreateComponent},
-  {path: 'list/:id/edit', component: EditComponent},
-  {path: 'list', component: ListComponent},
+  {path: 'criarcliente', component: CadastrarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
+  {path: 'listarClientes', component: ListarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
+  {path: 'gerente/listarFuncionarios', component: ListarFuncionarioComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: '**', redirectTo: 'not-found'}
 ];
 

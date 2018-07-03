@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {NgForm, AbstractControl} from '@angular/forms';
+import {AbstractControl, NgForm} from '@angular/forms';
 import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import {ActivatedRoute, Router} from '@angular/router';
-import swal from 'sweetalert2';
 import {FuncionarioService} from '../funcionario.service';
 import {AuthService} from '../../../auth/auth.service';
 
@@ -36,17 +35,6 @@ export class EditarFuncionarioComponent implements OnInit {
       this.funId = params.get('id');
       if (this.funId) {
         this.update = true;
-        this.ser.getFun(this.funId).subscribe(
-          (s) => {
-            this.fun = s;
-          }, () => {
-            swal(
-              'Erro!',
-              'Erro no servidor!',
-              'error'
-            );
-          }
-        );
       } else {
         this.route.navigate(['gerente']);
       }
@@ -70,16 +58,5 @@ export class EditarFuncionarioComponent implements OnInit {
     } else {
       this.fun.cargo = null;
     }
-    this.ser.updat(this.funId, this.fun).subscribe(
-      () => {
-        this.route.navigate(['gerente']);
-      }, () => {
-        swal(
-          'Erro!',
-          'CPF ou e-mail já cadastrado!',
-          'error'
-        );
-      }
-    );
   }
 }
