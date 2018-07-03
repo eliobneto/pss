@@ -1,20 +1,10 @@
 <div class="layout-topbar">
 
-  <a routerLink="{{base}}" *ngIf="app.isHorizontal() && !app.isMobile()" class="topbar-logo">
-    <img alt="logo" src="assets/layout/images/logo-slim.png"/>
-    <span class="app-name">SERENITY</span>
-  </a>
-
-  <img alt="logo" src="assets/img/icon.png" class="mobile-logo"/>
+   <img alt="logo" src="assets/img/icon.png" class="mobile-logo"/>
 
   <a href="#" class="menu-btn" (click)="app.onMenuButtonClick($event)">
     <i class="material-icons">&#xE5D2;</i>
   </a>
-
-  <a href="#" class="topbar-menu-btn" (click)="app.onTopbarMobileMenuButtonClick($event)">
-    <i class="material-icons">&#xE853;</i>
-  </a>
-
   <div class="layout-topbar-menu-wrapper">
     <ul class="topbar-menu fadeInDown" [ngClass]="{'topbar-menu-active': app.topbarMenuActive}"
         (click)="app.onTopbarMenuClick($event)">
@@ -43,4 +33,5 @@
       </li>
     </ul>
   </div>
+
 </div>

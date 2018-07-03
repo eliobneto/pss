@@ -52,12 +52,12 @@ export const routes: Routes = [
   {path: 'gerente/listarFuncionarios/:id/edit', component: EditarFuncionarioComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
   {path: 'gerente/listarFuncionarios', component: ListarFuncionarioComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: 'listarClientes', component: ListarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
-  {path: 'editarCliente/:id/edit', component: EditarClienteComponent},
+  {path: 'listarClientes/:id/edit', component: EditarClienteComponent},
   {path: 'criarcliente', component: CadastrarClienteComponent},
   {path: 'unauthorized', component: UnauthorizedComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: 'create', component: CreateComponent},
-  {path: 'edit', component: EditComponent},
+  {path: 'list/:id/edit', component: EditComponent},
   {path: 'list', component: ListComponent},
   {path: '**', redirectTo: 'not-found'}
 ];

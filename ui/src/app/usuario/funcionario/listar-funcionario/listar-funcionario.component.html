@@ -2,13 +2,13 @@
 
 <div class="ui-g-12">
   <div class="card card-w-title">
-    <p-dataView [value]="fun" [paginator]="true" [rows]="10">
+    <p-dataView [value]="fun" #dv filterBy="nome" [paginator]="true" [rows]="10">
       <p-header>
         <div class="ui-helper-clearfix">
           <div class="ui-g">
             <div class="ui-g-6 ui-md-4 filter-container">
               <div style="position:relative">
-                <input type="text" pInputText placeholder="Procurar por CPF">
+                <input type="text" pInputText (keyup)="dv.filter($event.target.value)" placeholder="Procurar por Nome">
               </div>
             </div>
           </div>
