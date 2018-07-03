@@ -34,9 +34,9 @@ export class UnauthorizedComponent implements OnInit, OnDestroy {
 
   home() {
     if (this.auth.get() === 1) {
-      this.route.navigate(['/admin']);
-    } else if (this.auth.get() === 2) {
       this.route.navigate(['/gerente']);
+    } else if (this.auth.get() === 2) {
+      this.route.navigate(['/admin']);
     } else if (this.auth.get() === 3) {
       this.route.navigate(['/cliente']);
     } else {

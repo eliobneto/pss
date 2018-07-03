@@ -120,6 +120,7 @@ import {EstoqueService} from './estoque/estoque.service';
 import {ClienteService} from './usuario/cliente/cliente.service';
 import {AuthGuard} from './auth/auth.gard';
 import {CategoriaService} from './categoria/categoria.service';
+import {CurrencyMaskModule} from 'ng2-currency-mask';
 
 @NgModule({
   imports: [
@@ -195,7 +196,8 @@ import {CategoriaService} from './categoria/categoria.service';
     TooltipModule,
     TreeModule,
     TreeTableModule,
-    CoreModule
+    CoreModule,
+    CurrencyMaskModule
   ],
   declarations: [
     AppComponent,

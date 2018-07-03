@@ -1,60 +1,135 @@
-<div class="ui-g">
-  <div class="ui-g-12">
-    <div class="card card-w-title">
-      <p-dataView #dv [value]="stock" [paginator]="true" [rows]="10" filterBy="nome">
-        <p-header>
-          <div class="ui-helper-clearfix">
-            <div class="ui-g">
-              <div class="ui-g-6 ui-md-4 filter-container">
-                <div style="position:relative">
-                  <input type="text" pInputText placeholder="Procurar por Nome" (keyup)="dv.filter($event.target.value)">
-                </div>
-              </div>
-            </div>
+<div class="card card-w-title">
+  <p-table #pt [value]="produtos" [columns]="cols" [paginator]="true" [rows]="10" [responsive]="true"
+           selectionMode="single" [(selection)]="selectedProd" (onRowSelect)="onRowSelect($event)">
+    <ng-template pTemplate="caption">
+      <div class="ui-table-caption ui-widget-header">
+        <div class="ui-g">
+          <div class="ui-g-12 ui-md-12">
+            <input type="text" pInputText size="50" placeholder="Busca Global"
+                   class="ui-inputtext ui-corner-all ui-state-default ui-widget black"
+                   (input)="pt.filterGlobal($event.target.value, 'contains')" style="width: auto;">
           </div>
-        </p-header>
-        <ng-template let-estoque pTemplate="listItem">
-          <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
-            <div class="ui-g-12 ui-md-8">
-              <div class="ui-g">
-                <div class="ui-g-2 ui-sm-2">Nome: </div>
-                <div class="ui-g-10 ui-sm-10">
-                  <b>{{estoque.nome}}</b>
-                </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of cols" [pSortableColumn]="col.field">
+          {{col.header}}
+          <p-sortIcon [field]="col.field"></p-sortIcon>
+        </th>
+      </tr>
+      <tr>
+        <th *ngFor="let col of cols" [ngSwitch]="col.field">
+          <input *ngSwitchCase="'nome'" pInputText type="text"
+                 (input)="pt.filter($event.target.value, col.field, col.filterMattchMode)" class="ui-fluid">
+          <input *ngSwitchCase="'descricao'" pInputText type="text"
+                 (input)="pt.filter($event.target.value, col.field, col.filterMattchMode)" class="ui-fluid">
+          <input *ngSwitchCase="'categoria'" pInputText type="text"
+                 (input)="pt.filter($event.target.value, col.field, col.filterMattchMode)" class="ui-fluid">
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template let-column pTemplate="body">
+      <tr [pSelectableRow]="column">
+        <td *ngFor="let col of cols">{{column[col.field]}}</td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary" let-rowData>
+      <div style="text-align:left">
+        <button type="button" pButton icon="ui-icon-add" (click)="showAdd()" label="Add"></button>
+      </div>
+    </ng-template>
+  </p-table>
+</div>
 
-                <div class="ui-g-2 ui-sm-2">Categoria: </div>
-                <div class="ui-g-8 ui-sm-8">
-                  <b>{{estoque.categoria}}</b>
-                </div>
+<p-dialog header="Detalhe do Produto" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true"
+          [width]="500">
+  <div class="ui-g ui-fluid" *ngIf="prod">
+    <div class="ui-g-12">
+      <div class="ui-g form-group">
 
-                <div class="ui-sm-1">
-                  <button pButton type="button" icon="ui-icon-edit" routerLink="{{estoque.id}}/edit"></button>
-                </div>
+        <div class="ui-g-12">
+          <span class="md-inputfield">
+            <input type="text" required name="nome" id="nome"
+                   class="ui-inputtext ui-corner-all ui-widget" ngModel #user="ngModel" [(ngModel)]="prod.nome"
+                   #nomef="ngModel" pInputText>
+            <label>Nome do Produto</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+          </span>
+        </div>
 
-                <div class="ui-g-2 ui-sm-2">Un/Lote: </div>
-                <div class="ui-g-10 ui-sm-10">
-                  <b>{{estoque.lote}}</b>
-                </div>
+        <div class="ui-g-12">
+          <span class="md-inputfield">
+            <input currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+                         type="text" required name="preco"
+                         class="ui-inputtext ui-corner-all ui-widget" #user="ngModel" [(ngModel)]="prod.preco"
+                         #nomef="ngModel" pInputText>
+            <label>Preço</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+          </span>
+        </div>
 
-                <div class="ui-g-2 ui-sm-2">Preco: </div>
-                <div class="ui-g-8 ui-sm-8">
-                  <b>R$ {{estoque.preco}}</b>
-                </div>
+        <div class="ui-g-12">
+              <span class="md-inputfield">
+                <input type="text" required name="descricao" id="descricao"
+                       class="ui-inputtext ui-corner-all ui-widget" ngModel #user="ngModel" [(ngModel)]="prod.descricao"
+                       #nomef="ngModel" pInputText>
+                <label>Descrição</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+              </span>
+        </div>
 
-                <div class="ui-sm-1">
-                  <button pButton type="button" icon="ui-icon-delete" class="ui-button-danger" (click)="confirmarExclusao(estoque.id)"></button>
-                </div>
+        <div class="ui-g-12">
+          <span class="md-inputfield">
+            <input type="number" required name="qtd" id="qtd"
+                         class="ui-inputtext ui-corner-all ui-widget" ngModel #user="ngModel" [(ngModel)]="prod.qtd"
+                         #nomef="ngModel" pInputText>
+            <label>Quantidade</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+          </span>
+        </div>
 
-                <div class="ui-g-2 ui-sm-2">Descrição: </div>
-                <div class="ui-g-8 ui-sm-8">
-                  <b>{{estoque.descricao}}</b>
-                </div>
+        <div class="ui-g-12">
+          <span class="md-inputfield">
+            <input mask="9?99999" type="number" required name="lote"
+                         class="ui-inputtext ui-corner-all ui-widget" ngModel #user="ngModel" [(ngModel)]="prod.lote"
+                         #nomef="ngModel" pInputText>
+            <label>Un/Lote</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+          </span>
+        </div>
 
-              </div>
-            </div>
+        <div class="ui-g-12">
+              <span class="md-inputfield">
+                <input type="text" required name="codigo" id="codigo"
+                       class="ui-inputtext ui-corner-all ui-widget" ngModel #user="ngModel" [(ngModel)]="prod.codigo"
+                       #nomef="ngModel" pInputText>
+                <label>Codigo</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+              </span>
+        </div>
+
+        <div class="ui-g-12">
+              <span class="md-inputfield">
+                <p-dropdown [options]="categorias" optionLabel="name" [(ngModel)]="selectedCateg" placeholder="Selecione" [style]="{'width':'150px'}" filter="true"></p-dropdown>
+                <span class="ui-message ui-messages-error ui-corner-all">*</span>
+              </span>
+        </div>
+        <br/>
+        <div class="ui-g-12">
+          <div class="fa-align-justify">
+            <span style="text-align: center"><span style="color: red">*</span> Campos Obrigatórios</span>
+            <br/>
           </div>
-        </ng-template>
-      </p-dataView>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <div class="ui-g">
+        <div class="ui-g-6 ui-fluid">
+          <button type="button" pButton icon="ui-icon-check" (click)="save()" label="Save"></button>
+        </div>
+        <div class="ui-g-6 ui-fluid">
+          <button type="button" pButton icon="ui-icon-close" (click)="delete()" label="Delete"></button>
+        </div>
+      </div>
+    </div>
+  </p-footer>
+</p-dialog>
