@@ -1,5 +1,5 @@
-<div class="ui-g">
-  <div class="ui-g-12">
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-lg-12">
     <div class="card docs">
 
 
@@ -44,23 +44,21 @@
 
 
 
-          <div class="ui-g form-group">
-            <div class="ui-g-12">
+          <div class="ui-g-12">
               <div class="ui-inputgroup">
                 <span class="md-inputfield">
-                  <input type="text" [disabled]="valida(funform) || disable" name="cargo" required id="cargo" [(ngModel)]="fun.cargo"
+                  <input type="text" [disabled]="valida(funform)" name="cargo" required id="cargo" [(ngModel)]="f.cargo"
                          #cargof="ngModel" pInputText
                          [ngClass]="(cargof.invalid && cargof.touched) ? 'is-invalid' : ''" class="ui-inputtext ui-corner-all ui-widgetl">
                   <label>Cargo</label>
                 </span>
                 <span class="ui-inputgroup-addon">
-                  <input type="checkbox" [(ngModel)]="fun.gerente" [disabled]="gerente || disable" #gerentef="ngModel" name="gerente" id="gerente">
-                  <label for="gerente" style="width: 15%">Gerente</label>
+                  <input type="checkbox" [(ngModel)]="f.gerente" [disabled]="gerente" #gerentef="ngModel" name="gerente" id="gerente">
+                  <label>Gerente</label>
                 </span>
-                <span class="ui-corner-all" style="color: red; font-size: 10px">  *</span>
               </div>
+              <div class="ui-corner-all" style="color: red; font-size: 10px">  *</div>
             </div>
-          </div>
 
 
           <div class="ui-g-12">
@@ -77,21 +75,22 @@
                        [ngClass]="(csenhaf.invalid && csenhaf.touched) || (csenhaf.touched && confirmasenha(funform,csenhaf)) ? 'is-invalid' : ''"
                        class="ui-inputtext ui-corner-all ui-widget">
                 <label>Confirmar Senha</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
-                <div class="ui-message ui-messages-error ui-corner-all" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem</div>
+<span class="ui-message ui-messages-error ui-corner-all" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem</span>
               </span>
           </div>
 
           <br/>
           <div class="ui-g-12">
-            <button class="ui-button-info" pButton label="Enviar" (click)="confirma()" type="submit"
-                    [disabled]="funform.invalid || confirmasenha(funform,csenhaf)"></button>
-          </div>
+              <button class="ui-button-info" pButton label="Enviar" (click)="confirma()" type="submit"
+                      [disabled]="funform.invalid || confirmasenha(funform,csenhaf)"></button>
+            </div>
+
 
           <br>
 
           <div class="ui-g-12">
-            <div class="fa-align-justify">
-              <span style="text-align: center"><span style="color: red">*</span> Campos Obrigatórios</span>
+            <div>
+              <span><span style="color: red">*</span> Campos Obrigatórios</span>
             </div>
           </div>
         </div>

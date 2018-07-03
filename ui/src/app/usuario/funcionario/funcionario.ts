@@ -1,4 +1,4 @@
-export class funcionario {
+export class Funcionario {
   id: string;
   cargo: string;
   cpf:	string;

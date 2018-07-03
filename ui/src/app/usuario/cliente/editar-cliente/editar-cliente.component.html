@@ -1,5 +1,5 @@
-<div class="ui-g">
-  <div class="ui-g-12">
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-lg-12">
     <div class="card docs">
 
 
@@ -25,9 +25,9 @@
 
           <div class="ui-g-12">
               <span class="md-inputfield">
-                <input type="text" required maxlength="8" minlength="8" name="cep" id="cep"
+                <p-inputMask mask="99999-999" type="text" required maxlength="8" minlength="8" name="cep" id="cep"
                        class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="cli.cep"
-                       #nomef="ngModel" pInputText>
+                             #nomef="ngModel" pInputText></p-inputMask>
                 <label>CEP</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
               </span>
           </div>
@@ -55,7 +55,7 @@
                 <input type="text" name="complemento" id="complemento"
                        class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="cli.complemento"
                        #nomef="ngModel" pInputText>
-                <label>Complemento</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+                <label>Complemento</label>
               </span>
           </div>
 
@@ -109,9 +109,10 @@
                 <input name="csenha" pInputText required id="csenha" type="password" ngModel #csenhaf="ngModel"
                        [ngClass]="(csenhaf.invalid && csenhaf.touched) || (csenhaf.touched && confirmasenha(funform,csenhaf)) ? 'is-invalid' : ''"
                        class="ui-inputtext ui-corner-all ui-widget">
-                <label>Confirmar Senha</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
-                <div class="ui-message ui-messages-error ui-corner-all" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem</div>
+                <label>Confirmar Senha</label><span class="ui-message ui-messages-error ui-corner-all">*
               </span>
+<span class="ui-message ui-messages-error ui-corner-all" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem</span>
+                </span>
           </div>
 
           <br/>

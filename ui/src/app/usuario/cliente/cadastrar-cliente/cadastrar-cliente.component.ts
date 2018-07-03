@@ -5,6 +5,7 @@ import {Cliente} from '../cliente';
 import {Router} from '@angular/router';
 import swal from 'sweetalert2';
 import { ClienteService } from '../cliente.service';
+import {InputMaskModule} from 'primeng/inputmask';
 
 @Component({
   selector: 'app-cadastrar-cliente',
