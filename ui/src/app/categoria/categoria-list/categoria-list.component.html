@@ -38,7 +38,9 @@
   <div class="ui-g" *ngIf="catego">
     <div class="ui-g-12 ui-fluid">
       <span class="md-inputfield">
-        <input type="text" pInputText placeholder="Nome" class="ui-inputtext ui-corner-all ui-widget" name="username" [(ngModel)]="catego.name">
+        <input type="text" pInputText required class="ui-inputtext ui-corner-all ui-widget" name="username"
+               [(ngModel)]="catego.name">
+        <label>Nome</label>
       </span>
     </div>
   </div>

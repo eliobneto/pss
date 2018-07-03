@@ -1,0 +1,29 @@
+<div class="login-panel ui-fluid">
+  <div class="login-panel-header">
+    <img src="assets/img/icon.png">
+  </div>
+  <div class="login-panel-content">
+    <div class="ui-g">
+      <div class="ui-g-12"><br><br> <br><br>
+        <h1>Recuperar Senha</h1>
+      </div>
+      <form #f="ngForm">
+        <div class="ui-g-12">
+
+                        <span class="md-inputfield">
+                            <input name="cpfcpnpj" id="cpfcpnpj" #cpfcpnpjf="ngModel" minlength="14"  [spMask]="cpfcpnpjMask"
+                                   [spKeepMask]="true" pInputText type="text" autocomplete="off" required pInputText
+                                   class="ui-inputtext ui-corner-all ui-widget" name="username" ngModel #user="ngModel">
+                            <label>CPF/CNPJ</label>
+                        </span>
+        </div>
+        <div class="ui-g-12">
+          <button type="submit" class="ui-button ui-widget ui-corner-all ui-button-text-icon-left"
+                  [disabled]="f.invalid" routerLink="/">
+            <span class="ui-button-text">Recuperar</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

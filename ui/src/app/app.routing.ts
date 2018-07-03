@@ -30,17 +30,18 @@ import {CreateComponent} from './estoque/funcionario/create/create.component';
 import {EditComponent} from './estoque/funcionario/edit/edit.component';
 import {ListComponent} from './estoque/funcionario/list/list.component';
 import {ListaComponent} from './estoque/cliente/lista/lista.component';
+import {RecuperarComponent} from "./auth/recuperar/recuperar.component";
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'cliente', component: ListaComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'recuperar', component: DocumentationComponent},
+  {path: 'recuperar', component: RecuperarComponent},
   {path: 'admin', component: CategoriaListComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
   {path: 'gerente', component: ListComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: 'unauthorized', component: UnauthorizedComponent},
   {path: 'not-found', component: NotFoundComponent},
-  {path: 'criarcliente', component: CadastrarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
+  {path: 'criarcliente', component: CadastrarClienteComponent},
   {path: 'listarClientes', component: ListarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
   {path: 'editarCliente/:id/edit', component: EditarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: 'cliente/data', component: DataDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
