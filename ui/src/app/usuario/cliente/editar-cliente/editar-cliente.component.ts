@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import swal from 'sweetalert2';
 import {ClienteService} from '../cliente.service';
 import {AuthService} from '../../../auth/auth.service';
+import {InputMaskModule} from 'primeng/inputmask';
 
 @Component({
   selector: 'app-editar-cliente',

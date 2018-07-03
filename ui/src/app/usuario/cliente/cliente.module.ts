@@ -12,6 +12,7 @@ import {PanelModule} from 'primeng/panel';
 import {CadastrarClienteComponent} from './cadastrar-cliente/cadastrar-cliente.component';
 import {EditarClienteComponent} from './editar-cliente/editar-cliente.component';
 import {ListarClienteComponent} from './listar-cliente/listar-cliente.component';
+import {InputMaskModule} from "primeng/primeng";
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import {ListarClienteComponent} from './listar-cliente/listar-cliente.component'
     AppRouting,
     HttpClientModule,
     DataViewModule,
-    PanelModule
+    PanelModule,
+    InputMaskModule
   ],
   declarations: [
     CadastrarClienteComponent,
