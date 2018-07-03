@@ -44,17 +44,18 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
       this.url = 'gerente';
     } else {
       this.model = [
-        {label: 'Store', icon: 'store', routerLink: ['/shop']},
-        {label: 'My Orders', icon: 'shopping_basket', routerLink: ['/orders']},
-        {label: 'My Cart', icon: 'shopping_cart', routerLink: ['/cart']}
+        {label: 'Loja', icon: 'store', routerLink: ['/shop']},
+        {label: 'Meus Pedidos', icon: 'shopping_basket', routerLink: ['/orders']},
+        {label: 'Meu caarrinho', icon: 'shopping_cart', routerLink: ['/cart']}
       ];
       this.url = 'cliente';
     }
     if (this.auth.get() >= 1 && this.auth.get() <= 2) {
       this.model = [
-        {label: 'Product', icon: 'store', routerLink: ['/product']},
-        {label: 'Reports', icon: 'feedback', routerLink: ['/reports']},
-        {label: 'Payment', icon: 'account_balance_wallet', routerLink: ['/payment']},
+        {label: 'Produtos', icon: 'store', routerLink: ['/product']},
+        {label: 'Relatórios', icon: 'feedback', routerLink: ['/reports']},
+        {label: 'Pagamento', icon: 'account_balance_wallet', routerLink: ['/payment']},
+        {label: 'Categorias', icon: 'sort', routerLink: ['/admin/categoria/list']},
         {label: 'Usuários', icon: 'people', items:
             [
               {label: 'Cadastrar Funcionário', routerLink: ['gerente/criarFuncionario']},
