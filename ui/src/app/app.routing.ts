@@ -29,6 +29,7 @@ import {AdminHomeComponent} from './admin/admin-home/admin-home.component';
 import {CreateComponent} from './estoque/funcionario/create/create.component';
 import {EditComponent} from './estoque/funcionario/edit/edit.component';
 import {ListComponent} from './estoque/funcionario/list/list.component';
+import {ListaComponent} from './estoque/cliente/lista/lista.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -43,7 +44,7 @@ export const routes: Routes = [
   {path: 'cliente/charts', component: ChartsDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
   {path: 'cliente/file', component: FileDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
   {path: 'cliente/utils', component: UtilsDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
-  {path: 'cliente', component: SampleDemoComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
+  {path: 'cliente', component: ListaComponent, canActivate: [AuthGuard], data: {nivel: 'cliente'}},
   {path: 'admin', component: AdminHomeComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
   {path: 'gerente', component: GerenteHomeComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: 'recuperar', component: DocumentationComponent},
@@ -53,12 +54,13 @@ export const routes: Routes = [
   {path: 'listarClientes', component: ListarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
   {path: 'editarCliente/:id/edit', component: EditarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: 'criarcliente', component: CadastrarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
-  {path: 'admin/categoria/list', component: CategoriaListComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
+  {path: 'admin/categoria/lista', component: CategoriaListComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
   {path: 'unauthorized', component: UnauthorizedComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: 'create', component: CreateComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
-  {path: 'edit', component: EditComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
+  {path: 'list/:id/edit', component: EditComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: 'list', component: ListComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
+  {path: 'lista', component: ListaComponent},
   {path: '**', redirectTo: 'not-found'}
 ];
 

@@ -44,7 +44,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
       this.url = 'gerente';
     } else {
       this.model = [
-        {label: 'Store', icon: 'store', routerLink: ['/shop']},
+        {label: 'Store', icon: 'store', routerLink: ['/lista']},
         {label: 'My Orders', icon: 'shopping_basket', routerLink: ['/orders']},
         {label: 'My Cart', icon: 'shopping_cart', routerLink: ['/cart']}
       ];

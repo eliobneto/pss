@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import swal from 'sweetalert2';
-import {EstoqueService} from '../estoque.service';
+import {EstoqueService} from '../../estoque.service';
 
 @Component({
   selector: 'app-list',
@@ -21,7 +21,6 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.service.getAllEstoque().then(s => this.stock = s);
   }
-
 
   confirmarExclusao(id: string) {
     swal({

@@ -1,16 +1,13 @@
 <div class="ui-g">
   <div class="ui-g-12">
     <div class="card card-w-title">
-      <p-dataView #pt [value]="stock" [paginator]="true" [rows]="10">
+      <p-dataView #dv [value]="stock" [paginator]="true" [rows]="10" filterBy="nome">
         <p-header>
           <div class="ui-helper-clearfix">
             <div class="ui-g">
               <div class="ui-g-6 ui-md-4 filter-container">
                 <div style="position:relative">
-                  <input type="text" pInputText size="50" placeholder="Buscar por nome"
-                         class="ui-inputtext ui-corner-all ui-state-default ui-widget black"
-                         (input)="pt.filterGlobal($event.target.value, 'contains')" style="width: auto;"
-                  >
+                  <input type="text" pInputText placeholder="Procurar por Nome" (keyup)="dv.filter($event.target.value)">
                 </div>
               </div>
             </div>
@@ -31,7 +28,7 @@
                 </div>
 
                 <div class="ui-sm-1">
-                  <button pButton type="button" icon="ui-icon-edit" routerLink="{{stock.id}}/edit"></button>
+                  <button pButton type="button" icon="ui-icon-edit" routerLink="{{estoque.id}}/edit"></button>
                 </div>
 
                 <div class="ui-g-2 ui-sm-2">Un/Lote: </div>
