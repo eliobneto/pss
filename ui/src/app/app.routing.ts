@@ -8,8 +8,6 @@ import {UnauthorizedComponent} from './shared/negado/unauthorized.component';
 import {NotFoundComponent} from './shared/não-encontrada/not-found.component';
 import {AuthGuard} from './auth/auth.gard';
 import {CategoriaListComponent} from './categoria/categoria-list/categoria-list.component';
-import {GerenteHomeComponent} from './gerente/gerente-home/gerente-home.component';
-import {AdminHomeComponent} from './admin/admin-home/admin-home.component';
 import {ListComponent} from './estoque/funcionario/produto-list/list.component';
 import {ListaComponent} from './estoque/cliente/lista/lista.component';
 import {RecuperarComponent} from "./auth/recuperar/recuperar.component";
