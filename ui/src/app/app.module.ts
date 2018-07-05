@@ -103,17 +103,12 @@ import {BreadcrumbService} from './breadcrumb.service';
 import {CoreModule} from './core/core.module';
 import {AuthService} from './auth/auth.service';
 
-import {CadastrarFuncionarioComponent} from './usuario/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
-import {EditarFuncionarioComponent} from './usuario/funcionario/editar-funcionario/editar-funcionario.component';
-import {ListarFuncionarioComponent} from './usuario/funcionario/listar-funcionario/listar-funcionario.component';
+import {ListarFuncionarioComponent} from './usuario/funcionario/funcionario-list/listar-funcionario.component';
 import {CadastrarClienteComponent} from './usuario/cliente/cadastrar-cliente/cadastrar-cliente.component';
-import {EditarClienteComponent} from './usuario/cliente/editar-cliente/editar-cliente.component';
-import {ListarClienteComponent} from './usuario/cliente/listar-cliente/listar-cliente.component';
+import {ListarClienteComponent} from './usuario/cliente/cliente-list/listar-cliente.component';
 import {FuncionarioService} from './usuario/funcionario/funcionario.service';
 
-import {CreateComponent} from './estoque/funcionario/create/create.component';
-import {EditComponent} from './estoque/funcionario/edit/edit.component';
-import {ListComponent} from './estoque/funcionario/list/list.component';
+import {ListComponent} from './estoque/funcionario/produto-list/list.component';
 import {ListaComponent} from './estoque/cliente/lista/lista.component';
 import {EstoqueService} from './estoque/estoque.service';
 
@@ -220,14 +215,9 @@ import {CurrencyMaskModule} from 'ng2-currency-mask';
     FileDemoComponent,
     UtilsDemoComponent,
     DocumentationComponent,
-    CadastrarFuncionarioComponent,
-    EditarFuncionarioComponent,
     ListarFuncionarioComponent,
     CadastrarClienteComponent,
-    EditarClienteComponent,
     ListarClienteComponent,
-    CreateComponent,
-    EditComponent,
     ListComponent,
     ListaComponent
   ],

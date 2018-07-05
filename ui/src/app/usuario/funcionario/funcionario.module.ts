@@ -5,9 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {SharedModule} from '../../shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
-import {CadastrarFuncionarioComponent} from './cadastrar-funcionario/cadastrar-funcionario.component';
-import {ListarFuncionarioComponent} from './listar-funcionario/listar-funcionario.component';
-import {EditarFuncionarioComponent} from './editar-funcionario/editar-funcionario.component';
+import {ListarFuncionarioComponent} from './funcionario-list/listar-funcionario.component';
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
 import {DialogModule} from 'primeng/dialog';
@@ -24,7 +22,7 @@ import {DialogModule} from 'primeng/dialog';
     TableModule,
     DialogModule,
   ],
-  declarations: [CadastrarFuncionarioComponent, ListarFuncionarioComponent, EditarFuncionarioComponent]
+  declarations: [ListarFuncionarioComponent]
 })
 export class FuncionarioModule {
 }

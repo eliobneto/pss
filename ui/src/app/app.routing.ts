@@ -1,11 +1,8 @@
 import {Routes, RouterModule} from '@angular/router';
 import {ModuleWithProviders} from '@angular/core';
 import {LoginComponent} from './auth/login/login.component';
-import {CadastrarFuncionarioComponent} from './usuario/funcionario/cadastrar-funcionario/cadastrar-funcionario.component';
-import {EditarFuncionarioComponent} from './usuario/funcionario/editar-funcionario/editar-funcionario.component';
-import {ListarFuncionarioComponent} from './usuario/funcionario/listar-funcionario/listar-funcionario.component';
-import {ListarClienteComponent} from './usuario/cliente/listar-cliente/listar-cliente.component';
-import {EditarClienteComponent} from './usuario/cliente/editar-cliente/editar-cliente.component';
+import {ListarFuncionarioComponent} from './usuario/funcionario/funcionario-list/listar-funcionario.component';
+import {ListarClienteComponent} from './usuario/cliente/cliente-list/listar-cliente.component';
 import {CadastrarClienteComponent} from './usuario/cliente/cadastrar-cliente/cadastrar-cliente.component';
 import {UnauthorizedComponent} from './shared/negado/unauthorized.component';
 import {NotFoundComponent} from './shared/não-encontrada/not-found.component';
@@ -13,9 +10,7 @@ import {AuthGuard} from './auth/auth.gard';
 import {CategoriaListComponent} from './categoria/categoria-list/categoria-list.component';
 import {GerenteHomeComponent} from './gerente/gerente-home/gerente-home.component';
 import {AdminHomeComponent} from './admin/admin-home/admin-home.component';
-import {CreateComponent} from './estoque/funcionario/create/create.component';
-import {EditComponent} from './estoque/funcionario/edit/edit.component';
-import {ListComponent} from './estoque/funcionario/list/list.component';
+import {ListComponent} from './estoque/funcionario/produto-list/list.component';
 import {ListaComponent} from './estoque/cliente/lista/lista.component';
 import {RecuperarComponent} from "./auth/recuperar/recuperar.component";
 

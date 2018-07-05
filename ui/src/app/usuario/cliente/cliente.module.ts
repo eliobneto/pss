@@ -6,8 +6,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {SharedModule} from '../../shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import {CadastrarClienteComponent} from './cadastrar-cliente/cadastrar-cliente.component';
-import {EditarClienteComponent} from './editar-cliente/editar-cliente.component';
-import {ListarClienteComponent} from './listar-cliente/listar-cliente.component';
+import {ListarClienteComponent} from './cliente-list/listar-cliente.component';
 
 @NgModule({
   imports: [
@@ -20,7 +19,6 @@ import {ListarClienteComponent} from './listar-cliente/listar-cliente.component'
   ],
   declarations: [
     CadastrarClienteComponent,
-    EditarClienteComponent,
     ListarClienteComponent
   ]
 })
