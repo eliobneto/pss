@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate {
       if (next.data.nivel && this.auth.temPermissao(next.data.nivel)) {
         return true;
       } else {
-        this.router.navigate(['/unauthorized']);
+        this.router.navigate(['/negado']);
         return false;
       }
     } else {

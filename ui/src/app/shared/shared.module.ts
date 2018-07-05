@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FooterComponent} from './footer/footer.component';
 import {MaskDirective} from './mask/mask.directive';
-import {UnauthorizedComponent} from './unauthorized/unauthorized.component';
-import {NotFoundComponent} from './not-found/not-found.component';
+import {UnauthorizedComponent} from './negado/unauthorized.component';
+import {NotFoundComponent} from './não-encontrada/not-found.component';
 
 @NgModule({
   imports: [
