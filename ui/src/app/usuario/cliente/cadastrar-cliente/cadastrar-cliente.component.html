@@ -1,8 +1,12 @@
-<div class="ui-g ui-fluid">
-  <div class="ui-g-12 ui-lg-12">
-    <div class="card docs">
-
-
+<div class="login-panel ui-fluid" style="height: 125%">
+  <div class="login-panel-header">
+    <img src="assets/img/icon.png">
+  </div>
+  <div class="login-panel-content">
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <h1>Cadastro Cliente BoxIt</h1>
+      </div>
       <form #funform="ngForm">
         <div class="ui-g form-group">
           <div class="ui-g-12">
@@ -17,7 +21,7 @@
           <div class="ui-g-12">
               <span class="md-inputfield">
                 <input type="text" name="cnpj" id="cnpj" [(ngModel)]="f.cnpj" #cnpjj="ngModel" class="ui-inputtext ui-corner-all ui-widget" required
-                       [spMask]="cnpjMask" [spKeepMask]="true" pInputText [ngClass]="(cnpjj?.errors?.cnpj || (cnpjj.touched && cnpjj.invalid)) ? 'is-invalid' : ''">
+                       [spMask]="cnpjMask" maxlength="18" minlength="18" [spKeepMask]="true" pInputText [ngClass]="(cnpjj?.errors?.cnpj || (cnpjj.touched && cnpjj.invalid)) ? 'is-invalid' : ''">
                 <label>CNPJ</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
                 <div class="ui-message ui-messages-error ui-corner-all" *ngIf="(cnpjj?.errors?.cnpj && cnpjj.touched) || (cnpjj.touched && cnpjj.invalid)"> CNPJ Inválido</div>
               </span>
@@ -104,21 +108,10 @@
               </span>
           </div>
 
-          <div class="ui-g-12">
-              <span class="md-inputfield">
-                <input name="csenha" pInputText required id="csenha" type="password" ngModel #csenhaf="ngModel"
-                       [ngClass]="(csenhaf.invalid && csenhaf.touched) || (csenhaf.touched && confirmasenha(funform,csenhaf)) ? 'is-invalid' : ''"
-                       class="ui-inputtext ui-corner-all ui-widget">
-                <label>Confirmar Senha</label><span class="ui-message ui-messages-error ui-corner-all">*
-              </span>
-<span class="ui-message ui-messages-error ui-corner-all" *ngIf="(csenhaf.touched && confirmasenha(funform,csenhaf))">As senhas não conferem</span>
-                </span>
-          </div>
-
           <br/>
           <div class="ui-g-12">
             <button class="ui-button-info" pButton label="Cadastrar-se" (click)="confirma()" type="submit"
-                    [disabled]="funform.invalid || confirmasenha(funform,csenhaf)"></button>
+                    [disabled]="funform.invalid"></button>
           </div>
 
           <br>

@@ -1,24 +1,26 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AbstractControl, NgForm} from '@angular/forms';
 import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import {Cliente} from '../cliente';
 import {Router} from '@angular/router';
 import swal from 'sweetalert2';
+import * as $ from 'jquery';
 import { ClienteService } from '../cliente.service';
-import {InputMaskModule} from 'primeng/inputmask';
 
 @Component({
   selector: 'app-cadastrar-cliente',
   templateUrl: './cadastrar-cliente.component.html',
   styleUrls: ['./cadastrar-cliente.component.css']
 })
-export class CadastrarClienteComponent implements OnInit {
+export class CadastrarClienteComponent implements OnInit, OnDestroy {
 
   public cpfMask = MyMaskUtil.CPF_MASK_GENERATOR;
   public cnpjMask = MyMaskUtil.CNPJ_MASK_GENERATOR;
   public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
   f = new Cliente();
   cli: any;
+  igual = false;
+  oba: any;
 
   constructor(
     private ser: ClienteService,
@@ -27,24 +29,61 @@ export class CadastrarClienteComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('body').addClass('login-body');
+    $('app-menu,app-footer,app-breadcrumb,app-topbar').hide();
+    $(function () {
+      $('input').on('blur', function (e) {
+        const el = $(this);
+        if (el.val() !== '') {
+          el.addClass('ui-state-filled');
+        } else {
+          el.removeClass('ui-state-filled');
+        }
+      });
+    });
   }
 
-
-  confirmasenha(funform: NgForm, csa: AbstractControl): boolean {
-    return funform.value.senha !== csa.value;
+  ngOnDestroy() {
+    $('body').removeClass('login-body');
+    $('app-menu,app-footer,app-breadcrumb,app-topbar').show();
   }
 
   confirma() {
-    this.ser.criarCli(this.f).subscribe(
-      () => {
-        this.route.navigate(['admin']);
-      }, (e) => {
-        swal(
-          'Erro!',
-          'CNPJ já cadastrado!',
-          'error'
-        );
-      }
-    );
+      this.ser.getClientes().then((s) => {
+        this.cli = s;
+        for (const o of this.cli) {
+          if (o.cnpj === true) {
+            this.igual = true;
+            break;
+          }
+        }
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    if (this.igual) {
+      swal(
+        'Erro!',
+        'CNPJ já cadastrado!',
+        'error'
+      )
+    } else {
+      swal(
+        'Sucesso!',
+        'Cliente Cadastrado!',
+        'success'
+      )
+    }
   }
 }

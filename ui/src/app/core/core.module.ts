@@ -11,7 +11,7 @@ import {CategoriaModule} from '../categoria/categoria.module';
     AuthModule,
     AppRouting,
     SharedModule,
-    CategoriaModule,
+    CategoriaModule
   ],
   declarations: [],
   exports: [
