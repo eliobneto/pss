@@ -7,8 +7,9 @@
       "email": "viniciosaggrizzi@gmail.com",
       "gerente": false,
       "nome": "Larissa Santos",
-      "telefone": "897-260-2828"
-    },
+      "telefone": "9897-260-2828"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 2,
       "cargo": "estagiario",
@@ -16,8 +17,9 @@
       "email": "estermaria@gmail.com",
       "gerente": false,
       "nome": "Davi Dal Piaz",
-      "telefone": "580-430-5326"
-    },
+      "telefone": "9580-430-5326"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 3,
       "cargo": "funcionario",
@@ -25,8 +27,9 @@
       "email": "biancafregolent@gmail.com",
       "gerente": false,
       "nome": "Fernanda Bassetti",
-      "telefone": "445-605-6026"
-    },
+      "telefone": "9445-605-6026"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 4,
       "cargo": "estagiario",
@@ -34,8 +37,9 @@
       "email": "ricardochrist@gmail.com",
       "gerente": false,
       "nome": "Paulo Azevedo",
-      "telefone": "423-356-7092"
-    },
+      "telefone": "9423-356-7092"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 5,
       "cargo": "funcionario",
@@ -43,8 +47,9 @@
       "email": "lviapazeto@gmail.com",
       "gerente": false,
       "nome": "Afonso Roza",
-      "telefone": "867-556-1822"
-    },
+      "telefone": "9867-556-1822"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 6,
       "cargo": "estagiario",
@@ -52,8 +57,9 @@
       "email": "lourenomerigue@gmail.com",
       "gerente": false,
       "nome": "Lucca Mosquini",
-      "telefone": "733-336-2093"
-    },
+      "telefone": "9733-336-2093"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 7,
       "cargo": "estagiario",
@@ -61,8 +67,9 @@
       "email": "lismarquio@gmail.com",
       "gerente": false,
       "nome": "Flávio Jacomelli",
-      "telefone": "213-531-6411"
-    },
+      "telefone": "9213-531-6411"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 8,
       "cargo": "contador",
@@ -70,8 +77,9 @@
       "email": "fredericofvero@gmail.com",
       "gerente": false,
       "nome": "Lívia Maróquio",
-      "telefone": "966-180-7570"
-    },
+      "telefone": "9966-180-7570"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 9,
       "cargo": "contador",
@@ -79,8 +87,9 @@
       "email": "maitoliveira@gmail.com",
       "gerente": false,
       "nome": "Calebe Guidolini",
-      "telefone": "874-304-6814"
-    },
+      "telefone": "9874-304-6814"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 10,
       "cargo": "estagiario",
@@ -88,8 +97,9 @@
       "email": "ricardocastro@gmail.com",
       "gerente": false,
       "nome": "Bernardo De Angeli",
-      "telefone": "479-347-4453"
-    },
+      "telefone": "9479-347-4453"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 11,
       "cargo": "estagiario",
@@ -97,8 +107,9 @@
       "email": "theodarroz@gmail.com",
       "gerente": false,
       "nome": "Cloe Mendes",
-      "telefone": "629-582-9480"
-    },
+      "telefone": "9629-582-9480"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 12,
       "cargo": "estagiario",
@@ -106,8 +117,9 @@
       "email": "nicoleminet@gmail.com",
       "gerente": false,
       "nome": "Íris Vargas",
-      "telefone": "735-535-6758"
-    },
+      "telefone": "9735-535-6758"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 13,
       "cargo": "funcionario",
@@ -115,8 +127,9 @@
       "email": "helosasantos@gmail.com",
       "gerente": false,
       "nome": "Laura Ambrozin",
-      "telefone": "765-986-0485"
-    },
+      "telefone": "9765-986-0485"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 14,
       "cargo": "funcionario",
@@ -124,8 +137,9 @@
       "email": "masaguilherme@gmail.com",
       "gerente": false,
       "nome": "Benjamin Macedo",
-      "telefone": "977-852-6802"
-    },
+      "telefone": "9977-852-6802"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 15,
       "cargo": "funcionario",
@@ -133,8 +147,9 @@
       "email": "alicebernab@gmail.com",
       "gerente": false,
       "nome": "Miguel Rigone",
-      "telefone": "115-658-4903"
-    },
+      "telefone": "9115-658-4903"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 16,
       "cargo": "estagiario",
@@ -142,8 +157,9 @@
       "email": "jooschulthais@gmail.com",
       "gerente": false,
       "nome": "Maria Handler",
-      "telefone": "702-413-6018"
-    },
+      "telefone": "9702-413-6018"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 17,
       "cargo": "contador",
@@ -151,8 +167,9 @@
       "email": "catarinavervloet@gmail.com",
       "gerente": false,
       "nome": "Renato Tonoli",
-      "telefone": "906-219-3286"
-    },
+      "telefone": "9906-219-3286"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 18,
       "cargo": "contador",
@@ -160,8 +177,9 @@
       "email": "joomonteiro@gmail.com",
       "gerente": false,
       "nome": "Pedro Coelha",
-      "telefone": "394-524-2555"
-    },
+      "telefone": "9394-524-2555"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 19,
       "cargo": "contador",
@@ -169,8 +187,9 @@
       "email": "helosalima@gmail.com",
       "gerente": false,
       "nome": "Júlia Néspoli",
-      "telefone": "326-486-9521"
-    },
+      "telefone": "9326-486-9521"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 20,
       "cargo": "contador",
@@ -178,8 +197,9 @@
       "email": "valentimwoodward@gmail.com",
       "gerente": false,
       "nome": "Anabela Scott",
-      "telefone": "748-714-3474"
-    },
+      "telefone": "9748-714-3474"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 21,
       "cargo": "contador",
@@ -187,8 +207,9 @@
       "email": "rafaeladagloria@gmail.com",
       "gerente": false,
       "nome": "Renan Côgo",
-      "telefone": "857-450-0290"
-    },
+      "telefone": "9857-450-0290"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 22,
       "cargo": "estagiario",
@@ -196,8 +217,9 @@
       "email": "davitozi@gmail.com",
       "gerente": false,
       "nome": "Hugo de Gois",
-      "telefone": "749-208-4959"
-    },
+      "telefone": "9749-208-4959"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 23,
       "cargo": "funcionario",
@@ -205,8 +227,9 @@
       "email": "abigailpescador@gmail.com",
       "gerente": false,
       "nome": "João Barroso",
-      "telefone": "838-657-6647"
-    },
+      "telefone": "9838-657-6647"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 24,
       "cargo": "estagiario",
@@ -214,8 +237,9 @@
       "email": "jorgedelima@gmail.com",
       "gerente": false,
       "nome": "Esther Romanini",
-      "telefone": "648-571-7215"
-    },
+      "telefone": "9648-571-7215"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 25,
       "cargo": "funcionario",
@@ -223,8 +247,9 @@
       "email": "leticiabrancaglioni@gmail.com",
       "gerente": false,
       "nome": "Laís Piassi",
-      "telefone": "848-944-3683"
-    },
+      "telefone": "9848-944-3683"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 26,
       "cargo": "contador",
@@ -232,8 +257,9 @@
       "email": "samuelnielsdatter@gmail.com",
       "gerente": false,
       "nome": "Clara Uliana",
-      "telefone": "322-105-6007"
-    },
+      "telefone": "9322-105-6007"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 27,
       "cargo": "contador",
@@ -241,8 +267,9 @@
       "email": "tiagoleal@gmail.com",
       "gerente": false,
       "nome": "Lara Brandão",
-      "telefone": "141-965-1927"
-    },
+      "telefone": "9141-965-1927"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 28,
       "cargo": "contador",
@@ -250,8 +277,9 @@
       "email": "cecliaminette@gmail.com",
       "gerente": false,
       "nome": "Clara Camporez",
-      "telefone": "238-858-5027"
-    },
+      "telefone": "9238-858-5027"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 29,
       "cargo": "funcionario",
@@ -259,8 +287,9 @@
       "email": "franciscomoscon@gmail.com",
       "gerente": false,
       "nome": "Ana Sagers",
-      "telefone": "955-795-5359"
-    },
+      "telefone": "9955-795-5359"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 30,
       "cargo": "contador",
@@ -268,8 +297,9 @@
       "email": "danielasperandio@gmail.com",
       "gerente": false,
       "nome": "Murilo Rigotto",
-      "telefone": "143-731-6783"
-    },
+      "telefone": "9143-731-6783"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 31,
       "cargo": "estagiario",
@@ -277,8 +307,9 @@
       "email": "helenaconceicao@gmail.com",
       "gerente": false,
       "nome": "Isadora Muniz",
-      "telefone": "460-164-6967"
-    },
+      "telefone": "9460-164-6967"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 32,
       "cargo": "contador",
@@ -286,8 +317,9 @@
       "email": "rafaelajuvanhol@gmail.com",
       "gerente": false,
       "nome": "Daniel Masut",
-      "telefone": "633-407-2952"
-    },
+      "telefone": "9633-407-2952"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 33,
       "cargo": "funcionario",
@@ -295,8 +327,9 @@
       "email": "tomsboldrine@gmail.com",
       "gerente": false,
       "nome": "Vitor Bonicenha",
-      "telefone": "303-861-8033"
-    },
+      "telefone": "9303-861-8033"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 34,
       "cargo": "contador",
@@ -304,8 +337,9 @@
       "email": "joopassamani@gmail.com",
       "gerente": false,
       "nome": "César Smith",
-      "telefone": "257-706-1487"
-    },
+      "telefone": "9257-706-1487"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 35,
       "cargo": "funcionario",
@@ -313,8 +347,9 @@
       "email": "anamariane@gmail.com",
       "gerente": false,
       "nome": "Victor Henrichsen",
-      "telefone": "315-134-5031"
-    },
+      "telefone": "9315-134-5031"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 36,
       "cargo": "contador",
@@ -322,8 +357,9 @@
       "email": "joostelzer@gmail.com",
       "gerente": false,
       "nome": "Catarina Butler",
-      "telefone": "682-666-8749"
-    },
+      "telefone": "9682-666-8749"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 37,
       "cargo": "contador",
@@ -331,8 +367,9 @@
       "email": "benjaminmoraes@gmail.com",
       "gerente": false,
       "nome": "Ian di Balliana",
-      "telefone": "219-475-4354"
-    },
+      "telefone": "9219-475-4354"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 38,
       "cargo": "estagiario",
@@ -340,8 +377,9 @@
       "email": "marinabattagnoli@gmail.com",
       "gerente": false,
       "nome": "Tomás Fardin",
-      "telefone": "855-615-9580"
-    },
+      "telefone": "9855-615-9580"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 39,
       "cargo": "estagiario",
@@ -349,8 +387,9 @@
       "email": "guilhermedurfee@gmail.com",
       "gerente": false,
       "nome": "Octávio Dalvi",
-      "telefone": "643-841-6210"
-    },
+      "telefone": "9643-841-6210"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 40,
       "cargo": "estagiario",
@@ -358,8 +397,9 @@
       "email": "afonsomarinho@gmail.com",
       "gerente": false,
       "nome": "Flávio Alves",
-      "telefone": "877-853-8542"
-    },
+      "telefone": "9877-853-8542"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 41,
       "cargo": "estagiario",
@@ -367,8 +407,9 @@
       "email": "jliajacobsen@gmail.com",
       "gerente": false,
       "nome": "Valentim Sangali",
-      "telefone": "415-970-7247"
-    },
+      "telefone": "9415-970-7247"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 42,
       "cargo": "funcionario",
@@ -376,8 +417,9 @@
       "email": "murilolucca@gmail.com",
       "gerente": false,
       "nome": "Carolina Breda",
-      "telefone": "631-690-6372"
-    },
+      "telefone": "9631-690-6372"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 43,
       "cargo": "estagiario",
@@ -385,8 +427,9 @@
       "email": "guilhermesalomo@gmail.com",
       "gerente": false,
       "nome": "Yasmin Warner",
-      "telefone": "388-240-3240"
-    },
+      "telefone": "9388-240-3240"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 44,
       "cargo": "contador",
@@ -394,8 +437,9 @@
       "email": "fernandoalvernaz@gmail.com",
       "gerente": false,
       "nome": "Felipe Rufino",
-      "telefone": "250-424-4549"
-    },
+      "telefone": "9250-424-4549"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 45,
       "cargo": "estagiario",
@@ -403,8 +447,9 @@
       "email": "palomaloss@gmail.com",
       "gerente": false,
       "nome": "Alice Moser",
-      "telefone": "115-735-4455"
-    },
+      "telefone": "9115-735-4455"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 46,
       "cargo": "funcionario",
@@ -412,8 +457,9 @@
       "email": "olviacorreia@gmail.com",
       "gerente": false,
       "nome": "Carolina Klein",
-      "telefone": "266-748-5620"
-    },
+      "telefone": "9266-748-5620"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 47,
       "cargo": "funcionario",
@@ -421,8 +467,9 @@
       "email": "elisahansdatter@gmail.com",
       "gerente": false,
       "nome": "Manuela Siciliano",
-      "telefone": "534-463-7278"
-    },
+      "telefone": "9534-463-7278"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 48,
       "cargo": "contador",
@@ -430,8 +477,9 @@
       "email": "arthurlaures@gmail.com",
       "gerente": false,
       "nome": "Emanuelle Casteluber",
-      "telefone": "296-498-2458"
-    },
+      "telefone": "9296-498-2458"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 49,
       "cargo": "funcionario",
@@ -439,8 +487,9 @@
       "email": "carloscarvalhido@gmail.com",
       "gerente": false,
       "nome": "Agatha Ragazzo",
-      "telefone": "422-819-6668"
-    },
+      "telefone": "9422-819-6668"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 50,
       "cargo": "contador",
@@ -448,8 +497,9 @@
       "email": "isabellythiago@gmail.com",
       "gerente": false,
       "nome": "Daniel Tonon",
-      "telefone": "540-930-0816"
-    },
+      "telefone": "9540-930-0816"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 51,
       "cargo": "contador",
@@ -457,8 +507,9 @@
       "email": "valentinachristiansdatter@gmail.com",
       "gerente": false,
       "nome": "Estela Albani",
-      "telefone": "808-999-0029"
-    },
+      "telefone": "9808-999-0029"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 52,
       "cargo": "contador",
@@ -466,8 +517,9 @@
       "email": "luisatedesco@gmail.com",
       "gerente": false,
       "nome": "Yasmine Monteiro",
-      "telefone": "478-402-9701"
-    },
+      "telefone": "9478-402-9701"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 53,
       "cargo": "funcionario",
@@ -475,8 +527,9 @@
       "email": "helenaperiordi@gmail.com",
       "gerente": false,
       "nome": "Elisa Marquette",
-      "telefone": "283-674-5273"
-    },
+      "telefone": "9283-674-5273"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 54,
       "cargo": "estagiario",
@@ -484,8 +537,9 @@
       "email": "kevinmariani@gmail.com",
       "gerente": false,
       "nome": "Helena Campagnaro",
-      "telefone": "483-378-5283"
-    },
+      "telefone": "9483-378-5283"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 55,
       "cargo": "contador",
@@ -493,8 +547,9 @@
       "email": "murilobezerra@gmail.com",
       "gerente": false,
       "nome": "Gustavo Franceschetto",
-      "telefone": "612-443-4140"
-    },
+      "telefone": "9612-443-4140"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 56,
       "cargo": "funcionario",
@@ -502,8 +557,9 @@
       "email": "raullizabo@gmail.com",
       "gerente": false,
       "nome": "Júlia Antoniazzi",
-      "telefone": "502-590-5480"
-    },
+      "telefone": "9502-590-5480"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 57,
       "cargo": "funcionario",
@@ -511,8 +567,9 @@
       "email": "luccademoraes@gmail.com",
       "gerente": false,
       "nome": "Rebeca Reinehr",
-      "telefone": "504-585-3489"
-    },
+      "telefone": "9504-585-3489"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 58,
       "cargo": "estagiario",
@@ -520,8 +577,9 @@
       "email": "carlosjensen@gmail.com",
       "gerente": false,
       "nome": "Caio Dias",
-      "telefone": "526-149-0264"
-    },
+      "telefone": "9526-149-0264"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 59,
       "cargo": "funcionario",
@@ -529,8 +587,9 @@
       "email": "julianomoscon@gmail.com",
       "gerente": false,
       "nome": "Ana Castro",
-      "telefone": "744-201-3599"
-    },
+      "telefone": "9744-201-3599"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 60,
       "cargo": "funcionario",
@@ -538,8 +597,9 @@
       "email": "gabrielminet@gmail.com",
       "gerente": false,
       "nome": "Sofia Magaldi",
-      "telefone": "869-973-6401"
-    },
+      "telefone": "9869-973-6401"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 61,
       "cargo": "estagiario",
@@ -547,8 +607,9 @@
       "email": "murielnos@gmail.com",
       "gerente": false,
       "nome": "Joaquim Chiecan",
-      "telefone": "603-833-1655"
-    },
+      "telefone": "9603-833-1655"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 62,
       "cargo": "contador",
@@ -556,8 +617,9 @@
       "email": "raulpilato@gmail.com",
       "gerente": false,
       "nome": "Lucas Fregolent",
-      "telefone": "706-410-3803"
-    },
+      "telefone": "9706-410-3803"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 63,
       "cargo": "contador",
@@ -565,8 +627,9 @@
       "email": "joslaures@gmail.com",
       "gerente": false,
       "nome": "Bernardo Marcarini",
-      "telefone": "648-788-2238"
-    },
+      "telefone": "9648-788-2238"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 64,
       "cargo": "contador",
@@ -574,8 +637,9 @@
       "email": "otviobraido@gmail.com",
       "gerente": false,
       "nome": "Ramom Battistella",
-      "telefone": "464-697-2562"
-    },
+      "telefone": "9464-697-2562"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 65,
       "cargo": "estagiario",
@@ -583,8 +647,9 @@
       "email": "heitordallarmellina@gmail.com",
       "gerente": false,
       "nome": "Guilherme Barazzuol",
-      "telefone": "368-213-7669"
-    },
+      "telefone": "9368-213-7669"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 66,
       "cargo": "funcionario",
@@ -592,8 +657,9 @@
       "email": "otviogabriel@gmail.com",
       "gerente": false,
       "nome": "Ariela Selva",
-      "telefone": "478-631-9420"
-    },
+      "telefone": "9478-631-9420"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 67,
       "cargo": "estagiario",
@@ -601,8 +667,9 @@
       "email": "marianabassetti@gmail.com",
       "gerente": false,
       "nome": "Frederico Valoto",
-      "telefone": "114-758-7123"
-    },
+      "telefone": "9114-758-7123"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 68,
       "cargo": "estagiario",
@@ -610,8 +677,9 @@
       "email": "bernardorasmussen@gmail.com",
       "gerente": false,
       "nome": "Luis Fim",
-      "telefone": "552-320-9755"
-    },
+      "telefone": "9552-320-9755"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 69,
       "cargo": "funcionario",
@@ -619,8 +687,9 @@
       "email": "ivanminiguite@gmail.com",
       "gerente": false,
       "nome": "Carolina Rauta",
-      "telefone": "282-937-0234"
-    },
+      "telefone": "9282-937-0234"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 70,
       "cargo": "estagiario",
@@ -628,8 +697,9 @@
       "email": "helenasantanna@gmail.com",
       "gerente": false,
       "nome": "Jessica Amaral",
-      "telefone": "756-657-1475"
-    },
+      "telefone": "9756-657-1475"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 71,
       "cargo": "estagiario",
@@ -637,8 +707,9 @@
       "email": "vitormilaneze@gmail.com",
       "gerente": false,
       "nome": "Santiago Guilherme",
-      "telefone": "778-755-1909"
-    },
+      "telefone": "9778-755-1909"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 72,
       "cargo": "contador",
@@ -646,8 +717,9 @@
       "email": "alciamonstans@gmail.com",
       "gerente": false,
       "nome": "Yara Faria",
-      "telefone": "320-617-6709"
-    },
+      "telefone": "9320-617-6709"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 73,
       "cargo": "contador",
@@ -655,8 +727,9 @@
       "email": "lucaslessa@gmail.com",
       "gerente": false,
       "nome": "Bruno Seraco",
-      "telefone": "249-549-2240"
-    },
+      "telefone": "9249-549-2240"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 74,
       "cargo": "funcionario",
@@ -664,8 +737,9 @@
       "email": "melissapizetta@gmail.com",
       "gerente": false,
       "nome": "Iara Rui",
-      "telefone": "746-256-8694"
-    },
+      "telefone": "9746-256-8694"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 75,
       "cargo": "contador",
@@ -673,8 +747,9 @@
       "email": "wilianrabello@gmail.com",
       "gerente": false,
       "nome": "Ivan Cittera",
-      "telefone": "801-433-0915"
-    },
+      "telefone": "9801-433-0915"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 76,
       "cargo": "funcionario",
@@ -682,8 +757,9 @@
       "email": "letciagrolla@gmail.com",
       "gerente": false,
       "nome": "Joaquim Batista",
-      "telefone": "782-136-0441"
-    },
+      "telefone": "9782-136-0441"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 77,
       "cargo": "estagiario",
@@ -691,8 +767,9 @@
       "email": "tiagosartrio@gmail.com",
       "gerente": false,
       "nome": "Heitor Rúbia",
-      "telefone": "543-159-2940"
-    },
+      "telefone": "9543-159-2940"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 78,
       "cargo": "estagiario",
@@ -700,8 +777,9 @@
       "email": "biancasalome@gmail.com",
       "gerente": false,
       "nome": "Joana Acátolli",
-      "telefone": "875-453-6838"
-    },
+      "telefone": "9875-453-6838"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 79,
       "cargo": "estagiario",
@@ -709,8 +787,9 @@
       "email": "fabrcioseguro@gmail.com",
       "gerente": false,
       "nome": "Giovana Cervantes",
-      "telefone": "970-456-9947"
-    },
+      "telefone": "9970-456-9947"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 80,
       "cargo": "estagiario",
@@ -718,8 +797,9 @@
       "email": "lorenadiboscarato@gmail.com",
       "gerente": false,
       "nome": "Daniel Fabre",
-      "telefone": "404-768-2419"
-    },
+      "telefone": "9404-768-2419"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 81,
       "cargo": "estagiario",
@@ -727,8 +807,9 @@
       "email": "nicolasbell@gmail.com",
       "gerente": false,
       "nome": "Marcela Cecote",
-      "telefone": "868-752-3152"
-    },
+      "telefone": "9868-752-3152"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 82,
       "cargo": "funcionario",
@@ -736,8 +817,9 @@
       "email": "marinaalves@gmail.com",
       "gerente": false,
       "nome": "Santiago Pegovaro",
-      "telefone": "468-526-2568"
-    },
+      "telefone": "9468-526-2568"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 83,
       "cargo": "funcionario",
@@ -745,8 +827,9 @@
       "email": "enzosilva@gmail.com",
       "gerente": false,
       "nome": "Kelly Lorenzon",
-      "telefone": "510-758-0120"
-    },
+      "telefone": "9510-758-0120"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 84,
       "cargo": "estagiario",
@@ -754,8 +837,9 @@
       "email": "fabrciomanoel@gmail.com",
       "gerente": false,
       "nome": "Raul Vervloet",
-      "telefone": "108-854-0926"
-    },
+      "telefone": "9108-854-0926"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 85,
       "cargo": "funcionario",
@@ -763,8 +847,9 @@
       "email": "biancaockerman@gmail.com",
       "gerente": false,
       "nome": "Lavínia Jacoboski",
-      "telefone": "530-542-6789"
-    },
+      "telefone": "9530-542-6789"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 86,
       "cargo": "contador",
@@ -772,8 +857,9 @@
       "email": "maurcioburgues@gmail.com",
       "gerente": false,
       "nome": "Clarisse Delaparte",
-      "telefone": "298-860-6514"
-    },
+      "telefone": "9298-860-6514"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 87,
       "cargo": "contador",
@@ -781,8 +867,9 @@
       "email": "adrianomaroto@gmail.com",
       "gerente": false,
       "nome": "Henrique Almeida",
-      "telefone": "448-197-8431"
-    },
+      "telefone": "9448-197-8431"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 88,
       "cargo": "funcionario",
@@ -790,8 +877,9 @@
       "email": "talitanspoli@gmail.com",
       "gerente": false,
       "nome": "Antônio Blanco",
-      "telefone": "475-296-8716"
-    },
+      "telefone": "9475-296-8716"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 89,
       "cargo": "contador",
@@ -799,8 +887,9 @@
       "email": "filipefabis@gmail.com",
       "gerente": false,
       "nome": "Iara Toè",
-      "telefone": "798-506-7942"
-    },
+      "telefone": "9798-506-7942"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 90,
       "cargo": "estagiario",
@@ -808,8 +897,9 @@
       "email": "fredericobattistela@gmail.com",
       "gerente": false,
       "nome": "Luisa Pino",
-      "telefone": "476-144-1816"
-    },
+      "telefone": "9476-144-1816"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 91,
       "cargo": "contador",
@@ -817,8 +907,9 @@
       "email": "pietrabalestre@gmail.com",
       "gerente": false,
       "nome": "Davi Michelsen",
-      "telefone": "798-879-0895"
-    },
+      "telefone": "9798-879-0895"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 92,
       "cargo": "contador",
@@ -826,8 +917,9 @@
       "email": "anacansian@gmail.com",
       "gerente": false,
       "nome": "Rafael Roncheti",
-      "telefone": "121-348-0811"
-    },
+      "telefone": "9121-348-0811"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 93,
       "cargo": "funcionario",
@@ -835,8 +927,9 @@
       "email": "sabrinapandini@gmail.com",
       "gerente": false,
       "nome": "Lucca da Conceicao",
-      "telefone": "642-348-0197"
-    },
+      "telefone": "9642-348-0197"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 94,
       "cargo": "estagiario",
@@ -844,8 +937,9 @@
       "email": "henriquehansdatter@gmail.com",
       "gerente": false,
       "nome": "Aurora Boiago",
-      "telefone": "609-128-6428"
-    },
+      "telefone": "9609-128-6428"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 95,
       "cargo": "funcionario",
@@ -853,8 +947,9 @@
       "email": "viniciosmalta@gmail.com",
       "gerente": false,
       "nome": "José Luis",
-      "telefone": "308-480-3274"
-    },
+      "telefone": "9308-480-3274"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 96,
       "cargo": "contador",
@@ -862,8 +957,9 @@
       "email": "brunoalbino@gmail.com",
       "gerente": false,
       "nome": "Fernando Appolinario",
-      "telefone": "583-727-2286"
-    },
+      "telefone": "9583-727-2286"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 97,
       "cargo": "funcionario",
@@ -871,8 +967,9 @@
       "email": "gustavorissari@gmail.com",
       "gerente": false,
       "nome": "Fernanda Vaz",
-      "telefone": "646-721-7996"
-    },
+      "telefone": "9646-721-7996"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 98,
       "cargo": "estagiario",
@@ -880,8 +977,9 @@
       "email": "luccamarotto@gmail.com",
       "gerente": false,
       "nome": "Letícia Herculano",
-      "telefone": "463-429-8179"
-    },
+      "telefone": "9463-429-8179"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 99,
       "cargo": "estagiario",
@@ -889,8 +987,9 @@
       "email": "diegofazoli@gmail.com",
       "gerente": false,
       "nome": "Aline Ostiguy Domingue",
-      "telefone": "424-246-6978"
-    },
+      "telefone": "9424-246-6978"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 100,
       "cargo": "funcionario",
@@ -898,8 +997,9 @@
       "email": "ianfaco@gmail.com",
       "gerente": false,
       "nome": "Karen Rugero",
-      "telefone": "795-752-2186"
-    },
+      "telefone": "9795-752-2186"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 101,
       "cargo": "estagiario",
@@ -907,8 +1007,9 @@
       "email": "henriquegranzotto@gmail.com",
       "gerente": false,
       "nome": "Amanda Shonio",
-      "telefone": "498-957-3228"
-    },
+      "telefone": "9498-957-3228"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 102,
       "cargo": "estagiario",
@@ -916,8 +1017,9 @@
       "email": "edgargrasseto@gmail.com",
       "gerente": false,
       "nome": "Vitória Zulianni",
-      "telefone": "199-116-4325"
-    },
+      "telefone": "9199-116-4325"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 103,
       "cargo": "contador",
@@ -925,8 +1027,9 @@
       "email": "giovanamarcarini@gmail.com",
       "gerente": false,
       "nome": "Pamela Valiatti",
-      "telefone": "308-531-9807"
-    },
+      "telefone": "9308-531-9807"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 104,
       "cargo": "contador",
@@ -934,8 +1037,9 @@
       "email": "octviofvero@gmail.com",
       "gerente": false,
       "nome": "Vinicios Frade",
-      "telefone": "104-442-2840"
-    },
+      "telefone": "9104-442-2840"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 105,
       "cargo": "contador",
@@ -943,8 +1047,9 @@
       "email": "aarbjerke@gmail.com",
       "gerente": false,
       "nome": "Miguel Ferraco",
-      "telefone": "176-461-5153"
-    },
+      "telefone": "9176-461-5153"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 106,
       "cargo": "contador",
@@ -952,8 +1057,9 @@
       "email": "vitorfiorini@gmail.com",
       "gerente": false,
       "nome": "Ana Provendel",
-      "telefone": "674-325-7128"
-    },
+      "telefone": "9674-325-7128"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 107,
       "cargo": "estagiario",
@@ -961,8 +1067,9 @@
       "email": "risarmellin@gmail.com",
       "gerente": false,
       "nome": "Cloe Pitanga",
-      "telefone": "193-138-5019"
-    },
+      "telefone": "9193-138-5019"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 108,
       "cargo": "contador",
@@ -970,8 +1077,9 @@
       "email": "caiomendes@gmail.com",
       "gerente": false,
       "nome": "Amanda Gregio",
-      "telefone": "278-877-0259"
-    },
+      "telefone": "9278-877-0259"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 109,
       "cargo": "contador",
@@ -979,8 +1087,9 @@
       "email": "fredericoloreno@gmail.com",
       "gerente": false,
       "nome": "Ingrid Lourenço",
-      "telefone": "156-276-0914"
-    },
+      "telefone": "9156-276-0914"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 110,
       "cargo": "funcionario",
@@ -988,8 +1097,9 @@
       "email": "pietrobolzan@gmail.com",
       "gerente": false,
       "nome": "Fernanda Zampirolli",
-      "telefone": "362-265-5722"
-    },
+      "telefone": "9362-265-5722"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 111,
       "cargo": "funcionario",
@@ -997,8 +1107,9 @@
       "email": "luisajacobsen@gmail.com",
       "gerente": false,
       "nome": "Yara Fileti",
-      "telefone": "762-208-4212"
-    },
+      "telefone": "9762-208-4212"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 112,
       "cargo": "contador",
@@ -1006,8 +1117,9 @@
       "email": "afonsocareta@gmail.com",
       "gerente": false,
       "nome": "Renan Agrisi",
-      "telefone": "282-642-4213"
-    },
+      "telefone": "9282-642-4213"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 113,
       "cargo": "contador",
@@ -1015,8 +1127,9 @@
       "email": "otviobravin@gmail.com",
       "gerente": false,
       "nome": "Melissa da Rocha",
-      "telefone": "532-788-8898"
-    },
+      "telefone": "9532-788-8898"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 114,
       "cargo": "estagiario",
@@ -1024,8 +1137,9 @@
       "email": "felipepianezolla@gmail.com",
       "gerente": false,
       "nome": "João Fiorini",
-      "telefone": "672-215-6943"
-    },
+      "telefone": "9672-215-6943"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 115,
       "cargo": "funcionario",
@@ -1033,8 +1147,9 @@
       "email": "lasmariani@gmail.com",
       "gerente": false,
       "nome": "Caio Colli",
-      "telefone": "619-468-3798"
-    },
+      "telefone": "9619-468-3798"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 116,
       "cargo": "funcionario",
@@ -1042,8 +1157,9 @@
       "email": "santiagosalgado@gmail.com",
       "gerente": false,
       "nome": "Pedro Sancao",
-      "telefone": "331-376-9613"
-    },
+      "telefone": "9331-376-9613"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 117,
       "cargo": "contador",
@@ -1051,8 +1167,9 @@
       "email": "emanuelfernandez@gmail.com",
       "gerente": false,
       "nome": "Vitor de Chaves",
-      "telefone": "253-667-8850"
-    },
+      "telefone": "9253-667-8850"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 118,
       "cargo": "estagiario",
@@ -1060,8 +1177,9 @@
       "email": "migueldardengo@gmail.com",
       "gerente": false,
       "nome": "Alexander Calabrez",
-      "telefone": "533-372-4378"
-    },
+      "telefone": "9533-372-4378"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 119,
       "cargo": "funcionario",
@@ -1069,8 +1187,9 @@
       "email": "caroldelarmelina@gmail.com",
       "gerente": false,
       "nome": "Patrícia Colli",
-      "telefone": "764-122-1174"
-    },
+      "telefone": "9764-122-1174"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 120,
       "cargo": "contador",
@@ -1078,8 +1197,9 @@
       "email": "helenamutk@gmail.com",
       "gerente": false,
       "nome": "Samuel do Couto",
-      "telefone": "165-519-4005"
-    },
+      "telefone": "9165-519-4005"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 121,
       "cargo": "funcionario",
@@ -1087,8 +1207,9 @@
       "email": "rafaelragazzo@gmail.com",
       "gerente": false,
       "nome": "Vitória Akechi",
-      "telefone": "263-537-5507"
-    },
+      "telefone": "9263-537-5507"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 122,
       "cargo": "funcionario",
@@ -1096,8 +1217,9 @@
       "email": "alicerasmussen@gmail.com",
       "gerente": false,
       "nome": "Maria Battistella",
-      "telefone": "412-336-7455"
-    },
+      "telefone": "9412-336-7455"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 123,
       "cargo": "contador",
@@ -1105,8 +1227,9 @@
       "email": "mariagomes@gmail.com",
       "gerente": false,
       "nome": "Bernardo Avelar",
-      "telefone": "652-771-8867"
-    },
+      "telefone": "9652-771-8867"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 124,
       "cargo": "funcionario",
@@ -1114,8 +1237,9 @@
       "email": "ingridnagem@gmail.com",
       "gerente": false,
       "nome": "Joaquim Lerner",
-      "telefone": "118-903-3396"
-    },
+      "telefone": "9118-903-3396"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 125,
       "cargo": "estagiario",
@@ -1123,8 +1247,9 @@
       "email": "caiodonati@gmail.com",
       "gerente": false,
       "nome": "Caio Faria",
-      "telefone": "932-901-3280"
-    },
+      "telefone": "9932-901-3280"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 126,
       "cargo": "estagiario",
@@ -1132,8 +1257,9 @@
       "email": "maurciodancy@gmail.com",
       "gerente": false,
       "nome": "Miguel Aggrizzi",
-      "telefone": "450-751-0716"
-    },
+      "telefone": "9450-751-0716"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 127,
       "cargo": "funcionario",
@@ -1141,8 +1267,9 @@
       "email": "jliotessaro@gmail.com",
       "gerente": false,
       "nome": "Theo Da Dalt",
-      "telefone": "492-287-3556"
-    },
+      "telefone": "9492-287-3556"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 128,
       "cargo": "funcionario",
@@ -1150,8 +1277,9 @@
       "email": "priscilapiovezan@gmail.com",
       "gerente": false,
       "nome": "Pedro Maria",
-      "telefone": "368-298-8374"
-    },
+      "telefone": "9368-298-8374"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 129,
       "cargo": "funcionario",
@@ -1159,8 +1287,9 @@
       "email": "yarateves@gmail.com",
       "gerente": false,
       "nome": "Octávio Mauro",
-      "telefone": "164-578-1167"
-    },
+      "telefone": "9164-578-1167"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 130,
       "cargo": "estagiario",
@@ -1168,8 +1297,9 @@
       "email": "lailamontemor@gmail.com",
       "gerente": false,
       "nome": "Ramom Poloni",
-      "telefone": "766-876-8880"
-    },
+      "telefone": "9766-876-8880"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 131,
       "cargo": "contador",
@@ -1177,8 +1307,9 @@
       "email": "michaelminiguiti@gmail.com",
       "gerente": false,
       "nome": "Sofia Cricco",
-      "telefone": "722-168-0235"
-    },
+      "telefone": "9722-168-0235"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 132,
       "cargo": "funcionario",
@@ -1186,8 +1317,9 @@
       "email": "yasmincamillete@gmail.com",
       "gerente": false,
       "nome": "Cristiano da Camara",
-      "telefone": "168-547-0300"
-    },
+      "telefone": "9168-547-0300"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 133,
       "cargo": "estagiario",
@@ -1195,8 +1327,9 @@
       "email": "marcelacampos@gmail.com",
       "gerente": false,
       "nome": "Matheus Peixoto",
-      "telefone": "563-718-0499"
-    },
+      "telefone": "9563-718-0499"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 134,
       "cargo": "estagiario",
@@ -1204,8 +1337,9 @@
       "email": "lviaraposo@gmail.com",
       "gerente": false,
       "nome": "Emanuel Ostity Domingue",
-      "telefone": "865-310-8902"
-    },
+      "telefone": "9865-310-8902"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 135,
       "cargo": "estagiario",
@@ -1213,8 +1347,9 @@
       "email": "marcospizzeta@gmail.com",
       "gerente": false,
       "nome": "Helena Cola",
-      "telefone": "327-956-5051"
-    },
+      "telefone": "9327-956-5051"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 136,
       "cargo": "funcionario",
@@ -1222,8 +1357,9 @@
       "email": "kelvinscharra@gmail.com",
       "gerente": false,
       "nome": "Alana de Martin",
-      "telefone": "603-830-2568"
-    },
+      "telefone": "9603-830-2568"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 137,
       "cargo": "estagiario",
@@ -1231,8 +1367,9 @@
       "email": "lucasjosefa@gmail.com",
       "gerente": false,
       "nome": "Lavínia Botti",
-      "telefone": "628-775-2158"
-    },
+      "telefone": "9628-775-2158"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 138,
       "cargo": "funcionario",
@@ -1240,8 +1377,9 @@
       "email": "causobrinho@gmail.com",
       "gerente": false,
       "nome": "Bianca Correia",
-      "telefone": "697-376-2058"
-    },
+      "telefone": "9697-376-2058"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 139,
       "cargo": "contador",
@@ -1249,8 +1387,9 @@
       "email": "carolferreirabraga@gmail.com",
       "gerente": false,
       "nome": "Enzo Bourguignon",
-      "telefone": "521-902-4396"
-    },
+      "telefone": "9521-902-4396"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 140,
       "cargo": "contador",
@@ -1258,8 +1397,9 @@
       "email": "lavniaandrio@gmail.com",
       "gerente": false,
       "nome": "Pedro Pezzin",
-      "telefone": "185-929-5281"
-    },
+      "telefone": "9185-929-5281"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 141,
       "cargo": "funcionario",
@@ -1267,8 +1407,9 @@
       "email": "murielmoura@gmail.com",
       "gerente": false,
       "nome": "Samuel de Lima",
-      "telefone": "228-954-5032"
-    },
+      "telefone": "9228-954-5032"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 142,
       "cargo": "funcionario",
@@ -1276,8 +1417,9 @@
       "email": "rafaelalzia@gmail.com",
       "gerente": false,
       "nome": "Davi Maremiori",
-      "telefone": "456-791-6253"
-    },
+      "telefone": "9456-791-6253"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 143,
       "cargo": "estagiario",
@@ -1285,8 +1427,9 @@
       "email": "henriqueragazzo@gmail.com",
       "gerente": false,
       "nome": "Felipe Légora ",
-      "telefone": "872-829-8559"
-    },
+      "telefone": "9872-829-8559"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 144,
       "cargo": "estagiario",
@@ -1294,8 +1437,9 @@
       "email": "wilianbusetti@gmail.com",
       "gerente": false,
       "nome": "Valentina Oliveria",
-      "telefone": "559-811-9811"
-    },
+      "telefone": "9559-811-9811"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 145,
       "cargo": "funcionario",
@@ -1303,8 +1447,9 @@
       "email": "flviosimoes@gmail.com",
       "gerente": false,
       "nome": "Olívia Marchese",
-      "telefone": "103-613-1321"
-    },
+      "telefone": "9103-613-1321"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 146,
       "cargo": "contador",
@@ -1312,8 +1457,9 @@
       "email": "duartealberto@gmail.com",
       "gerente": false,
       "nome": "Mariana Capelini",
-      "telefone": "831-815-0700"
-    },
+      "telefone": "9831-815-0700"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 147,
       "cargo": "estagiario",
@@ -1321,8 +1467,9 @@
       "email": "heitortaylor@gmail.com",
       "gerente": false,
       "nome": "Emanuelly Thiago",
-      "telefone": "793-862-1151"
-    },
+      "telefone": "9793-862-1151"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 148,
       "cargo": "estagiario",
@@ -1330,8 +1477,9 @@
       "email": "gabrielcarrer@gmail.com",
       "gerente": false,
       "nome": "Theo Libardi",
-      "telefone": "723-894-0159"
-    },
+      "telefone": "9723-894-0159"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 149,
       "cargo": "funcionario",
@@ -1339,8 +1487,9 @@
       "email": "anakiefer@gmail.com",
       "gerente": false,
       "nome": "Miguel Boarin",
-      "telefone": "140-857-2115"
-    },
+      "telefone": "9140-857-2115"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 150,
       "cargo": "funcionario",
@@ -1348,8 +1497,9 @@
       "email": "jliatonon@gmail.com",
       "gerente": false,
       "nome": "Aquiles Fraga",
-      "telefone": "504-909-4616"
-    },
+      "telefone": "9504-909-4616"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 151,
       "cargo": "estagiario",
@@ -1357,8 +1507,9 @@
       "email": "lavniapereira@gmail.com",
       "gerente": false,
       "nome": "Beatriz Bonadiman",
-      "telefone": "666-302-1862"
-    },
+      "telefone": "9666-302-1862"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 152,
       "cargo": "contador",
@@ -1366,8 +1517,9 @@
       "email": "tomsdossantos@gmail.com",
       "gerente": false,
       "nome": "Theo Piccin",
-      "telefone": "887-263-8547"
-    },
+      "telefone": "9887-263-8547"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 153,
       "cargo": "funcionario",
@@ -1375,8 +1527,9 @@
       "email": "lismoura@gmail.com",
       "gerente": false,
       "nome": "Brenda Zerboni",
-      "telefone": "597-919-0107"
-    },
+      "telefone": "9597-919-0107"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 154,
       "cargo": "contador",
@@ -1384,8 +1537,9 @@
       "email": "bernardofirio@gmail.com",
       "gerente": false,
       "nome": "Alice Barreto",
-      "telefone": "972-200-8029"
-    },
+      "telefone": "9972-200-8029"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 155,
       "cargo": "contador",
@@ -1393,8 +1547,9 @@
       "email": "manuelabertone@gmail.com",
       "gerente": false,
       "nome": "Ana Serafim",
-      "telefone": "422-374-2165"
-    },
+      "telefone": "9422-374-2165"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 156,
       "cargo": "estagiario",
@@ -1402,8 +1557,9 @@
       "email": "lviamoschon@gmail.com",
       "gerente": false,
       "nome": "Giovanna Appolinario",
-      "telefone": "626-769-4450"
-    },
+      "telefone": "9626-769-4450"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 157,
       "cargo": "funcionario",
@@ -1411,8 +1567,9 @@
       "email": "maitguarnier@gmail.com",
       "gerente": false,
       "nome": "Eduarda Correia",
-      "telefone": "874-280-7890"
-    },
+      "telefone": "9874-280-7890"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 158,
       "cargo": "funcionario",
@@ -1420,8 +1577,9 @@
       "email": "anatiborcio@gmail.com",
       "gerente": false,
       "nome": "Daniel Capelini",
-      "telefone": "102-795-3098"
-    },
+      "telefone": "9102-795-3098"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 159,
       "cargo": "contador",
@@ -1429,8 +1587,9 @@
       "email": "duartebaptista@gmail.com",
       "gerente": false,
       "nome": "Artur Rago",
-      "telefone": "635-614-8808"
-    },
+      "telefone": "9635-614-8808"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 160,
       "cargo": "funcionario",
@@ -1438,8 +1597,9 @@
       "email": "aquilesdenadai@gmail.com",
       "gerente": false,
       "nome": "Mariana Onhas",
-      "telefone": "266-978-5029"
-    },
+      "telefone": "9266-978-5029"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 161,
       "cargo": "funcionario",
@@ -1447,8 +1607,9 @@
       "email": "rebecacarniele@gmail.com",
       "gerente": false,
       "nome": "Juliana Souza",
-      "telefone": "657-200-0485"
-    },
+      "telefone": "9657-200-0485"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 162,
       "cargo": "estagiario",
@@ -1456,8 +1617,9 @@
       "email": "danielzanichelli@gmail.com",
       "gerente": false,
       "nome": "Yasmine Bozzi",
-      "telefone": "197-903-3759"
-    },
+      "telefone": "9197-903-3759"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 163,
       "cargo": "contador",
@@ -1465,8 +1627,9 @@
       "email": "marinabortoloth@gmail.com",
       "gerente": false,
       "nome": "Luiza Guilherme",
-      "telefone": "519-219-5802"
-    },
+      "telefone": "9519-219-5802"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 164,
       "cargo": "contador",
@@ -1474,8 +1637,9 @@
       "email": "marianacaversani@gmail.com",
       "gerente": false,
       "nome": "Marcela da Camara",
-      "telefone": "631-130-5263"
-    },
+      "telefone": "9631-130-5263"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 165,
       "cargo": "estagiario",
@@ -1483,8 +1647,9 @@
       "email": "kevinviebrantz@gmail.com",
       "gerente": false,
       "nome": "Isabella Oliveria",
-      "telefone": "803-581-0358"
-    },
+      "telefone": "9803-581-0358"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 166,
       "cargo": "funcionario",
@@ -1492,8 +1657,9 @@
       "email": "manuelakristiansen@gmail.com",
       "gerente": false,
       "nome": "Lucas Ferrari",
-      "telefone": "318-856-3753"
-    },
+      "telefone": "9318-856-3753"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 167,
       "cargo": "funcionario",
@@ -1501,8 +1667,9 @@
       "email": "tomsberg@gmail.com",
       "gerente": false,
       "nome": "Alice Novo",
-      "telefone": "330-438-2884"
-    },
+      "telefone": "9330-438-2884"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 168,
       "cargo": "contador",
@@ -1510,8 +1677,9 @@
       "email": "otvioorsato@gmail.com",
       "gerente": false,
       "nome": "Francisco Nascimento",
-      "telefone": "642-173-5905"
-    },
+      "telefone": "9642-173-5905"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 169,
       "cargo": "estagiario",
@@ -1519,8 +1687,9 @@
       "email": "manuelamaia@gmail.com",
       "gerente": false,
       "nome": "Lourenço Miquelin",
-      "telefone": "559-663-4904"
-    },
+      "telefone": "9559-663-4904"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 170,
       "cargo": "contador",
@@ -1528,8 +1697,9 @@
       "email": "emanuelatrindade@gmail.com",
       "gerente": false,
       "nome": "Bernardo Falquetto",
-      "telefone": "906-116-6346"
-    },
+      "telefone": "9906-116-6346"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 171,
       "cargo": "funcionario",
@@ -1537,8 +1707,9 @@
       "email": "joocheibub@gmail.com",
       "gerente": false,
       "nome": "Kelvin Pillon",
-      "telefone": "305-975-7130"
-    },
+      "telefone": "9305-975-7130"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 172,
       "cargo": "contador",
@@ -1546,8 +1717,9 @@
       "email": "samuelcardoso@gmail.com",
       "gerente": false,
       "nome": "Francisco Caretta",
-      "telefone": "932-547-2030"
-    },
+      "telefone": "9932-547-2030"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 173,
       "cargo": "estagiario",
@@ -1555,8 +1727,9 @@
       "email": "valentinademoraes@gmail.com",
       "gerente": false,
       "nome": "Juliano Tavares",
-      "telefone": "251-849-6933"
-    },
+      "telefone": "9251-849-6933"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 174,
       "cargo": "contador",
@@ -1564,8 +1737,9 @@
       "email": "marianaknudsen@gmail.com",
       "gerente": false,
       "nome": "Valentim Zandonadi",
-      "telefone": "409-244-1052"
-    },
+      "telefone": "9409-244-1052"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 175,
       "cargo": "estagiario",
@@ -1573,8 +1747,9 @@
       "email": "leticiaconciani@gmail.com",
       "gerente": false,
       "nome": "Yara Vadagnin",
-      "telefone": "132-429-8332"
-    },
+      "telefone": "9132-429-8332"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 176,
       "cargo": "estagiario",
@@ -1582,8 +1757,9 @@
       "email": "joaquimbreziniscki@gmail.com",
       "gerente": false,
       "nome": "Natália Rochetti",
-      "telefone": "938-858-8273"
-    },
+      "telefone": "9938-858-8273"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 177,
       "cargo": "funcionario",
@@ -1591,8 +1767,9 @@
       "email": "giovanamathiello@gmail.com",
       "gerente": false,
       "nome": "Anabela Fittipaldi",
-      "telefone": "484-592-6120"
-    },
+      "telefone": "9484-592-6120"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 178,
       "cargo": "estagiario",
@@ -1600,8 +1777,9 @@
       "email": "julianoferrari@gmail.com",
       "gerente": false,
       "nome": "Rebeca Rodrigues",
-      "telefone": "538-735-0886"
-    },
+      "telefone": "9538-735-0886"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 179,
       "cargo": "contador",
@@ -1609,8 +1787,9 @@
       "email": "mateusbottega@gmail.com",
       "gerente": false,
       "nome": "Rodrigo Caprini",
-      "telefone": "455-464-7083"
-    },
+      "telefone": "9455-464-7083"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 180,
       "cargo": "funcionario",
@@ -1618,8 +1797,9 @@
       "email": "pedroandersen@gmail.com",
       "gerente": false,
       "nome": "Jessica Bernadot",
-      "telefone": "328-635-6808"
-    },
+      "telefone": "9328-635-6808"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 181,
       "cargo": "estagiario",
@@ -1627,8 +1807,9 @@
       "email": "antniograssi@gmail.com",
       "gerente": false,
       "nome": "Brenda Berg",
-      "telefone": "567-499-4703"
-    },
+      "telefone": "9567-499-4703"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 182,
       "cargo": "funcionario",
@@ -1636,8 +1817,9 @@
       "email": "jliamuniz@gmail.com",
       "gerente": false,
       "nome": "Elisa Giacomele",
-      "telefone": "588-320-6886"
-    },
+      "telefone": "9588-320-6886"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 183,
       "cargo": "estagiario",
@@ -1645,8 +1827,9 @@
       "email": "gustavovanzan@gmail.com",
       "gerente": false,
       "nome": "Marcelo Doimo",
-      "telefone": "245-261-1335"
-    },
+      "telefone": "9245-261-1335"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 184,
       "cargo": "estagiario",
@@ -1654,8 +1837,9 @@
       "email": "gabrielmarcarini@gmail.com",
       "gerente": false,
       "nome": "Henrique Barreira",
-      "telefone": "185-626-3046"
-    },
+      "telefone": "9185-626-3046"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 185,
       "cargo": "contador",
@@ -1663,8 +1847,9 @@
       "email": "helenapalermo@gmail.com",
       "gerente": false,
       "nome": "Taís Zucoloto",
-      "telefone": "107-172-9611"
-    },
+      "telefone": "9107-172-9611"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 186,
       "cargo": "funcionario",
@@ -1672,8 +1857,9 @@
       "email": "fernandomontemor@gmail.com",
       "gerente": false,
       "nome": "Aline de Oliveira",
-      "telefone": "914-353-4824"
-    },
+      "telefone": "9914-353-4824"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 187,
       "cargo": "estagiario",
@@ -1681,8 +1867,9 @@
       "email": "arielabernardes@gmail.com",
       "gerente": false,
       "nome": "Nicolas Sperandio",
-      "telefone": "166-303-2886"
-    },
+      "telefone": "9166-303-2886"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 188,
       "cargo": "estagiario",
@@ -1690,8 +1877,9 @@
       "email": "franciscokuiger@gmail.com",
       "gerente": false,
       "nome": "Jonathan Gaucci",
-      "telefone": "534-181-0596"
-    },
+      "telefone": "9534-181-0596"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 189,
       "cargo": "funcionario",
@@ -1699,8 +1887,9 @@
       "email": "caiosgulmaro@gmail.com",
       "gerente": false,
       "nome": "Beatriz Brandão",
-      "telefone": "904-952-4794"
-    },
+      "telefone": "9904-952-4794"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 190,
       "cargo": "contador",
@@ -1708,8 +1897,9 @@
       "email": "alciacattelan@gmail.com",
       "gerente": false,
       "nome": "Miguel Fiorim",
-      "telefone": "730-175-9868"
-    },
+      "telefone": "9730-175-9868"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 191,
       "cargo": "estagiario",
@@ -1717,8 +1907,9 @@
       "email": "matheusdemoraes@gmail.com",
       "gerente": false,
       "nome": "Frederico Zorzal",
-      "telefone": "589-154-7104"
-    },
+      "telefone": "9589-154-7104"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 192,
       "cargo": "estagiario",
@@ -1726,8 +1917,9 @@
       "email": "gabrielcalazans@gmail.com",
       "gerente": false,
       "nome": "Milene Guedes",
-      "telefone": "596-232-8011"
-    },
+      "telefone": "9596-232-8011"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 193,
       "cargo": "estagiario",
@@ -1735,8 +1927,9 @@
       "email": "luispase@gmail.com",
       "gerente": false,
       "nome": "Bruno Destéfani",
-      "telefone": "140-512-4760"
-    },
+      "telefone": "9140-512-4760"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 194,
       "cargo": "estagiario",
@@ -1744,8 +1937,9 @@
       "email": "yasminoliveria@gmail.com",
       "gerente": false,
       "nome": "Nicolas Shael",
-      "telefone": "401-561-9033"
-    },
+      "telefone": "9401-561-9033"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 195,
       "cargo": "funcionario",
@@ -1753,8 +1947,9 @@
       "email": "luizacosta@gmail.com",
       "gerente": false,
       "nome": "Vinicius Mork",
-      "telefone": "454-724-3259"
-    },
+      "telefone": "9454-724-3259"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 196,
       "cargo": "contador",
@@ -1762,8 +1957,9 @@
       "email": "danielbossoli@gmail.com",
       "gerente": false,
       "nome": "Melissa Riatto",
-      "telefone": "167-235-0501"
-    },
+      "telefone": "9167-235-0501"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 197,
       "cargo": "funcionario",
@@ -1771,8 +1967,9 @@
       "email": "ianmace@gmail.com",
       "gerente": false,
       "nome": "Laura Pavan",
-      "telefone": "859-804-2930"
-    },
+      "telefone": "9859-804-2930"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 198,
       "cargo": "contador",
@@ -1780,8 +1977,9 @@
       "email": "ricardohoracio@gmail.com",
       "gerente": false,
       "nome": "Joana Conterini",
-      "telefone": "137-827-0932"
-    },
+      "telefone": "9137-827-0932"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 199,
       "cargo": "funcionario",
@@ -1789,8 +1987,9 @@
       "email": "carolinadafraga@gmail.com",
       "gerente": false,
       "nome": "Isabelly Cocco",
-      "telefone": "585-718-8655"
-    },
+      "telefone": "9585-718-8655"
+    ,
+      "password": "MQOgEnu"},
     {
       "id": 200,
       "cargo": "estagiario",
@@ -1798,7 +1997,7 @@
       "email": "anabalestre@gmail.com",
       "gerente": true,
       "nome": "Lucas La Point",
-      "telefone": "882-621-9549"
+      "telefone": "9882-621-9549"
     }
   ]
 }

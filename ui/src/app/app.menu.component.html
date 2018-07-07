@@ -1,10 +1,8 @@
 <div class="layout-sidebar" [ngClass]="{'layout-sidebar-active': app.sidebarActive, 'layout-sidebar-dark': app.darkMenu}"
     (click)="app.onSidebarClick($event)" (mouseover)="app.sidebarActive=true" (mouseleave)="app.sidebarActive=false">
     <div class="sidebar-logo">
-        <a routerLink="{{url}}">
-            <img alt="logo" src="assets/img/icon.png" />
-            <span class="app-name">BOXIT</span>
-        </a>
+      <img alt="logo" src="assets/img/icon.png" />
+      <span class="app-name">BOXIT</span>
     </div>
 
     <p-scrollPanel #scrollPanel [style]="{height: '100%'}">

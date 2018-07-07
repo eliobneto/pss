@@ -1,5 +1,4 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {AbstractControl, NgForm} from '@angular/forms';
 import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import {Cliente} from '../cliente';
 import {Router} from '@angular/router';
@@ -18,9 +17,6 @@ export class CadastrarClienteComponent implements OnInit, OnDestroy {
   public cnpjMask = MyMaskUtil.CNPJ_MASK_GENERATOR;
   public phoneMask = MyMaskUtil.DYNAMIC_PHONE_MASK_GENERATOR;
   f = new Cliente();
-  cli: any;
-  igual = false;
-  oba: any;
 
   constructor(
     private ser: ClienteService,
@@ -49,41 +45,32 @@ export class CadastrarClienteComponent implements OnInit, OnDestroy {
   }
 
   confirma() {
-      this.ser.getClientes().then((s) => {
-        this.cli = s;
-        for (const o of this.cli) {
-          if (o.cnpj === true) {
-            this.igual = true;
-            break;
+    let igual = false;
+    const cnpj = this.f.cnpj;
+    $.ajax({
+      url: 'assets/demo/data/cliente.json',
+      dataType: 'json',
+      async: false,
+      success: function (result) {
+        $(result.data).each(function (index, value) {
+          if (cnpj === value.cnpj) {
+            igual = true;
           }
-        }
-      });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    if (this.igual) {
+        });
+      }
+    });
+     if (igual) {
       swal(
         'Erro!',
         'CNPJ já cadastrado!',
         'error'
-      )
+      );
     } else {
       swal(
         'Sucesso!',
         'Cliente Cadastrado!',
         'success'
-      )
+      );
     }
   }
 }
