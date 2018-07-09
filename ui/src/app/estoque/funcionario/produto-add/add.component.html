@@ -1,0 +1,46 @@
+
+<div class="card card-w-title">
+  <div class="ui-g-12 ui-lg-12">
+    <div class="card docs">
+      <h1>Aumentar quantidade de produto no estoque</h1>
+
+      <form #funform="ngForm">
+        <div class="ui-g form-group">
+
+          <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <input type="text" required name="codigo" id="codigo"
+                   class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="stock.nome"
+                   #nomef="ngModel" pInputText>
+            <label>Código do Produto</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+          </span>
+          </div>
+
+          <div class="ui-g-12 ui-md-6">
+          <span class="md-inputfield">
+            <input type="text" required name="qtd" id="qtd"
+                   class="ui-inputtext ui-corner-all ui-widget"  ngModel #user="ngModel" [(ngModel)]="stock.nome"
+                   #nomef="ngModel" pInputText>
+            <label>Quantidade a ser Incrementada</label><span class="ui-message ui-messages-error ui-corner-all">*</span>
+          </span>
+          </div>
+
+          <br/>
+          <div class="ui-g">
+            <div class="ui-g-12" style="text-align:center">
+              <button pButton type="button" label="Enviar" class="blue-btn flat" (click)="updateItem()"></button>
+
+            </div>
+          </div>
+          <br>
+
+          <div class="ui-g-12 ui-lg-12">
+            <div style="text-align: center">
+              <span ><span style="color: red">*</span> Campos Obrigatórios</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

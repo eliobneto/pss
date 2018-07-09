@@ -10,7 +10,7 @@ export class ClienteService {
   constructor(private http: HttpClient, private router: Router) { }
 
   getClientes() {
-    return this.http.get<any>('assets/demo/data/cliente.json').toPromise()
+    return this.http.get<any>('assets/data/cliente.json').toPromise()
       .then(res => <Cliente[]> res.data)
       .then(data => data);
 

@@ -11,6 +11,7 @@ import {CategoriaListComponent} from './categoria/categoria-list/categoria-list.
 import {ListComponent} from './estoque/funcionario/produto-list/list.component';
 import {ListaComponent} from './estoque/cliente/lista/lista.component';
 import {RecuperarComponent} from "./auth/recuperar/recuperar.component";
+import {AddComponent} from "./estoque/funcionario/produto-add/add.component";
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -24,6 +25,7 @@ export const routes: Routes = [
   {path: 'criarcliente', component: CadastrarClienteComponent},
   {path: 'listarClientes', component: ListarClienteComponent, canActivate: [AuthGuard], data: {nivel: 'admin'}},
   {path: 'gerente/listarFuncionarios', component: ListarFuncionarioComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
+  {path: 'add', component: AddComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: '**', redirectTo: 'não-encontrada'}
 ];
 

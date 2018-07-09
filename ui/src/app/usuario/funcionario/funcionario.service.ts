@@ -9,7 +9,7 @@ export class FuncionarioService {
   constructor(private http: HttpClient, private router: Router) { }
 
   getFuns() {
-    return this.http.get<any>('assets/demo/data/funcionario.json').toPromise()
+    return this.http.get<any>('assets/data/funcionario.json').toPromise()
       .then(res => <Funcionario[]> res.data)
       .then(data => data);
   }

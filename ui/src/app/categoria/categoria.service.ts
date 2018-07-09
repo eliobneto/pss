@@ -10,7 +10,7 @@ export class CategoriaService {
   constructor(private http: HttpClient) { }
 
   get() {
-    return this.http.get<any>('assets/demo/data/categoria.json').toPromise()
+    return this.http.get<any>('assets/data/categoria.json').toPromise()
       .then(res => <Categoria[]> res.data)
       .then(data => data);
   }

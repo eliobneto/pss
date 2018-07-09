@@ -46,23 +46,27 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
       this.model = [
         {label: 'Loja', icon: 'store', routerLink: ['/shop']},
         {label: 'Meus Pedidos', icon: 'shopping_basket', routerLink: ['/orders']},
-        {label: 'Meu caarrinho', icon: 'shopping_cart', routerLink: ['/cart']}
+        {label: 'Meu Carrinho', icon: 'shopping_cart', routerLink: ['/cart']}
       ];
       this.url = 'cliente';
     }
     if (this.auth.get() >= 1 && this.auth.get() <= 2) {
       this.model = [
-        {label: 'Produtos', icon: 'store', routerLink: ['/product']},
         {label: 'Relatórios', icon: 'feedback', routerLink: ['/reports']},
         {label: 'Pagamento', icon: 'account_balance_wallet', routerLink: ['/payment']},
         {label: 'Categorias', icon: 'sort', routerLink: ['/admin']},
         {label: 'Usuários', icon: 'people', items:
             [
               {label: 'Listar Funcionarios', routerLink: ['/gerente/listarFuncionarios']},
-              {label: 'Listar Clientes', routerLink: ['listarClientes']}
+              {label: 'Listar Clientes', routerLink: ['/listarClientes']}
             ]
         },
-        {label: 'Estoque', icon: 'store', routerLink: ['/gerente']}
+        {label: 'Estoque', icon: 'store', items:
+            [
+              {label: 'Listar Produtos', routerLink: ['/gerente']},
+              {label: 'Aumentar Estoque', routerLink: ['/add']}
+            ]
+        },
       ];
     }
   }
