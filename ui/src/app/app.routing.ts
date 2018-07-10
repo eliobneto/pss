@@ -13,6 +13,7 @@ import {ListaComponent} from './estoque/cliente/lista/lista.component';
 import {RecuperarComponent} from "./auth/recuperar/recuperar.component";
 import {AddComponent} from "./estoque/funcionario/produto-add/add.component";
 import {PagoComponent} from "./estoque/funcionario/produto-pago/pago.component";
+import {GerarComponent} from "./relatorio/relatorio-gerar/gerar.component";
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -28,6 +29,7 @@ export const routes: Routes = [
   {path: 'gerente/listarFuncionarios', component: ListarFuncionarioComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: 'add', component: AddComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: 'pago', component: PagoComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
+  {path: 'gerar', component: GerarComponent, canActivate: [AuthGuard], data: {nivel: 'gerente'}},
   {path: '**', redirectTo: 'não-encontrada'}
 ];
 

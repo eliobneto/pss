@@ -1,20 +1,19 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {EstoqueService} from '../../estoque.service';
-import {Estoque} from '../../estoque';
-import {Categoria} from '../../../categoria/categoria';
-import {CategoriaService} from '../../../categoria/categoria.service';
+import {EstoqueService} from '../../estoque/estoque.service';
+import {Estoque} from '../../estoque/estoque';
+import {Categoria} from '../../categoria/categoria';
+import {CategoriaService} from "../../categoria/categoria.service";
 import swal from 'sweetalert2';
-import {MyMaskUtil} from '../../../shared/mask/my-mask.util';
 import {CalendarModule} from 'primeng/calendar';
 
 @Component({
-  selector: 'app-pago',
-  templateUrl: './pago.component.html',
-  styleUrls: ['./pago.component.css']
+  selector: 'app-gerar',
+  templateUrl: './gerar.component.html',
+  styleUrls: ['./gerar.component.css']
 })
 
-export class PagoComponent implements OnInit {
+export class GerarComponent implements OnInit {
 
   constructor(
     private service: EstoqueService,
@@ -23,7 +22,6 @@ export class PagoComponent implements OnInit {
     private route: Router
   ) {}
 
-public cnpjMask = MyMaskUtil.CNPJ_MASK_GENERATOR;
   produtos: Estoque[];
   categorias: Categoria[];
   stock: any;

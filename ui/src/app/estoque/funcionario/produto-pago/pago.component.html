@@ -1,6 +1,6 @@
 <div class="ui-g" *ngIf="prod">
 
-
+<form #funform="ngForm">
   <div class="ui-g-12" align="center">
     <h1>Registrar pagamento</h1>
     <br/><br/>
@@ -9,7 +9,7 @@
       <div class="ui-g-12" align="center">
         <span>CNPJ do comprador<span style="color: red">*</span></span>
         <span class="md-inputfield">
-            <input type="text" name="cnpj" id="cnpj" [(ngModel)]="f.cnpj" #cnpjj="ngModel"
+            <input type="text" name="cnpj" id="cnpj" [(ngModel)]="cnpj" #cnpjj="ngModel"
                    class="ui-inputtext ui-corner-all ui-widget" required
                    [spMask]="cnpjMask" maxlength="18" minlength="18" [spKeepMask]="true" pInputText
                    [ngClass]="(cnpjj?.errors?.cnpj || (cnpjj.touched && cnpjj.invalid)) ? 'is-invalid' : ''">
@@ -22,7 +22,7 @@
       <div class="ui-g-12">
         <span>Número do Boleto<span style="color: red">*</span></span>
         <span class="md-inputfield">
-            <input type="number" required name="qtd" id="qtd"
+            <input mask="999999999999999999999999999999999999999999999" maxlength="45" minlength="45" type="number" required name="qtd" id="qtd"
                    class="ui-inputtext ui-corner-all ui-widget" ngModel #user="ngModel" [(ngModel)]="prod.qtd"
                    #nomef="ngModel" pInputText>
           </span>
@@ -46,7 +46,7 @@
       </div>
 
       <div class="ui-g-12" align="center">
-        <button type="button" pButton icon="ui-icon-check" (click)="updateItem()" label="Registrar" routerLink="/gerente"></button>
+        <button type="button" pButton icon="ui-icon-check" label="Registrar" [disabled]="funform.invalid" routerLink="/gerente"></button>
       </div>
 
       <br/><br/>
@@ -58,6 +58,6 @@
       </div>
     </div>
   </div>
-
+</form>
 </div>
 

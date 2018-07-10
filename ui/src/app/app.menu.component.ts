@@ -52,7 +52,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
     }
     if (this.auth.get() >= 1 && this.auth.get() <= 2) {
       this.model = [
-        {label: 'Relatórios', icon: 'feedback', routerLink: ['/reports']},
+        {label: 'Relatórios', icon: 'feedback', routerLink: ['/gerar']},
         {label: 'Pagamento', icon: 'account_balance_wallet', routerLink: ['/pago']},
         {label: 'Categorias', icon: 'sort', routerLink: ['/admin']},
         {label: 'Usuários', icon: 'people', items:
@@ -64,7 +64,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
         {label: 'Estoque', icon: 'store', items:
             [
               {label: 'Listar Produtos', routerLink: ['/gerente']},
-              {label: 'Aumentar Estoque', routerLink: ['/add']}
+              {label: 'Alterar Quantidade', routerLink: ['/add']}
             ]
         },
       ];

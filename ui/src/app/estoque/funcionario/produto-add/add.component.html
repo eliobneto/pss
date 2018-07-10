@@ -1,6 +1,6 @@
 <div class="ui-g" *ngIf="prod">
 
-
+<form #funform="ngForm">
     <div class="ui-g-12" align="center">
       <h1>Alterar quantidade de produtos</h1>
       <br/><br/>
@@ -16,7 +16,7 @@
         </div>
 
         <div class="ui-g-12" align="center">
-          <span>Quantidade a ser adicionada<span style="color: red">*</span></span>
+          <span>Quantidade a ser alterada<span style="color: red">*</span></span>
           <span class="md-inputfield">
             <input type="number" required name="qtd" id="qtd"
                    class="ui-inputtext ui-corner-all ui-widget" ngModel #user="ngModel" [(ngModel)]="prod.qtd"
@@ -27,12 +27,13 @@
         <div class="ui-g-12" align="center">
           <span>Motivo<span style="color: red">*</span></span>
           <span class="md-inputfield">
-            <input type="text" pInputText>
+            <input type="text" required pInputText>
           </span>
         </div>
 
         <div class="ui-g-12" align="center">
-          <button type="button" pButton icon="ui-icon-check" (click)="updateItem()" label="Salvar" routerLink="/gerente"></button>
+          <button type="button" pButton icon="ui-icon-check" (click)="updateItem()" [disabled]="funform.invalid"
+                  label="Salvar" routerLink="/gerente"></button>
         </div>
 
         <br/><br/>
@@ -44,6 +45,6 @@
         </div>
       </div>
     </div>
-
+</form>
 </div>
 

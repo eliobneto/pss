@@ -113,11 +113,13 @@ import {AddComponent} from "./estoque/funcionario/produto-add/add.component";
 import {PagoComponent} from "./estoque/funcionario/produto-pago/pago.component";
 import {ListaComponent} from './estoque/cliente/lista/lista.component';
 import {EstoqueService} from './estoque/estoque.service';
+import {GerarComponent} from "./relatorio/relatorio-gerar/gerar.component";
 
 import {ClienteService} from './usuario/cliente/cliente.service';
 import {AuthGuard} from './auth/auth.gard';
 import {CategoriaService} from './categoria/categoria.service';
 import {CurrencyMaskModule} from 'ng2-currency-mask';
+import {RelatorioService} from "./relatorio/relatorio.service";
 
 @NgModule({
   imports: [
@@ -223,7 +225,8 @@ import {CurrencyMaskModule} from 'ng2-currency-mask';
     ListComponent,
     AddComponent,
     PagoComponent,
-    ListaComponent
+    ListaComponent,
+    GerarComponent
   ],
   providers: [
     CarService,
@@ -236,7 +239,8 @@ import {CurrencyMaskModule} from 'ng2-currency-mask';
     FuncionarioService,
     AuthGuard,
     EstoqueService,
-    CategoriaService
+    CategoriaService,
+    RelatorioService
   ],
   bootstrap: [
     AppComponent
