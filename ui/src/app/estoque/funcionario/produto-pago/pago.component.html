@@ -1,0 +1,63 @@
+<div class="ui-g" *ngIf="prod">
+
+
+  <div class="ui-g-12" align="center">
+    <h1>Registrar pagamento</h1>
+    <br/><br/>
+    <div class="ui-g form-group">
+
+      <div class="ui-g-12" align="center">
+        <span>CNPJ do comprador<span style="color: red">*</span></span>
+        <span class="md-inputfield">
+            <input type="text" name="cnpj" id="cnpj" [(ngModel)]="f.cnpj" #cnpjj="ngModel"
+                   class="ui-inputtext ui-corner-all ui-widget" required
+                   [spMask]="cnpjMask" maxlength="18" minlength="18" [spKeepMask]="true" pInputText
+                   [ngClass]="(cnpjj?.errors?.cnpj || (cnpjj.touched && cnpjj.invalid)) ? 'is-invalid' : ''">
+                <div class="ui-message ui-messages-error ui-corner-all"
+                     *ngIf="(cnpjj?.errors?.cnpj && cnpjj.touched) || (cnpjj.touched && cnpjj.invalid)"> CNPJ Inválido</div>
+
+          </span>
+      </div>
+
+      <div class="ui-g-12">
+        <span>Número do Boleto<span style="color: red">*</span></span>
+        <span class="md-inputfield">
+            <input type="number" required name="qtd" id="qtd"
+                   class="ui-inputtext ui-corner-all ui-widget" ngModel #user="ngModel" [(ngModel)]="prod.qtd"
+                   #nomef="ngModel" pInputText>
+          </span>
+      </div>
+
+      <div class="ui-g-12">
+        <span>Valor pago<span style="color: red">*</span></span>
+        <span class="md-inputfield">
+            <input currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+                   type="text" required name="preco"
+                   class="ui-inputtext ui-corner-all ui-widget" #user="ngModel" [(ngModel)]="prod.preco"
+                   #nomef="ngModel" pInputText>
+          </span>
+      </div>
+
+
+
+      <div class="ui-g-12">
+        <h1>Data de recebimento</h1>
+        <p-calendar [(ngModel)]="prod.date3" [showIcon]="true"></p-calendar> <span style="margin-left:35px">{{prod.date3|date}}</span>
+      </div>
+
+      <div class="ui-g-12" align="center">
+        <button type="button" pButton icon="ui-icon-check" (click)="updateItem()" label="Registrar" routerLink="/gerente"></button>
+      </div>
+
+      <br/><br/>
+      <div class="ui-g-12" align="center">
+        <div class="fa-align-justify">
+          <span style="text-align: center"><span style="color: red">*</span> Campos Obrigatórios</span>
+          <br/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

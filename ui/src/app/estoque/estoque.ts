@@ -8,4 +8,5 @@ export class Estoque {
   categoria: string;
   foto: string;
   codigo: string;
+  date3: Date;
 }

@@ -110,6 +110,7 @@ import {FuncionarioService} from './usuario/funcionario/funcionario.service';
 
 import {ListComponent} from './estoque/funcionario/produto-list/list.component';
 import {AddComponent} from "./estoque/funcionario/produto-add/add.component";
+import {PagoComponent} from "./estoque/funcionario/produto-pago/pago.component";
 import {ListaComponent} from './estoque/cliente/lista/lista.component';
 import {EstoqueService} from './estoque/estoque.service';
 
@@ -221,6 +222,7 @@ import {CurrencyMaskModule} from 'ng2-currency-mask';
     ListarClienteComponent,
     ListComponent,
     AddComponent,
+    PagoComponent,
     ListaComponent
   ],
   providers: [

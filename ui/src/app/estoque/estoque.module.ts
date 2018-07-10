@@ -16,6 +16,8 @@ import {SliderModule} from 'primeng/slider';
 import {CurrencyMaskModule} from 'ng2-currency-mask';
 import {DropdownModule} from 'primeng/primeng';
 import {AddComponent} from "./funcionario/produto-add/add.component";
+import {PagoComponent} from "./funcionario/produto-pago/pago.component";
+import {CalendarModule} from 'primeng/calendar';
 
 @NgModule({
   imports: [
@@ -32,11 +34,13 @@ import {AddComponent} from "./funcionario/produto-add/add.component";
     DialogModule,
     SliderModule,
     CurrencyMaskModule,
-    DropdownModule
+    DropdownModule,
+    CalendarModule
   ],
   declarations: [
     ListComponent,
     AddComponent,
+    PagoComponent,
     ListaComponent
   ]
 })

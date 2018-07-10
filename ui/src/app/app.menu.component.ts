@@ -53,7 +53,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
     if (this.auth.get() >= 1 && this.auth.get() <= 2) {
       this.model = [
         {label: 'Relatórios', icon: 'feedback', routerLink: ['/reports']},
-        {label: 'Pagamento', icon: 'account_balance_wallet', routerLink: ['/payment']},
+        {label: 'Pagamento', icon: 'account_balance_wallet', routerLink: ['/pago']},
         {label: 'Categorias', icon: 'sort', routerLink: ['/admin']},
         {label: 'Usuários', icon: 'people', items:
             [
